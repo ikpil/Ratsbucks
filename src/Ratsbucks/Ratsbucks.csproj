@@ -1,37 +1,58 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
-		<SingleProject>true</SingleProject>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<RootNamespace>Ratsbucks</RootNamespace>
-		<UseMaui>true</UseMaui>
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <SingleProject>true</SingleProject>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>Ratsbucks</RootNamespace>
+        <UseMaui>true</UseMaui>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
-		<!-- Images -->
-		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Include="Resources\Images\avatars\*" />
-		<MauiImage Include="Resources\Images\backgrounds\*" />
-		<MauiImage Include="Resources\Images\topics\*" />
+    <ItemGroup>
+        <!-- App Icon -->
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4"/>
+        <!-- Splash Screen -->
+        <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128"/>
+        <!-- Images -->
+        <MauiImage Include="Resources\Images\*" LogicalName="%(Filename)%(Extension)"/>
+        <MauiImage Include="Resources\Images\avatars\*" LogicalName="%(Filename)%(Extension)"/>
+        <MauiImage Include="Resources\Images\backgrounds\*" LogicalName="%(Filename)%(Extension)"/>
+        <MauiImage Include="Resources\Images\topics\*" LogicalName="%(Filename)%(Extension)"/>
 
-		<MauiFont Include="Resources\Fonts\*" />
-		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
-		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
-	</ItemGroup>
+        <MauiFont Include="Resources\Fonts\*"/>
+        <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+        <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)"/>
+    </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.51" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
-		<PackageReference Include="CommunityToolkit.Maui" Version="11.2.0" />
-		<PackageReference Include="Reactor.Maui" Version="3.0.29" />
-		<PackageReference Include="Reactor.Maui.Canvas" Version="3.0.29" />
-		<PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0" />
-	</ItemGroup>
+    <ItemGroup>
+        <MauiImage Remove="Resources\Images\billing_img.png" />
+        <MauiImage Remove="Resources\Images\favorites_img.png" />
+        <MauiImage Remove="Resources\Images\help_img.png" />
+        <MauiImage Remove="Resources\Images\home_img.png" />
+        <MauiImage Remove="Resources\Images\search_img.png" />
+        <MauiImage Remove="Resources\Images\start_course_button.png" />
+        <MauiImage Remove="Resources\Images\videos_img.png" />
+    </ItemGroup>
 
+    <ItemGroup>
+        <EmbeddedResource Include="Resources\Images\billing_img.png" />
+        <EmbeddedResource Include="Resources\Images\favorites_img.png" />
+        <EmbeddedResource Include="Resources\Images\help_img.png" />
+        <EmbeddedResource Include="Resources\Images\home_img.png" />
+        <EmbeddedResource Include="Resources\Images\search_img.png" />
+        <EmbeddedResource Include="Resources\Images\start_course_button.png" />
+        <EmbeddedResource Include="Resources\Images\videos_img.png" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.51"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0"/>
+        <PackageReference Include="CommunityToolkit.Maui" Version="11.2.0"/>
+        <PackageReference Include="Reactor.Maui" Version="3.0.29"/>
+        <PackageReference Include="Reactor.Maui.Canvas" Version="3.0.29"/>
+        <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0"/>
+    </ItemGroup>
+
+	
 </Project>

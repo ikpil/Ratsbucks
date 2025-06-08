@@ -48,7 +48,7 @@ class MainPage : Component<MainPageState>
                     .Show(!State.IsSideMenuShown && !State.ShowOnboarding)
             )
         )
-        //.Set(MauiControls.NavigationPage.HasNavigationBarProperty, false) // todo : ikpil
+        .Set(Microsoft.Maui.Controls.NavigationPage.HasNavigationBarProperty, false)
         .BackgroundColor(ApplicationTheme.Background2)
         ;
 

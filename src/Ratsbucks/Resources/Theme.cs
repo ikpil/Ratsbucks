@@ -16,4 +16,5 @@ class ApplicationTheme
     public static Color Background { get; } = Color.FromUint(0xFFF2F6FF);
     public static Color BackgroundDark { get; } = Color.FromUint(0xFF25254B);
     public static Color Background2 { get; } = Color.FromUint(0xFF17203A);
+    
 }
