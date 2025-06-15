@@ -3,8 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net9.0-android</TargetFramework>
 		<SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
-		<OutputType>Exe</OutputType>
-		<RootNamespace>Ratsbucks</RootNamespace>
+		<RootNamespace>Ratsbucks.iOS</RootNamespace>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<UseMaui>true</UseMaui>

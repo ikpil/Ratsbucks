@@ -3,8 +3,8 @@
 	<PropertyGroup>
 		<TargetFramework>net9.0-maccatalyst</TargetFramework>
 		<SupportedOSPlatformVersion>15.0</SupportedOSPlatformVersion>
+		<RootNamespace>Ratsbucks.Mac</RootNamespace>
 		<OutputType>Exe</OutputType>
-		<RootNamespace>Ratsbucks</RootNamespace>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<UseMaui>true</UseMaui>
