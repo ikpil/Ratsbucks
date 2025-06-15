@@ -10,20 +10,15 @@ class MainPage : Component
 {
     public override VisualNode Render()
     {
-        return new Shell()
-        {
-            new FlyoutItem("Counter")
-            {
-                new CounterPage()
-            },
-            new FlyoutItem("Counter with service")
-            {
-                new CounterWithServicePage()
-            }
-        }
-        .ItemTemplate(RenderItemTemplate);
+        return Shell(
+                FlyoutItem("Counter", new CounterPage()),
+                FlyoutItem("Counter with service", new CounterWithServicePage()),
+                FlyoutItem("Parameters", new ParametersPage()),
+                FlyoutItem("CollectionView", new CollectionViewPage())
+            )
+            .ItemTemplate(RenderItemTemplate);
     }
-    
+
     private static VisualNode RenderItemTemplate(Microsoft.Maui.Controls.BaseShellItem item)
     {
         return new Grid("68", "*")
