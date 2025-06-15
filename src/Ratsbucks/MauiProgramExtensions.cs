@@ -3,6 +3,7 @@ using MauiReactor;
 using Ratsbucks.Pages;
 using Microsoft.Extensions.Logging;
 using SkiaSharp.Views.Maui.Controls.Hosting;
+using AppTheme = Ratsbucks.Resources.Styles.AppTheme;
 
 namespace Ratsbucks;
 
@@ -11,7 +12,10 @@ public static class MauiProgramExtensions
 	public static MauiAppBuilder UseSharedMauiApp(this MauiAppBuilder builder)
 	{
 		builder
-			.UseMauiReactorApp<MainPage>()
+			.UseMauiReactorApp<MainPage>(app =>
+			{
+				app.UseTheme<AppTheme>();
+			})
 			.UseMauiCommunityToolkit()
 			.UseSkiaSharp()
 #if DEBUG
