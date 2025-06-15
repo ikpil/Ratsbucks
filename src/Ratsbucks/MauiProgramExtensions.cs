@@ -2,37 +2,36 @@
 using MauiReactor;
 using Ratsbucks.Pages;
 using Microsoft.Extensions.Logging;
+using Ratsbucks.Resources.Styles;
 using SkiaSharp.Views.Maui.Controls.Hosting;
-using AppTheme = Ratsbucks.Resources.Styles.AppTheme;
 
 namespace Ratsbucks;
 
 public static class MauiProgramExtensions
 {
-	public static MauiAppBuilder UseSharedMauiApp(this MauiAppBuilder builder)
-	{
-		builder
-			.UseMauiReactorApp<MainPage>(app =>
-			{
-				app.UseTheme<AppTheme>();
-			})
-			.UseMauiCommunityToolkit()
-			.UseSkiaSharp()
+    public static MauiAppBuilder UseSharedMauiApp(this MauiAppBuilder builder)
+    {
+        builder
+            .UseMauiReactorApp<MainPage>(app =>
+            {
+                app.UseTheme<ApplicationTheme>();
+            })
+            .UseMauiCommunityToolkit()
+            .UseSkiaSharp()
 #if DEBUG
-			//.EnableMauiReactorHotReload()
+            //.EnableMauiReactorHotReload()
 #endif
 
-			.ConfigureFonts(fonts =>
-			{
-				fonts.AddFont("Inter-Regular.ttf", "InterRegular");
-				fonts.AddFont("Inter-SemiBold.ttf", "InterSemiBold");
-				fonts.AddFont("Poppins-Bold.ttf", "PoppinsBold");
-			});
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
 
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
-		return builder;
-	}
+        return builder;
+    }
 }
