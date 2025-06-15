@@ -12,10 +12,14 @@ class MainPage : Component
     {
         return new Shell()
         {
-            new FlyoutItem()
+            new FlyoutItem("Counter")
             {
                 new CounterPage()
             },
+            new FlyoutItem("Counter with service")
+            {
+                new CounterWithServicePage()
+            }
         }
         .ItemTemplate(RenderItemTemplate);
     }
