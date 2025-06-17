@@ -15,7 +15,8 @@ class MainPage : Component
                 FlyoutItem("Counter with service", new CounterWithServicePage()),
                 FlyoutItem("Parameters", new ParametersPage()),
                 FlyoutItem("CollectionView", new CollectionViewPage()),
-                FlyoutItem("EditableCollectionView", new EditableCollectionViewPage())
+                FlyoutItem("EditableCollectionView", new EditableCollectionViewPage()),
+                FlyoutItem("ListView", new ListViewPage())
             )
             .ItemTemplate(RenderItemTemplate);
     }
