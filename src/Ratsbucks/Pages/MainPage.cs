@@ -18,7 +18,8 @@ class MainPage : Component
                 FlyoutItem("EditableCollectionView", new EditableCollectionViewPage()),
                 FlyoutItem("ListView", new ListViewPage()),
                 FlyoutItem("ListView Extended Test", new ListViewExtendedTestPage()),
-                FlyoutItem("AnimationBasics", new AnimationBasics())
+                FlyoutItem("AnimationBasics", new AnimationBasics()),
+                FlyoutItem("CardsAnimationPage", new CardsAnimationPage())
             )
             .ItemTemplate(RenderItemTemplate);
     }
