@@ -14,11 +14,14 @@ public static class MauiProgramExtensions
     {
         builder
             .UseMauiCommunityToolkit()
-            .UseMauiReactorApp<MainPage>(app => { app.UseTheme<ApplicationTheme>(); })
+            .UseMauiReactorApp<MainPage>(app =>
+            {
+                app.UseTheme<ApplicationTheme>();
+            }, unhandledExceptionAction: args =>
+            {
+                Console.WriteLine(args.ExceptionObject);
+            })
             .UseSkiaSharp()
-#if DEBUG
-            //.EnableMauiReactorHotReload()
-#endif
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
