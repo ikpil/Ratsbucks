@@ -20,7 +20,8 @@ class MainPage : Component
                 FlyoutItem("ListView Extended Test", new ListViewExtendedTestPage()),
                 FlyoutItem("AnimationBasics", new AnimationBasics()),
                 FlyoutItem("CardsAnimationPage", new CardsAnimationPage()),
-                FlyoutItem("CanvasCardsAnimationPage", new CanvasCardsAnimationPage())
+                FlyoutItem("CanvasCardsAnimationPage", new CanvasCardsAnimationPage()),
+                FlyoutItem("Image", new ImagePage())
             )
             .ItemTemplate(RenderItemTemplate);
     }

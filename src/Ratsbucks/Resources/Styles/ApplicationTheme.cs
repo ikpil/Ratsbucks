@@ -1,6 +1,5 @@
 ﻿using MauiReactor;
 using MauiReactor.Shapes;
-using MauiControls = Microsoft.Maui.Controls;
 
 namespace Ratsbucks.Resources.Styles;
 
