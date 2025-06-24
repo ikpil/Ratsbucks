@@ -23,8 +23,8 @@ class MainPage : Component
                 FlyoutItem("CanvasCardsAnimationPage", new CanvasCardsAnimationPage()),
                 FlyoutItem("Image", new ImagePage()),
                 FlyoutItem("AnimatedCollectionViewPage", new AnimatedCollectionViewPage()),
-                FlyoutItem("AnimationShowcasePage", new AnimationShowcasePage())
-                
+                FlyoutItem("AnimationShowcasePage", new AnimationShowcasePage()),
+                FlyoutItem("AnimationLoopPage", new AnimationLoopPage())
             )
             .ItemTemplate(RenderItemTemplate);
     }
