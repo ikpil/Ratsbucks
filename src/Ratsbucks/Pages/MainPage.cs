@@ -24,7 +24,8 @@ class MainPage : Component
                 FlyoutItem("Image", new ImagePage()),
                 FlyoutItem("AnimatedCollectionViewPage", new AnimatedCollectionViewPage()),
                 FlyoutItem("AnimationShowcasePage", new AnimationShowcasePage()),
-                FlyoutItem("AnimationLoopPage", new AnimationLoopPage())
+                FlyoutItem("AnimationLoopPage", new AnimationLoopPage()),
+                FlyoutItem("NavigationMainPage", new NavigationMainPage())
             )
             .ItemTemplate(RenderItemTemplate);
     }
