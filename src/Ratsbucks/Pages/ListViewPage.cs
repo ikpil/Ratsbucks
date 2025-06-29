@@ -1,18 +1,5 @@
 ﻿using MauiReactor;
 using Ratsbucks.Models;
-using ContentPage = MauiReactor.ContentPage;
-using EntryCell = MauiReactor.EntryCell;
-using Grid = MauiReactor.Grid;
-using HorizontalStackLayout = MauiReactor.HorizontalStackLayout;
-using Image = MauiReactor.Image;
-using ImageCell = MauiReactor.ImageCell;
-using Label = MauiReactor.Label;
-using ListView = MauiReactor.ListView;
-using StackLayout = MauiReactor.StackLayout;
-using Switch = MauiReactor.Switch;
-using SwitchCell = MauiReactor.SwitchCell;
-using TextCell = MauiReactor.TextCell;
-using ViewCell = MauiReactor.ViewCell;
 
 namespace Ratsbucks.Pages;
 

@@ -1,9 +1,4 @@
-﻿using Button = MauiReactor.Button;
-using ContentPage = MauiReactor.ContentPage;
-using Entry = MauiReactor.Entry;
-using Label = MauiReactor.Label;
-using StackLayout = MauiReactor.StackLayout;
-
+﻿
 namespace Ratsbucks.Pages;
 
 public class NavigationMainPageState

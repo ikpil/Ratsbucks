@@ -2,15 +2,6 @@ using MauiReactor.Animations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using BoxView = MauiReactor.BoxView;
-using Button = MauiReactor.Button;
-using Frame = MauiReactor.Frame;
-using HorizontalStackLayout = MauiReactor.HorizontalStackLayout;
-using Label = MauiReactor.Label;
-using Picker = MauiReactor.Picker;
-using Slider = MauiReactor.Slider;
-using Switch = MauiReactor.Switch;
-using VerticalStackLayout = MauiReactor.VerticalStackLayout;
 
 namespace Ratsbucks.Pages;
 

@@ -1,7 +1,4 @@
 ﻿using MauiReactor;
-using Button = MauiReactor.Button;
-using ContentPage = MauiReactor.ContentPage;
-using Label = MauiReactor.Label;
 
 namespace Ratsbucks.Pages;
 

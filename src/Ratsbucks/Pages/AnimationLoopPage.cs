@@ -1,9 +1,5 @@
 ﻿using MauiReactor.Animations;
 using MauiReactor.Shapes;
-using ContentPage = MauiReactor.ContentPage;
-using GraphicsView = MauiReactor.GraphicsView;
-using Grid = MauiReactor.Grid;
-using Label = MauiReactor.Label;
 
 namespace Ratsbucks.Pages;
 

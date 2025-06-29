@@ -1,7 +1,5 @@
 using MauiReactor;
 using MauiReactor.Canvas;
-using ContentPage = MauiReactor.ContentPage;
-using Timer = MauiReactor.Timer;
 
 namespace Ratsbucks.Pages;
 

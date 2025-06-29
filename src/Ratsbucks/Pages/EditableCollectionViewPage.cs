@@ -1,10 +1,5 @@
 ﻿using System.Collections.ObjectModel;
 using MauiReactor;
-using Button = MauiReactor.Button;
-using CollectionView = MauiReactor.CollectionView;
-using ContentPage = MauiReactor.ContentPage;
-using Grid = MauiReactor.Grid;
-using Label = MauiReactor.Label;
 
 namespace Ratsbucks.Pages;
 

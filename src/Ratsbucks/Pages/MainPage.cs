@@ -1,8 +1,4 @@
 ﻿using MauiReactor;
-using FlyoutItem = MauiReactor.FlyoutItem;
-using Grid = MauiReactor.Grid;
-using Label = MauiReactor.Label;
-using Shell = MauiReactor.Shell;
 
 namespace Ratsbucks.Pages;
 
@@ -26,7 +22,9 @@ class MainPage : Component
                 FlyoutItem("AnimationShowcasePage", new AnimationShowcasePage()),
                 FlyoutItem("AnimationLoopPage", new AnimationLoopPage()),
                 FlyoutItem("NavigationMainPage", new NavigationMainPage()),
-                FlyoutItem("ElementRefPage", new ElementRefPage())
+                FlyoutItem("ElementRefPage", new ElementRefPage()),
+                FlyoutItem("CanvasPage", new CanvasPage()),
+                FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
     }

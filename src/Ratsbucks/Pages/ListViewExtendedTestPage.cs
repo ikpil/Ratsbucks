@@ -1,8 +1,5 @@
 ﻿using MauiReactor;
 using Ratsbucks.Models;
-using ContentPage = MauiReactor.ContentPage;
-using ListView = MauiReactor.ListView;
-using ViewCell = MauiReactor.ViewCell;
 
 namespace Ratsbucks.Pages;
 
