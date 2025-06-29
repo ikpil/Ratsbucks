@@ -33,5 +33,7 @@ global using TextCell = MauiReactor.TextCell;
 global using Entry = MauiReactor.Entry;
 global using MauiReactor.Animations;
 global using ActivityIndicator = MauiReactor.ActivityIndicator;
+global using IView = MauiReactor.IView;
+
 
 
