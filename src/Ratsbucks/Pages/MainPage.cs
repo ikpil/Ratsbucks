@@ -29,6 +29,7 @@ class MainPage : Component
                 FlyoutItem("RemainingItemsThresholdTestPage", new RemainingItemsThresholdTestPage()),
                 FlyoutItem("AnimatedButtonPage", new AnimatedButtonPage()),
                 FlyoutItem("BorderCornerRadiusPage", new BorderCornerRadiusPage()),
+                FlyoutItem("ShowPopupTestPage", new ShowPopupTestPage()),
                 FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
