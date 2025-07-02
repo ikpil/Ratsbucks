@@ -31,6 +31,7 @@ class MainPage : Component
                 FlyoutItem("BorderCornerRadiusPage", new BorderCornerRadiusPage()),
                 FlyoutItem("ShowPopupTestPage", new ShowPopupTestPage()),
                 FlyoutItem("CarouselTestPage", new CarouselTestPage()),
+                FlyoutItem("CarouselTestWithImagesPage", new CarouselTestWithImagesPage()),
                 FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
