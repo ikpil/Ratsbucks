@@ -34,6 +34,9 @@ global using Entry = MauiReactor.Entry;
 global using MauiReactor.Animations;
 global using ActivityIndicator = MauiReactor.ActivityIndicator;
 global using IView = MauiReactor.IView;
+global using CarouselView = MauiReactor.CarouselView;
+global using IndicatorView = MauiReactor.IndicatorView;
+
 
 
 

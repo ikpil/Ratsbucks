@@ -30,6 +30,7 @@ class MainPage : Component
                 FlyoutItem("AnimatedButtonPage", new AnimatedButtonPage()),
                 FlyoutItem("BorderCornerRadiusPage", new BorderCornerRadiusPage()),
                 FlyoutItem("ShowPopupTestPage", new ShowPopupTestPage()),
+                FlyoutItem("CarouselTestPage", new CarouselTestPage()),
                 FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
