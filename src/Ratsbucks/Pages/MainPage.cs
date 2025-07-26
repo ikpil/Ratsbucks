@@ -34,6 +34,7 @@ class MainPage : Component
                 FlyoutItem("CarouselTestWithImagesPage", new CarouselTestWithImagesPage()),
                 FlyoutItem("Canvas AutoV/HStack Test", new CanvasAutoStackPage()),
                 FlyoutItem("Inline components", new InlineComponentsPage()),
+                FlyoutItem("Collection View Grouped", new CollectionViewExtendedTestPage()),
                 FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
