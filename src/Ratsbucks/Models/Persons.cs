@@ -1,4 +1,7 @@
-﻿namespace Ratsbucks.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Ratsbucks.Models;
 
 public record Person(string FirstName, string LastName);
 

@@ -35,6 +35,7 @@ class MainPage : Component
                 FlyoutItem("Canvas AutoV/HStack Test", new CanvasAutoStackPage()),
                 FlyoutItem("Inline components", new InlineComponentsPage()),
                 FlyoutItem("Collection View Grouped", new CollectionViewExtendedTestPage()),
+                FlyoutItem("Drag & Drop", new DragDropTestPage()),
                 FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
