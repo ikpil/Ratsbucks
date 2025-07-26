@@ -28,10 +28,11 @@ class MainPage : Component
                 FlyoutItem("GraphicsViewPage", new GraphicsViewPage()),
                 FlyoutItem("RemainingItemsThresholdTestPage", new RemainingItemsThresholdTestPage()),
                 FlyoutItem("AnimatedButtonPage", new AnimatedButtonPage()),
-                FlyoutItem("BorderCornerRadiusPage", new BorderCornerRadiusPage()),
                 FlyoutItem("ShowPopupTestPage", new ShowPopupTestPage()),
                 FlyoutItem("CarouselTestPage", new CarouselTestPage()),
                 FlyoutItem("CarouselTestWithImagesPage", new CarouselTestWithImagesPage()),
+                FlyoutItem("Canvas AutoV/HStack Test", new CanvasAutoStackPage()),
+                FlyoutItem("Border Corner Radius Test", new BorderCornerRadiusPage()),
                 FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
