@@ -40,6 +40,7 @@ class MainPage : Component
                 FlyoutItem("Behavior Test", new BehaviorTestPage()),
                 FlyoutItem("Pickers Page", new PickerPage()),
                 FlyoutItem("Visual State Test Page", new VisualStateTestPage()),
+                FlyoutItem("FormattedText Test Page", new FormattedTextTestPage()),
                 FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
