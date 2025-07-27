@@ -37,6 +37,7 @@ class MainPage : Component
                 FlyoutItem("Collection View Grouped", new CollectionViewExtendedTestPage()),
                 FlyoutItem("Drag & Drop", new DragDropTestPage()),
                 FlyoutItem("Gradient Test", new GradientPage()),
+                FlyoutItem("Behavior Test", new BehaviorTestPage()),
                 FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
