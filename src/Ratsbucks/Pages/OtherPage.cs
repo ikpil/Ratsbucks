@@ -4,6 +4,6 @@ public class OtherPage : Component
 {
     public override VisualNode Render()
     {
-        throw new NotImplementedException();
+        return ContentPage("OtherPage");
     }
 }

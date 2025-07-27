@@ -15,7 +15,7 @@ public static class MauiProgramExtensions
     {
         builder
             .UseMauiCommunityToolkit()
-            .UseMauiReactorApp<AppShell>(app =>
+            .UseMauiReactorApp<HomePage>(app =>
             {
                 app.UseTheme<ApplicationTheme>();
             }, unhandledExceptionAction: args =>

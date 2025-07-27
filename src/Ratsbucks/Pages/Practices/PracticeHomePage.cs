@@ -1,6 +1,6 @@
 ﻿namespace Ratsbucks.Pages.Practices;
 
-public class HomePage : Component
+public class PracticeHomePage : Component
 {
     public override VisualNode Render()
     {
