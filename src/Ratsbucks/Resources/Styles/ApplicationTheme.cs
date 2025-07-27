@@ -42,6 +42,13 @@ public class ApplicationTheme : Theme
     public static Brush Gray900Brush { get; } = new SolidColorBrush(Gray900);
     public static Brush Gray950Brush { get; } = new SolidColorBrush(Gray950);
 
+    public static void ToggleCurrentAppTheme()
+    {
+        if (Application.Current != null)
+        {
+            Application.Current.UserAppTheme = IsDarkTheme ? AppTheme.Light : AppTheme.Dark;
+        }
+    }
 
 
     protected override void OnApply()
