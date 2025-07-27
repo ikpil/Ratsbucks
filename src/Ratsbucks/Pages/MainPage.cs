@@ -44,6 +44,7 @@ class MainPage : Component
                 FlyoutItem("Theming Test Page", new ThemeTestPage()),
                 FlyoutItem("CollectionView Multiple Selection Test Page", new CollectionViewSelectionPage()),
                 FlyoutItem("Animating Label Test Page", new AnimatingLabelTestPage()),
+                FlyoutItem("Grid Test Page", new GridPage()),
                 FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
