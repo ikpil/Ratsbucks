@@ -5,6 +5,11 @@ namespace Ratsbucks.Resources.Styles;
 
 public class ApplicationTheme : Theme
 {
+    public static Color DarkBackground { get; } = Color.FromArgb("#FF17171C");
+    public static Color DarkText { get; } = Color.FromArgb("#FFFFFFFF");
+    public static Color LightBackground { get; } = Color.FromArgb("#FFF1F2F3");
+    public static Color LightText { get; } = Color.FromArgb("#FF000000");
+
     public static Color Primary { get; } = Color.FromRgba(81, 43, 212, 255); // #512BD4
     public static Color PrimaryDark { get; } = Color.FromRgba(172, 153, 234, 255); // #AC99EA
     public static Color PrimaryDarkText { get; } = Color.FromRgba(36, 36, 36, 255); // #242424

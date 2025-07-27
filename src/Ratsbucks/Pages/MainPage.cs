@@ -43,6 +43,7 @@ class MainPage : Component
                 FlyoutItem("FormattedText Test Page", new FormattedTextTestPage()),
                 FlyoutItem("Theming Test Page", new ThemeTestPage()),
                 FlyoutItem("CollectionView Multiple Selection Test Page", new CollectionViewSelectionPage()),
+                FlyoutItem("Animating Label Test Page", new AnimatingLabelTestPage()),
                 FlyoutItem("EmptyPage", new EmptyPage())
             )
             .ItemTemplate(RenderItemTemplate);
