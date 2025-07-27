@@ -2,6 +2,7 @@
 using MauiReactor;
 using Ratsbucks.Pages;
 using Microsoft.Extensions.Logging;
+using Ratsbucks.Pages.Practices;
 using Ratsbucks.Resources.Styles;
 using Ratsbucks.Services;
 using SkiaSharp.Views.Maui.Controls.Hosting;
@@ -14,7 +15,7 @@ public static class MauiProgramExtensions
     {
         builder
             .UseMauiCommunityToolkit()
-            .UseMauiReactorApp<MainPage>(app =>
+            .UseMauiReactorApp<AppShell>(app =>
             {
                 app.UseTheme<ApplicationTheme>();
             }, unhandledExceptionAction: args =>
