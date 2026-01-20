@@ -24,6 +24,57 @@ class _HomeViewState extends State<HomeView> {
           physics: const BouncingScrollPhysics(),
           itemCount: 10,
           itemBuilder: (context, index) {
+            if (index == 0) {
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // 상단 영역
+                  Container(
+                    height: 100,
+                    margin: const EdgeInsets.all(8.0),
+                    color: Colors.primaries[index % Colors.primaries.length],
+                    child: Center(
+                      child: Text(
+                        'Item $index Top',
+                        style: const TextStyle(color: Colors.white, fontSize: 24),
+                      ),
+                    ),
+                  ),
+                  // 하단 영역 (좌우 스크롤)
+                  SizedBox(
+                    height: 50,
+                    child: ScrollConfiguration(
+                      behavior: ScrollConfiguration.of(context).copyWith(
+                        dragDevices: {
+                          PointerDeviceKind.touch,
+                          PointerDeviceKind.mouse,
+                        },
+                      ),
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        physics: const BouncingScrollPhysics(),
+                        itemCount: 6,
+                        itemBuilder: (context, subIndex) {
+                          return Container(
+                            width: 120,
+                            margin: const EdgeInsets.all(8.0),
+                            color: Colors.accents[subIndex % Colors.accents.length],
+                            child: Center(
+                              child: Text(
+                                'Sub Item $subIndex',
+                                style: const TextStyle(
+                                    color: Colors.white, fontSize: 16),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            }
+
             if (index == 1) {
               return SizedBox(
                 height: 200,
