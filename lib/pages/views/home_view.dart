@@ -23,9 +23,12 @@ class _HomeViewState extends State<HomeView> {
         child: CustomScrollView(
           physics: const BouncingScrollPhysics(),
           slivers: [
-            SliverPersistentHeader(
-              pinned: true,
-              delegate: _HomeHeaderDelegate(),
+            SliverSafeArea(
+              bottom: false,
+              sliver: SliverPersistentHeader(
+                pinned: true,
+                delegate: _HomeHeaderDelegate(),
+              ),
             ),
             SliverList(
               delegate: SliverChildBuilderDelegate(
@@ -102,60 +105,59 @@ class _HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
       child: Stack(
-        clipBehavior: Clip.none,
+        clipBehavior: Clip.hardEdge,
         children: [
+          // 상단 영역 (Top)
           Positioned(
-            top: -shrinkOffset,
+            bottom: 50, // 하단 메뉴 높이만큼 위로
             left: 0,
             right: 0,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // 상단 영역 (Top) - 스크롤 시 위로 사라짐
-                Container(
-                  height: 150,
-                  margin: const EdgeInsets.all(8.0),
-                  color: Colors.primaries[0],
-                  child: Center(
-                    child: Text(
-                      'Item 0 Top',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
-                    ),
-                  ),
+            height: 150,
+            child: Container(
+              color: Colors.primaries[0],
+              child: Center(
+                child: Text(
+                  'Header Top',
+                  style: const TextStyle(color: Colors.white, fontSize: 24),
                 ),
-                // 하단 영역 (Bottom) - 고정됨 (좌우 스크롤)
-                SizedBox(
-                  height: 50,
-                  child: ScrollConfiguration(
-                    behavior: ScrollConfiguration.of(context).copyWith(
-                      dragDevices: {
-                        PointerDeviceKind.touch,
-                        PointerDeviceKind.mouse,
-                      },
-                    ),
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      physics: const BouncingScrollPhysics(),
-                      itemCount: 6,
-                      itemBuilder: (context, subIndex) {
-                        return Container(
-                          width: 120,
-                          margin: const EdgeInsets.all(8.0),
-                          color:
-                              Colors.accents[subIndex % Colors.accents.length],
-                          child: Center(
-                            child: Text(
-                              'Sub Item $subIndex',
-                              style: const TextStyle(
-                                  color: Colors.white, fontSize: 16),
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                  ),
+              ),
+            ),
+          ),
+          // 하단 영역 (Bottom) - 메뉴
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: 50,
+            child: SizedBox(
+              height: 50,
+              child: ScrollConfiguration(
+                behavior: ScrollConfiguration.of(context).copyWith(
+                  dragDevices: {
+                    PointerDeviceKind.touch,
+                    PointerDeviceKind.mouse,
+                  },
                 ),
-              ],
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: 6,
+                  itemBuilder: (context, subIndex) {
+                    return Container(
+                      width: 120,
+                      margin: const EdgeInsets.all(8.0),
+                      color: Colors.accents[subIndex % Colors.accents.length],
+                      child: Center(
+                        child: Text(
+                          'Header Menu $subIndex',
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 16),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
             ),
           ),
         ],
@@ -164,10 +166,10 @@ class _HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
   }
 
   @override
-  double get maxExtent => 150 + 16 + 50; // 150(height) + 16(margin) + 50(height)
+  double get maxExtent => 150 + 50; // 최대 보여질 높이 (상단 영역 + 하단 영역)
 
   @override
-  double get minExtent => 16 + 50;
+  double get minExtent => 50; // 최소 보여질 높이 (하단 영역 높이만 남김)
 
   @override
   bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
