@@ -31,7 +31,7 @@ class _RootPageState extends State<RootPage> {
 
     return Scaffold(
       extendBody: true,
-      backgroundColor: Colors.black, // Background color for the gap
+      backgroundColor: Colors.grey[200], // Changed from black to light grey
       body: Stack(
         children: [
           // Main Body (Background)
@@ -78,22 +78,48 @@ class _RootPageState extends State<RootPage> {
             curve: Curves.easeInOutCubic,
             top: isPaySelected ? 60 : MediaQuery.of(context).size.height,
             bottom: 0,
-            left: isPaySelected ? 16 : 0, // Add side margins when visible
+            left: isPaySelected ? 16 : 0,
             right: isPaySelected ? 16 : 0,
-            child: Container(
-              decoration: const BoxDecoration(
-                color: Color(0xFFF9F9F9),
-                borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black26,
-                    blurRadius: 20,
-                    offset: Offset(0, -5),
-                  ),
-                ],
+            child: GestureDetector(
+              onVerticalDragEnd: (details) {
+                if (details.primaryVelocity! > 500) {
+                  // Swipe down detected
+                  setState(() {
+                    _selectedIndex = _previousIndex;
+                  });
+                }
+              },
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Color(0xFFF9F9F9),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black26,
+                      blurRadius: 20,
+                      offset: Offset(0, -5),
+                    ),
+                  ],
+                ),
+                clipBehavior: Clip.hardEdge,
+                child: Column(
+                  children: [
+                    // Drag Handle
+                    Center(
+                      child: Container(
+                        margin: const EdgeInsets.only(top: 12, bottom: 4),
+                        width: 40,
+                        height: 5,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(2.5),
+                        ),
+                      ),
+                    ),
+                    const Expanded(child: PayView()),
+                  ],
+                ),
               ),
-              clipBehavior: Clip.hardEdge,
-              child: const PayView(),
             ),
           ),
         ],
