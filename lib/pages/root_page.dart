@@ -85,10 +85,10 @@ class _RootPageState extends State<RootPage> {
           AnimatedPositioned(
             duration: _isDraggingPayView ? Duration.zero : const Duration(milliseconds: 300),
             curve: Curves.easeInOutCubic,
-            top: isPaySelected ? 60 + _payViewDragOffset : MediaQuery.of(context).size.height,
-            bottom: 0,
+            top: isPaySelected ? 120 + _payViewDragOffset : MediaQuery.of(context).size.height,
             left: isPaySelected ? 16 : 0,
             right: isPaySelected ? 16 : 0,
+            bottom: isPaySelected ? 0 : null,
             child: GestureDetector(
               onVerticalDragStart: (details) {
                 if (isPaySelected) {
