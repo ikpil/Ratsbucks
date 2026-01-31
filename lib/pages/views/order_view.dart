@@ -10,6 +10,11 @@ class OrderView extends StatefulWidget {
 class _OrderViewState extends State<OrderView> {
   int _selectedCategoryIndex = 0;
   final List<String> _mainCategories = ['음료', '푸드', '상품'];
+  late PageController _pageController;
+
+  // 상세 페이지 상태 관리를 위한 변수
+  String? _detailTitle;
+  List<Map<String, dynamic>>? _detailItems;
 
   // Helper to duplicate data for scroll testing
   List<Map<String, dynamic>> _repeat(List<Map<String, dynamic>> list, int times) {
@@ -25,6 +30,8 @@ class _OrderViewState extends State<OrderView> {
   @override
   void initState() {
     super.initState();
+    _pageController = PageController(initialPage: 0);
+    
     // Initialize with more data for scroll testing
     _beverageMenu = {
       '콜드 브루': _repeat([
@@ -116,108 +123,154 @@ class _OrderViewState extends State<OrderView> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: false,
-        titleSpacing: 24,
-        title: const Text(
-          'Order',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 28,
-            letterSpacing: -0.5,
-          ),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.search, color: Colors.black, size: 28),
-            padding: const EdgeInsets.only(right: 20),
-          ),
-        ],
-      ),
-      body: Column(
-        children: [
-          // Custom Tab Bar (Quick Menu Style)
-          Container(
-            height: 60,
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: ListView.separated(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              scrollDirection: Axis.horizontal,
-              itemCount: _mainCategories.length,
-              separatorBuilder: (context, index) => const SizedBox(width: 12),
-              itemBuilder: (context, index) {
-                final isSelected = _selectedCategoryIndex == index;
-                return GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      _selectedCategoryIndex = index;
-                    });
-                  },
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 200),
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: isSelected ? const Color(0xFF00704A) : Colors.white,
-                      borderRadius: BorderRadius.circular(22),
-                      border: Border.all(
-                        color: isSelected ? const Color(0xFF00704A) : Colors.grey.shade300,
-                        width: 1,
-                      ),
-                      boxShadow: isSelected
-                          ? [
-                              BoxShadow(
-                                color: const Color(0xFF00704A).withOpacity(0.3),
-                                blurRadius: 8,
-                                offset: const Offset(0, 4),
-                              ),
-                            ]
-                          : null,
-                    ),
-                    child: Text(
-                      _mainCategories[index],
-                      style: TextStyle(
-                        color: isSelected ? Colors.white : Colors.grey[600],
-                        fontSize: 15,
-                        fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-                        letterSpacing: -0.3,
-                      ),
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
-          
-          const Divider(height: 1, thickness: 1, color: Color(0xFFF0F0F0)),
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
 
-          // Main Content List
-          Expanded(
-            child: _buildBody(),
-          ),
-        ],
-      ),
+  void _onCategoryTap(int index) {
+    setState(() {
+      _selectedCategoryIndex = index;
+    });
+    _pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
     );
   }
 
-  Widget _buildBody() {
-    switch (_selectedCategoryIndex) {
-      case 0:
-        return _buildCategoryList(_beverageMenu, 'assets/images/coffee_icon.png');
-      case 1:
-        return _buildCategoryList(_foodMenu, 'assets/images/cake_icon.png');
-      case 2:
-        return _buildCategoryList(_goodsMenu, 'assets/images/mug_icon.png');
-      default:
-        return Container();
-    }
+  void _onPageChanged(int index) {
+    setState(() {
+      _selectedCategoryIndex = index;
+    });
+  }
+
+  void _openDetail(String title, List<Map<String, dynamic>> items) {
+    setState(() {
+      _detailTitle = title;
+      _detailItems = items;
+    });
+  }
+
+  void _closeDetail() {
+    setState(() {
+      _detailTitle = null;
+      _detailItems = null;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // 상세 페이지가 열려있으면 백 버튼으로 닫기 처리
+    return PopScope(
+      canPop: _detailTitle == null,
+      onPopInvoked: (didPop) {
+        if (didPop) return;
+        if (_detailTitle != null) {
+          _closeDetail();
+        }
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          leading: _detailTitle != null
+              ? IconButton(
+                  icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.black),
+                  onPressed: _closeDetail,
+                )
+              : null,
+          centerTitle: _detailTitle != null, // 상세 페이지일 땐 가운데 정렬
+          titleSpacing: _detailTitle != null ? 0 : 24,
+          title: Text(
+            _detailTitle ?? 'Order',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: _detailTitle != null ? 18 : 28,
+              letterSpacing: _detailTitle != null ? 0 : -0.5,
+            ),
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search, color: Colors.black, size: 28),
+              padding: const EdgeInsets.only(right: 20),
+            ),
+          ],
+        ),
+        body: _detailTitle != null
+            ? _buildDetailView() // 상세 페이지
+            : Column(
+                children: [
+                  // 상단 탭 (Quick Menu Style)
+                  Container(
+                    height: 60,
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: ListView.separated(
+                      padding: const EdgeInsets.symmetric(horizontal: 24),
+                      scrollDirection: Axis.horizontal,
+                      itemCount: _mainCategories.length,
+                      separatorBuilder: (context, index) => const SizedBox(width: 12),
+                      itemBuilder: (context, index) {
+                        final isSelected = _selectedCategoryIndex == index;
+                        return GestureDetector(
+                          onTap: () => _onCategoryTap(index),
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 200),
+                            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: isSelected ? const Color(0xFF00704A) : Colors.white,
+                              borderRadius: BorderRadius.circular(22),
+                              border: Border.all(
+                                color: isSelected ? const Color(0xFF00704A) : Colors.grey.shade300,
+                                width: 1,
+                              ),
+                              boxShadow: isSelected
+                                  ? [
+                                      BoxShadow(
+                                        color: const Color(0xFF00704A).withOpacity(0.3),
+                                        blurRadius: 8,
+                                        offset: const Offset(0, 4),
+                                      ),
+                                    ]
+                                  : null,
+                            ),
+                            child: Text(
+                              _mainCategories[index],
+                              style: TextStyle(
+                                color: isSelected ? Colors.white : Colors.grey[600],
+                                fontSize: 15,
+                                fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
+                                letterSpacing: -0.3,
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+
+                  const Divider(height: 1, thickness: 1, color: Color(0xFFF0F0F0)),
+
+                  // PageView로 좌우 스와이프 구현
+                  Expanded(
+                    child: PageView(
+                      controller: _pageController,
+                      onPageChanged: _onPageChanged,
+                      children: [
+                        _buildCategoryList(_beverageMenu, 'assets/images/coffee_icon.png'),
+                        _buildCategoryList(_foodMenu, 'assets/images/cake_icon.png'),
+                        _buildCategoryList(_goodsMenu, 'assets/images/mug_icon.png'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+      ),
+    );
   }
 
   Widget _buildCategoryList(Map<String, List<Map<String, dynamic>>> menuData, String iconAsset) {
@@ -233,17 +286,7 @@ class _OrderViewState extends State<OrderView> {
           child: Material(
             color: Colors.transparent,
             child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => MenuListView(
-                      title: category,
-                      items: items,
-                    ),
-                  ),
-                );
-              },
+              onTap: () => _openDetail(category, items),
               borderRadius: BorderRadius.circular(16),
               child: Container(
                 padding: const EdgeInsets.all(20),
@@ -315,6 +358,91 @@ class _OrderViewState extends State<OrderView> {
     );
   }
 
+  Widget _buildDetailView() {
+    // 상세 페이지 뷰
+    return ListView.separated(
+      physics: const BouncingScrollPhysics(),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 120),
+      itemCount: _detailItems?.length ?? 0,
+      separatorBuilder: (context, index) => const Divider(height: 32, thickness: 0.5),
+      itemBuilder: (context, index) {
+        final item = _detailItems![index];
+        return Container(
+          padding: const EdgeInsets.symmetric(vertical: 4),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // Menu Image
+              Container(
+                width: 86,
+                height: 86,
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade50,
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Icon(
+                    Icons.coffee_rounded,
+                    color: Colors.grey.shade300,
+                    size: 42,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 20),
+              // Menu Details
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      item['name'],
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87,
+                        letterSpacing: -0.3,
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      item['en'] ?? '',
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.grey.shade500,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      item['price'],
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF00704A),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // Like Button
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.favorite_border_rounded),
+                color: Colors.grey.shade400,
+                splashRadius: 24,
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  // Icons & Helpers...
   IconData _getIconForCategory(String category) {
     if (category.contains('콜드') || category.contains('에스프레소')) return Icons.coffee_rounded;
     if (category.contains('프라푸치노') || category.contains('블렌디드')) return Icons.local_drink_rounded;
@@ -339,120 +467,5 @@ class _OrderViewState extends State<OrderView> {
     if (category.contains('머그')) return 'Mug & Glass';
     if (category.contains('텀블러')) return 'Tumbler';
     return category;
-  }
-}
-
-class MenuListView extends StatelessWidget {
-  final String title;
-  final List<Map<String, dynamic>> items;
-
-  const MenuListView({
-    super.key,
-    required this.title,
-    required this.items,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.black),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: Text(
-          title,
-          style: const TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
-          ),
-        ),
-        centerTitle: true,
-      ),
-      body: ListView.separated(
-        physics: const BouncingScrollPhysics(),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        itemCount: items.length,
-        separatorBuilder: (context, index) => const Divider(height: 32, thickness: 0.5),
-        itemBuilder: (context, index) {
-          final item = items[index];
-          return Container(
-            padding: const EdgeInsets.symmetric(vertical: 4),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                // Menu Image
-                Container(
-                  width: 86,
-                  height: 86,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade50,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Center(
-                    child: Icon(
-                      Icons.coffee_rounded,
-                      color: Colors.grey.shade300,
-                      size: 42,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 20),
-                // Menu Details
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        item['name'],
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87,
-                          letterSpacing: -0.3,
-                        ),
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        item['en'] ?? '',
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.grey.shade500,
-                        ),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        item['price'],
-                        style: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xFF00704A),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                // Like Button
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.favorite_border_rounded),
-                  color: Colors.grey.shade400,
-                  splashRadius: 24,
-                ),
-              ],
-            ),
-          );
-        },
-      ),
-    );
   }
 }
