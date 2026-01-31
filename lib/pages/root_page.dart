@@ -17,6 +17,8 @@ class RootPage extends StatefulWidget {
 class _RootPageState extends State<RootPage> {
   int _selectedIndex = 0;
   int _previousIndex = 0;
+  double _payViewDragOffset = 0.0;
+  bool _isDraggingPayView = false;
 
   final List<Map<String, dynamic>> _navItems = [
     {'label': 'Home', 'icon': Icons.house_rounded},
@@ -81,22 +83,52 @@ class _RootPageState extends State<RootPage> {
 
           // Pay View (Overlay)
           AnimatedPositioned(
-            duration: const Duration(milliseconds: 400),
+            duration: _isDraggingPayView ? Duration.zero : const Duration(milliseconds: 300),
             curve: Curves.easeInOutCubic,
-            top: isPaySelected ? 60 : MediaQuery.of(context).size.height,
+            top: isPaySelected ? 60 + _payViewDragOffset : MediaQuery.of(context).size.height,
             bottom: 0,
             left: isPaySelected ? 16 : 0,
             right: isPaySelected ? 16 : 0,
             child: GestureDetector(
-              onVerticalDragEnd: (details) {
-                if (details.primaryVelocity! > 500) {
-                  // Swipe down detected
+              onVerticalDragStart: (details) {
+                if (isPaySelected) {
                   setState(() {
-                    _selectedIndex = _previousIndex;
+                    _isDraggingPayView = true;
                   });
                 }
               },
-              child: Container(
+              onVerticalDragUpdate: (details) {
+                if (isPaySelected && _isDraggingPayView) {
+                  setState(() {
+                    // Follow user's finger but prevent moving above original position
+                    final newOffset = _payViewDragOffset + details.delta.dy;
+                    _payViewDragOffset = newOffset.clamp(0.0, MediaQuery.of(context).size.height);
+                  });
+                }
+              },
+              onVerticalDragEnd: (details) {
+                if (isPaySelected && _isDraggingPayView) {
+                  setState(() {
+                    _isDraggingPayView = false;
+
+                    final screenHeight = MediaQuery.of(context).size.height;
+                    final dismissThreshold = screenHeight * 0.25;
+                    final isVelocityEnough = details.primaryVelocity! > 600;
+
+                    if (_payViewDragOffset > dismissThreshold || isVelocityEnough) {
+                      // Close
+                      _selectedIndex = _previousIndex;
+                      _payViewDragOffset = 0.0;
+                    } else {
+                      // Snap back
+                      _payViewDragOffset = 0.0;
+                    }
+                  });
+                }
+              },
+              child: AnimatedContainer(
+                duration: _isDraggingPayView ? Duration.zero : const Duration(milliseconds: 300),
+                curve: Curves.easeOutCubic,
                 decoration: const BoxDecoration(
                   color: Color(0xFFF9F9F9),
                   borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
