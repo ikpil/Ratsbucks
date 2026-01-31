@@ -124,8 +124,8 @@ class _OrderViewState extends State<OrderView> with TickerProviderStateMixin {
                       SliverPersistentHeader(
                         pinned: true,
                         delegate: _SliverAppBarDelegate(
-                          minHeight: 60.0,
-                          maxHeight: 60.0,
+                          minHeight: 61.0,
+                          maxHeight: 61.0,
                           child: Container(
                             color: Colors.white,
                             child: Column(
