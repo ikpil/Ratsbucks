@@ -31,6 +31,13 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     final isPaySelected = _selectedIndex == 1;
+    
+    // Calculate scale and opacity based on drag offset
+    final screenHeight = MediaQuery.of(context).size.height;
+    final dismissThreshold = screenHeight * 0.25;
+    final dragRatio = (_payViewDragOffset / dismissThreshold).clamp(0.0, 1.0);
+    final scaleValue = 0.92 + (0.08 * dragRatio); // Scale from 0.92 to 1.0
+    final opacityValue = 0.8 + (0.2 * dragRatio); // Opacity from 0.8 to 1.0
 
     return Scaffold(
       extendBody: true,
@@ -45,13 +52,12 @@ class _RootPageState extends State<RootPage> {
 
           // Main Body (Background)
           AnimatedContainer(
-            duration: const Duration(milliseconds: 300),
+            duration: _isDraggingPayView ? Duration.zero : const Duration(milliseconds: 300),
             curve: Curves.easeInOut,
             // Use alignment to keep it centered when scaling
             alignment: Alignment.center,
             transform: Matrix4.identity()
-              ..scale(isPaySelected ? 0.92 : 1.0)
-              ..translate(0.0, isPaySelected ? -20.0 : 0.0), // Slightly move up
+              ..scale(isPaySelected ? scaleValue : 1.0),
             transformAlignment: Alignment.center, // Scale from center
             decoration: BoxDecoration(
               borderRadius:
@@ -60,7 +66,7 @@ class _RootPageState extends State<RootPage> {
             ),
             clipBehavior: Clip.hardEdge,
             child: Opacity(
-              opacity: isPaySelected ? 0.8 : 1.0,
+              opacity: isPaySelected ? opacityValue : 1.0,
               child: IgnorePointer(
                 ignoring: isPaySelected,
                 child: Container(
