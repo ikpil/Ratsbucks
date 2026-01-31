@@ -52,6 +52,9 @@ class _HomeViewState extends State<HomeView> {
                 childCount: 3,
               ),
             ),
+            const SliverToBoxAdapter(
+              child: SizedBox(height: 120),
+            ),
           ],
         ),
       ),
