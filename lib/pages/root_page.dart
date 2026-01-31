@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/glass_navbar.dart';
+import '../widgets/space_background.dart';
 import 'views/home_view.dart';
 import 'views/pay_view.dart';
 import 'views/order_view.dart';
@@ -31,9 +32,15 @@ class _RootPageState extends State<RootPage> {
 
     return Scaffold(
       extendBody: true,
-      backgroundColor: Colors.grey[200], // Changed from black to light grey
+      backgroundColor: Colors.black, // Fallback color
       body: Stack(
         children: [
+          // Space Background
+          if (isPaySelected)
+            const Positioned.fill(
+              child: SpaceBackground(),
+            ),
+
           // Main Body (Background)
           AnimatedContainer(
             duration: const Duration(milliseconds: 300),
