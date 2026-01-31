@@ -15,6 +15,7 @@ class OrderCategoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.only(top: 16, left: 20, right: 20, bottom: 120),
       itemCount: menuData.keys.length,
       itemBuilder: (context, index) {

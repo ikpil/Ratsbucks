@@ -74,75 +74,120 @@ class _OrderViewState extends State<OrderView> with TickerProviderStateMixin {
           _closeDetail();
         }
       },
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          leading: _detailTitle != null
-              ? IconButton(
-                  icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.black),
-                  onPressed: _closeDetail,
-                )
-              : null,
-          centerTitle: _detailTitle != null, // 상세 페이지일 땐 가운데 정렬
-          titleSpacing: _detailTitle != null ? 0 : 24,
-          title: Text(
-            _detailTitle ?? 'Order',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: _detailTitle != null ? 18 : 28,
-              letterSpacing: _detailTitle != null ? 0 : -0.5,
-            ),
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.search, color: Colors.black, size: 28),
-              padding: const EdgeInsets.only(right: 20),
-            ),
-          ],
-        ),
-        body: _detailTitle != null
-            ? OrderDetailView(items: _detailItems!)
-            : Column(
-                children: [
-                  OrderCategoryTab(
-                    selectedIndex: _selectedCategoryIndex,
-                    categories: _mainCategories,
-                    onCategoryTap: _onCategoryTap,
-                  ),
-
-                  const Divider(height: 1, thickness: 1, color: Color(0xFFF0F0F0)),
-
-                  Expanded(
-                    child: PageView(
-                      controller: _pageController,
-                      onPageChanged: _onPageChanged,
-                      children: [
-                        OrderCategoryList(
-                          menuData: MenuData.beverageMenu,
-                          onCategoryTap: _openDetail,
-                          iconAsset: 'assets/images/coffee_icon.png',
+      child: _detailTitle != null
+          ? OrderDetailView(
+              title: _detailTitle!,
+              items: _detailItems!,
+              onPop: _closeDetail,
+            )
+          : Scaffold(
+              backgroundColor: Colors.white,
+              body: NestedScrollView(
+                physics: const BouncingScrollPhysics(),
+                headerSliverBuilder: (context, innerBoxIsScrolled) {
+                  return [
+                    SliverAppBar(
+                      backgroundColor: Colors.white,
+                      expandedHeight: 120.0,
+                      floating: false,
+                      pinned: true,
+                      elevation: 0,
+                      flexibleSpace: FlexibleSpaceBar(
+                        titlePadding: const EdgeInsets.only(left: 24, bottom: 16),
+                        title: const Text(
+                          'Order',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 28,
+                          ),
                         ),
-                        OrderCategoryList(
-                          menuData: MenuData.foodMenu,
-                          onCategoryTap: _openDetail,
-                          iconAsset: 'assets/images/cake_icon.png',
-                        ),
-                        OrderCategoryList(
-                          menuData: MenuData.goodsMenu,
-                          onCategoryTap: _openDetail,
-                          iconAsset: 'assets/images/mug_icon.png',
+                        background: Container(color: Colors.white),
+                        centerTitle: false,
+                      ),
+                      actions: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.search, color: Colors.black, size: 28),
+                          padding: const EdgeInsets.only(right: 20),
                         ),
                       ],
                     ),
-                  ),
-                ],
+                    SliverPersistentHeader(
+                      pinned: true,
+                      delegate: _SliverAppBarDelegate(
+                        minHeight: 60.0,
+                        maxHeight: 60.0,
+                        child: Container(
+                          color: Colors.white,
+                          child: Column(
+                            children: [
+                              OrderCategoryTab(
+                                selectedIndex: _selectedCategoryIndex,
+                                categories: _mainCategories,
+                                onCategoryTap: _onCategoryTap,
+                              ),
+                              const Divider(height: 1, thickness: 1, color: Color(0xFFF0F0F0)),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ];
+                },
+                body: PageView(
+                  controller: _pageController,
+                  onPageChanged: _onPageChanged,
+                  children: [
+                    OrderCategoryList(
+                      menuData: MenuData.beverageMenu,
+                      onCategoryTap: _openDetail,
+                      iconAsset: 'assets/images/coffee_icon.png',
+                    ),
+                    OrderCategoryList(
+                      menuData: MenuData.foodMenu,
+                      onCategoryTap: _openDetail,
+                      iconAsset: 'assets/images/cake_icon.png',
+                    ),
+                    OrderCategoryList(
+                      menuData: MenuData.goodsMenu,
+                      onCategoryTap: _openDetail,
+                      iconAsset: 'assets/images/mug_icon.png',
+                    ),
+                  ],
+                ),
               ),
-      ),
+            ),
     );
   }
+}
 
+class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
+  final double minHeight;
+  final double maxHeight;
+  final Widget child;
+
+  _SliverAppBarDelegate({
+    required this.minHeight,
+    required this.maxHeight,
+    required this.child,
+  });
+
+  @override
+  double get minExtent => minHeight;
+
+  @override
+  double get maxExtent => maxHeight;
+
+  @override
+  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return SizedBox.expand(child: child);
+  }
+
+  @override
+  bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
+    return maxHeight != oldDelegate.maxHeight ||
+        minHeight != oldDelegate.minHeight ||
+        child != oldDelegate.child;
+  }
 }
