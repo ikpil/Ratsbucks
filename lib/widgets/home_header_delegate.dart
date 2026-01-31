@@ -105,18 +105,44 @@ class HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
                     ];
                     final isSelected = index == 0;
 
-                    return Container(
-                      margin: const EdgeInsets.only(right: 24),
-                      alignment: Alignment.center,
-                      child: Text(
-                        menus[index],
-                        style: TextStyle(
+                    return Center(
+                      child: Container(
+                        margin: const EdgeInsets.only(right: 10),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 8,
+                        ),
+                        decoration: BoxDecoration(
                           color: isSelected
                               ? const Color(0xFF00704A)
-                              : Colors.grey[600],
-                          fontSize: 15,
-                          fontWeight:
-                              isSelected ? FontWeight.bold : FontWeight.w500,
+                              : Colors.white,
+                          borderRadius: BorderRadius.circular(25),
+                          border: Border.all(
+                            color: isSelected
+                                ? const Color(0xFF00704A)
+                                : Colors.grey.shade300,
+                            width: 1,
+                          ),
+                          boxShadow: isSelected
+                              ? [
+                                  BoxShadow(
+                                    color: const Color(0xFF00704A)
+                                        .withOpacity(0.3),
+                                    blurRadius: 8,
+                                    offset: const Offset(0, 4),
+                                  ),
+                                ]
+                              : null,
+                        ),
+                        child: Text(
+                          menus[index],
+                          style: TextStyle(
+                            color: isSelected ? Colors.white : Colors.grey[600],
+                            fontSize: 14,
+                            fontWeight:
+                                isSelected ? FontWeight.bold : FontWeight.w500,
+                            letterSpacing: -0.3,
+                          ),
                         ),
                       ),
                     );
