@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-import 'dart:ui';
+import 'package:flutter/gestures.dart';
 import 'pay_card.dart';
 
 class PayCardCarousel extends StatelessWidget {
-  const PayCardCarousel({super.key});
+  final List<Map<String, dynamic>> cards;
+
+  const PayCardCarousel({
+    super.key,
+    required this.cards,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,36 +21,22 @@ class PayCardCarousel extends StatelessWidget {
             PointerDeviceKind.mouse,
           },
         ),
-        child: ListView(
+        child: ListView.builder(
           scrollDirection: Axis.horizontal,
           physics: const BouncingScrollPhysics(),
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          children: const [
-            PayCard(
-              type: 'Credit Card',
-              title: 'Rats Card',
-              number: '**** **** **** 1234',
-              balance: '₩ 54,000',
-              color: Color(0xFF1E3932),
-              icon: Icons.credit_card,
-            ),
-            PayCard(
-              type: 'Bitcoin',
-              title: 'My Crypto Wallet',
-              number: '0.0423 BTC',
-              balance: '₩ 2,450,000',
-              color: Color(0xFFF7931A),
-              icon: Icons.currency_bitcoin,
-            ),
-            PayCard(
-              type: 'Bank Account',
-              title: 'Star Bank',
-              number: '123-456-7890',
-              balance: 'Auto-Charge',
-              color: Color(0xFF00704A),
-              icon: Icons.account_balance,
-            ),
-          ],
+          itemCount: cards.length,
+          itemBuilder: (context, index) {
+            final card = cards[index];
+            return PayCard(
+              type: card['type'] as String,
+              title: card['title'] as String,
+              number: card['number'] as String,
+              balance: card['balance'] as String,
+              color: card['color'] as Color,
+              icon: card['icon'] as IconData,
+            );
+          },
         ),
       ),
     );
