@@ -44,10 +44,10 @@ class PayView extends StatelessWidget {
         'onTap': () {},
       },
       {
-        'icon': Icons.apple,
-        'title': 'Apple Pay',
-        'subtitle': 'Apple Pay로 빠르고 안전하게',
-        'color': Colors.black,
+        'icon': Icons.account_balance_rounded,
+        'title': '계좌 연결',
+        'subtitle': '은행 계좌를 등록하여 직불 결제하세요',
+        'color': Colors.teal.shade600,
         'onTap': () {},
       },
       {
@@ -58,17 +58,31 @@ class PayView extends StatelessWidget {
         'onTap': () {},
       },
       {
+        'icon': Icons.apple,
+        'title': 'Apple Pay',
+        'subtitle': 'Apple Pay로 빠르고 안전하게',
+        'color': Colors.black,
+        'onTap': () {},
+      },
+      {
+        'icon': Icons.face,
+        'title': '페이코',
+        'subtitle': '페이코로 빠르고 안전하게',
+        'color': Colors.black,
+        'onTap': () {},
+      },
+      {
+        'icon': Icons.face,
+        'title': '쓱페이',
+        'subtitle': '쓱!쓱! 빠르고 안전하게',
+        'color': Colors.black,
+        'onTap': () {},
+      },
+      {
         'icon': Icons.currency_bitcoin_rounded,
         'title': '암호화폐 연결',
         'subtitle': '비트코인 등 코인 지갑을 연결합니다',
         'color': Colors.orange.shade700,
-        'onTap': () {},
-      },
-      {
-        'icon': Icons.account_balance_rounded,
-        'title': '계좌 연결',
-        'subtitle': '은행 계좌를 등록하여 직불 결제하세요',
-        'color': Colors.teal.shade600,
         'onTap': () {},
       },
     ];
