@@ -144,6 +144,7 @@ class _OrderViewState extends State<OrderView> with TickerProviderStateMixin {
                     ];
                   },
                   body: PageView(
+                    physics: const NeverScrollableScrollPhysics(),
                     controller: _pageController,
                     onPageChanged: _onPageChanged,
                     children: [
