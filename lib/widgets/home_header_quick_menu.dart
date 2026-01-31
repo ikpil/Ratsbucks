@@ -18,9 +18,8 @@ class HomeHeaderQuickMenu extends StatelessWidget {
       '프리퀀시',
     ];
 
-    return Container(
+    return SizedBox(
       height: 50,
-      color: Colors.white.withOpacity(0.7),
       child: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(
           dragDevices: {

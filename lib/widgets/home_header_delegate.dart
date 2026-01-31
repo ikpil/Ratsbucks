@@ -11,7 +11,7 @@ class HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
     final double opacity = (1.0 - percent).clamp(0.0, 1.0);
 
     return Container(
-      color: Theme.of(context).scaffoldBackgroundColor,
+      color: Colors.transparent,
       child: Stack(
         clipBehavior: Clip.hardEdge,
         children: [
@@ -32,12 +32,15 @@ class HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
           ),
 
           // Bottom Menu (Quick Menu)
-          const Positioned(
+          Positioned(
             bottom: 0,
             left: 0,
             right: 0,
             height: 50,
-            child: HomeHeaderQuickMenu(),
+            child: Container(
+              color: Colors.white.withOpacity(0.8),
+              child: const HomeHeaderQuickMenu(),
+            ),
           ),
         ],
       ),
