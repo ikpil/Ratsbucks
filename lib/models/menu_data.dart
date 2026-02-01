@@ -659,24 +659,22 @@ class MenuData {
     '티 (Tea)': {'en': 'Tea', 'image': 'assets/images/categories/tea.jpg'},
     '브루드 커피': {
       'en': 'Brewed Coffee',
-      'image': 'assets/images/categories/mug.jpg'
-    }, // Using mug image for brewed coffee
-    '피지오': {
-      'en': 'Fizzio',
-      'image': 'assets/images/categories/cold_brew.jpg'
-    }, // Fallback
+      'image': 'assets/images/categories/brewed_coffee.jpg'
+    },
+    '피지오': {'en': 'Fizzio', 'image': 'assets/images/categories/fizzio.jpg'},
     '리프레셔': {
       'en': 'Refresher',
-      'image': 'assets/images/categories/fruit.jpg'
-    }, // Fruit like
+      'image': 'assets/images/categories/refresher.jpg'
+    },
     '미니 음료': {
       'en': 'Mini Drink',
-      'image': 'assets/images/categories/tumbler.jpg'
-    }, // Fallback
+      'image': 'assets/images/categories/fizzio.jpg'
+    },
     '병음료': {
       'en': 'Bottled Drink',
-      'image': 'assets/images/categories/fruit.jpg'
+      'image': 'assets/images/categories/bottled.jpg'
     },
+    '에이드': {'en': 'Ade', 'image': 'assets/images/categories/ade.jpg'},
 
     // Food
     '브레드': {'en': 'Bread', 'image': 'assets/images/categories/bread.jpg'},
@@ -687,7 +685,7 @@ class MenuData {
     },
     '따뜻한 푸드': {
       'en': 'Warm Food',
-      'image': 'assets/images/categories/sandwich.jpg'
+      'image': 'assets/images/categories/warm_food.jpg'
     },
     '과일 & 요거트': {
       'en': 'Fruit & Yogurt',
@@ -695,33 +693,60 @@ class MenuData {
     },
     '스낵 & 미니 디저트': {
       'en': 'Snack & Mini Dessert',
-      'image': 'assets/images/categories/cake.jpg'
+      'image': 'assets/images/categories/snack.jpg'
     },
     '아이스크림': {
       'en': 'Ice Cream',
-      'image': 'assets/images/categories/frappuccino.jpg'
-    }, // Similar texture
+      'image': 'assets/images/categories/ice_cream.jpg'
+    },
+    '수프': {'en': 'Soup', 'image': 'assets/images/categories/soup.jpg'},
+    '브런치': {'en': 'Brunch', 'image': 'assets/images/categories/brunch.jpg'},
+    '초콜릿': {
+      'en': 'Chocolate',
+      'image': 'assets/images/categories/chocolate.jpg'
+    },
+    '마카롱': {'en': 'Macaron', 'image': 'assets/images/categories/macaron.jpg'},
 
     // Goods
-    '머그': {'en': 'Mug', 'image': 'assets/images/categories/mug.jpg'},
-    '글라스': {'en': 'Glass', 'image': 'assets/images/categories/mug.jpg'},
-    '텀블러': {'en': 'Tumbler', 'image': 'assets/images/categories/tumbler.jpg'},
-    '보온병': {'en': 'Thermos', 'image': 'assets/images/categories/tumbler.jpg'},
-    '액세서리': {
-      'en': 'Accessory',
-      'image': 'assets/images/categories/tumbler.jpg'
+    '머그 & 글라스': {
+      'en': 'Mug & Glass',
+      'image': 'assets/images/categories/glass.jpg'
     },
-    '커피 용품': {
-      'en': 'Coffee Goods',
-      'image': 'assets/images/categories/mug.jpg'
+    '텀블러 & 보온병': {
+      'en': 'Tumbler & Thermos',
+      'image': 'assets/images/categories/thermos.jpg'
     },
-    '패키지 티': {
-      'en': 'Packaged Tea',
-      'image': 'assets/images/categories/tea.jpg'
+    '원두': {
+      'en': 'Whole Bean',
+      'image': 'assets/images/categories/whole_bean.jpg'
+    },
+    '비아 (VIA)': {
+      'en': 'VIA Instant',
+      'image': 'assets/images/categories/via.jpg'
+    },
+    '티 패키지': {
+      'en': 'Tea Package',
+      'image': 'assets/images/categories/tea_package.jpg'
+    },
+    '시럽 & 소스': {
+      'en': 'Syrup & Sauce',
+      'image': 'assets/images/categories/syrup.jpg'
+    },
+    '라이프스타일': {
+      'en': 'Lifestyle',
+      'image': 'assets/images/categories/lifestyle.jpg'
     },
     '기프트 카드': {
       'en': 'Gift Card',
-      'image': 'assets/images/categories/cake.jpg'
-    }, // Celebration
+      'image': 'assets/images/categories/gift_card.jpg'
+    },
+    '액세서리': {
+      'en': 'Accessory',
+      'image': 'assets/images/categories/accessory.jpg'
+    },
+    '커피 용품': {
+      'en': 'Coffee Goods',
+      'image': 'assets/images/categories/coffee_goods.jpg'
+    },
   };
 }
