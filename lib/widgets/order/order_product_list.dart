@@ -39,14 +39,10 @@ class OrderProductList extends StatelessWidget {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) {
-                if (index.isOdd) {
-                  return const Divider(height: 32, thickness: 0.5);
-                }
-                final itemIndex = index ~/ 2;
-                final item = items[itemIndex];
+                final item = items[index];
                 return OrderProductTile(item: item);
               },
-              childCount: items.length * 2 - 1,
+              childCount: items.length,
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: 120)),

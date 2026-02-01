@@ -1,63 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/models/menu_data.dart';
 
-class ParallaxFlowDelegate extends FlowDelegate {
-  ParallaxFlowDelegate({
-    required this.scrollable,
-    required this.listItemContext,
-  }) : super(repaint: scrollable.position);
-
-  final ScrollableState scrollable;
-  final BuildContext listItemContext;
-
-  @override
-  BoxConstraints getConstraintsForChild(int i, BoxConstraints constraints) {
-    // Force the background image to be taller than the item (120px) to allow parallax movement.
-    // Setting a fixed height ensures consistent behavior regardless of image aspect ratio.
-    return BoxConstraints.tightFor(
-      width: constraints.maxWidth,
-      height: 200.0, // Significantly taller than the card height
-    );
-  }
-
-  @override
-  void paintChildren(FlowPaintingContext context) {
-    if (context.childCount == 0) return;
-
-    // Calculate scroll offset of the list item within the viewport
-    final scrollableBox = scrollable.context.findRenderObject() as RenderBox;
-    final listItemBox = listItemContext.findRenderObject() as RenderBox;
-    final listItemOffset = listItemBox.localToGlobal(
-        listItemBox.size.centerLeft(Offset.zero),
-        ancestor: scrollableBox);
-
-    // Calculate the percentage of the item in the viewport
-    final viewportDimension = scrollable.position.viewportDimension;
-    final scrollFraction =
-        (listItemOffset.dy / viewportDimension).clamp(0.0, 1.0);
-
-    // Calculate the vertical alignment of the background
-    final verticalAlignment = Alignment(0.0, scrollFraction * 2 - 1);
-
-    // Paint the child
-    final backgroundSize = context.getChildSize(0) ?? Size.zero;
-    final listItemSize = context.size;
-    final childRect =
-        verticalAlignment.inscribe(backgroundSize, Offset.zero & listItemSize);
-
-    context.paintChild(
-      0,
-      transform: Matrix4.translationValues(0.0, childRect.top, 0.0),
-    );
-  }
-
-  @override
-  bool shouldRepaint(ParallaxFlowDelegate oldDelegate) {
-    return scrollable != oldDelegate.scrollable ||
-        listItemContext != oldDelegate.listItemContext;
-  }
-}
-
 class OrderSubCategoryList extends StatelessWidget {
   final int categoryIndex;
   final Function(String title, List<Map<String, dynamic>> items) onCategoryTap;
@@ -87,41 +30,37 @@ class OrderSubCategoryList extends StatelessWidget {
 
     return ListView.builder(
       physics: const BouncingScrollPhysics(),
-      padding: const EdgeInsets.only(top: 16, left: 20, right: 20, bottom: 120),
+      padding: const EdgeInsets.only(top: 16, bottom: 120),
       itemCount: menuData.keys.length,
       itemBuilder: (context, index) {
         final category = menuData.keys.elementAt(index);
         final items = menuData[category]!;
 
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 16),
-          child: ParallaxSubCategoryCard(
-            category: category,
-            onTap: () => onCategoryTap(category, items),
-          ),
+        return SubCategoryCard(
+          category: category,
+          onTap: () => onCategoryTap(category, items),
         );
       },
     );
   }
 }
 
-class ParallaxSubCategoryCard extends StatefulWidget {
+class SubCategoryCard extends StatefulWidget {
   final String category;
   final VoidCallback onTap;
 
-  const ParallaxSubCategoryCard({
+  const SubCategoryCard({
     super.key,
     required this.category,
     required this.onTap,
   });
 
   @override
-  State<ParallaxSubCategoryCard> createState() =>
-      _ParallaxSubCategoryCardState();
+  State<SubCategoryCard> createState() => _SubCategoryCardState();
 }
 
-class _ParallaxSubCategoryCardState extends State<ParallaxSubCategoryCard> {
-  final GlobalKey _backgroundImageKey = GlobalKey();
+class _SubCategoryCardState extends State<SubCategoryCard> {
+  bool _isPressed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -132,28 +71,69 @@ class _ParallaxSubCategoryCardState extends State<ParallaxSubCategoryCard> {
 
     return GestureDetector(
       onTap: widget.onTap,
-      child: Container(
-        height: 120, // Slightly reduced height for better proportion
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.06),
-              blurRadius: 16,
-              offset: const Offset(0, 4),
-            ),
-          ],
-        ),
-        clipBehavior: Clip.hardEdge,
-        child: Row(
-          children: [
-            // Text Content Area (Left Side - 60%)
-            Expanded(
-              flex: 6,
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      onTapDown: (_) => setState(() => _isPressed = true),
+      onTapUp: (_) => setState(() => _isPressed = false),
+      onTapCancel: () => setState(() => _isPressed = false),
+      child: AnimatedScale(
+        scale: _isPressed ? 0.95 : 1.0,
+        duration: const Duration(milliseconds: 100),
+        child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.05),
+                offset: const Offset(0, 4),
+                blurRadius: 16,
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              // Image Area (Embossed Circle)
+              Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: const Color(0xFFF5F5F5),
+                  border: Border.all(
+                    color: Colors.black.withOpacity(0.05),
+                    width: 1,
+                  ),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: Offset(-2, -2),
+                      blurRadius: 4,
+                    ),
+                    BoxShadow(
+                      color: Color(0xFFE0E0E0),
+                      offset: Offset(2, 2),
+                      blurRadius: 4,
+                    ),
+                  ],
+                ),
+                child: ClipOval(
+                  child: Image.asset(
+                    imagePath,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) => Center(
+                      child: Icon(
+                        Icons.coffee,
+                        size: 40,
+                        color: Colors.brown.shade300,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 24),
+              // Text Content Area
+              Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -161,7 +141,7 @@ class _ParallaxSubCategoryCardState extends State<ParallaxSubCategoryCard> {
                     Text(
                       widget.category,
                       style: const TextStyle(
-                        fontSize: 20,
+                        fontSize: 22,
                         fontWeight: FontWeight.w800,
                         color: Colors.black87,
                         letterSpacing: -0.5,
@@ -172,11 +152,11 @@ class _ParallaxSubCategoryCardState extends State<ParallaxSubCategoryCard> {
                     const SizedBox(height: 6),
                     Text(
                       englishName,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
-                        color: Colors.grey.shade500,
                         fontWeight: FontWeight.w500,
-                        letterSpacing: 0,
+                        color: Color(0xFF9E9E9E),
+                        fontStyle: FontStyle.italic,
                       ),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
@@ -184,39 +164,13 @@ class _ParallaxSubCategoryCardState extends State<ParallaxSubCategoryCard> {
                   ],
                 ),
               ),
-            ),
-
-            // Image Area (Right Side - 40% with Parallax)
-            Expanded(
-              flex: 4,
-              child: Stack(
-                fit: StackFit.expand,
-                children: [
-                  Flow(
-                    delegate: ParallaxFlowDelegate(
-                      scrollable: Scrollable.of(context),
-                      listItemContext: context,
-                    ),
-                    children: [
-                      Image.asset(
-                        imagePath,
-                        key: _backgroundImageKey,
-                        fit: BoxFit.cover,
-                        errorBuilder: (context, error, stackTrace) => Container(
-                          color: Colors.grey.shade200,
-                          child: const Center(
-                            child: Icon(Icons.coffee, color: Colors.grey),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  // Optional: Subtle separation line or shadow if needed
-                  // But user asked for distinct areas, the cut is distinct enough.
-                ],
+              Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 20,
+                color: Colors.grey.shade300,
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
