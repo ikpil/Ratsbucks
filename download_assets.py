@@ -21,8 +21,8 @@ def download_image(url, save_path):
         print(f"Failed to download {url}: {e}")
 
 def main():
-    os.makedirs('assets/images/categories', exist_ok=True)
-    os.makedirs('assets/images/products', exist_ok=True)
+    os.makedirs('assets/assets/images/categories', exist_ok=True)
+    os.makedirs('assets/assets/images/products', exist_ok=True)
 
     # Categories
     print("Processing Categories...")
@@ -33,7 +33,7 @@ def main():
                 title = row['title'].strip()
                 url = row['img']
                 filename = f"{title.replace(' ', '_').replace('/', '_').replace('-', '_').lower()}.avif"
-                save_path = os.path.join('assets/images/categories', filename)
+                save_path = os.path.join('assets/assets/images/categories', filename)
                 download_image(url, save_path)
     except Exception as e:
         print(f"Error processing categories: {e}")
@@ -67,7 +67,7 @@ def main():
 
                 if should_download:
                     filename = f"{name.replace(' ', '_').replace('/', '_').replace('-', '_').lower()}.avif"
-                    save_path = os.path.join('assets/images/products', filename)
+                    save_path = os.path.join('assets/assets/images/products', filename)
                     download_image(url, save_path)
                     count += 1
                     if count >= 50: # Limit to 50 product images to avoid taking too long/space
