@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/widgets/rats_sliver_app_bar.dart';
 
 class OrderDetailView extends StatelessWidget {
   final String title;
@@ -19,27 +20,12 @@ class OrderDetailView extends StatelessWidget {
       body: CustomScrollView(
         physics: const BouncingScrollPhysics(),
         slivers: [
-          SliverAppBar(
-            backgroundColor: Colors.white,
-            expandedHeight: 120.0,
-            floating: false,
-            pinned: true,
-            elevation: 0,
+          RatsSliverAppBar(
+            title: title,
             leading: IconButton(
-              icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.black),
+              icon: const Icon(Icons.arrow_back_ios_new_rounded,
+                  color: Colors.black),
               onPressed: onPop,
-            ),
-            flexibleSpace: FlexibleSpaceBar(
-              titlePadding: const EdgeInsets.only(left: 24, bottom: 16),
-              title: Text(
-                title,
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18, // Collapsed font size, might need adjustment for expanded
-                ),
-              ),
-              centerTitle: false,
             ),
             actions: [
               IconButton(

@@ -4,6 +4,7 @@ import 'package:my_app/models/menu_data.dart';
 import 'package:my_app/pages/views/components/order_category_list.dart';
 import 'package:my_app/pages/views/components/order_category_tab.dart';
 import 'package:my_app/pages/views/components/order_detail_view.dart';
+import 'package:my_app/widgets/rats_sliver_app_bar.dart';
 
 class OrderView extends StatefulWidget {
   const OrderView({super.key});
@@ -94,28 +95,8 @@ class _OrderViewState extends State<OrderView> with TickerProviderStateMixin {
                   physics: const BouncingScrollPhysics(),
                   headerSliverBuilder: (context, innerBoxIsScrolled) {
                     return [
-                      SliverAppBar(
-                        backgroundColor: Colors.white,
-                        expandedHeight: 120.0,
-                        floating: false,
-                        pinned: true,
-                        elevation: 0,
-                        scrolledUnderElevation: 0,
-                        surfaceTintColor: Colors.transparent,
-                        centerTitle: true,
-                        flexibleSpace: FlexibleSpaceBar(
-                          titlePadding: const EdgeInsets.only(bottom: 16),
-                          centerTitle: true,
-                          title: const Text(
-                            'Order',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 26,
-                            ),
-                          ),
-                          background: Container(color: Colors.white),
-                        ),
+                      RatsSliverAppBar(
+                        title: 'Order',
                         actions: [
                           IconButton(
                             onPressed: () {},
