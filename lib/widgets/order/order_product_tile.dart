@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../pages/views/product_detail_view.dart';
 
 class OrderProductTile extends StatefulWidget {
   final Map<String, dynamic> item;
@@ -18,6 +19,14 @@ class _OrderProductTileState extends State<OrderProductTile> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProductDetailView(item: widget.item),
+          ),
+        );
+      },
       onTapDown: (_) => setState(() => _isPressed = true),
       onTapUp: (_) => setState(() => _isPressed = false),
       onTapCancel: () => setState(() => _isPressed = false),
@@ -64,21 +73,24 @@ class _OrderProductTileState extends State<OrderProductTile> {
                     ),
                   ],
                 ),
-                child: ClipOval(
-                  child: Image.asset(
-                    widget.item['image'] ?? '',
-                    fit: BoxFit.cover,
-                    width: 80,
-                    height: 80,
-                    errorBuilder: (context, error, stackTrace) {
-                      return Center(
-                        child: Icon(
-                          Icons.coffee,
-                          size: 40,
-                          color: Colors.brown.shade300,
-                        ),
-                      );
-                    },
+                child: Hero(
+                  tag: widget.item['name'] ?? 'product_image',
+                  child: ClipOval(
+                    child: Image.asset(
+                      widget.item['image'] ?? '',
+                      fit: BoxFit.cover,
+                      width: 80,
+                      height: 80,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Center(
+                          child: Icon(
+                            Icons.coffee,
+                            size: 40,
+                            color: Colors.brown.shade300,
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
