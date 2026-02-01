@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:my_app/widgets/order/order_sub_category_list.dart';
 import 'package:my_app/widgets/order/order_main_category_tab.dart';
-import 'package:my_app/widgets/order/order_detail_view.dart';
+import 'package:my_app/widgets/order/order_product_list.dart';
 import 'package:my_app/widgets/common/rats_sliver_app_bar.dart';
 
 class OrderView extends StatefulWidget {
@@ -59,7 +59,7 @@ class _OrderViewState extends State<OrderView> {
           },
         ),
         child: _detailTitle != null
-            ? OrderDetailView(
+            ? OrderProductList(
                 title: _detailTitle!,
                 items: _detailItems!,
                 onPop: _closeDetail,
