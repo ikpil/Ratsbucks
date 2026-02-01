@@ -1,6 +1,63 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/models/menu_data.dart';
 
+class ParallaxFlowDelegate extends FlowDelegate {
+  ParallaxFlowDelegate({
+    required this.scrollable,
+    required this.listItemContext,
+    required this.backgroundImageKey,
+  }) : super(repaint: scrollable.position);
+
+  final ScrollableState scrollable;
+  final BuildContext listItemContext;
+  final GlobalKey backgroundImageKey;
+
+  @override
+  BoxConstraints getConstraintsForChild(int i, BoxConstraints constraints) {
+    return BoxConstraints.tightFor(
+      width: constraints.maxWidth,
+    );
+  }
+
+  @override
+  void paintChildren(FlowPaintingContext context) {
+    // Calculate scroll offset of the list item within the viewport
+    final scrollableBox = scrollable.context.findRenderObject() as RenderBox;
+    final listItemBox = listItemContext.findRenderObject() as RenderBox;
+    final listItemOffset = listItemBox.localToGlobal(
+        listItemBox.size.centerLeft(Offset.zero),
+        ancestor: scrollableBox);
+
+    // Calculate the percentage of the item in the viewport
+    final viewportDimension = scrollable.position.viewportDimension;
+    final scrollFraction =
+        (listItemOffset.dy / viewportDimension).clamp(0.0, 1.0);
+
+    // Calculate the vertical alignment of the background
+    final verticalAlignment = Alignment(0.0, scrollFraction * 2 - 1);
+
+    // Paint the child
+    final backgroundSize =
+        (backgroundImageKey.currentContext!.findRenderObject() as RenderBox)
+            .size;
+    final listItemSize = context.size;
+    final childRect =
+        verticalAlignment.inscribe(backgroundSize, Offset.zero & listItemSize);
+
+    context.paintChild(
+      0,
+      transform: Matrix4.translationValues(0.0, childRect.top, 0.0),
+    );
+  }
+
+  @override
+  bool shouldRepaint(ParallaxFlowDelegate oldDelegate) {
+    return scrollable != oldDelegate.scrollable ||
+        listItemContext != oldDelegate.listItemContext ||
+        backgroundImageKey != oldDelegate.backgroundImageKey;
+  }
+}
+
 class OrderSubCategoryList extends StatelessWidget {
   final int categoryIndex;
   final Function(String title, List<Map<String, dynamic>> items) onCategoryTap;
@@ -38,96 +95,156 @@ class OrderSubCategoryList extends StatelessWidget {
 
         return Padding(
           padding: const EdgeInsets.only(bottom: 16),
-          child: Material(
-            color: Colors.transparent,
-            child: InkWell(
-              onTap: () => onCategoryTap(category, items),
-              borderRadius: BorderRadius.circular(12),
-              child: Container(
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
-                      blurRadius: 10,
-                      offset: const Offset(0, 2),
-                    ),
-                  ],
+          child: ParallaxSubCategoryCard(
+            category: category,
+            onTap: () => onCategoryTap(category, items),
+          ),
+        );
+      },
+    );
+  }
+}
+
+class ParallaxSubCategoryCard extends StatefulWidget {
+  final String category;
+  final VoidCallback onTap;
+
+  const ParallaxSubCategoryCard({
+    super.key,
+    required this.category,
+    required this.onTap,
+  });
+
+  @override
+  State<ParallaxSubCategoryCard> createState() =>
+      _ParallaxSubCategoryCardState();
+}
+
+class _ParallaxSubCategoryCardState extends State<ParallaxSubCategoryCard> {
+  final GlobalKey _backgroundImageKey = GlobalKey();
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: widget.onTap,
+      child: Container(
+        height: 140,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.08),
+              blurRadius: 16,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        clipBehavior: Clip.hardEdge,
+        child: Stack(
+          children: [
+            // Background Image with Parallax
+            Positioned.fill(
+              left: 100, // Image takes right side mostly
+              child: Flow(
+                delegate: ParallaxFlowDelegate(
+                  scrollable: Scrollable.of(context),
+                  listItemContext: context,
+                  backgroundImageKey: _backgroundImageKey,
                 ),
-                child: Row(
+                children: [
+                  Image.asset(
+                    _getImagePathForCategory(widget.category),
+                    key: _backgroundImageKey,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) =>
+                        Container(color: Colors.grey.shade200),
+                  ),
+                ],
+              ),
+            ),
+
+            // Gradient Overlay for Text Readability (Left to Right)
+            Positioned.fill(
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: [
+                      Colors.white,
+                      Colors.white.withOpacity(0.8),
+                      Colors.transparent,
+                    ],
+                    stops: const [0.4, 0.6, 1.0],
+                  ),
+                ),
+              ),
+            ),
+
+            // Text Content
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 24, right: 24),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Representative Image
-                    ClipRRect(
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(12),
-                        bottomLeft: Radius.circular(12),
-                      ),
-                      child: Image.asset(
-                        _getImagePathForCategory(category),
-                        width: 100,
-                        height: 100,
-                        fit: BoxFit.cover,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Container(
-                            width: 100,
-                            height: 100,
-                            color: Colors.grey.shade100,
-                            child: Icon(
-                              _getIconForCategory(category),
-                              color: Colors.grey.shade400,
-                              size: 32,
-                            ),
-                          );
-                        },
+                    Text(
+                      widget.category,
+                      style: const TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.black87,
+                        letterSpacing: -0.5,
                       ),
                     ),
-                    const SizedBox(width: 20),
-                    // Representative Name & English Name
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                    const SizedBox(height: 6),
+                    Text(
+                      _getEnglishCategoryName(widget.category),
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.grey.shade600,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF00704A).withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: const Row(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            category,
-                            style: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black87,
-                              letterSpacing: -0.5,
+                            'View Menu',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFF00704A),
                             ),
                           ),
-                          const SizedBox(height: 4),
-                          Text(
-                            _getEnglishCategoryName(category),
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.grey.shade500,
-                              fontWeight: FontWeight.w400,
-                              letterSpacing: -0.2,
-                            ),
+                          SizedBox(width: 4),
+                          Icon(
+                            Icons.arrow_forward_rounded,
+                            size: 14,
+                            color: Color(0xFF00704A),
                           ),
                         ],
                       ),
-                    ),
-                    // Arrow Icon
-                    Padding(
-                      padding: const EdgeInsets.only(right: 20),
-                      child: Icon(
-                        Icons.arrow_forward_ios_rounded,
-                        color: Colors.grey.shade300,
-                        size: 16,
-                      ),
-                    ),
+                    )
                   ],
                 ),
               ),
             ),
-          ),
-        );
-      },
+          ],
+        ),
+      ),
     );
   }
 
@@ -156,22 +273,6 @@ class OrderSubCategoryList extends StatelessWidget {
     else if (category.contains('텀블러')) filename = 'tumbler.jpg';
 
     return 'assets/images/categories/$filename';
-  }
-
-  IconData _getIconForCategory(String category) {
-    if (category.contains('콜드') || category.contains('에스프레소'))
-      return Icons.coffee_rounded;
-    if (category.contains('프라푸치노') || category.contains('블렌디드'))
-      return Icons.local_drink_rounded;
-    if (category.contains('티')) return Icons.emoji_food_beverage_rounded;
-    if (category.contains('케이크') || category.contains('브레드'))
-      return Icons.cake_rounded;
-    if (category.contains('샌드위치')) return Icons.lunch_dining_rounded;
-    if (category.contains('과일') || category.contains('요거트'))
-      return Icons.rice_bowl_rounded;
-    if (category.contains('머그') || category.contains('텀블러'))
-      return Icons.coffee_maker_rounded;
-    return Icons.restaurant_menu_rounded;
   }
 
   String _getEnglishCategoryName(String category) {
