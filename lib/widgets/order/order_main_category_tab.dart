@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class OrderCategoryTab extends StatelessWidget {
+class OrderMainCategoryTab extends StatelessWidget {
   final int selectedIndex;
   final List<String> categories;
   final ValueChanged<int> onCategoryTap;
 
-  const OrderCategoryTab({
+  const OrderMainCategoryTab({
     super.key,
     required this.selectedIndex,
     required this.categories,
@@ -26,15 +26,16 @@ class OrderCategoryTab extends StatelessWidget {
           final isSelected = selectedIndex == index;
           return GestureDetector(
             onTap: () => onCategoryTap(index),
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 200),
+            child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: isSelected ? const Color(0xFF00704A) : Colors.white,
                 borderRadius: BorderRadius.circular(22),
                 border: Border.all(
-                  color: isSelected ? const Color(0xFF00704A) : Colors.grey.shade300,
+                  color: isSelected
+                      ? const Color(0xFF00704A)
+                      : Colors.grey.shade300,
                   width: 1,
                 ),
                 boxShadow: isSelected

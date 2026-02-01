@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/models/menu_data.dart';
 
-class OrderCategoryList extends StatelessWidget {
+class OrderSubCategoryList extends StatelessWidget {
   final int categoryIndex;
   final Function(String title, List<Map<String, dynamic>> items) onCategoryTap;
 
-  const OrderCategoryList({
+  const OrderSubCategoryList({
     super.key,
     required this.categoryIndex,
     required this.onCategoryTap,

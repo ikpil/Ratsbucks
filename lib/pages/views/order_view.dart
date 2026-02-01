@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'package:my_app/widgets/order/order_category_list.dart';
-import 'package:my_app/widgets/order/order_category_tab.dart';
+import 'package:my_app/widgets/order/order_sub_category_list.dart';
+import 'package:my_app/widgets/order/order_main_category_tab.dart';
 import 'package:my_app/widgets/order/order_detail_view.dart';
 import 'package:my_app/widgets/common/rats_sliver_app_bar.dart';
 
@@ -90,7 +90,7 @@ class _OrderViewState extends State<OrderView> {
                             color: Colors.white,
                             child: Column(
                               children: [
-                                OrderCategoryTab(
+                                OrderMainCategoryTab(
                                   selectedIndex: _selectedCategoryIndex,
                                   categories: _mainCategories,
                                   onCategoryTap: _onCategoryTap,
@@ -106,7 +106,7 @@ class _OrderViewState extends State<OrderView> {
                       ),
                     ];
                   },
-                  body: OrderCategoryList(
+                  body: OrderSubCategoryList(
                     categoryIndex: _selectedCategoryIndex,
                     onCategoryTap: _openDetail,
                   ),
