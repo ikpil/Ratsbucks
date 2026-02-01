@@ -11,14 +11,16 @@ class SpaceBackground extends StatefulWidget {
 class _SpaceBackgroundState extends State<SpaceBackground>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
+  late Animation<double> _animation;
 
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 10),
-    )..repeat();
+      duration: const Duration(seconds: 5),
+    )..repeat(reverse: true);
+    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
   }
 
   @override
@@ -30,10 +32,10 @@ class _SpaceBackgroundState extends State<SpaceBackground>
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: _controller,
+      animation: _animation,
       builder: (context, child) {
         return CustomPaint(
-          painter: _AuroraGradientPainter(_controller.value),
+          painter: _AuroraGradientPainter(_animation.value),
           size: Size.infinite,
         );
       },
@@ -53,22 +55,22 @@ class _AuroraGradientPainter extends CustomPainter {
     // Create multiple moving gradient centers based on animation
     final double t = animationValue * 2 * math.pi;
 
-    // Orb 1: Blue/Purple
+    // Orb 1: Blue (Top)
     final Offset center1 = Offset(
       size.width * (0.5 + 0.3 * math.sin(t)),
-      size.height * (0.3 + 0.2 * math.cos(t * 0.7)),
+      size.height * (0.2 + 0.1 * math.cos(t * 0.9)),
     );
 
-    // Orb 2: Orange/Pink
+    // Orb 2: Orange (Left)
     final Offset center2 = Offset(
-      size.width * (0.5 + 0.4 * math.cos(t * 0.8)),
-      size.height * (0.7 + 0.2 * math.sin(t * 0.6)),
+      size.width * (0.2 + 0.1 * math.cos(t * 0.8)),
+      size.height * (0.5 + 0.2 * math.sin(t * 0.7)),
     );
 
-    // Orb 3: Cyan/Green
+    // Orb 3: Green (Right)
     final Offset center3 = Offset(
-      size.width * (0.5 + 0.3 * math.sin(t * 1.2 + math.pi)),
-      size.height * (0.5 + 0.3 * math.cos(t * 0.9)),
+      size.width * (0.8 + 0.1 * math.sin(t * 1.1 + math.pi)),
+      size.height * (0.6 + 0.2 * math.cos(t * 0.85)),
     );
 
     // We blend these gradients by drawing them with different blend modes
@@ -79,7 +81,7 @@ class _AuroraGradientPainter extends CustomPainter {
     final paint1 = Paint()
       ..shader = RadialGradient(
         colors: [
-          const Color(0xFF4A00E0).withOpacity(0.6), // Purple
+          const Color(0xFF2196F3).withOpacity(0.6), // Blue
           Colors.transparent,
         ],
         radius: 0.8,
@@ -91,7 +93,7 @@ class _AuroraGradientPainter extends CustomPainter {
     final paint2 = Paint()
       ..shader = RadialGradient(
         colors: [
-          const Color(0xFF8E2DE2).withOpacity(0.5), // Pink/Violet
+          const Color(0xFFFF9800).withOpacity(0.5), // Orange
           Colors.transparent,
         ],
         radius: 0.7,
@@ -103,7 +105,7 @@ class _AuroraGradientPainter extends CustomPainter {
     final paint3 = Paint()
       ..shader = RadialGradient(
         colors: [
-          const Color(0xFF00C6FF).withOpacity(0.5), // Cyan
+          const Color(0xFF4CAF50).withOpacity(0.5), // Green
           Colors.transparent,
         ],
         radius: 0.9,
