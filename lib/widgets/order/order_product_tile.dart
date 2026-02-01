@@ -64,11 +64,21 @@ class _OrderProductTileState extends State<OrderProductTile> {
                     ),
                   ],
                 ),
-                child: Center(
-                  child: Icon(
-                    Icons.coffee,
-                    size: 40,
-                    color: Colors.brown.shade300,
+                child: ClipOval(
+                  child: Image.asset(
+                    widget.item['image'] ?? '',
+                    fit: BoxFit.cover,
+                    width: 80,
+                    height: 80,
+                    errorBuilder: (context, error, stackTrace) {
+                      return Center(
+                        child: Icon(
+                          Icons.coffee,
+                          size: 40,
+                          color: Colors.brown.shade300,
+                        ),
+                      );
+                    },
                   ),
                 ),
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/widgets/common/rats_sliver_app_bar.dart';
-import 'package:my_app/widgets/order/order_product_tile.dart';
+import '../common/rats_sliver_app_bar.dart';
+import 'order_product_tile.dart';
 
 class OrderProductList extends StatelessWidget {
   final String title;

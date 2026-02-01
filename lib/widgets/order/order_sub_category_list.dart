@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/models/menu_data.dart';
+import '../../models/menu_data.dart';
 
 class OrderSubCategoryList extends StatelessWidget {
   final int categoryIndex;

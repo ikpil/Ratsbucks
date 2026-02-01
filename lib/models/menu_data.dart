@@ -1,468 +1,1321 @@
 class MenuData {
   static final Map<String, List<Map<String, dynamic>>> beverageMenu = {
     '콜드 브루': [
-      {'name': '나이트로 콜드 브루', 'price': '6,000', 'en': 'Nitro Cold Brew'},
-      {'name': '돌체 콜드 브루', 'price': '6,000', 'en': 'Dolce Cold Brew'},
-      {'name': '콜드 브루', 'price': '4,900', 'en': 'Cold Brew'},
+      {
+        'name': '나이트로 콜드 브루',
+        'price': '6,000',
+        'en': 'Nitro Cold Brew',
+        'image': 'assets/images/products/nitro_cold_brew.avif'
+      },
+      {
+        'name': '돌체 콜드 브루',
+        'price': '6,000',
+        'en': 'Dolce Cold Brew',
+        'image':
+            'assets/images/products/cold_brew_with_nondairy_vanilla_sweet_cream_cold_foam.avif'
+      },
+      {
+        'name': '콜드 브루',
+        'price': '4,900',
+        'en': 'Cold Brew',
+        'image': 'assets/images/products/starbucks®_cold_brew_coffee.avif'
+      },
       {
         'name': '바닐라 크림 콜드 브루',
         'price': '5,800',
-        'en': 'Vanilla Cream Cold Brew'
+        'en': 'Vanilla Cream Cold Brew',
+        'image': 'assets/images/products/vanilla_sweet_cream_cold_brew.avif'
       },
-      {'name': '오트 콜드 브루', 'price': '5,800', 'en': 'Oat Cold Brew'},
-      {'name': '제주 비자림 콜드 브루', 'price': '6,800', 'en': 'Jeju Forest Cold Brew'},
+      {
+        'name': '오트 콜드 브루',
+        'price': '5,800',
+        'en': 'Oat Cold Brew',
+        'image': 'assets/images/categories/cold_brew.jpg'
+      },
+      {
+        'name': '제주 비자림 콜드 브루',
+        'price': '6,800',
+        'en': 'Jeju Forest Cold Brew',
+        'image': 'assets/images/categories/cold_brew.jpg'
+      },
       {
         'name': '시그니처 더 블랙 콜드 브루',
         'price': '19,600',
-        'en': 'Signature The Black Cold Brew'
+        'en': 'Signature The Black Cold Brew',
+        'image': 'assets/images/categories/cold_brew.jpg'
       },
-      {'name': '콜드 브루 몰트', 'price': '8,500', 'en': 'Cold Brew Malt'},
-      {'name': '콜드 브루 플로트', 'price': '8,000', 'en': 'Cold Brew Float'},
-      {'name': '프렌치 바닐라 라떼', 'price': '6,500', 'en': 'French Vanilla Latte'},
+      {
+        'name': '콜드 브루 몰트',
+        'price': '8,500',
+        'en': 'Cold Brew Malt',
+        'image': 'assets/images/categories/cold_brew.jpg'
+      },
+      {
+        'name': '콜드 브루 플로트',
+        'price': '8,000',
+        'en': 'Cold Brew Float',
+        'image': 'assets/images/categories/cold_brew.jpg'
+      },
+      {
+        'name': '프렌치 바닐라 라떼',
+        'price': '6,500',
+        'en': 'French Vanilla Latte',
+        'image': 'assets/images/products/iced_caffè_latte.avif'
+      },
     ],
     '에스프레소': [
-      {'name': '아메리카노', 'price': '4,500', 'en': 'Caffe Americano'},
-      {'name': '카페 라떼', 'price': '5,000', 'en': 'Caffe Latte'},
-      {'name': '카푸치노', 'price': '5,000', 'en': 'Cappuccino'},
-      {'name': '카라멜 마키아또', 'price': '5,900', 'en': 'Caramel Macchiato'},
-      {'name': '스타벅스 돌체 라떼', 'price': '5,900', 'en': 'Starbucks Dolce Latte'},
-      {'name': '바닐라 빈 라떼', 'price': '6,100', 'en': 'Vanilla Bean Latte'},
-      {'name': '에스프레소', 'price': '4,000', 'en': 'Espresso'},
-      {'name': '에스프레소 마키아또', 'price': '4,000', 'en': 'Espresso Macchiato'},
-      {'name': '에스프레소 콘 파나', 'price': '4,200', 'en': 'Espresso Con Panna'},
-      {'name': '카페 모카', 'price': '5,500', 'en': 'Caffe Mocha'},
-      {'name': '화이트 초콜릿 모카', 'price': '5,900', 'en': 'White Chocolate Mocha'},
+      {
+        'name': '아메리카노',
+        'price': '4,500',
+        'en': 'Caffe Americano',
+        'image': 'assets/images/products/caffè_americano.avif'
+      },
+      {
+        'name': '카페 라떼',
+        'price': '5,000',
+        'en': 'Caffe Latte',
+        'image': 'assets/images/products/caffè_latte.avif'
+      },
+      {
+        'name': '카푸치노',
+        'price': '5,000',
+        'en': 'Cappuccino',
+        'image': 'assets/images/products/caffè_latte.avif'
+      },
+      {
+        'name': '카라멜 마키아또',
+        'price': '5,900',
+        'en': 'Caramel Macchiato',
+        'image': 'assets/images/products/iced_caramel_macchiato.avif'
+      },
+      {
+        'name': '스타벅스 돌체 라떼',
+        'price': '5,900',
+        'en': 'Starbucks Dolce Latte',
+        'image': 'assets/images/products/caffè_latte.avif'
+      },
+      {
+        'name': '바닐라 빈 라떼',
+        'price': '6,100',
+        'en': 'Vanilla Bean Latte',
+        'image': 'assets/images/products/starbucks®_blonde_vanilla_latte.avif'
+      },
+      {
+        'name': '에스프레소',
+        'price': '4,000',
+        'en': 'Espresso',
+        'image': 'assets/images/products/espresso.avif'
+      },
+      {
+        'name': '에스프레소 마키아또',
+        'price': '4,000',
+        'en': 'Espresso Macchiato',
+        'image': 'assets/images/products/espresso_macchiato.avif'
+      },
+      {
+        'name': '에스프레소 콘 파나',
+        'price': '4,200',
+        'en': 'Espresso Con Panna',
+        'image': 'assets/images/products/espresso_con_panna.avif'
+      },
+      {
+        'name': '카페 모카',
+        'price': '5,500',
+        'en': 'Caffe Mocha',
+        'image': 'assets/images/products/caffè_mocha.avif'
+      },
+      {
+        'name': '화이트 초콜릿 모카',
+        'price': '5,900',
+        'en': 'White Chocolate Mocha',
+        'image': 'assets/images/products/white_chocolate_mocha.avif'
+      },
     ],
     '프라푸치노': [
-      {'name': '자바 칩 프라푸치노', 'price': '6,300', 'en': 'Java Chip Frappuccino'},
-      {'name': '카라멜 프라푸치노', 'price': '5,900', 'en': 'Caramel Frappuccino'},
+      {
+        'name': '자바 칩 프라푸치노',
+        'price': '6,300',
+        'en': 'Java Chip Frappuccino',
+        'image':
+            'assets/images/products/java_chip_frappuccino®_blended_beverage.avif'
+      },
+      {
+        'name': '카라멜 프라푸치노',
+        'price': '5,900',
+        'en': 'Caramel Frappuccino',
+        'image':
+            'assets/images/products/caramel_frappuccino®_blended_beverage.avif'
+      },
       {
         'name': '제주 말차 크림 프라푸치노',
         'price': '6,300',
-        'en': 'Jeju Matcha Cream Frappuccino'
+        'en': 'Jeju Matcha Cream Frappuccino',
+        'image': 'assets/images/categories/frappuccino.jpg'
       },
       {
         'name': '화이트 초콜릿 모카 프라푸치노',
         'price': '6,000',
-        'en': 'White Chocolate Mocha Frappuccino'
+        'en': 'White Chocolate Mocha Frappuccino',
+        'image': 'assets/images/categories/frappuccino.jpg'
       },
-      {'name': '에스프레소 프라푸치노', 'price': '5,500', 'en': 'Espresso Frappuccino'},
+      {
+        'name': '에스프레소 프라푸치노',
+        'price': '5,500',
+        'en': 'Espresso Frappuccino',
+        'image':
+            'assets/images/products/espresso_frappuccino®_blended_beverage.avif'
+      },
       {
         'name': '더블 에스프레소 칩 프라푸치노',
         'price': '6,300',
-        'en': 'Double Espresso Chip Frappuccino'
+        'en': 'Double Espresso Chip Frappuccino',
+        'image': 'assets/images/categories/frappuccino.jpg'
       },
       {
         'name': '초콜릿 크림 칩 프라푸치노',
         'price': '6,000',
-        'en': 'Chocolate Cream Chip Frappuccino'
+        'en': 'Chocolate Cream Chip Frappuccino',
+        'image':
+            'assets/images/products/chocolate_cookie_crumble_crème_frappuccino®.avif'
       },
       {
         'name': '제주 까망 크림 프라푸치노',
         'price': '7,500',
-        'en': 'Jeju Black Sesame Cream Frappuccino'
+        'en': 'Jeju Black Sesame Cream Frappuccino',
+        'image': 'assets/images/categories/frappuccino.jpg'
       },
       {
         'name': '제주 쑥떡 크림 프라푸치노',
         'price': '7,500',
-        'en': 'Jeju Mugwort Cream Frappuccino'
+        'en': 'Jeju Mugwort Cream Frappuccino',
+        'image': 'assets/images/categories/frappuccino.jpg'
       },
       {
         'name': '바닐라 크림 프라푸치노',
         'price': '5,100',
-        'en': 'Vanilla Cream Frappuccino'
+        'en': 'Vanilla Cream Frappuccino',
+        'image': 'assets/images/categories/frappuccino.jpg'
       },
     ],
     '블렌디드': [
-      {'name': '망고 바나나 블렌디드', 'price': '6,300', 'en': 'Mango Banana Blended'},
+      {
+        'name': '망고 바나나 블렌디드',
+        'price': '6,300',
+        'en': 'Mango Banana Blended',
+        'image': 'assets/images/categories/blended.jpg'
+      },
       {
         'name': '딸기 딜라이트 요거트 블렌디드',
         'price': '6,300',
-        'en': 'Strawberry Delight Yogurt Blended'
+        'en': 'Strawberry Delight Yogurt Blended',
+        'image':
+            'assets/images/products/strawberry_crème_frappuccino®_blended_beverage.avif'
       },
-      {'name': '피치 & 레몬 블렌디드', 'price': '6,300', 'en': 'Peach & Lemon Blended'},
+      {
+        'name': '피치 & 레몬 블렌디드',
+        'price': '6,300',
+        'en': 'Peach & Lemon Blended',
+        'image': 'assets/images/categories/blended.jpg'
+      },
       {
         'name': '망고 패션 티 블렌디드',
         'price': '5,400',
-        'en': 'Mango Passion Tea Blended'
+        'en': 'Mango Passion Tea Blended',
+        'image': 'assets/images/categories/blended.jpg'
       },
-      {'name': '익스트림 티 블렌디드', 'price': '6,800', 'en': 'Xtreme Tea Blended'},
+      {
+        'name': '익스트림 티 블렌디드',
+        'price': '6,800',
+        'en': 'Xtreme Tea Blended',
+        'image': 'assets/images/categories/blended.jpg'
+      },
       {
         'name': '여수 바다 유자 블렌디드',
         'price': '7,000',
-        'en': 'Yeosu Sea Yuja Blended'
+        'en': 'Yeosu Sea Yuja Blended',
+        'image': 'assets/images/categories/blended.jpg'
       },
-      {'name': '제주 비자림 콜드 브루', 'price': '6,800', 'en': 'Jeju Forest Cold Brew'},
-      {'name': '코코넛 밀크 블렌디드', 'price': '6,500', 'en': 'Coconut Milk Blended'},
-      {'name': '오트 그린 티 블렌디드', 'price': '6,500', 'en': 'Oat Green Tea Blended'},
+      {
+        'name': '제주 비자림 콜드 브루',
+        'price': '6,800',
+        'en': 'Jeju Forest Cold Brew',
+        'image': 'assets/images/categories/blended.jpg'
+      },
+      {
+        'name': '코코넛 밀크 블렌디드',
+        'price': '6,500',
+        'en': 'Coconut Milk Blended',
+        'image': 'assets/images/categories/blended.jpg'
+      },
+      {
+        'name': '오트 그린 티 블렌디드',
+        'price': '6,500',
+        'en': 'Oat Green Tea Blended',
+        'image': 'assets/images/categories/blended.jpg'
+      },
       {
         'name': '시그니처 초콜릿 블렌디드',
         'price': '6,500',
-        'en': 'Signature Chocolate Blended'
+        'en': 'Signature Chocolate Blended',
+        'image': 'assets/images/categories/blended.jpg'
       },
     ],
     '티 (Tea)': [
       {
         'name': '자몽 허니 블랙 티',
         'price': '5,700',
-        'en': 'Grapefruit Honey Black Tea'
+        'en': 'Grapefruit Honey Black Tea',
+        'image': 'assets/images/categories/tea.jpg'
       },
-      {'name': '유자 민트 티', 'price': '5,900', 'en': 'Yuaja Mint Tea'},
-      {'name': '차이 티 라떼', 'price': '5,500', 'en': 'Chai Tea Latte'},
+      {
+        'name': '유자 민트 티',
+        'price': '5,900',
+        'en': 'Yuaja Mint Tea',
+        'image': 'assets/images/categories/tea.jpg'
+      },
+      {
+        'name': '차이 티 라떼',
+        'price': '5,500',
+        'en': 'Chai Tea Latte',
+        'image': 'assets/images/products/chai_latte.avif'
+      },
       {
         'name': '제주 유기농 말차로 만든 라떼',
         'price': '6,100',
-        'en': 'Jeju Organic Matcha Latte'
+        'en': 'Jeju Organic Matcha Latte',
+        'image': 'assets/images/categories/tea.jpg'
       },
       {
         'name': '잉글리쉬 브렉퍼스트 티',
         'price': '4,500',
-        'en': 'English Breakfast Brewed Tea'
+        'en': 'English Breakfast Brewed Tea',
+        'image': 'assets/images/categories/tea.jpg'
       },
-      {'name': '얼 그레이 티', 'price': '4,500', 'en': 'Earl Grey Brewed Tea'},
-      {'name': '유스베리 티', 'price': '4,500', 'en': 'Youthberry Brewed Tea'},
+      {
+        'name': '얼 그레이 티',
+        'price': '4,500',
+        'en': 'Earl Grey Brewed Tea',
+        'image': 'assets/images/products/earl_grey_tea.avif'
+      },
+      {
+        'name': '유스베리 티',
+        'price': '4,500',
+        'en': 'Youthberry Brewed Tea',
+        'image': 'assets/images/categories/tea.jpg'
+      },
       {
         'name': '히비스커스 블렌드 티',
         'price': '4,500',
-        'en': 'Hibiscus Blend Brewed Tea'
+        'en': 'Hibiscus Blend Brewed Tea',
+        'image': 'assets/images/categories/tea.jpg'
       },
-      {'name': '민트 블렌드 티', 'price': '4,500', 'en': 'Mint Blend Brewed Tea'},
+      {
+        'name': '민트 블렌드 티',
+        'price': '4,500',
+        'en': 'Mint Blend Brewed Tea',
+        'image': 'assets/images/categories/tea.jpg'
+      },
       {
         'name': '캐모마일 블렌드 티',
         'price': '4,500',
-        'en': 'Chamomile Blend Brewed Tea'
+        'en': 'Chamomile Blend Brewed Tea',
+        'image': 'assets/images/categories/tea.jpg'
       },
     ],
     '브루드 커피': [
-      {'name': '오늘의 커피', 'price': '4,200', 'en': 'Brewed Coffee'},
-      {'name': '아이스 커피', 'price': '4,500', 'en': 'Iced Coffee'},
-      {'name': '카페 베로나', 'price': '5,000', 'en': 'Caffe Verona'},
-      {'name': '파이크 플레이스 로스트', 'price': '5,000', 'en': 'Pike Place Roast'},
-      {'name': '디카페인 하우스 블렌드', 'price': '5,300', 'en': 'Decaf House Blend'},
-      {'name': '크리스마스 블렌드', 'price': '5,500', 'en': 'Christmas Blend'},
-      {'name': '콜롬비아', 'price': '5,000', 'en': 'Colombia'},
-      {'name': '이탈리안 로스트', 'price': '5,000', 'en': 'Italian Roast'},
-      {'name': '에티오피아', 'price': '5,500', 'en': 'Ethiopia'},
-      {'name': '수마트라', 'price': '5,500', 'en': 'Sumatra'},
+      {
+        'name': '오늘의 커피',
+        'price': '4,200',
+        'en': 'Brewed Coffee',
+        'image': 'assets/images/categories/brewed_coffee.jpg'
+      },
+      {
+        'name': '아이스 커피',
+        'price': '4,500',
+        'en': 'Iced Coffee',
+        'image': 'assets/images/products/iced_coffee.avif'
+      },
+      {
+        'name': '카페 베로나',
+        'price': '5,000',
+        'en': 'Caffe Verona',
+        'image': 'assets/images/categories/brewed_coffee.jpg'
+      },
+      {
+        'name': '파이크 플레이스 로스트',
+        'price': '5,000',
+        'en': 'Pike Place Roast',
+        'image': 'assets/images/categories/brewed_coffee.jpg'
+      },
+      {
+        'name': '디카페인 하우스 블렌드',
+        'price': '5,300',
+        'en': 'Decaf House Blend',
+        'image': 'assets/images/categories/brewed_coffee.jpg'
+      },
+      {
+        'name': '크리스마스 블렌드',
+        'price': '5,500',
+        'en': 'Christmas Blend',
+        'image': 'assets/images/categories/brewed_coffee.jpg'
+      },
+      {
+        'name': '콜롬비아',
+        'price': '5,000',
+        'en': 'Colombia',
+        'image': 'assets/images/categories/brewed_coffee.jpg'
+      },
+      {
+        'name': '이탈리안 로스트',
+        'price': '5,000',
+        'en': 'Italian Roast',
+        'image': 'assets/images/categories/brewed_coffee.jpg'
+      },
+      {
+        'name': '에티오피아',
+        'price': '5,500',
+        'en': 'Ethiopia',
+        'image': 'assets/images/categories/brewed_coffee.jpg'
+      },
+      {
+        'name': '수마트라',
+        'price': '5,500',
+        'en': 'Sumatra',
+        'image': 'assets/images/categories/brewed_coffee.jpg'
+      },
     ],
     '피지오': [
-      {'name': '쿨 라임 피지오', 'price': '5,900', 'en': 'Cool Lime Fizzio'},
+      {
+        'name': '쿨 라임 피지오',
+        'price': '5,900',
+        'en': 'Cool Lime Fizzio',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
       {
         'name': '블랙 티 레모네이드 피지오',
         'price': '5,400',
-        'en': 'Black Tea Lemonade Fizzio'
+        'en': 'Black Tea Lemonade Fizzio',
+        'image': 'assets/images/categories/fizzio.jpg'
       },
       {
         'name': '패션 탱고 티 레모네이드 피지오',
         'price': '5,400',
-        'en': 'Passion Tango Tea Lemonade Fizzio'
+        'en': 'Passion Tango Tea Lemonade Fizzio',
+        'image': 'assets/images/categories/fizzio.jpg'
       },
-      {'name': '핑크베리 유스베리', 'price': '6,100', 'en': 'Pinkberry Youthberry'},
-      {'name': '오미자 셔벗 블렌디드', 'price': '6,300', 'en': 'Omija Sherbet Blended'},
-      {'name': '라임 모히또 티', 'price': '6,100', 'en': 'Lime Mojito Tea'},
-      {'name': '자몽 피지오', 'price': '6,300', 'en': 'Grapefruit Fizzio'},
-      {'name': '유자 피지오', 'price': '6,300', 'en': 'Yuja Fizzio'},
-      {'name': '레몬 에이드 피지오', 'price': '5,900', 'en': 'Lemonade Fizzio'},
-      {'name': '믹스베리 피지오', 'price': '6,300', 'en': 'Mix Berry Fizzio'},
+      {
+        'name': '핑크베리 유스베리',
+        'price': '6,100',
+        'en': 'Pinkberry Youthberry',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '오미자 셔벗 블렌디드',
+        'price': '6,300',
+        'en': 'Omija Sherbet Blended',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '라임 모히또 티',
+        'price': '6,100',
+        'en': 'Lime Mojito Tea',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '자몽 피지오',
+        'price': '6,300',
+        'en': 'Grapefruit Fizzio',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '유자 피지오',
+        'price': '6,300',
+        'en': 'Yuja Fizzio',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '레몬 에이드 피지오',
+        'price': '5,900',
+        'en': 'Lemonade Fizzio',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '믹스베리 피지오',
+        'price': '6,300',
+        'en': 'Mix Berry Fizzio',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
     ],
     '리프레셔': [
       {
         'name': '딸기 아사이 레모네이드 스타벅스 리프레셔',
         'price': '5,900',
-        'en': 'Strawberry Acai Lemonade Starbucks Refreshers'
+        'en': 'Strawberry Acai Lemonade Starbucks Refreshers',
+        'image': 'assets/images/categories/refresher.jpg'
       },
       {
         'name': '망고 용과 레모네이드 스타벅스 리프레셔',
         'price': '5,900',
-        'en': 'Mango Dragonfruit Lemonade Starbucks Refreshers'
+        'en': 'Mango Dragonfruit Lemonade Starbucks Refreshers',
+        'image': 'assets/images/categories/refresher.jpg'
       },
       {
         'name': '퍼플 드링크 위드 망고 용과 스타벅스 리프레셔',
         'price': '5,900',
-        'en': 'Purple Drink with Mango Dragonfruit Starbucks Refreshers'
+        'en': 'Purple Drink with Mango Dragonfruit Starbucks Refreshers',
+        'image': 'assets/images/categories/refresher.jpg'
       },
       {
         'name': '핑크 드링크 위드 딸기 아사이 스타벅스 리프레셔',
         'price': '5,900',
-        'en': 'Pink Drink with Strawberry Acai Starbucks Refreshers'
+        'en': 'Pink Drink with Strawberry Acai Starbucks Refreshers',
+        'image': 'assets/images/categories/refresher.jpg'
       },
-      {'name': '슈크림 라떼', 'price': '6,300', 'en': 'Choux Cream Latte'},
+      {
+        'name': '슈크림 라떼',
+        'price': '6,300',
+        'en': 'Choux Cream Latte',
+        'image': 'assets/images/categories/refresher.jpg'
+      },
       {
         'name': '바질 레몬 셔벗 블렌디드',
         'price': '6,500',
-        'en': 'Basil Lemon Sherbet Blended'
+        'en': 'Basil Lemon Sherbet Blended',
+        'image': 'assets/images/categories/refresher.jpg'
       },
-      {'name': '코코넛 리프레셔', 'price': '6,000', 'en': 'Coconut Refreshers'},
-      {'name': '라임 리프레셔', 'price': '6,000', 'en': 'Lime Refreshers'},
+      {
+        'name': '코코넛 리프레셔',
+        'price': '6,000',
+        'en': 'Coconut Refreshers',
+        'image': 'assets/images/categories/refresher.jpg'
+      },
+      {
+        'name': '라임 리프레셔',
+        'price': '6,000',
+        'en': 'Lime Refreshers',
+        'image': 'assets/images/categories/refresher.jpg'
+      },
       {
         'name': '베리 히비스커스 리프레셔',
         'price': '6,000',
-        'en': 'Berry Hibiscus Refreshers'
+        'en': 'Berry Hibiscus Refreshers',
+        'image': 'assets/images/categories/refresher.jpg'
       },
-      {'name': '쿨 라임 리프레셔', 'price': '6,000', 'en': 'Cool Lime Refreshers'},
+      {
+        'name': '쿨 라임 리프레셔',
+        'price': '6,000',
+        'en': 'Cool Lime Refreshers',
+        'image': 'assets/images/categories/refresher.jpg'
+      },
     ],
     '미니 음료': [
       {
         'name': '루비 레드 칠링 아이스 티',
         'price': '8,300',
-        'en': 'Ruby Red Chilling Iced Tea'
+        'en': 'Ruby Red Chilling Iced Tea',
+        'image': 'assets/images/categories/fizzio.jpg'
       },
       {
         'name': '제주 유기농 말차로 만든 라떼',
         'price': '8,300',
-        'en': 'Jeju Organic Matcha Latte'
+        'en': 'Jeju Organic Matcha Latte',
+        'image': 'assets/images/categories/fizzio.jpg'
       },
-      {'name': '미니 딸기 라떼', 'price': '4,500', 'en': 'Mini Strawberry Latte'},
-      {'name': '미니 망고 스무디', 'price': '4,500', 'en': 'Mini Mango Smoothie'},
-      {'name': '미니 초콜릿', 'price': '4,000', 'en': 'Mini Chocolate'},
-      {'name': '미니 바닐라 크림', 'price': '4,000', 'en': 'Mini Vanilla Cream'},
-      {'name': '미니 카라멜', 'price': '4,000', 'en': 'Mini Caramel'},
-      {'name': '미니 헤이즐넛', 'price': '4,000', 'en': 'Mini Hazelnut'},
-      {'name': '미니 그린티', 'price': '4,500', 'en': 'Mini Green Tea'},
-      {'name': '미니 블루베리 요거트', 'price': '4,500', 'en': 'Mini Blueberry Yogurt'},
+      {
+        'name': '미니 딸기 라떼',
+        'price': '4,500',
+        'en': 'Mini Strawberry Latte',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '미니 망고 스무디',
+        'price': '4,500',
+        'en': 'Mini Mango Smoothie',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '미니 초콜릿',
+        'price': '4,000',
+        'en': 'Mini Chocolate',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '미니 바닐라 크림',
+        'price': '4,000',
+        'en': 'Mini Vanilla Cream',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '미니 카라멜',
+        'price': '4,000',
+        'en': 'Mini Caramel',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '미니 헤이즐넛',
+        'price': '4,000',
+        'en': 'Mini Hazelnut',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '미니 그린티',
+        'price': '4,500',
+        'en': 'Mini Green Tea',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
+      {
+        'name': '미니 블루베리 요거트',
+        'price': '4,500',
+        'en': 'Mini Blueberry Yogurt',
+        'image': 'assets/images/categories/fizzio.jpg'
+      },
     ],
     '병음료': [
-      {'name': '한입에 쏙 고구마', 'price': '3,800', 'en': 'Sweet Potato Bite'},
-      {'name': '리얼 블루베리', 'price': '3,900', 'en': 'Real Blueberry'},
+      {
+        'name': '한입에 쏙 고구마',
+        'price': '3,800',
+        'en': 'Sweet Potato Bite',
+        'image': 'assets/images/categories/bottled.jpg'
+      },
+      {
+        'name': '리얼 블루베리',
+        'price': '3,900',
+        'en': 'Real Blueberry',
+        'image': 'assets/images/categories/bottled.jpg'
+      },
       {
         'name': '딸기 가득 요거트',
         'price': '4,100',
-        'en': 'Full of Strawberry Yogurt'
+        'en': 'Full of Strawberry Yogurt',
+        'image': 'assets/images/categories/bottled.jpg'
       },
-      {'name': '망고 가득 요거트', 'price': '4,100', 'en': 'Full of Mango Yogurt'},
-      {'name': '블루베리 요거트', 'price': '3,900', 'en': 'Blueberry Yogurt'},
-      {'name': '치아씨드 요거트', 'price': '4,300', 'en': 'Chia Seed Yogurt'},
-      {'name': '케일 & 사과 주스', 'price': '4,000', 'en': 'Kale & Apple Juice'},
-      {'name': '햇사과 주스', 'price': '4,000', 'en': 'Fresh Apple Juice'},
-      {'name': '딸기 주스', 'price': '3,800', 'en': 'Strawberry Juice'},
-      {'name': '토마토 주스', 'price': '3,800', 'en': 'Tomato Juice'},
+      {
+        'name': '망고 가득 요거트',
+        'price': '4,100',
+        'en': 'Full of Mango Yogurt',
+        'image': 'assets/images/categories/bottled.jpg'
+      },
+      {
+        'name': '블루베리 요거트',
+        'price': '3,900',
+        'en': 'Blueberry Yogurt',
+        'image': 'assets/images/categories/bottled.jpg'
+      },
+      {
+        'name': '치아씨드 요거트',
+        'price': '4,300',
+        'en': 'Chia Seed Yogurt',
+        'image': 'assets/images/categories/bottled.jpg'
+      },
+      {
+        'name': '케일 & 사과 주스',
+        'price': '4,000',
+        'en': 'Kale & Apple Juice',
+        'image': 'assets/images/categories/bottled.jpg'
+      },
+      {
+        'name': '햇사과 주스',
+        'price': '4,000',
+        'en': 'Fresh Apple Juice',
+        'image': 'assets/images/categories/bottled.jpg'
+      },
+      {
+        'name': '딸기 주스',
+        'price': '3,800',
+        'en': 'Strawberry Juice',
+        'image': 'assets/images/categories/bottled.jpg'
+      },
+      {
+        'name': '토마토 주스',
+        'price': '3,800',
+        'en': 'Tomato Juice',
+        'image': 'assets/images/categories/bottled.jpg'
+      },
     ],
     '에이드': [
-      {'name': '라임 패션 티', 'price': '5,600', 'en': 'Lime Passion Tea'},
+      {
+        'name': '라임 패션 티',
+        'price': '5,600',
+        'en': 'Lime Passion Tea',
+        'image': 'assets/images/categories/ade.jpg'
+      },
       {
         'name': '자몽 셔벗 블렌디드',
         'price': '6,300',
-        'en': 'Grapefruit Sherbet Blended'
+        'en': 'Grapefruit Sherbet Blended',
+        'image': 'assets/images/categories/ade.jpg'
       },
-      {'name': '유자 에이드', 'price': '5,900', 'en': 'Yuja Ade'},
-      {'name': '레몬 에이드', 'price': '5,400', 'en': 'Lemon Ade'},
-      {'name': '자몽 에이드', 'price': '5,900', 'en': 'Grapefruit Ade'},
-      {'name': '청포도 에이드', 'price': '6,000', 'en': 'Green Grape Ade'},
-      {'name': '오렌지 에이드', 'price': '5,900', 'en': 'Orange Ade'},
-      {'name': '베리 에이드', 'price': '6,000', 'en': 'Berry Ade'},
-      {'name': '깔라만시 에이드', 'price': '6,100', 'en': 'Calamansi Ade'},
-      {'name': '석류 에이드', 'price': '6,200', 'en': 'Pomegranate Ade'},
+      {
+        'name': '유자 에이드',
+        'price': '5,900',
+        'en': 'Yuja Ade',
+        'image': 'assets/images/categories/ade.jpg'
+      },
+      {
+        'name': '레몬 에이드',
+        'price': '5,400',
+        'en': 'Lemon Ade',
+        'image': 'assets/images/categories/ade.jpg'
+      },
+      {
+        'name': '자몽 에이드',
+        'price': '5,900',
+        'en': 'Grapefruit Ade',
+        'image': 'assets/images/categories/ade.jpg'
+      },
+      {
+        'name': '청포도 에이드',
+        'price': '6,000',
+        'en': 'Green Grape Ade',
+        'image': 'assets/images/categories/ade.jpg'
+      },
+      {
+        'name': '오렌지 에이드',
+        'price': '5,900',
+        'en': 'Orange Ade',
+        'image': 'assets/images/categories/ade.jpg'
+      },
+      {
+        'name': '베리 에이드',
+        'price': '6,000',
+        'en': 'Berry Ade',
+        'image': 'assets/images/categories/ade.jpg'
+      },
+      {
+        'name': '깔라만시 에이드',
+        'price': '6,100',
+        'en': 'Calamansi Ade',
+        'image': 'assets/images/categories/ade.jpg'
+      },
+      {
+        'name': '석류 에이드',
+        'price': '6,200',
+        'en': 'Pomegranate Ade',
+        'image': 'assets/images/categories/ade.jpg'
+      },
     ],
   };
 
   static final Map<String, List<Map<String, dynamic>>> foodMenu = {
     '케이크': [
-      {'name': '부드러운 생크림 카스텔라', 'price': '4,500', 'en': 'Fresh Cream Castella'},
-      {'name': '클라우드 치즈 케이크', 'price': '5,500', 'en': 'Cloud Cheese Cake'},
-      {'name': '7 레이어 가나슈 케이크', 'price': '5,700', 'en': '7 Layer Ganache Cake'},
+      {
+        'name': '부드러운 생크림 카스텔라',
+        'price': '4,500',
+        'en': 'Fresh Cream Castella',
+        'image': 'assets/images/categories/cake.jpg'
+      },
+      {
+        'name': '클라우드 치즈 케이크',
+        'price': '5,500',
+        'en': 'Cloud Cheese Cake',
+        'image': 'assets/images/categories/cake.jpg'
+      },
+      {
+        'name': '7 레이어 가나슈 케이크',
+        'price': '5,700',
+        'en': '7 Layer Ganache Cake',
+        'image': 'assets/images/categories/cake.jpg'
+      },
       {
         'name': '레드벨벳 크림치즈 케이크',
         'price': '5,500',
-        'en': 'Red Velvet Cream Cheese Cake'
+        'en': 'Red Velvet Cream Cheese Cake',
+        'image': 'assets/images/categories/cake.jpg'
       },
       {
         'name': '마스카포네 티라미수 케이크',
         'price': '5,900',
-        'en': 'Mascarpone Tiramisu Cake'
+        'en': 'Mascarpone Tiramisu Cake',
+        'image': 'assets/images/categories/cake.jpg'
       },
       {
         'name': '블루베리 쿠키 치즈 케이크',
         'price': '6,900',
-        'en': 'Blueberry Cookie Cheese Cake'
+        'en': 'Blueberry Cookie Cheese Cake',
+        'image': 'assets/images/categories/cake.jpg'
       },
-      {'name': '슈크림 가득 바움쿠헨', 'price': '6,900', 'en': 'Choux Cream Baumkuchen'},
+      {
+        'name': '슈크림 가득 바움쿠헨',
+        'price': '6,900',
+        'en': 'Choux Cream Baumkuchen',
+        'image': 'assets/images/categories/cake.jpg'
+      },
       {
         'name': '더 촉촉한 초콜릿 생크림 케이크',
         'price': '5,900',
-        'en': 'Chocolate Fresh Cream Cake'
+        'en': 'Chocolate Fresh Cream Cake',
+        'image': 'assets/images/categories/cake.jpg'
       },
-      {'name': '호두 당근 케이크', 'price': '6,500', 'en': 'Walnut Carrot Cake'},
-      {'name': '번트 치즈 케이크', 'price': '6,900', 'en': 'Burnt Cheese Cake'},
+      {
+        'name': '호두 당근 케이크',
+        'price': '6,500',
+        'en': 'Walnut Carrot Cake',
+        'image': 'assets/images/categories/cake.jpg'
+      },
+      {
+        'name': '번트 치즈 케이크',
+        'price': '6,900',
+        'en': 'Burnt Cheese Cake',
+        'image': 'assets/images/categories/cake.jpg'
+      },
     ],
     '샌드위치 & 샐러드': [
-      {'name': 'B.E.L.T. 샌드위치', 'price': '5,900', 'en': 'B.E.L.T. Sandwich'},
-      {'name': '에그 에그 샌드위치', 'price': '4,400', 'en': 'Egg Egg Sandwich'},
+      {
+        'name': 'B.E.L.T. 샌드위치',
+        'price': '5,900',
+        'en': 'B.E.L.T. Sandwich',
+        'image': 'assets/images/categories/sandwich.jpg'
+      },
+      {
+        'name': '에그 에그 샌드위치',
+        'price': '4,400',
+        'en': 'Egg Egg Sandwich',
+        'image': 'assets/images/categories/sandwich.jpg'
+      },
       {
         'name': '바비큐 치킨 치즈 치아바타',
         'price': '5,800',
-        'en': 'BBQ Chicken Cheese Ciabatta'
+        'en': 'BBQ Chicken Cheese Ciabatta',
+        'image': 'assets/images/categories/sandwich.jpg'
       },
       {
         'name': '햄 & 루꼴라 올리브 샌드위치',
         'price': '6,200',
-        'en': 'Ham & Arugula Olive Sandwich'
+        'en': 'Ham & Arugula Olive Sandwich',
+        'image': 'assets/images/categories/sandwich.jpg'
       },
-      {'name': '단호박 에그 샌드위치', 'price': '4,900', 'en': 'Pumpkin Egg Sandwich'},
+      {
+        'name': '단호박 에그 샌드위치',
+        'price': '4,900',
+        'en': 'Pumpkin Egg Sandwich',
+        'image': 'assets/images/categories/sandwich.jpg'
+      },
       {
         'name': '크랜베리 치킨 치즈 샌드위치',
         'price': '4,500',
-        'en': 'Cranberry Chicken Cheese Sandwich'
+        'en': 'Cranberry Chicken Cheese Sandwich',
+        'image': 'assets/images/categories/sandwich.jpg'
       },
       {
         'name': '트리플 치즈 크로크무슈',
         'price': '5,200',
-        'en': 'Triple Cheese Croque Monsieur'
+        'en': 'Triple Cheese Croque Monsieur',
+        'image': 'assets/images/categories/sandwich.jpg'
       },
-      {'name': '쉬림프 코코넛 샐러드', 'price': '6,500', 'en': 'Shrimp Coconut Salad'},
-      {'name': '로스트 치킨 샐러드', 'price': '6,500', 'en': 'Roasted Chicken Salad'},
-      {'name': '콥 & 요거트 샐러드', 'price': '5,800', 'en': 'Cobb & Yogurt Salad'},
+      {
+        'name': '쉬림프 코코넛 샐러드',
+        'price': '6,500',
+        'en': 'Shrimp Coconut Salad',
+        'image': 'assets/images/categories/sandwich.jpg'
+      },
+      {
+        'name': '로스트 치킨 샐러드',
+        'price': '6,500',
+        'en': 'Roasted Chicken Salad',
+        'image': 'assets/images/categories/sandwich.jpg'
+      },
+      {
+        'name': '콥 & 요거트 샐러드',
+        'price': '5,800',
+        'en': 'Cobb & Yogurt Salad',
+        'image': 'assets/images/categories/sandwich.jpg'
+      },
     ],
     '브레드': [
-      {'name': '하트 파이', 'price': '3,200', 'en': 'Heart Pie'},
-      {'name': '미니 클래식 스콘', 'price': '4,000', 'en': 'Mini Classic Scone'},
-      {'name': '베이글 (플레인/블루베리)', 'price': '3,000', 'en': 'Bagel'},
-      {'name': '프렌치 크루아상', 'price': '3,200', 'en': 'French Croissant'},
-      {'name': '초콜릿 데니쉬 롤', 'price': '3,900', 'en': 'Chocolate Danish Roll'},
-      {'name': '연유 밀크 모닝', 'price': '4,300', 'en': 'Condensed Milk Morning'},
-      {'name': '버터 프레첼', 'price': '3,800', 'en': 'Butter Pretzel'},
-      {'name': '뺑 오 쇼콜라', 'price': '3,500', 'en': 'Pain au Chocolat'},
-      {'name': '고메 버터 스콘', 'price': '3,500', 'en': 'Gourmet Butter Scone'},
-      {'name': '리얼 블루베리 베이글', 'price': '3,000', 'en': 'Real Blueberry Bagel'},
+      {
+        'name': '하트 파이',
+        'price': '3,200',
+        'en': 'Heart Pie',
+        'image': 'assets/images/categories/bread.jpg'
+      },
+      {
+        'name': '미니 클래식 스콘',
+        'price': '4,000',
+        'en': 'Mini Classic Scone',
+        'image': 'assets/images/products/petite_vanilla_bean_scone.avif'
+      },
+      {
+        'name': '베이글 (플레인/블루베리)',
+        'price': '3,000',
+        'en': 'Bagel',
+        'image': 'assets/images/products/plain_bagel.avif'
+      },
+      {
+        'name': '프렌치 크루아상',
+        'price': '3,200',
+        'en': 'French Croissant',
+        'image': 'assets/images/products/butter_croissant.avif'
+      },
+      {
+        'name': '초콜릿 데니쉬 롤',
+        'price': '3,900',
+        'en': 'Chocolate Danish Roll',
+        'image': 'assets/images/categories/bread.jpg'
+      },
+      {
+        'name': '연유 밀크 모닝',
+        'price': '4,300',
+        'en': 'Condensed Milk Morning',
+        'image': 'assets/images/categories/bread.jpg'
+      },
+      {
+        'name': '버터 프레첼',
+        'price': '3,800',
+        'en': 'Butter Pretzel',
+        'image': 'assets/images/categories/bread.jpg'
+      },
+      {
+        'name': '뺑 오 쇼콜라',
+        'price': '3,500',
+        'en': 'Pain au Chocolat',
+        'image': 'assets/images/products/chocolate_croissant.avif'
+      },
+      {
+        'name': '고메 버터 스콘',
+        'price': '3,500',
+        'en': 'Gourmet Butter Scone',
+        'image': 'assets/images/categories/bread.jpg'
+      },
+      {
+        'name': '리얼 블루베리 베이글',
+        'price': '3,000',
+        'en': 'Real Blueberry Bagel',
+        'image': 'assets/images/products/everything_bagel.avif'
+      },
     ],
     '과일 & 요거트': [
-      {'name': '하루 한 컵 RED', 'price': '2,600', 'en': 'Cup of Fruit RED'},
-      {'name': '오가닉 그릭 요거트', 'price': '3,900', 'en': 'Organic Greek Yogurt'},
+      {
+        'name': '하루 한 컵 RED',
+        'price': '2,600',
+        'en': 'Cup of Fruit RED',
+        'image': 'assets/images/categories/fruit.jpg'
+      },
+      {
+        'name': '오가닉 그릭 요거트',
+        'price': '3,900',
+        'en': 'Organic Greek Yogurt',
+        'image': 'assets/images/categories/fruit.jpg'
+      },
       {
         'name': '오가닉 그릭 요거트 플레인',
         'price': '3,900',
-        'en': 'Organic Greek Yogurt Plain'
+        'en': 'Organic Greek Yogurt Plain',
+        'image': 'assets/images/categories/fruit.jpg'
       },
-      {'name': '그래놀라 요거트', 'price': '4,200', 'en': 'Granola Yogurt'},
-      {'name': '사과 & 당근', 'price': '3,500', 'en': 'Apple & Carrot'},
-      {'name': '바나나', 'price': '1,500', 'en': 'Banana'},
-      {'name': '한라봉 젤리', 'price': '2,800', 'en': 'Hallabong Jelly'},
-      {'name': '사과 가득 핸디 젤리', 'price': '2,800', 'en': 'Apple Handy Jelly'},
-      {'name': '딸기 가득 핸디 젤리', 'price': '2,800', 'en': 'Strawberry Handy Jelly'},
-      {'name': '토마토 & 모짜렐라', 'price': '4,500', 'en': 'Tomato & Mozzarella'},
+      {
+        'name': '그래놀라 요거트',
+        'price': '4,200',
+        'en': 'Granola Yogurt',
+        'image': 'assets/images/categories/fruit.jpg'
+      },
+      {
+        'name': '사과 & 당근',
+        'price': '3,500',
+        'en': 'Apple & Carrot',
+        'image': 'assets/images/categories/fruit.jpg'
+      },
+      {
+        'name': '바나나',
+        'price': '1,500',
+        'en': 'Banana',
+        'image': 'assets/images/categories/fruit.jpg'
+      },
+      {
+        'name': '한라봉 젤리',
+        'price': '2,800',
+        'en': 'Hallabong Jelly',
+        'image': 'assets/images/categories/fruit.jpg'
+      },
+      {
+        'name': '사과 가득 핸디 젤리',
+        'price': '2,800',
+        'en': 'Apple Handy Jelly',
+        'image': 'assets/images/categories/fruit.jpg'
+      },
+      {
+        'name': '딸기 가득 핸디 젤리',
+        'price': '2,800',
+        'en': 'Strawberry Handy Jelly',
+        'image': 'assets/images/categories/fruit.jpg'
+      },
+      {
+        'name': '토마토 & 모짜렐라',
+        'price': '4,500',
+        'en': 'Tomato & Mozzarella',
+        'image': 'assets/images/categories/fruit.jpg'
+      },
     ],
     '스낵 & 미니 디저트': [
-      {'name': '한입에 쏙 고구마', 'price': '3,800', 'en': 'Sweet Potato Bite'},
-      {'name': '라이스 칩', 'price': '2,700', 'en': 'Rice Chip'},
+      {
+        'name': '한입에 쏙 고구마',
+        'price': '3,800',
+        'en': 'Sweet Potato Bite',
+        'image': 'assets/images/categories/snack.jpg'
+      },
+      {
+        'name': '라이스 칩',
+        'price': '2,700',
+        'en': 'Rice Chip',
+        'image': 'assets/images/categories/snack.jpg'
+      },
       {
         'name': '더블 치즈 베이글 칩',
         'price': '2,700',
-        'en': 'Double Cheese Bagel Chip'
+        'en': 'Double Cheese Bagel Chip',
+        'image': 'assets/images/categories/snack.jpg'
       },
-      {'name': '한입에 쏙 공주 밤', 'price': '3,500', 'en': 'Chestnut Bite'},
+      {
+        'name': '한입에 쏙 공주 밤',
+        'price': '3,500',
+        'en': 'Chestnut Bite',
+        'image': 'assets/images/categories/snack.jpg'
+      },
       {
         'name': '오도독 건강한 넛 & 블루베리',
         'price': '2,000',
-        'en': 'Crunchy Nuts & Blueberry'
+        'en': 'Crunchy Nuts & Blueberry',
+        'image': 'assets/images/categories/snack.jpg'
       },
       {
         'name': '초콜릿 월넛 브라우니',
         'price': '3,500',
-        'en': 'Chocolate Walnut Brownie'
+        'en': 'Chocolate Walnut Brownie',
+        'image': 'assets/images/categories/snack.jpg'
       },
       {
         'name': '다크 초콜릿 카우보이 쿠키',
         'price': '2,800',
-        'en': 'Dark Chocolate Cowboy Cookie'
+        'en': 'Dark Chocolate Cowboy Cookie',
+        'image': 'assets/images/categories/snack.jpg'
       },
       {
         'name': '화이트 초콜릿 카우보이 쿠키',
         'price': '2,800',
-        'en': 'White Chocolate Cowboy Cookie'
+        'en': 'White Chocolate Cowboy Cookie',
+        'image': 'assets/images/categories/snack.jpg'
       },
-      {'name': '아몬드 토피넛 캔디', 'price': '3,500', 'en': 'Almond Toffee Nut Candy'},
-      {'name': '비스코티', 'price': '2,500', 'en': 'Biscotti'},
+      {
+        'name': '아몬드 토피넛 캔디',
+        'price': '3,500',
+        'en': 'Almond Toffee Nut Candy',
+        'image': 'assets/images/categories/snack.jpg'
+      },
+      {
+        'name': '비스코티',
+        'price': '2,500',
+        'en': 'Biscotti',
+        'image': 'assets/images/categories/snack.jpg'
+      },
     ],
     '아이스크림': [
       {
         'name': '자바 칩 유기농 바닐라 아이스크림',
         'price': '2,900',
-        'en': 'Java Chip Organic Vanilla Ice Cream'
+        'en': 'Java Chip Organic Vanilla Ice Cream',
+        'image': 'assets/images/categories/ice_cream.jpg'
       },
       {
         'name': '넛츠 초콜릿 아포가토',
         'price': '5,600',
-        'en': 'Nuts Chocolate Affogato'
+        'en': 'Nuts Chocolate Affogato',
+        'image': 'assets/images/categories/ice_cream.jpg'
       },
       {
         'name': '유기농 바닐라 아이스크림',
         'price': '2,900',
-        'en': 'Organic Vanilla Ice Cream'
+        'en': 'Organic Vanilla Ice Cream',
+        'image': 'assets/images/categories/ice_cream.jpg'
       },
       {
         'name': '유기농 초콜릿 아이스크림',
         'price': '2,900',
-        'en': 'Organic Chocolate Ice Cream'
+        'en': 'Organic Chocolate Ice Cream',
+        'image': 'assets/images/categories/ice_cream.jpg'
       },
       {
         'name': '딸기 요거트 젤라또',
         'price': '3,500',
-        'en': 'Strawberry Yogurt Gelato'
+        'en': 'Strawberry Yogurt Gelato',
+        'image': 'assets/images/categories/ice_cream.jpg'
       },
-      {'name': '망고 요거트 젤라또', 'price': '3,500', 'en': 'Mango Yogurt Gelato'},
-      {'name': '바닐라 아포가토', 'price': '5,600', 'en': 'Vanilla Affogato'},
-      {'name': '초콜릿 아포가토', 'price': '5,600', 'en': 'Chocolate Affogato'},
-      {'name': '그린티 아포가토', 'price': '6,100', 'en': 'Green Tea Affogato'},
-      {'name': '자바 칩 아포가토', 'price': '6,100', 'en': 'Java Chip Affogato'},
+      {
+        'name': '망고 요거트 젤라또',
+        'price': '3,500',
+        'en': 'Mango Yogurt Gelato',
+        'image': 'assets/images/categories/ice_cream.jpg'
+      },
+      {
+        'name': '바닐라 아포가토',
+        'price': '5,600',
+        'en': 'Vanilla Affogato',
+        'image': 'assets/images/categories/ice_cream.jpg'
+      },
+      {
+        'name': '초콜릿 아포가토',
+        'price': '5,600',
+        'en': 'Chocolate Affogato',
+        'image': 'assets/images/categories/ice_cream.jpg'
+      },
+      {
+        'name': '그린티 아포가토',
+        'price': '6,100',
+        'en': 'Green Tea Affogato',
+        'image': 'assets/images/categories/ice_cream.jpg'
+      },
+      {
+        'name': '자바 칩 아포가토',
+        'price': '6,100',
+        'en': 'Java Chip Affogato',
+        'image': 'assets/images/categories/ice_cream.jpg'
+      },
     ],
     '수프': [
-      {'name': '트러플 머쉬룸 수프', 'price': '4,200', 'en': 'Truffle Mushroom Soup'},
-      {'name': '로스트 치킨 수프', 'price': '4,200', 'en': 'Roasted Chicken Soup'},
-      {'name': '단호박 크림 수프', 'price': '4,200', 'en': 'Pumpkin Cream Soup'},
-      {'name': '토마토 로제 수프', 'price': '4,200', 'en': 'Tomato Rose Soup'},
-      {'name': '브로콜리 치즈 수프', 'price': '4,200', 'en': 'Broccoli Cheese Soup'},
-      {'name': '양송이 수프', 'price': '3,900', 'en': 'Mushroom Soup'},
-      {'name': '콘 크림 수프', 'price': '3,900', 'en': 'Corn Cream Soup'},
-      {'name': '어니언 수프', 'price': '3,900', 'en': 'Onion Soup'},
-      {'name': '클램 차우더 수프', 'price': '4,500', 'en': 'Clam Chowder Soup'},
-      {'name': '비프 칠리 수프', 'price': '4,500', 'en': 'Beef Chili Soup'},
+      {
+        'name': '트러플 머쉬룸 수프',
+        'price': '4,200',
+        'en': 'Truffle Mushroom Soup',
+        'image': 'assets/images/categories/soup.jpg'
+      },
+      {
+        'name': '로스트 치킨 수프',
+        'price': '4,200',
+        'en': 'Roasted Chicken Soup',
+        'image': 'assets/images/categories/soup.jpg'
+      },
+      {
+        'name': '단호박 크림 수프',
+        'price': '4,200',
+        'en': 'Pumpkin Cream Soup',
+        'image': 'assets/images/categories/soup.jpg'
+      },
+      {
+        'name': '토마토 로제 수프',
+        'price': '4,200',
+        'en': 'Tomato Rose Soup',
+        'image': 'assets/images/categories/soup.jpg'
+      },
+      {
+        'name': '브로콜리 치즈 수프',
+        'price': '4,200',
+        'en': 'Broccoli Cheese Soup',
+        'image': 'assets/images/categories/soup.jpg'
+      },
+      {
+        'name': '양송이 수프',
+        'price': '3,900',
+        'en': 'Mushroom Soup',
+        'image': 'assets/images/categories/soup.jpg'
+      },
+      {
+        'name': '콘 크림 수프',
+        'price': '3,900',
+        'en': 'Corn Cream Soup',
+        'image': 'assets/images/categories/soup.jpg'
+      },
+      {
+        'name': '어니언 수프',
+        'price': '3,900',
+        'en': 'Onion Soup',
+        'image': 'assets/images/categories/soup.jpg'
+      },
+      {
+        'name': '클램 차우더 수프',
+        'price': '4,500',
+        'en': 'Clam Chowder Soup',
+        'image': 'assets/images/categories/soup.jpg'
+      },
+      {
+        'name': '비프 칠리 수프',
+        'price': '4,500',
+        'en': 'Beef Chili Soup',
+        'image': 'assets/images/categories/soup.jpg'
+      },
     ],
     '브런치': [
-      {'name': '브런치 유어 웨이', 'price': 'Variable', 'en': 'Brunch Your Way'},
-      {'name': '베이컨 치즈 토스트', 'price': '4,900', 'en': 'Bacon Cheese Toast'},
-      {'name': '햄 & 치즈 베이글', 'price': '5,300', 'en': 'Ham & Cheese Bagel'},
-      {'name': '에그 베이컨 파니니', 'price': '6,500', 'en': 'Egg Bacon Panini'},
-      {'name': '브리오슈 에그 샌드위치', 'price': '5,900', 'en': 'Brioche Egg Sandwich'},
+      {
+        'name': '브런치 유어 웨이',
+        'price': 'Variable',
+        'en': 'Brunch Your Way',
+        'image': 'assets/images/categories/brunch.jpg'
+      },
+      {
+        'name': '베이컨 치즈 토스트',
+        'price': '4,900',
+        'en': 'Bacon Cheese Toast',
+        'image': 'assets/images/categories/brunch.jpg'
+      },
+      {
+        'name': '햄 & 치즈 베이글',
+        'price': '5,300',
+        'en': 'Ham & Cheese Bagel',
+        'image': 'assets/images/categories/brunch.jpg'
+      },
+      {
+        'name': '에그 베이컨 파니니',
+        'price': '6,500',
+        'en': 'Egg Bacon Panini',
+        'image': 'assets/images/categories/brunch.jpg'
+      },
+      {
+        'name': '브리오슈 에그 샌드위치',
+        'price': '5,900',
+        'en': 'Brioche Egg Sandwich',
+        'image': 'assets/images/categories/brunch.jpg'
+      },
       {
         'name': '잉글리쉬 머핀 밀 박스',
         'price': '5,900',
-        'en': 'English Muffin Meal Box'
+        'en': 'English Muffin Meal Box',
+        'image': 'assets/images/categories/brunch.jpg'
       },
       {
         'name': '멕시칸 브리또 밀 박스',
         'price': '5,900',
-        'en': 'Mexican Burrito Meal Box'
+        'en': 'Mexican Burrito Meal Box',
+        'image': 'assets/images/categories/brunch.jpg'
       },
       {
         'name': '쉬림프 로제 파스타 밀 박스',
         'price': '6,500',
-        'en': 'Shrimp Rose Pasta Meal Box'
+        'en': 'Shrimp Rose Pasta Meal Box',
+        'image': 'assets/images/categories/brunch.jpg'
       },
-      {'name': '트러플 머쉬룸 수프', 'price': '4,200', 'en': 'Truffle Mushroom Soup'},
-      {'name': '현미 크림 수프', 'price': '3,900', 'en': 'Brown Rice Cream Soup'},
+      {
+        'name': '트러플 머쉬룸 수프',
+        'price': '4,200',
+        'en': 'Truffle Mushroom Soup',
+        'image': 'assets/images/categories/brunch.jpg'
+      },
+      {
+        'name': '현미 크림 수프',
+        'price': '3,900',
+        'en': 'Brown Rice Cream Soup',
+        'image': 'assets/images/categories/brunch.jpg'
+      },
     ],
     '초콜릿': [
-      {'name': '시그니처 초콜릿', 'price': '5,300', 'en': 'Signature Chocolate'},
-      {'name': '화이트 초콜릿 모카', 'price': '5,600', 'en': 'White Chocolate Mocha'},
-      {'name': '아몬드 초콜릿', 'price': '3,500', 'en': 'Almond Chocolate'},
-      {'name': '헤이즐넛 초콜릿', 'price': '3,500', 'en': 'Hazelnut Chocolate'},
-      {'name': '다크 초콜릿', 'price': '3,500', 'en': 'Dark Chocolate'},
-      {'name': '밀크 초콜릿', 'price': '3,500', 'en': 'Milk Chocolate'},
-      {'name': '제주 녹차 초콜릿', 'price': '4,000', 'en': 'Jeju Green Tea Chocolate'},
-      {'name': '코인 초콜릿', 'price': '1,500', 'en': 'Coin Chocolate'},
-      {'name': '초콜릿 바', 'price': '2,500', 'en': 'Chocolate Bar'},
-      {'name': '트러플 초콜릿', 'price': '8,000', 'en': 'Truffle Chocolate'},
+      {
+        'name': '시그니처 초콜릿',
+        'price': '5,300',
+        'en': 'Signature Chocolate',
+        'image': 'assets/images/categories/chocolate.jpg'
+      },
+      {
+        'name': '화이트 초콜릿 모카',
+        'price': '5,600',
+        'en': 'White Chocolate Mocha',
+        'image': 'assets/images/categories/chocolate.jpg'
+      },
+      {
+        'name': '아몬드 초콜릿',
+        'price': '3,500',
+        'en': 'Almond Chocolate',
+        'image': 'assets/images/categories/chocolate.jpg'
+      },
+      {
+        'name': '헤이즐넛 초콜릿',
+        'price': '3,500',
+        'en': 'Hazelnut Chocolate',
+        'image': 'assets/images/categories/chocolate.jpg'
+      },
+      {
+        'name': '다크 초콜릿',
+        'price': '3,500',
+        'en': 'Dark Chocolate',
+        'image': 'assets/images/categories/chocolate.jpg'
+      },
+      {
+        'name': '밀크 초콜릿',
+        'price': '3,500',
+        'en': 'Milk Chocolate',
+        'image': 'assets/images/categories/chocolate.jpg'
+      },
+      {
+        'name': '제주 녹차 초콜릿',
+        'price': '4,000',
+        'en': 'Jeju Green Tea Chocolate',
+        'image': 'assets/images/categories/chocolate.jpg'
+      },
+      {
+        'name': '코인 초콜릿',
+        'price': '1,500',
+        'en': 'Coin Chocolate',
+        'image': 'assets/images/categories/chocolate.jpg'
+      },
+      {
+        'name': '초콜릿 바',
+        'price': '2,500',
+        'en': 'Chocolate Bar',
+        'image': 'assets/images/categories/chocolate.jpg'
+      },
+      {
+        'name': '트러플 초콜릿',
+        'price': '8,000',
+        'en': 'Truffle Chocolate',
+        'image': 'assets/images/categories/chocolate.jpg'
+      },
     ],
     '마카롱': [
-      {'name': '블루베리 마카롱', 'price': '2,700', 'en': 'Blueberry Macaron'},
-      {'name': '바닐라 마카롱', 'price': '2,700', 'en': 'Vanilla Macaron'},
-      {'name': '스트로베리 마카롱', 'price': '2,700', 'en': 'Strawberry Macaron'},
-      {'name': '초콜릿 마카롱', 'price': '2,700', 'en': 'Chocolate Macaron'},
-      {'name': '피스타치오 마카롱', 'price': '2,700', 'en': 'Pistachio Macaron'},
-      {'name': '레몬 마카롱', 'price': '2,700', 'en': 'Lemon Macaron'},
-      {'name': '얼 그레이 마카롱', 'price': '2,700', 'en': 'Earl Grey Macaron'},
-      {'name': '솔티드 카라멜 마카롱', 'price': '2,900', 'en': 'Salted Caramel Macaron'},
-      {'name': '라즈베리 마카롱', 'price': '2,900', 'en': 'Raspberry Macaron'},
-      {'name': '흑임자 마카롱', 'price': '2,900', 'en': 'Black Sesame Macaron'},
+      {
+        'name': '블루베리 마카롱',
+        'price': '2,700',
+        'en': 'Blueberry Macaron',
+        'image': 'assets/images/categories/macaron.jpg'
+      },
+      {
+        'name': '바닐라 마카롱',
+        'price': '2,700',
+        'en': 'Vanilla Macaron',
+        'image': 'assets/images/categories/macaron.jpg'
+      },
+      {
+        'name': '스트로베리 마카롱',
+        'price': '2,700',
+        'en': 'Strawberry Macaron',
+        'image': 'assets/images/categories/macaron.jpg'
+      },
+      {
+        'name': '초콜릿 마카롱',
+        'price': '2,700',
+        'en': 'Chocolate Macaron',
+        'image': 'assets/images/categories/macaron.jpg'
+      },
+      {
+        'name': '피스타치오 마카롱',
+        'price': '2,700',
+        'en': 'Pistachio Macaron',
+        'image': 'assets/images/categories/macaron.jpg'
+      },
+      {
+        'name': '레몬 마카롱',
+        'price': '2,700',
+        'en': 'Lemon Macaron',
+        'image': 'assets/images/categories/macaron.jpg'
+      },
+      {
+        'name': '얼 그레이 마카롱',
+        'price': '2,700',
+        'en': 'Earl Grey Macaron',
+        'image': 'assets/images/categories/macaron.jpg'
+      },
+      {
+        'name': '솔티드 카라멜 마카롱',
+        'price': '2,900',
+        'en': 'Salted Caramel Macaron',
+        'image': 'assets/images/categories/macaron.jpg'
+      },
+      {
+        'name': '라즈베리 마카롱',
+        'price': '2,900',
+        'en': 'Raspberry Macaron',
+        'image': 'assets/images/categories/macaron.jpg'
+      },
+      {
+        'name': '흑임자 마카롱',
+        'price': '2,900',
+        'en': 'Black Sesame Macaron',
+        'image': 'assets/images/categories/macaron.jpg'
+      },
     ],
   };
 
@@ -471,173 +1324,621 @@ class MenuData {
       {
         'name': '그린 사이렌 클래식 머그',
         'price': '16,000',
-        'en': 'Green Siren Classic Mug'
+        'en': 'Green Siren Classic Mug',
+        'image': 'assets/images/categories/glass.jpg'
       },
-      {'name': 'SS 블랙 데비 머그', 'price': '22,000', 'en': 'SS Black Debbie Mug'},
-      {'name': '더블월 글라스', 'price': '18,000', 'en': 'Double Wall Glass'},
-      {'name': '서울 투어 머그', 'price': '18,000', 'en': 'Seoul Tour Mug'},
-      {'name': '제주 투어 머그', 'price': '18,000', 'en': 'Jeju Tour Mug'},
-      {'name': '부산 투어 머그', 'price': '18,000', 'en': 'Busan Tour Mug'},
+      {
+        'name': 'SS 블랙 데비 머그',
+        'price': '22,000',
+        'en': 'SS Black Debbie Mug',
+        'image': 'assets/images/categories/glass.jpg'
+      },
+      {
+        'name': '더블월 글라스',
+        'price': '18,000',
+        'en': 'Double Wall Glass',
+        'image': 'assets/images/categories/glass.jpg'
+      },
+      {
+        'name': '서울 투어 머그',
+        'price': '18,000',
+        'en': 'Seoul Tour Mug',
+        'image': 'assets/images/categories/glass.jpg'
+      },
+      {
+        'name': '제주 투어 머그',
+        'price': '18,000',
+        'en': 'Jeju Tour Mug',
+        'image': 'assets/images/categories/glass.jpg'
+      },
+      {
+        'name': '부산 투어 머그',
+        'price': '18,000',
+        'en': 'Busan Tour Mug',
+        'image': 'assets/images/categories/glass.jpg'
+      },
       {
         'name': 'SS 헤리티지 뉴턴 텀블러',
         'price': '31,000',
-        'en': 'SS Heritage Newton Tumbler'
+        'en': 'SS Heritage Newton Tumbler',
+        'image': 'assets/images/categories/glass.jpg'
       },
-      {'name': '아이코닉 사이렌 머그', 'price': '14,000', 'en': 'Iconic Siren Mug'},
-      {'name': '밀키 화이트 머그', 'price': '15,000', 'en': 'Milky White Mug'},
-      {'name': '스태킹 머그 세트', 'price': '28,000', 'en': 'Stacking Mug Set'},
+      {
+        'name': '아이코닉 사이렌 머그',
+        'price': '14,000',
+        'en': 'Iconic Siren Mug',
+        'image': 'assets/images/categories/glass.jpg'
+      },
+      {
+        'name': '밀키 화이트 머그',
+        'price': '15,000',
+        'en': 'Milky White Mug',
+        'image': 'assets/images/categories/glass.jpg'
+      },
+      {
+        'name': '스태킹 머그 세트',
+        'price': '28,000',
+        'en': 'Stacking Mug Set',
+        'image': 'assets/images/categories/glass.jpg'
+      },
     ],
     '텀블러 & 보온병': [
       {
         'name': 'SS 엘마 블랙 텀블러',
         'price': '33,000',
-        'en': 'SS Elma Black Tumbler'
+        'en': 'SS Elma Black Tumbler',
+        'image': 'assets/images/categories/thermos.jpg'
       },
       {
         'name': 'JNL 제트 블랙 보온병',
         'price': '48,000',
-        'en': 'JNL Jet Black Thermos'
+        'en': 'JNL Jet Black Thermos',
+        'image': 'assets/images/categories/thermos.jpg'
       },
-      {'name': '미르 텀블러', 'price': '35,000', 'en': 'MiiR Tumbler'},
-      {'name': 'SS 콩코드 텀블러', 'price': '35,000', 'en': 'SS Concorde Tumbler'},
-      {'name': 'SS 투고 텀블러', 'price': '31,000', 'en': 'SS ToGo Tumbler'},
-      {'name': 'SS 오페라 텀블러', 'price': '33,000', 'en': 'SS Opera Tumbler'},
-      {'name': 'JNM 클래식 보온병', 'price': '45,000', 'en': 'JNM Classic Thermos'},
-      {'name': 'FEJ 보온병', 'price': '48,000', 'en': 'FEJ Thermos'},
-      {'name': '스탠리 텀블러', 'price': '37,000', 'en': 'Stanley Tumbler'},
-      {'name': '마블 화이트 보온병', 'price': '49,000', 'en': 'Marble White Thermos'},
+      {
+        'name': '미르 텀블러',
+        'price': '35,000',
+        'en': 'MiiR Tumbler',
+        'image': 'assets/images/categories/thermos.jpg'
+      },
+      {
+        'name': 'SS 콩코드 텀블러',
+        'price': '35,000',
+        'en': 'SS Concorde Tumbler',
+        'image': 'assets/images/categories/thermos.jpg'
+      },
+      {
+        'name': 'SS 투고 텀블러',
+        'price': '31,000',
+        'en': 'SS ToGo Tumbler',
+        'image': 'assets/images/categories/thermos.jpg'
+      },
+      {
+        'name': 'SS 오페라 텀블러',
+        'price': '33,000',
+        'en': 'SS Opera Tumbler',
+        'image': 'assets/images/categories/thermos.jpg'
+      },
+      {
+        'name': 'JNM 클래식 보온병',
+        'price': '45,000',
+        'en': 'JNM Classic Thermos',
+        'image': 'assets/images/categories/thermos.jpg'
+      },
+      {
+        'name': 'FEJ 보온병',
+        'price': '48,000',
+        'en': 'FEJ Thermos',
+        'image': 'assets/images/categories/thermos.jpg'
+      },
+      {
+        'name': '스탠리 텀블러',
+        'price': '37,000',
+        'en': 'Stanley Tumbler',
+        'image': 'assets/images/categories/thermos.jpg'
+      },
+      {
+        'name': '마블 화이트 보온병',
+        'price': '49,000',
+        'en': 'Marble White Thermos',
+        'image': 'assets/images/categories/thermos.jpg'
+      },
     ],
     '커피 용품': [
-      {'name': '세라믹 드리퍼', 'price': '24,000', 'en': 'Ceramic Dripper'},
-      {'name': '커피 프레스', 'price': '38,000', 'en': 'Coffee Press'},
-      {'name': '글라스 서버', 'price': '22,000', 'en': 'Glass Server'},
-      {'name': '커피 스쿱', 'price': '9,000', 'en': 'Coffee Scoop'},
-      {'name': '드립 케틀', 'price': '42,000', 'en': 'Drip Kettle'},
-      {'name': '핸드 그라인더', 'price': '39,000', 'en': 'Hand Grinder'},
-      {'name': '프렌치 프레스', 'price': '36,000', 'en': 'French Press'},
-      {'name': '사이펀', 'price': '89,000', 'en': 'Siphon'},
-      {'name': '콜드 브루 메이커', 'price': '25,000', 'en': 'Cold Brew Maker'},
-      {'name': '종이 필터', 'price': '3,500', 'en': 'Paper Filter'},
+      {
+        'name': '세라믹 드리퍼',
+        'price': '24,000',
+        'en': 'Ceramic Dripper',
+        'image': 'assets/images/categories/coffee_goods.jpg'
+      },
+      {
+        'name': '커피 프레스',
+        'price': '38,000',
+        'en': 'Coffee Press',
+        'image': 'assets/images/categories/coffee_goods.jpg'
+      },
+      {
+        'name': '글라스 서버',
+        'price': '22,000',
+        'en': 'Glass Server',
+        'image': 'assets/images/categories/coffee_goods.jpg'
+      },
+      {
+        'name': '커피 스쿱',
+        'price': '9,000',
+        'en': 'Coffee Scoop',
+        'image': 'assets/images/categories/coffee_goods.jpg'
+      },
+      {
+        'name': '드립 케틀',
+        'price': '42,000',
+        'en': 'Drip Kettle',
+        'image': 'assets/images/categories/coffee_goods.jpg'
+      },
+      {
+        'name': '핸드 그라인더',
+        'price': '39,000',
+        'en': 'Hand Grinder',
+        'image': 'assets/images/categories/coffee_goods.jpg'
+      },
+      {
+        'name': '프렌치 프레스',
+        'price': '36,000',
+        'en': 'French Press',
+        'image': 'assets/images/categories/coffee_goods.jpg'
+      },
+      {
+        'name': '사이펀',
+        'price': '89,000',
+        'en': 'Siphon',
+        'image': 'assets/images/categories/coffee_goods.jpg'
+      },
+      {
+        'name': '콜드 브루 메이커',
+        'price': '25,000',
+        'en': 'Cold Brew Maker',
+        'image': 'assets/images/categories/coffee_goods.jpg'
+      },
+      {
+        'name': '종이 필터',
+        'price': '3,500',
+        'en': 'Paper Filter',
+        'image': 'assets/images/categories/coffee_goods.jpg'
+      },
     ],
     '원두': [
       {
         'name': '에스프레소 로스트 250g',
         'price': '15,000',
-        'en': 'Espresso Roast 250g'
+        'en': 'Espresso Roast 250g',
+        'image': 'assets/images/categories/whole_bean.jpg'
       },
-      {'name': '하우스 블렌드 250g', 'price': '15,000', 'en': 'House Blend 250g'},
+      {
+        'name': '하우스 블렌드 250g',
+        'price': '15,000',
+        'en': 'House Blend 250g',
+        'image': 'assets/images/categories/whole_bean.jpg'
+      },
       {
         'name': '파이크 플레이스 로스트 250g',
         'price': '15,000',
-        'en': 'Pike Place Roast 250g'
+        'en': 'Pike Place Roast 250g',
+        'image': 'assets/images/categories/whole_bean.jpg'
       },
-      {'name': '카페 베로나 250g', 'price': '15,000', 'en': 'Caffe Verona 250g'},
-      {'name': '수마트라 250g', 'price': '16,000', 'en': 'Sumatra 250g'},
-      {'name': '에티오피아 250g', 'price': '18,000', 'en': 'Ethiopia 250g'},
-      {'name': '콜롬비아 250g', 'price': '16,000', 'en': 'Colombia 250g'},
+      {
+        'name': '카페 베로나 250g',
+        'price': '15,000',
+        'en': 'Caffe Verona 250g',
+        'image': 'assets/images/categories/whole_bean.jpg'
+      },
+      {
+        'name': '수마트라 250g',
+        'price': '16,000',
+        'en': 'Sumatra 250g',
+        'image': 'assets/images/categories/whole_bean.jpg'
+      },
+      {
+        'name': '에티오피아 250g',
+        'price': '18,000',
+        'en': 'Ethiopia 250g',
+        'image': 'assets/images/categories/whole_bean.jpg'
+      },
+      {
+        'name': '콜롬비아 250g',
+        'price': '16,000',
+        'en': 'Colombia 250g',
+        'image': 'assets/images/categories/whole_bean.jpg'
+      },
       {
         'name': '과테말라 안티구아 250g',
         'price': '16,000',
-        'en': 'Guatemala Antigua 250g'
+        'en': 'Guatemala Antigua 250g',
+        'image': 'assets/images/categories/whole_bean.jpg'
       },
-      {'name': '케냐 250g', 'price': '18,000', 'en': 'Kenya 250g'},
+      {
+        'name': '케냐 250g',
+        'price': '18,000',
+        'en': 'Kenya 250g',
+        'image': 'assets/images/categories/whole_bean.jpg'
+      },
       {
         'name': '디카페인 하우스 블렌드 250g',
         'price': '17,000',
-        'en': 'Decaf House Blend 250g'
+        'en': 'Decaf House Blend 250g',
+        'image': 'assets/images/categories/whole_bean.jpg'
       },
     ],
     '비아 (VIA)': [
-      {'name': '비아 바닐라 라떼', 'price': '6,900', 'en': 'VIA Vanilla Latte'},
-      {'name': '비아 캐러멜 라떼', 'price': '6,900', 'en': 'VIA Caramel Latte'},
-      {'name': '비아 콜롬비아', 'price': '12,800', 'en': 'VIA Colombia'},
-      {'name': '비아 하우스 블렌드', 'price': '12,800', 'en': 'VIA House Blend'},
-      {'name': '비아 파이크 플레이스', 'price': '12,800', 'en': 'VIA Pike Place'},
-      {'name': '비아 이탈리안 로스트', 'price': '12,800', 'en': 'VIA Italian Roast'},
+      {
+        'name': '비아 바닐라 라떼',
+        'price': '6,900',
+        'en': 'VIA Vanilla Latte',
+        'image': 'assets/images/categories/via.jpg'
+      },
+      {
+        'name': '비아 캐러멜 라떼',
+        'price': '6,900',
+        'en': 'VIA Caramel Latte',
+        'image': 'assets/images/categories/via.jpg'
+      },
+      {
+        'name': '비아 콜롬비아',
+        'price': '12,800',
+        'en': 'VIA Colombia',
+        'image': 'assets/images/categories/via.jpg'
+      },
+      {
+        'name': '비아 하우스 블렌드',
+        'price': '12,800',
+        'en': 'VIA House Blend',
+        'image': 'assets/images/categories/via.jpg'
+      },
+      {
+        'name': '비아 파이크 플레이스',
+        'price': '12,800',
+        'en': 'VIA Pike Place',
+        'image': 'assets/images/categories/via.jpg'
+      },
+      {
+        'name': '비아 이탈리안 로스트',
+        'price': '12,800',
+        'en': 'VIA Italian Roast',
+        'image': 'assets/images/categories/via.jpg'
+      },
       {
         'name': '비아 디카페인 하우스 블렌드',
         'price': '13,500',
-        'en': 'VIA Decaf House Blend'
+        'en': 'VIA Decaf House Blend',
+        'image': 'assets/images/categories/via.jpg'
       },
-      {'name': '비아 모카', 'price': '7,200', 'en': 'VIA Mocha'},
-      {'name': '비아 말차', 'price': '8,500', 'en': 'VIA Matcha'},
-      {'name': '비아 아이스 커피', 'price': '6,900', 'en': 'VIA Iced Coffee'},
+      {
+        'name': '비아 모카',
+        'price': '7,200',
+        'en': 'VIA Mocha',
+        'image': 'assets/images/categories/via.jpg'
+      },
+      {
+        'name': '비아 말차',
+        'price': '8,500',
+        'en': 'VIA Matcha',
+        'image': 'assets/images/categories/via.jpg'
+      },
+      {
+        'name': '비아 아이스 커피',
+        'price': '6,900',
+        'en': 'VIA Iced Coffee',
+        'image': 'assets/images/categories/via.jpg'
+      },
     ],
     '티 패키지': [
-      {'name': '제주 녹차 (15입)', 'price': '20,000', 'en': 'Jeju Green Tea'},
-      {'name': '얼 그레이 (15입)', 'price': '20,000', 'en': 'Earl Grey'},
+      {
+        'name': '제주 녹차 (15입)',
+        'price': '20,000',
+        'en': 'Jeju Green Tea',
+        'image': 'assets/images/categories/tea_package.jpg'
+      },
+      {
+        'name': '얼 그레이 (15입)',
+        'price': '20,000',
+        'en': 'Earl Grey',
+        'image': 'assets/images/categories/tea_package.jpg'
+      },
       {
         'name': '잉글리쉬 브렉퍼스트 (15입)',
         'price': '20,000',
-        'en': 'English Breakfast'
+        'en': 'English Breakfast',
+        'image': 'assets/images/categories/tea_package.jpg'
       },
-      {'name': '차이 (15입)', 'price': '20,000', 'en': 'Chai'},
-      {'name': '히비스커스 (15입)', 'price': '20,000', 'en': 'Hibiscus'},
-      {'name': '민트 블렌드 (15입)', 'price': '20,000', 'en': 'Mint Blend'},
-      {'name': '유스베리 (15입)', 'price': '22,000', 'en': 'Youthberry'},
-      {'name': '캐모마일 블렌드 (15입)', 'price': '20,000', 'en': 'Chamomile Blend'},
-      {'name': '제주 유채꽃 티', 'price': '25,000', 'en': 'Jeju Canola Flower Tea'},
+      {
+        'name': '차이 (15입)',
+        'price': '20,000',
+        'en': 'Chai',
+        'image': 'assets/images/categories/tea_package.jpg'
+      },
+      {
+        'name': '히비스커스 (15입)',
+        'price': '20,000',
+        'en': 'Hibiscus',
+        'image': 'assets/images/categories/tea_package.jpg'
+      },
+      {
+        'name': '민트 블렌드 (15입)',
+        'price': '20,000',
+        'en': 'Mint Blend',
+        'image': 'assets/images/categories/tea_package.jpg'
+      },
+      {
+        'name': '유스베리 (15입)',
+        'price': '22,000',
+        'en': 'Youthberry',
+        'image': 'assets/images/categories/tea_package.jpg'
+      },
+      {
+        'name': '캐모마일 블렌드 (15입)',
+        'price': '20,000',
+        'en': 'Chamomile Blend',
+        'image': 'assets/images/categories/tea_package.jpg'
+      },
+      {
+        'name': '제주 유채꽃 티',
+        'price': '25,000',
+        'en': 'Jeju Canola Flower Tea',
+        'image': 'assets/images/categories/tea_package.jpg'
+      },
       {
         'name': '자몽 허니 블랙 티 세트',
         'price': '28,000',
-        'en': 'Grapefruit Honey Black Tea Set'
+        'en': 'Grapefruit Honey Black Tea Set',
+        'image': 'assets/images/categories/tea_package.jpg'
       },
     ],
     '시럽 & 소스': [
-      {'name': '바닐라 시럽 (280ml)', 'price': '9,000', 'en': 'Vanilla Syrup'},
-      {'name': '헤이즐넛 시럽 (280ml)', 'price': '9,000', 'en': 'Hazelnut Syrup'},
-      {'name': '카라멜 시럽 (280ml)', 'price': '9,000', 'en': 'Caramel Syrup'},
-      {'name': '초콜릿 소스', 'price': '8,000', 'en': 'Chocolate Sauce'},
-      {'name': '카라멜 소스', 'price': '8,000', 'en': 'Caramel Sauce'},
-      {'name': '화이트 초콜릿 소스', 'price': '8,500', 'en': 'White Chocolate Sauce'},
-      {'name': '클래식 시럽', 'price': '8,000', 'en': 'Classic Syrup'},
-      {'name': '돌체 시럽', 'price': '9,500', 'en': 'Dolce Syrup'},
-      {'name': '제주 꿀', 'price': '12,000', 'en': 'Jeju Honey'},
-      {'name': '메이플 시럽', 'price': '11,000', 'en': 'Maple Syrup'},
+      {
+        'name': '바닐라 시럽 (280ml)',
+        'price': '9,000',
+        'en': 'Vanilla Syrup',
+        'image': 'assets/images/categories/syrup.jpg'
+      },
+      {
+        'name': '헤이즐넛 시럽 (280ml)',
+        'price': '9,000',
+        'en': 'Hazelnut Syrup',
+        'image': 'assets/images/categories/syrup.jpg'
+      },
+      {
+        'name': '카라멜 시럽 (280ml)',
+        'price': '9,000',
+        'en': 'Caramel Syrup',
+        'image': 'assets/images/categories/syrup.jpg'
+      },
+      {
+        'name': '초콜릿 소스',
+        'price': '8,000',
+        'en': 'Chocolate Sauce',
+        'image': 'assets/images/categories/syrup.jpg'
+      },
+      {
+        'name': '카라멜 소스',
+        'price': '8,000',
+        'en': 'Caramel Sauce',
+        'image': 'assets/images/categories/syrup.jpg'
+      },
+      {
+        'name': '화이트 초콜릿 소스',
+        'price': '8,500',
+        'en': 'White Chocolate Sauce',
+        'image': 'assets/images/categories/syrup.jpg'
+      },
+      {
+        'name': '클래식 시럽',
+        'price': '8,000',
+        'en': 'Classic Syrup',
+        'image': 'assets/images/categories/syrup.jpg'
+      },
+      {
+        'name': '돌체 시럽',
+        'price': '9,500',
+        'en': 'Dolce Syrup',
+        'image': 'assets/images/categories/syrup.jpg'
+      },
+      {
+        'name': '제주 꿀',
+        'price': '12,000',
+        'en': 'Jeju Honey',
+        'image': 'assets/images/categories/syrup.jpg'
+      },
+      {
+        'name': '메이플 시럽',
+        'price': '11,000',
+        'en': 'Maple Syrup',
+        'image': 'assets/images/categories/syrup.jpg'
+      },
     ],
     '라이프스타일': [
-      {'name': '스타벅스 장우산', 'price': '25,000', 'en': 'Starbucks Umbrella'},
-      {'name': '23 스타벅스 다이어리', 'price': '32,000', 'en': '23 Starbucks Diary'},
-      {'name': '에코백', 'price': '18,000', 'en': 'Eco Bag'},
-      {'name': '파우치', 'price': '15,000', 'en': 'Pouch'},
-      {'name': '키링', 'price': '12,000', 'en': 'Key Ring'},
-      {'name': '노트북 파우치', 'price': '35,000', 'en': 'Laptop Pouch'},
-      {'name': '피크닉 매트', 'price': '28,000', 'en': 'Picnic Mat'},
-      {'name': '쿨러백', 'price': '32,000', 'en': 'Cooler Bag'},
-      {'name': '담요', 'price': '22,000', 'en': 'Blanket'},
-      {'name': '머그 리드', 'price': '5,000', 'en': 'Mug Lid'},
+      {
+        'name': '스타벅스 장우산',
+        'price': '25,000',
+        'en': 'Starbucks Umbrella',
+        'image': 'assets/images/categories/lifestyle.jpg'
+      },
+      {
+        'name': '23 스타벅스 다이어리',
+        'price': '32,000',
+        'en': '23 Starbucks Diary',
+        'image': 'assets/images/categories/lifestyle.jpg'
+      },
+      {
+        'name': '에코백',
+        'price': '18,000',
+        'en': 'Eco Bag',
+        'image': 'assets/images/categories/lifestyle.jpg'
+      },
+      {
+        'name': '파우치',
+        'price': '15,000',
+        'en': 'Pouch',
+        'image': 'assets/images/categories/lifestyle.jpg'
+      },
+      {
+        'name': '키링',
+        'price': '12,000',
+        'en': 'Key Ring',
+        'image': 'assets/images/categories/lifestyle.jpg'
+      },
+      {
+        'name': '노트북 파우치',
+        'price': '35,000',
+        'en': 'Laptop Pouch',
+        'image': 'assets/images/categories/lifestyle.jpg'
+      },
+      {
+        'name': '피크닉 매트',
+        'price': '28,000',
+        'en': 'Picnic Mat',
+        'image': 'assets/images/categories/lifestyle.jpg'
+      },
+      {
+        'name': '쿨러백',
+        'price': '32,000',
+        'en': 'Cooler Bag',
+        'image': 'assets/images/categories/lifestyle.jpg'
+      },
+      {
+        'name': '담요',
+        'price': '22,000',
+        'en': 'Blanket',
+        'image': 'assets/images/categories/lifestyle.jpg'
+      },
+      {
+        'name': '머그 리드',
+        'price': '5,000',
+        'en': 'Mug Lid',
+        'image': 'assets/images/categories/lifestyle.jpg'
+      },
     ],
     '기프트 카드': [
-      {'name': 'Thank You 카드', 'price': 'Variable', 'en': 'Thank You Card'},
+      {
+        'name': 'Thank You 카드',
+        'price': 'Variable',
+        'en': 'Thank You Card',
+        'image': 'assets/images/categories/gift_card.jpg'
+      },
       {
         'name': 'Happy Birthday 카드',
         'price': 'Variable',
-        'en': 'Happy Birthday Card'
+        'en': 'Happy Birthday Card',
+        'image': 'assets/images/categories/gift_card.jpg'
       },
       {
         'name': 'Congratulations 카드',
         'price': 'Variable',
-        'en': 'Congratulations Card'
+        'en': 'Congratulations Card',
+        'image': 'assets/images/categories/gift_card.jpg'
       },
-      {'name': 'Love You 카드', 'price': 'Variable', 'en': 'Love You Card'},
-      {'name': 'Cheer Up 카드', 'price': 'Variable', 'en': 'Cheer Up Card'},
-      {'name': 'Wedding 카드', 'price': 'Variable', 'en': 'Wedding Card'},
-      {'name': 'Graduation 카드', 'price': 'Variable', 'en': 'Graduation Card'},
-      {'name': 'New Year 카드', 'price': 'Variable', 'en': 'New Year Card'},
-      {'name': 'Christmas 카드', 'price': 'Variable', 'en': 'Christmas Card'},
-      {'name': 'Seoul City 카드', 'price': 'Variable', 'en': 'Seoul City Card'},
+      {
+        'name': 'Love You 카드',
+        'price': 'Variable',
+        'en': 'Love You Card',
+        'image': 'assets/images/categories/gift_card.jpg'
+      },
+      {
+        'name': 'Cheer Up 카드',
+        'price': 'Variable',
+        'en': 'Cheer Up Card',
+        'image': 'assets/images/categories/gift_card.jpg'
+      },
+      {
+        'name': 'Wedding 카드',
+        'price': 'Variable',
+        'en': 'Wedding Card',
+        'image': 'assets/images/categories/gift_card.jpg'
+      },
+      {
+        'name': 'Graduation 카드',
+        'price': 'Variable',
+        'en': 'Graduation Card',
+        'image': 'assets/images/categories/gift_card.jpg'
+      },
+      {
+        'name': 'New Year 카드',
+        'price': 'Variable',
+        'en': 'New Year Card',
+        'image': 'assets/images/categories/gift_card.jpg'
+      },
+      {
+        'name': 'Christmas 카드',
+        'price': 'Variable',
+        'en': 'Christmas Card',
+        'image': 'assets/images/categories/gift_card.jpg'
+      },
+      {
+        'name': 'Seoul City 카드',
+        'price': 'Variable',
+        'en': 'Seoul City Card',
+        'image': 'assets/images/categories/gift_card.jpg'
+      },
     ],
     '액세서리': [
-      {'name': '베어리스타 키체인', 'price': '14,000', 'en': 'Bearista Key Chain'},
-      {'name': '머들러', 'price': '7,000', 'en': 'Muddler'},
-      {'name': '코스터', 'price': '5,000', 'en': 'Coaster'},
-      {'name': '스트로우 세트', 'price': '8,000', 'en': 'Straw Set'},
-      {'name': '보틀 커버', 'price': '9,000', 'en': 'Bottle Cover'},
-      {'name': '텀블러 세척 솔', 'price': '6,000', 'en': 'Tumbler Brush'},
-      {'name': '커피 스쿱 클립', 'price': '8,000', 'en': 'Coffee Scoop Clip'},
-      {'name': '티 인퓨저', 'price': '15,000', 'en': 'Tea Infuser'},
-      {'name': '드리퍼 필터 케이스', 'price': '22,000', 'en': 'Dripper Filter Case'},
-      {'name': '원두 보관 용기', 'price': '18,000', 'en': 'Bean Storage Container'},
+      {
+        'name': '베어리스타 키체인',
+        'price': '14,000',
+        'en': 'Bearista Key Chain',
+        'image': 'assets/images/categories/accessory.jpg'
+      },
+      {
+        'name': '머들러',
+        'price': '7,000',
+        'en': 'Muddler',
+        'image': 'assets/images/categories/accessory.jpg'
+      },
+      {
+        'name': '코스터',
+        'price': '5,000',
+        'en': 'Coaster',
+        'image': 'assets/images/categories/accessory.jpg'
+      },
+      {
+        'name': '스트로우 세트',
+        'price': '8,000',
+        'en': 'Straw Set',
+        'image': 'assets/images/categories/accessory.jpg'
+      },
+      {
+        'name': '보틀 커버',
+        'price': '9,000',
+        'en': 'Bottle Cover',
+        'image': 'assets/images/categories/accessory.jpg'
+      },
+      {
+        'name': '텀블러 세척 솔',
+        'price': '6,000',
+        'en': 'Tumbler Brush',
+        'image': 'assets/images/categories/accessory.jpg'
+      },
+      {
+        'name': '커피 스쿱 클립',
+        'price': '8,000',
+        'en': 'Coffee Scoop Clip',
+        'image': 'assets/images/categories/accessory.jpg'
+      },
+      {
+        'name': '티 인퓨저',
+        'price': '15,000',
+        'en': 'Tea Infuser',
+        'image': 'assets/images/categories/accessory.jpg'
+      },
+      {
+        'name': '드리퍼 필터 케이스',
+        'price': '22,000',
+        'en': 'Dripper Filter Case',
+        'image': 'assets/images/categories/accessory.jpg'
+      },
+      {
+        'name': '원두 보관 용기',
+        'price': '18,000',
+        'en': 'Bean Storage Container',
+        'image': 'assets/images/categories/accessory.jpg'
+      },
     ],
   };
 
