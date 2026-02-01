@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'bouncing_button.dart';
+import '../common/bouncing_button.dart';
 
 class PayAddButton extends StatelessWidget {
   final IconData icon;

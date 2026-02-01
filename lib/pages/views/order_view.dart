@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:my_app/models/menu_data.dart';
-import 'package:my_app/pages/views/components/order_category_list.dart';
-import 'package:my_app/pages/views/components/order_category_tab.dart';
-import 'package:my_app/pages/views/components/order_detail_view.dart';
-import 'package:my_app/widgets/rats_sliver_app_bar.dart';
+import 'package:my_app/widgets/order/order_category_list.dart';
+import 'package:my_app/widgets/order/order_category_tab.dart';
+import 'package:my_app/widgets/order/order_detail_view.dart';
+import 'package:my_app/widgets/common/rats_sliver_app_bar.dart';
 
 class OrderView extends StatefulWidget {
   const OrderView({super.key});

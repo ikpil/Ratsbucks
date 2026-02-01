@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'bouncing_button.dart';
+import '../common/bouncing_button.dart';
 
 class QuickOrderSection extends StatelessWidget {
   const QuickOrderSection({super.key});

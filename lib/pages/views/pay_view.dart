@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import '../../widgets/pay_card_carousel.dart';
-import '../../widgets/pay_method_list.dart';
+import '../../widgets/pay/pay_card_carousel.dart';
+import '../../widgets/pay/pay_method_list.dart';
 
 class PayView extends StatelessWidget {
   const PayView({super.key});

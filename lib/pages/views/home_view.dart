@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import '../../widgets/quick_order_section.dart';
-import '../../widgets/home_event_section.dart';
-import '../../widgets/home_header_delegate.dart';
+import '../../widgets/home/quick_order_section.dart';
+import '../../widgets/home/home_event_section.dart';
+import '../../widgets/home/home_header_delegate.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

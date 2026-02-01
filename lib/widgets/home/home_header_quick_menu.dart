@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'bouncing_button.dart';
+import '../common/bouncing_button.dart';
 
 class HomeHeaderQuickMenu extends StatelessWidget {
   const HomeHeaderQuickMenu({super.key});

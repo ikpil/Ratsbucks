@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/widgets/rats_sliver_app_bar.dart';
+import 'package:my_app/widgets/common/rats_sliver_app_bar.dart';
 
 class OrderDetailView extends StatelessWidget {
   final String title;
