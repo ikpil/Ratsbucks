@@ -5,22 +5,25 @@ class ParallaxFlowDelegate extends FlowDelegate {
   ParallaxFlowDelegate({
     required this.scrollable,
     required this.listItemContext,
-    required this.backgroundImageKey,
   }) : super(repaint: scrollable.position);
 
   final ScrollableState scrollable;
   final BuildContext listItemContext;
-  final GlobalKey backgroundImageKey;
 
   @override
   BoxConstraints getConstraintsForChild(int i, BoxConstraints constraints) {
+    // Force the background image to be taller than the item (120px) to allow parallax movement.
+    // Setting a fixed height ensures consistent behavior regardless of image aspect ratio.
     return BoxConstraints.tightFor(
       width: constraints.maxWidth,
+      height: 200.0, // Significantly taller than the card height
     );
   }
 
   @override
   void paintChildren(FlowPaintingContext context) {
+    if (context.childCount == 0) return;
+
     // Calculate scroll offset of the list item within the viewport
     final scrollableBox = scrollable.context.findRenderObject() as RenderBox;
     final listItemBox = listItemContext.findRenderObject() as RenderBox;
@@ -37,9 +40,7 @@ class ParallaxFlowDelegate extends FlowDelegate {
     final verticalAlignment = Alignment(0.0, scrollFraction * 2 - 1);
 
     // Paint the child
-    final backgroundSize =
-        (backgroundImageKey.currentContext!.findRenderObject() as RenderBox)
-            .size;
+    final backgroundSize = context.getChildSize(0) ?? Size.zero;
     final listItemSize = context.size;
     final childRect =
         verticalAlignment.inscribe(backgroundSize, Offset.zero & listItemSize);
@@ -53,8 +54,7 @@ class ParallaxFlowDelegate extends FlowDelegate {
   @override
   bool shouldRepaint(ParallaxFlowDelegate oldDelegate) {
     return scrollable != oldDelegate.scrollable ||
-        listItemContext != oldDelegate.listItemContext ||
-        backgroundImageKey != oldDelegate.backgroundImageKey;
+        listItemContext != oldDelegate.listItemContext;
   }
 }
 
@@ -196,7 +196,6 @@ class _ParallaxSubCategoryCardState extends State<ParallaxSubCategoryCard> {
                     delegate: ParallaxFlowDelegate(
                       scrollable: Scrollable.of(context),
                       listItemContext: context,
-                      backgroundImageKey: _backgroundImageKey,
                     ),
                     children: [
                       Image.asset(
