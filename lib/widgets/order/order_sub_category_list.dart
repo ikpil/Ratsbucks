@@ -42,66 +42,84 @@ class OrderSubCategoryList extends StatelessWidget {
             color: Colors.transparent,
             child: InkWell(
               onTap: () => onCategoryTap(category, items),
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(12),
               child: Container(
-                padding: const EdgeInsets.all(20),
+                height: 100,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.04),
-                      blurRadius: 16,
-                      offset: const Offset(0, 4),
+                      color: Colors.black.withOpacity(0.05),
+                      blurRadius: 10,
+                      offset: const Offset(0, 2),
                     ),
                   ],
-                  border: Border.all(color: Colors.grey.shade100),
                 ),
                 child: Row(
                   children: [
-                    Container(
-                      width: 56,
-                      height: 56,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF9F9F9),
-                        borderRadius: BorderRadius.circular(28),
+                    // Representative Image
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(12),
+                        bottomLeft: Radius.circular(12),
                       ),
-                      child: Icon(
-                        _getIconForCategory(category),
-                        color: const Color(0xFF00704A),
-                        size: 28,
+                      child: Image.asset(
+                        _getImagePathForCategory(category),
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Container(
+                            width: 100,
+                            height: 100,
+                            color: Colors.grey.shade100,
+                            child: Icon(
+                              _getIconForCategory(category),
+                              color: Colors.grey.shade400,
+                              size: 32,
+                            ),
+                          );
+                        },
                       ),
                     ),
                     const SizedBox(width: 20),
+                    // Representative Name & English Name
                     Expanded(
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             category,
                             style: const TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w700,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
                               color: Colors.black87,
-                              letterSpacing: -0.3,
+                              letterSpacing: -0.5,
                             ),
                           ),
                           const SizedBox(height: 4),
                           Text(
                             _getEnglishCategoryName(category),
                             style: TextStyle(
-                              fontSize: 13,
+                              fontSize: 14,
                               color: Colors.grey.shade500,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: -0.2,
                             ),
                           ),
                         ],
                       ),
                     ),
-                    Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: Colors.grey.shade300,
-                      size: 16,
+                    // Arrow Icon
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        color: Colors.grey.shade300,
+                        size: 16,
+                      ),
                     ),
                   ],
                 ),
@@ -111,6 +129,33 @@ class OrderSubCategoryList extends StatelessWidget {
         );
       },
     );
+  }
+
+  String _getImagePathForCategory(String category) {
+    String filename = 'cold_brew.jpg'; // Default
+    if (category.contains('콜드 브루'))
+      filename = 'cold_brew.jpg';
+    else if (category.contains('에스프레소'))
+      filename = 'espresso.jpg';
+    else if (category.contains('프라푸치노'))
+      filename = 'frappuccino.jpg';
+    else if (category.contains('블렌디드'))
+      filename = 'blended.jpg';
+    else if (category.contains('티'))
+      filename = 'tea.jpg';
+    else if (category.contains('케이크'))
+      filename = 'cake.jpg';
+    else if (category.contains('샌드위치'))
+      filename = 'sandwich.jpg';
+    else if (category.contains('브레드'))
+      filename = 'bread.jpg';
+    else if (category.contains('과일'))
+      filename = 'fruit.jpg';
+    else if (category.contains('머그'))
+      filename = 'mug.jpg';
+    else if (category.contains('텀블러')) filename = 'tumbler.jpg';
+
+    return 'assets/images/categories/$filename';
   }
 
   IconData _getIconForCategory(String category) {
