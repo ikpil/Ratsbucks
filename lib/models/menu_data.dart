@@ -5,64 +5,64 @@ class MenuData {
         'name': '나이트로 콜드 브루',
         'price': '6,000',
         'en': 'Nitro Cold Brew',
-        'image': 'images/products/nitro_cold_brew.avif'
+        'image': 'images/products/nitro_cold_brew.png'
       },
       {
         'name': '돌체 콜드 브루',
         'price': '6,000',
         'en': 'Dolce Cold Brew',
         'image':
-            'images/products/cold_brew_with_nondairy_vanilla_sweet_cream_cold_foam.avif'
+            'images/products/cold_brew_with_nondairy_vanilla_sweet_cream_cold_foam.png'
       },
       {
         'name': '콜드 브루',
         'price': '4,900',
         'en': 'Cold Brew',
-        'image': 'images/products/starbucks®_cold_brew_coffee.avif'
+        'image': 'images/products/starbucks®_cold_brew_coffee.png'
       },
       {
         'name': '바닐라 크림 콜드 브루',
         'price': '5,800',
         'en': 'Vanilla Cream Cold Brew',
-        'image': 'images/products/vanilla_sweet_cream_cold_brew.avif'
+        'image': 'images/products/vanilla_sweet_cream_cold_brew.png'
       },
       {
         'name': '오트 콜드 브루',
         'price': '5,800',
         'en': 'Oat Cold Brew',
         'image':
-            'images/products/nondairy_vanilla_sweet_cream_cold_brew.avif'
+            'images/products/nondairy_vanilla_sweet_cream_cold_brew.png'
       },
       {
         'name': '제주 비자림 콜드 브루',
         'price': '6,800',
         'en': 'Jeju Forest Cold Brew',
-        'image': 'images/products/pistachio_cream_cold_brew.avif'
+        'image': 'images/products/pistachio_cream_cold_brew.png'
       },
       {
         'name': '시그니처 더 블랙 콜드 브루',
         'price': '19,600',
         'en': 'Signature The Black Cold Brew',
-        'image': 'images/products/starbucks®_cold_brew_coffee.avif'
+        'image': 'images/products/starbucks®_cold_brew_coffee.png'
       },
       {
         'name': '콜드 브루 몰트',
         'price': '8,500',
         'en': 'Cold Brew Malt',
-        'image': 'images/products/chocolate_cream_cold_brew.avif'
+        'image': 'images/products/chocolate_cream_cold_brew.png'
       },
       {
         'name': '콜드 브루 플로트',
         'price': '8,000',
         'en': 'Cold Brew Float',
-        'image': 'images/products/salted_caramel_cream_cold_brew.avif'
+        'image': 'images/products/salted_caramel_cream_cold_brew.png'
       },
       {
         'name': '프렌치 바닐라 라떼',
         'price': '6,500',
         'en': 'French Vanilla Latte',
         'image':
-            'images/products/iced_starbucks®_blonde_vanilla_latte.avif'
+            'images/products/iced_starbucks®_blonde_vanilla_latte.png'
       },
     ],
     '에스프레소': [
@@ -70,67 +70,67 @@ class MenuData {
         'name': '아메리카노',
         'price': '4,500',
         'en': 'Caffe Americano',
-        'image': 'images/products/caffè_americano.avif'
+        'image': 'images/products/caffè_americano.png'
       },
       {
         'name': '카페 라떼',
         'price': '5,000',
         'en': 'Caffe Latte',
-        'image': 'images/products/caffè_latte.avif'
+        'image': 'images/products/caffè_latte.png'
       },
       {
         'name': '카푸치노',
         'price': '5,000',
         'en': 'Cappuccino',
-        'image': 'images/products/caffè_latte.avif'
+        'image': 'images/products/caffè_latte.png'
       },
       {
         'name': '카라멜 마키아또',
         'price': '5,900',
         'en': 'Caramel Macchiato',
-        'image': 'images/products/caramel_brulée_latte.avif'
+        'image': 'images/products/caramel_brulée_latte.png'
       },
       {
         'name': '스타벅스 돌체 라떼',
         'price': '5,900',
         'en': 'Starbucks Dolce Latte',
-        'image': 'images/products/cinnamon_dolce_latte.avif'
+        'image': 'images/products/cinnamon_dolce_latte.png'
       },
       {
         'name': '바닐라 빈 라떼',
         'price': '6,100',
         'en': 'Vanilla Bean Latte',
-        'image': 'images/products/starbucks®_blonde_vanilla_latte.avif'
+        'image': 'images/products/starbucks®_blonde_vanilla_latte.png'
       },
       {
         'name': '에스프레소',
         'price': '4,000',
         'en': 'Espresso',
-        'image': 'images/products/espresso.avif'
+        'image': 'images/products/espresso.png'
       },
       {
         'name': '에스프레소 마키아또',
         'price': '4,000',
         'en': 'Espresso Macchiato',
-        'image': 'images/products/espresso_macchiato.avif'
+        'image': 'images/products/espresso_macchiato.png'
       },
       {
         'name': '에스프레소 콘 파나',
         'price': '4,200',
         'en': 'Espresso Con Panna',
-        'image': 'images/products/espresso_con_panna.avif'
+        'image': 'images/products/espresso_con_panna.png'
       },
       {
         'name': '카페 모카',
         'price': '5,500',
         'en': 'Caffe Mocha',
-        'image': 'images/products/caffè_mocha.avif'
+        'image': 'images/products/caffè_mocha.png'
       },
       {
         'name': '화이트 초콜릿 모카',
         'price': '5,900',
         'en': 'White Chocolate Mocha',
-        'image': 'images/products/white_chocolate_mocha.avif'
+        'image': 'images/products/white_chocolate_mocha.png'
       },
     ],
     '프라푸치노': [
@@ -139,67 +139,67 @@ class MenuData {
         'price': '6,300',
         'en': 'Java Chip Frappuccino',
         'image':
-            'images/products/java_chip_frappuccino®_blended_beverage.avif'
+            'images/products/java_chip_frappuccino®_blended_beverage.png'
       },
       {
         'name': '카라멜 프라푸치노',
         'price': '5,900',
         'en': 'Caramel Frappuccino',
         'image':
-            'images/products/caramel_frappuccino®_blended_beverage.avif'
+            'images/products/caramel_frappuccino®_blended_beverage.png'
       },
       {
         'name': '제주 말차 크림 프라푸치노',
         'price': '6,300',
         'en': 'Jeju Matcha Cream Frappuccino',
-        'image': 'images/products/chai_crème_frappuccino®.avif'
+        'image': 'images/products/chai_crème_frappuccino®.png'
       },
       {
         'name': '화이트 초콜릿 모카 프라푸치노',
         'price': '6,000',
         'en': 'White Chocolate Mocha Frappuccino',
         'image':
-            'images/products/peppermint_white_chocolate_mocha_frappuccino®_blended_beverage.avif'
+            'images/products/peppermint_white_chocolate_mocha_frappuccino®_blended_beverage.png'
       },
       {
         'name': '에스프레소 프라푸치노',
         'price': '5,500',
         'en': 'Espresso Frappuccino',
         'image':
-            'images/products/espresso_frappuccino®_blended_beverage.avif'
+            'images/products/espresso_frappuccino®_blended_beverage.png'
       },
       {
         'name': '더블 에스프레소 칩 프라푸치노',
         'price': '6,300',
         'en': 'Double Espresso Chip Frappuccino',
         'image':
-            'images/products/coffee_frappuccino®_blended_beverage.avif'
+            'images/products/coffee_frappuccino®_blended_beverage.png'
       },
       {
         'name': '초콜릿 크림 칩 프라푸치노',
         'price': '6,000',
         'en': 'Chocolate Cream Chip Frappuccino',
         'image':
-            'images/products/chocolate_cookie_crumble_crème_frappuccino®.avif'
+            'images/products/chocolate_cookie_crumble_crème_frappuccino®.png'
       },
       {
         'name': '제주 까망 크림 프라푸치노',
         'price': '7,500',
         'en': 'Jeju Black Sesame Cream Frappuccino',
-        'image': 'images/products/mocha_cookie_crumble_frappuccino®.avif'
+        'image': 'images/products/mocha_cookie_crumble_frappuccino®.png'
       },
       {
         'name': '제주 쑥떡 크림 프라푸치노',
         'price': '7,500',
         'en': 'Jeju Mugwort Cream Frappuccino',
-        'image': 'images/products/pistachio_cream_cold_brew.avif'
+        'image': 'images/products/pistachio_cream_cold_brew.png'
       },
       {
         'name': '바닐라 크림 프라푸치노',
         'price': '5,100',
         'en': 'Vanilla Cream Frappuccino',
         'image':
-            'images/products/caffè_vanilla_frappuccino®_blended_beverage.avif'
+            'images/products/caffè_vanilla_frappuccino®_blended_beverage.png'
       },
     ],
     '블렌디드': [
@@ -207,63 +207,63 @@ class MenuData {
         'name': '망고 바나나 블렌디드',
         'price': '6,300',
         'en': 'Mango Banana Blended',
-        'image': 'images/products/iced_peach_green_tea_lemonade.avif'
+        'image': 'images/products/iced_peach_green_tea_lemonade.png'
       },
       {
         'name': '딸기 딜라이트 요거트 블렌디드',
         'price': '6,300',
         'en': 'Strawberry Delight Yogurt Blended',
         'image':
-            'images/products/strawberry_crème_frappuccino®_blended_beverage.avif'
+            'images/products/strawberry_crème_frappuccino®_blended_beverage.png'
       },
       {
         'name': '피치 & 레몬 블렌디드',
         'price': '6,300',
         'en': 'Peach & Lemon Blended',
-        'image': 'images/products/iced_peach_green_tea.avif'
+        'image': 'images/products/iced_peach_green_tea.png'
       },
       {
         'name': '망고 패션 티 블렌디드',
         'price': '5,400',
         'en': 'Mango Passion Tea Blended',
-        'image': 'images/products/iced_passion_tango®_tea_lemonade.avif'
+        'image': 'images/products/iced_passion_tango®_tea_lemonade.png'
       },
       {
         'name': '익스트림 티 블렌디드',
         'price': '6,800',
         'en': 'Xtreme Tea Blended',
-        'image': 'images/products/iced_black_tea_lemonade.avif'
+        'image': 'images/products/iced_black_tea_lemonade.png'
       },
       {
         'name': '여수 바다 유자 블렌디드',
         'price': '7,000',
         'en': 'Yeosu Sea Yuja Blended',
-        'image': 'images/products/iced_honey_almondmilk_flat_white.avif'
+        'image': 'images/products/iced_honey_almondmilk_flat_white.png'
       },
       {
         'name': '제주 비자림 콜드 브루',
         'price': '6,800',
         'en': 'Jeju Forest Cold Brew',
-        'image': 'images/products/pistachio_cream_cold_brew.avif'
+        'image': 'images/products/pistachio_cream_cold_brew.png'
       },
       {
         'name': '코코넛 밀크 블렌디드',
         'price': '6,500',
         'en': 'Coconut Milk Blended',
-        'image': 'images/products/iced_coconutmilk_mocha_macchiato.avif'
+        'image': 'images/products/iced_coconutmilk_mocha_macchiato.png'
       },
       {
         'name': '오트 그린 티 블렌디드',
         'price': '6,500',
         'en': 'Oat Green Tea Blended',
-        'image': 'images/products/iced_green_tea_latte.avif'
+        'image': 'images/products/iced_green_tea_latte.png'
       },
       {
         'name': '시그니처 초콜릿 블렌디드',
         'price': '6,500',
         'en': 'Signature Chocolate Blended',
         'image':
-            'images/products/chocolate_cookie_crumble_crème_frappuccino®.avif'
+            'images/products/chocolate_cookie_crumble_crème_frappuccino®.png'
       },
     ],
     '티 (Tea)': [
@@ -271,61 +271,61 @@ class MenuData {
         'name': '자몽 허니 블랙 티',
         'price': '5,700',
         'en': 'Grapefruit Honey Black Tea',
-        'image': 'images/products/iced_black_tea_lemonade.avif'
+        'image': 'images/products/iced_black_tea_lemonade.png'
       },
       {
         'name': '유자 민트 티',
         'price': '5,900',
         'en': 'Yuaja Mint Tea',
-        'image': 'images/products/jade_citrus_mint®_brewed_tea.avif'
+        'image': 'images/products/jade_citrus_mint®_brewed_tea.png'
       },
       {
         'name': '차이 티 라떼',
         'price': '5,500',
         'en': 'Chai Tea Latte',
-        'image': 'images/products/chai_latte.avif'
+        'image': 'images/products/chai_latte.png'
       },
       {
         'name': '제주 유기농 말차로 만든 라떼',
         'price': '6,100',
         'en': 'Jeju Organic Matcha Latte',
-        'image': 'images/products/iced_green_tea_latte.avif'
+        'image': 'images/products/iced_green_tea_latte.png'
       },
       {
         'name': '잉글리쉬 브렉퍼스트 티',
         'price': '4,500',
         'en': 'English Breakfast Brewed Tea',
-        'image': 'images/products/royal_english_breakfast_tea.avif'
+        'image': 'images/products/royal_english_breakfast_tea.png'
       },
       {
         'name': '얼 그레이 티',
         'price': '4,500',
         'en': 'Earl Grey Brewed Tea',
-        'image': 'images/products/earl_grey_tea.avif'
+        'image': 'images/products/earl_grey_tea.png'
       },
       {
         'name': '유스베리 티',
         'price': '4,500',
         'en': 'Youthberry Brewed Tea',
-        'image': 'images/products/iced_passion_tango®_tea.avif'
+        'image': 'images/products/iced_passion_tango®_tea.png'
       },
       {
         'name': '히비스커스 블렌드 티',
         'price': '4,500',
         'en': 'Hibiscus Blend Brewed Tea',
-        'image': 'images/products/iced_passion_tango®_tea.avif'
+        'image': 'images/products/iced_passion_tango®_tea.png'
       },
       {
         'name': '민트 블렌드 티',
         'price': '4,500',
         'en': 'Mint Blend Brewed Tea',
-        'image': 'images/products/mint_majesty.avif'
+        'image': 'images/products/mint_majesty.png'
       },
       {
         'name': '캐모마일 블렌드 티',
         'price': '4,500',
         'en': 'Chamomile Blend Brewed Tea',
-        'image': 'images/products/chamomile.avif'
+        'image': 'images/products/chamomile.png'
       },
     ],
     '브루드 커피': [
@@ -333,63 +333,63 @@ class MenuData {
         'name': '오늘의 커피',
         'price': '4,200',
         'en': 'Brewed Coffee',
-        'image': 'images/products/caffè_americano.avif'
+        'image': 'images/products/caffè_americano.png'
       },
       {
         'name': '아이스 커피',
         'price': '4,500',
         'en': 'Iced Coffee',
-        'image': 'images/products/iced_coffee.avif'
+        'image': 'images/products/iced_coffee.png'
       },
       {
         'name': '카페 베로나',
         'price': '5,000',
         'en': 'Caffe Verona',
-        'image': 'images/products/caffè_americano.avif'
+        'image': 'images/products/caffè_americano.png'
       },
       {
         'name': '파이크 플레이스 로스트',
         'price': '5,000',
         'en': 'Pike Place Roast',
         'image':
-            'images/products/coffee_traveler___pike_place®_roast.avif'
+            'images/products/coffee_traveler___pike_place®_roast.png'
       },
       {
         'name': '디카페인 하우스 블렌드',
         'price': '5,300',
         'en': 'Decaf House Blend',
         'image':
-            'images/products/coffee_traveler___decaf_pike_place®_roast.avif'
+            'images/products/coffee_traveler___decaf_pike_place®_roast.png'
       },
       {
         'name': '크리스마스 블렌드',
         'price': '5,500',
         'en': 'Christmas Blend',
-        'image': 'images/products/caffè_americano.avif'
+        'image': 'images/products/caffè_americano.png'
       },
       {
         'name': '콜롬비아',
         'price': '5,000',
         'en': 'Colombia',
-        'image': 'images/products/coffee_traveler___veranda_blend®.avif'
+        'image': 'images/products/coffee_traveler___veranda_blend®.png'
       },
       {
         'name': '이탈리안 로스트',
         'price': '5,000',
         'en': 'Italian Roast',
-        'image': 'images/products/coffee_traveler___dark_roast.avif'
+        'image': 'images/products/coffee_traveler___dark_roast.png'
       },
       {
         'name': '에티오피아',
         'price': '5,500',
         'en': 'Ethiopia',
-        'image': 'images/products/caffè_americano.avif'
+        'image': 'images/products/caffè_americano.png'
       },
       {
         'name': '수마트라',
         'price': '5,500',
         'en': 'Sumatra',
-        'image': 'images/products/coffee_traveler___dark_roast.avif'
+        'image': 'images/products/coffee_traveler___dark_roast.png'
       },
     ],
     '피지오': [
@@ -403,13 +403,13 @@ class MenuData {
         'name': '블랙 티 레모네이드 피지오',
         'price': '5,400',
         'en': 'Black Tea Lemonade Fizzio',
-        'image': 'images/products/iced_black_tea_lemonade.avif'
+        'image': 'images/products/iced_black_tea_lemonade.png'
       },
       {
         'name': '패션 탱고 티 레모네이드 피지오',
         'price': '5,400',
         'en': 'Passion Tango Tea Lemonade Fizzio',
-        'image': 'images/products/iced_passion_tango®_tea_lemonade.avif'
+        'image': 'images/products/iced_passion_tango®_tea_lemonade.png'
       },
       {
         'name': '핑크베리 유스베리',
@@ -460,38 +460,38 @@ class MenuData {
         'price': '5,900',
         'en': 'Strawberry Acai Lemonade Starbucks Refreshers',
         'image':
-            'images/products/strawberry_acai_lemonade_starbucks_refreshers_beverage.avif'
+            'images/products/strawberry_acai_lemonade_starbucks_refreshers_beverage.png'
       },
       {
         'name': '망고 용과 레모네이드 스타벅스 리프레셔',
         'price': '5,900',
         'en': 'Mango Dragonfruit Lemonade Starbucks Refreshers',
         'image':
-            'images/products/mango_dragonfruit_lemonade_starbucks_refreshers_beverage.avif'
+            'images/products/mango_dragonfruit_lemonade_starbucks_refreshers_beverage.png'
       },
       {
         'name': '퍼플 드링크 위드 망고 용과 스타벅스 리프레셔',
         'price': '5,900',
         'en': 'Purple Drink with Mango Dragonfruit Starbucks Refreshers',
-        'image': 'images/products/dragon_drink.avif'
+        'image': 'images/products/dragon_drink.png'
       },
       {
         'name': '핑크 드링크 위드 딸기 아사이 스타벅스 리프레셔',
         'price': '5,900',
         'en': 'Pink Drink with Strawberry Acai Starbucks Refreshers',
-        'image': 'images/products/pink_drink.avif'
+        'image': 'images/products/pink_drink.png'
       },
       {
         'name': '슈크림 라떼',
         'price': '6,300',
         'en': 'Choux Cream Latte',
-        'image': 'images/products/cinnamon_dolce_latte.avif'
+        'image': 'images/products/cinnamon_dolce_latte.png'
       },
       {
         'name': '바질 레몬 셔벗 블렌디드',
         'price': '6,500',
         'en': 'Basil Lemon Sherbet Blended',
-        'image': 'images/products/lemonade.avif'
+        'image': 'images/products/lemonade.png'
       },
       {
         'name': '코코넛 리프레셔',
@@ -510,7 +510,7 @@ class MenuData {
         'price': '6,000',
         'en': 'Berry Hibiscus Refreshers',
         'image':
-            'images/products/very_berry_hibiscus_lemonade_starbucks_refreshers_beverage.avif'
+            'images/products/very_berry_hibiscus_lemonade_starbucks_refreshers_beverage.png'
       },
       {
         'name': '쿨 라임 리프레셔',
@@ -530,51 +530,51 @@ class MenuData {
         'name': '제주 유기농 말차로 만든 라떼',
         'price': '8,300',
         'en': 'Jeju Organic Matcha Latte',
-        'image': 'images/products/iced_green_tea_latte.avif'
+        'image': 'images/products/iced_green_tea_latte.png'
       },
       {
         'name': '미니 딸기 라떼',
         'price': '4,500',
         'en': 'Mini Strawberry Latte',
         'image':
-            'images/products/strawberry_crème_frappuccino®_blended_beverage.avif'
+            'images/products/strawberry_crème_frappuccino®_blended_beverage.png'
       },
       {
         'name': '미니 망고 스무디',
         'price': '4,500',
         'en': 'Mini Mango Smoothie',
         'image':
-            'images/products/mango_dragonfruit_lemonade_starbucks_refreshers_beverage.avif'
+            'images/products/mango_dragonfruit_lemonade_starbucks_refreshers_beverage.png'
       },
       {
         'name': '미니 초콜릿',
         'price': '4,000',
         'en': 'Mini Chocolate',
-        'image': 'images/products/hot_chocolate.avif'
+        'image': 'images/products/hot_chocolate.png'
       },
       {
         'name': '미니 바닐라 크림',
         'price': '4,000',
         'en': 'Mini Vanilla Cream',
-        'image': 'images/products/vanilla_crème.avif'
+        'image': 'images/products/vanilla_crème.png'
       },
       {
         'name': '미니 카라멜',
         'price': '4,000',
         'en': 'Mini Caramel',
-        'image': 'images/products/caramel_macchiato.avif'
+        'image': 'images/products/caramel_macchiato.png'
       },
       {
         'name': '미니 헤이즐넛',
         'price': '4,000',
         'en': 'Mini Hazelnut',
-        'image': 'images/products/hazelnut_bianco_latte.avif'
+        'image': 'images/products/hazelnut_bianco_latte.png'
       },
       {
         'name': '미니 그린티',
         'price': '4,500',
         'en': 'Mini Green Tea',
-        'image': 'images/products/matcha_green_tea_latte.avif'
+        'image': 'images/products/matcha_green_tea_latte.png'
       },
       {
         'name': '미니 블루베리 요거트',
@@ -625,7 +625,7 @@ class MenuData {
         'price': '4,000',
         'en': 'Kale & Apple Juice',
         'image':
-            'images/products/evolution_fresh®_organic_green_devotion.avif'
+            'images/products/evolution_fresh®_organic_green_devotion.png'
       },
       {
         'name': '햇사과 주스',
@@ -651,13 +651,13 @@ class MenuData {
         'name': '라임 패션 티',
         'price': '5,600',
         'en': 'Lime Passion Tea',
-        'image': 'images/products/iced_passion_tango®_tea.avif'
+        'image': 'images/products/iced_passion_tango®_tea.png'
       },
       {
         'name': '자몽 셔벗 블렌디드',
         'price': '6,300',
         'en': 'Grapefruit Sherbet Blended',
-        'image': 'images/products/blended_strawberry_lemonade.avif'
+        'image': 'images/products/blended_strawberry_lemonade.png'
       },
       {
         'name': '유자 에이드',
@@ -669,7 +669,7 @@ class MenuData {
         'name': '레몬 에이드',
         'price': '5,400',
         'en': 'Lemon Ade',
-        'image': 'images/products/lemonade.avif'
+        'image': 'images/products/lemonade.png'
       },
       {
         'name': '자몽 에이드',
@@ -716,7 +716,7 @@ class MenuData {
         'name': '부드러운 생크림 카스텔라',
         'price': '4,500',
         'en': 'Fresh Cream Castella',
-        'image': 'images/products/cinnamon_coffee_cake.avif'
+        'image': 'images/products/cinnamon_coffee_cake.png'
       },
       {
         'name': '클라우드 치즈 케이크',
@@ -778,7 +778,7 @@ class MenuData {
         'name': 'B.E.L.T. 샌드위치',
         'price': '5,900',
         'en': 'B.E.L.T. Sandwich',
-        'image': 'images/products/bacon,_gouda_&_egg_sandwich.avif'
+        'image': 'images/products/bacon,_gouda_&_egg_sandwich.png'
       },
       {
         'name': '에그 에그 샌드위치',
@@ -791,14 +791,14 @@ class MenuData {
         'price': '5,800',
         'en': 'BBQ Chicken Cheese Ciabatta',
         'image':
-            'images/products/chicken,_maple_butter_&_egg_sandwich.avif'
+            'images/products/chicken,_maple_butter_&_egg_sandwich.png'
       },
       {
         'name': '햄 & 루꼴라 올리브 샌드위치',
         'price': '6,200',
         'en': 'Ham & Arugula Olive Sandwich',
         'image':
-            'images/products/double_smoked_bacon,_cheddar_&_egg_sandwich.avif'
+            'images/products/double_smoked_bacon,_cheddar_&_egg_sandwich.png'
       },
       {
         'name': '단호박 에그 샌드위치',
@@ -816,7 +816,7 @@ class MenuData {
         'name': '트리플 치즈 크로크무슈',
         'price': '5,200',
         'en': 'Triple Cheese Croque Monsieur',
-        'image': 'images/products/grilled_cheese_on_sourdough.avif'
+        'image': 'images/products/grilled_cheese_on_sourdough.png'
       },
       {
         'name': '쉬림프 코코넛 샐러드',
@@ -848,19 +848,19 @@ class MenuData {
         'name': '미니 클래식 스콘',
         'price': '4,000',
         'en': 'Mini Classic Scone',
-        'image': 'images/products/petite_vanilla_bean_scone.avif'
+        'image': 'images/products/petite_vanilla_bean_scone.png'
       },
       {
         'name': '베이글 (플레인/블루베리)',
         'price': '3,000',
         'en': 'Bagel',
-        'image': 'images/products/plain_bagel.avif'
+        'image': 'images/products/plain_bagel.png'
       },
       {
         'name': '프렌치 크루아상',
         'price': '3,200',
         'en': 'French Croissant',
-        'image': 'images/products/butter_croissant.avif'
+        'image': 'images/products/butter_croissant.png'
       },
       {
         'name': '초콜릿 데니쉬 롤',
@@ -884,7 +884,7 @@ class MenuData {
         'name': '뺑 오 쇼콜라',
         'price': '3,500',
         'en': 'Pain au Chocolat',
-        'image': 'images/products/chocolate_croissant.avif'
+        'image': 'images/products/chocolate_croissant.png'
       },
       {
         'name': '고메 버터 스콘',
@@ -896,7 +896,7 @@ class MenuData {
         'name': '리얼 블루베리 베이글',
         'price': '3,000',
         'en': 'Real Blueberry Bagel',
-        'image': 'images/products/everything_bagel.avif'
+        'image': 'images/products/everything_bagel.png'
       },
     ],
     '과일 & 요거트': [
@@ -916,7 +916,7 @@ class MenuData {
         'name': '오가닉 그릭 요거트 플레인',
         'price': '3,900',
         'en': 'Organic Greek Yogurt Plain',
-        'image': 'images/products/berry_trio_parfait.avif'
+        'image': 'images/products/berry_trio_parfait.png'
       },
       {
         'name': '그래놀라 요거트',
@@ -934,7 +934,7 @@ class MenuData {
         'name': '바나나',
         'price': '1,500',
         'en': 'Banana',
-        'image': 'images/products/banana.avif'
+        'image': 'images/products/banana.png'
       },
       {
         'name': '한라봉 젤리',
@@ -972,13 +972,13 @@ class MenuData {
         'name': '라이스 칩',
         'price': '2,700',
         'en': 'Rice Chip',
-        'image': 'images/products/marshmallow_dream_bar.avif'
+        'image': 'images/products/marshmallow_dream_bar.png'
       },
       {
         'name': '더블 치즈 베이글 칩',
         'price': '2,700',
         'en': 'Double Cheese Bagel Chip',
-        'image': 'images/products/string_cheese.avif'
+        'image': 'images/products/string_cheese.png'
       },
       {
         'name': '한입에 쏙 공주 밤',
@@ -996,7 +996,7 @@ class MenuData {
         'name': '초콜릿 월넛 브라우니',
         'price': '3,500',
         'en': 'Chocolate Walnut Brownie',
-        'image': 'images/products/double_chocolate_chunk_brownie.avif'
+        'image': 'images/products/double_chocolate_chunk_brownie.png'
       },
       {
         'name': '다크 초콜릿 카우보이 쿠키',
@@ -1015,13 +1015,13 @@ class MenuData {
         'price': '3,500',
         'en': 'Almond Toffee Nut Candy',
         'image':
-            'images/products/salt_&_vinegar_kettle_potato_chips.avif'
+            'images/products/salt_&_vinegar_kettle_potato_chips.png'
       },
       {
         'name': '비스코티',
         'price': '2,500',
         'en': 'Biscotti',
-        'image': 'images/products/madeleines.avif'
+        'image': 'images/products/madeleines.png'
       },
     ],
     '아이스크림': [
@@ -1159,21 +1159,21 @@ class MenuData {
         'name': '베이컨 치즈 토스트',
         'price': '4,900',
         'en': 'Bacon Cheese Toast',
-        'image': 'images/products/bacon,_gouda_&_egg_sandwich.avif'
+        'image': 'images/products/bacon,_gouda_&_egg_sandwich.png'
       },
       {
         'name': '햄 & 치즈 베이글',
         'price': '5,300',
         'en': 'Ham & Cheese Bagel',
         'image':
-            'images/products/double_smoked_bacon,_cheddar_&_egg_sandwich.avif'
+            'images/products/double_smoked_bacon,_cheddar_&_egg_sandwich.png'
       },
       {
         'name': '에그 베이컨 파니니',
         'price': '6,500',
         'en': 'Egg Bacon Panini',
         'image':
-            'images/products/turkey_bacon,_cheddar_&_egg_white_sandwich.avif'
+            'images/products/turkey_bacon,_cheddar_&_egg_white_sandwich.png'
       },
       {
         'name': '브리오슈 에그 샌드위치',
@@ -1185,13 +1185,13 @@ class MenuData {
         'name': '잉글리쉬 머핀 밀 박스',
         'price': '5,900',
         'en': 'English Muffin Meal Box',
-        'image': 'images/products/sausage,_cheddar_&_egg_sandwich.avif'
+        'image': 'images/products/sausage,_cheddar_&_egg_sandwich.png'
       },
       {
         'name': '멕시칸 브리또 밀 박스',
         'price': '5,900',
         'en': 'Mexican Burrito Meal Box',
-        'image': 'images/products/spinach,_feta_&_egg_white_wrap.avif'
+        'image': 'images/products/spinach,_feta_&_egg_white_wrap.png'
       },
       {
         'name': '쉬림프 로제 파스타 밀 박스',
@@ -1217,13 +1217,13 @@ class MenuData {
         'name': '시그니처 초콜릿',
         'price': '5,300',
         'en': 'Signature Chocolate',
-        'image': 'images/products/hot_chocolate.avif'
+        'image': 'images/products/hot_chocolate.png'
       },
       {
         'name': '화이트 초콜릿 모카',
         'price': '5,600',
         'en': 'White Chocolate Mocha',
-        'image': 'images/products/white_chocolate_mocha.avif'
+        'image': 'images/products/white_chocolate_mocha.png'
       },
       {
         'name': '아몬드 초콜릿',
@@ -1530,7 +1530,7 @@ class MenuData {
         'name': '에스프레소 로스트 250g',
         'price': '15,000',
         'en': 'Espresso Roast 250g',
-        'image': 'images/products/espresso_roast.avif'
+        'image': 'images/products/espresso_roast.png'
       },
       {
         'name': '하우스 블렌드 250g',
@@ -1646,7 +1646,7 @@ class MenuData {
         'name': '비아 아이스 커피',
         'price': '6,900',
         'en': 'VIA Iced Coffee',
-        'image': 'images/products/via®_sweetened_iced_coffee.avif'
+        'image': 'images/products/via®_sweetened_iced_coffee.png'
       },
     ],
     '티 패키지': [
