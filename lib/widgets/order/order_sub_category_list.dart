@@ -125,68 +125,35 @@ class _ParallaxSubCategoryCardState extends State<ParallaxSubCategoryCard> {
 
   @override
   Widget build(BuildContext context) {
+    final details =
+        MenuData.categoryDetails[widget.category] ?? {'en': '', 'image': ''};
+    final englishName = details['en'] ?? '';
+    final imagePath = details['image'] ?? '';
+
     return GestureDetector(
       onTap: widget.onTap,
       child: Container(
-        height: 140,
+        height: 120, // Slightly reduced height for better proportion
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.08),
+              color: Colors.black.withOpacity(0.06),
               blurRadius: 16,
               offset: const Offset(0, 4),
             ),
           ],
         ),
         clipBehavior: Clip.hardEdge,
-        child: Stack(
+        child: Row(
           children: [
-            // Background Image with Parallax
-            Positioned.fill(
-              left: 100, // Image takes right side mostly
-              child: Flow(
-                delegate: ParallaxFlowDelegate(
-                  scrollable: Scrollable.of(context),
-                  listItemContext: context,
-                  backgroundImageKey: _backgroundImageKey,
-                ),
-                children: [
-                  Image.asset(
-                    _getImagePathForCategory(widget.category),
-                    key: _backgroundImageKey,
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) =>
-                        Container(color: Colors.grey.shade200),
-                  ),
-                ],
-              ),
-            ),
-
-            // Gradient Overlay for Text Readability (Left to Right)
-            Positioned.fill(
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: [
-                      Colors.white,
-                      Colors.white.withOpacity(0.8),
-                      Colors.transparent,
-                    ],
-                    stops: const [0.4, 0.6, 1.0],
-                  ),
-                ),
-              ),
-            ),
-
-            // Text Content
-            Align(
-              alignment: Alignment.centerLeft,
+            // Text Content Area (Left Side - 60%)
+            Expanded(
+              flex: 6,
               child: Padding(
-                padding: const EdgeInsets.only(left: 24, right: 24),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,99 +161,65 @@ class _ParallaxSubCategoryCardState extends State<ParallaxSubCategoryCard> {
                     Text(
                       widget.category,
                       style: const TextStyle(
-                        fontSize: 22,
+                        fontSize: 20,
                         fontWeight: FontWeight.w800,
                         color: Colors.black87,
                         letterSpacing: -0.5,
                       ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      _getEnglishCategoryName(widget.category),
+                      englishName,
                       style: TextStyle(
                         fontSize: 14,
-                        color: Colors.grey.shade600,
+                        color: Colors.grey.shade500,
                         fontWeight: FontWeight.w500,
                         letterSpacing: 0,
                       ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    const SizedBox(height: 16),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 12, vertical: 6),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF00704A).withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: const Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            'View Menu',
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF00704A),
-                            ),
-                          ),
-                          SizedBox(width: 4),
-                          Icon(
-                            Icons.arrow_forward_rounded,
-                            size: 14,
-                            color: Color(0xFF00704A),
-                          ),
-                        ],
-                      ),
-                    )
                   ],
                 ),
+              ),
+            ),
+
+            // Image Area (Right Side - 40% with Parallax)
+            Expanded(
+              flex: 4,
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Flow(
+                    delegate: ParallaxFlowDelegate(
+                      scrollable: Scrollable.of(context),
+                      listItemContext: context,
+                      backgroundImageKey: _backgroundImageKey,
+                    ),
+                    children: [
+                      Image.asset(
+                        imagePath,
+                        key: _backgroundImageKey,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) => Container(
+                          color: Colors.grey.shade200,
+                          child: const Center(
+                            child: Icon(Icons.coffee, color: Colors.grey),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  // Optional: Subtle separation line or shadow if needed
+                  // But user asked for distinct areas, the cut is distinct enough.
+                ],
               ),
             ),
           ],
         ),
       ),
     );
-  }
-
-  String _getImagePathForCategory(String category) {
-    String filename = 'cold_brew.jpg'; // Default
-    if (category.contains('콜드 브루'))
-      filename = 'cold_brew.jpg';
-    else if (category.contains('에스프레소'))
-      filename = 'espresso.jpg';
-    else if (category.contains('프라푸치노'))
-      filename = 'frappuccino.jpg';
-    else if (category.contains('블렌디드'))
-      filename = 'blended.jpg';
-    else if (category.contains('티'))
-      filename = 'tea.jpg';
-    else if (category.contains('케이크'))
-      filename = 'cake.jpg';
-    else if (category.contains('샌드위치'))
-      filename = 'sandwich.jpg';
-    else if (category.contains('브레드'))
-      filename = 'bread.jpg';
-    else if (category.contains('과일'))
-      filename = 'fruit.jpg';
-    else if (category.contains('머그'))
-      filename = 'mug.jpg';
-    else if (category.contains('텀블러')) filename = 'tumbler.jpg';
-
-    return 'assets/images/categories/$filename';
-  }
-
-  String _getEnglishCategoryName(String category) {
-    if (category.contains('콜드 브루')) return 'Cold Brew';
-    if (category.contains('에스프레소')) return 'Espresso';
-    if (category.contains('프라푸치노')) return 'Frappuccino';
-    if (category.contains('블렌디드')) return 'Blended';
-    if (category.contains('티')) return 'Tea';
-    if (category.contains('케이크')) return 'Cake';
-    if (category.contains('샌드위치')) return 'Sandwich & Salad';
-    if (category.contains('브레드')) return 'Bread';
-    if (category.contains('과일')) return 'Fruit & Yogurt';
-    if (category.contains('머그')) return 'Mug & Glass';
-    if (category.contains('텀블러')) return 'Tumbler';
-    return category;
   }
 }
