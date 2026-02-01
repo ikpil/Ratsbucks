@@ -1,19 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/models/menu_data.dart';
 
 class OrderCategoryList extends StatelessWidget {
-  final Map<String, List<Map<String, dynamic>>> menuData;
+  final int categoryIndex;
   final Function(String title, List<Map<String, dynamic>> items) onCategoryTap;
-  final String iconAsset;
 
   const OrderCategoryList({
     super.key,
-    required this.menuData,
+    required this.categoryIndex,
     required this.onCategoryTap,
-    required this.iconAsset,
   });
+
+  Map<String, List<Map<String, dynamic>>> get _menuData {
+    switch (categoryIndex) {
+      case 0:
+        return MenuData.beverageMenu;
+      case 1:
+        return MenuData.foodMenu;
+      case 2:
+        return MenuData.goodsMenu;
+      default:
+        return MenuData.beverageMenu;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
+    final menuData = _menuData;
+
     return ListView.builder(
       physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.only(top: 16, left: 20, right: 20, bottom: 120),
@@ -100,13 +114,18 @@ class OrderCategoryList extends StatelessWidget {
   }
 
   IconData _getIconForCategory(String category) {
-    if (category.contains('콜드') || category.contains('에스프레소')) return Icons.coffee_rounded;
-    if (category.contains('프라푸치노') || category.contains('블렌디드')) return Icons.local_drink_rounded;
+    if (category.contains('콜드') || category.contains('에스프레소'))
+      return Icons.coffee_rounded;
+    if (category.contains('프라푸치노') || category.contains('블렌디드'))
+      return Icons.local_drink_rounded;
     if (category.contains('티')) return Icons.emoji_food_beverage_rounded;
-    if (category.contains('케이크') || category.contains('브레드')) return Icons.cake_rounded;
+    if (category.contains('케이크') || category.contains('브레드'))
+      return Icons.cake_rounded;
     if (category.contains('샌드위치')) return Icons.lunch_dining_rounded;
-    if (category.contains('과일') || category.contains('요거트')) return Icons.rice_bowl_rounded;
-    if (category.contains('머그') || category.contains('텀블러')) return Icons.coffee_maker_rounded;
+    if (category.contains('과일') || category.contains('요거트'))
+      return Icons.rice_bowl_rounded;
+    if (category.contains('머그') || category.contains('텀블러'))
+      return Icons.coffee_maker_rounded;
     return Icons.restaurant_menu_rounded;
   }
 

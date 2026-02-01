@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'package:my_app/models/menu_data.dart';
 import 'package:my_app/widgets/order/order_category_list.dart';
 import 'package:my_app/widgets/order/order_category_tab.dart';
 import 'package:my_app/widgets/order/order_detail_view.dart';
@@ -13,39 +12,15 @@ class OrderView extends StatefulWidget {
   State<OrderView> createState() => _OrderViewState();
 }
 
-class _OrderViewState extends State<OrderView> with TickerProviderStateMixin {
+class _OrderViewState extends State<OrderView> {
   int _selectedCategoryIndex = 0;
   final List<String> _mainCategories = ['음료', '푸드', '상품'];
-  late PageController _pageController;
 
   // 상세 페이지 상태 관리를 위한 변수
   String? _detailTitle;
   List<Map<String, dynamic>>? _detailItems;
 
-  @override
-  void initState() {
-    super.initState();
-    _pageController = PageController(initialPage: 0);
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
-  }
-
   void _onCategoryTap(int index) {
-    setState(() {
-      _selectedCategoryIndex = index;
-    });
-    _pageController.animateToPage(
-      index,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeInOut,
-    );
-  }
-
-  void _onPageChanged(int index) {
     setState(() {
       _selectedCategoryIndex = index;
     });
@@ -131,27 +106,9 @@ class _OrderViewState extends State<OrderView> with TickerProviderStateMixin {
                       ),
                     ];
                   },
-                  body: PageView(
-                    physics: const NeverScrollableScrollPhysics(),
-                    controller: _pageController,
-                    onPageChanged: _onPageChanged,
-                    children: [
-                      OrderCategoryList(
-                        menuData: MenuData.beverageMenu,
-                        onCategoryTap: _openDetail,
-                        iconAsset: 'assets/images/coffee_icon.png',
-                      ),
-                      OrderCategoryList(
-                        menuData: MenuData.foodMenu,
-                        onCategoryTap: _openDetail,
-                        iconAsset: 'assets/images/cake_icon.png',
-                      ),
-                      OrderCategoryList(
-                        menuData: MenuData.goodsMenu,
-                        onCategoryTap: _openDetail,
-                        iconAsset: 'assets/images/mug_icon.png',
-                      ),
-                    ],
+                  body: OrderCategoryList(
+                    categoryIndex: _selectedCategoryIndex,
+                    onCategoryTap: _openDetail,
                   ),
                 ),
               ),
