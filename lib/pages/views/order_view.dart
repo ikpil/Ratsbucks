@@ -100,23 +100,27 @@ class _OrderViewState extends State<OrderView> with TickerProviderStateMixin {
                         floating: false,
                         pinned: true,
                         elevation: 0,
+                        scrolledUnderElevation: 0,
+                        surfaceTintColor: Colors.transparent,
+                        centerTitle: true,
                         flexibleSpace: FlexibleSpaceBar(
-                          titlePadding: const EdgeInsets.only(left: 24, bottom: 16),
+                          titlePadding: const EdgeInsets.only(bottom: 16),
+                          centerTitle: true,
                           title: const Text(
                             'Order',
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
-                              fontSize: 28,
+                              fontSize: 26,
                             ),
                           ),
                           background: Container(color: Colors.white),
-                          centerTitle: false,
                         ),
                         actions: [
                           IconButton(
                             onPressed: () {},
-                            icon: const Icon(Icons.search, color: Colors.black, size: 28),
+                            icon: const Icon(Icons.search,
+                                color: Colors.black, size: 28),
                             padding: const EdgeInsets.only(right: 20),
                           ),
                         ],
@@ -135,7 +139,10 @@ class _OrderViewState extends State<OrderView> with TickerProviderStateMixin {
                                   categories: _mainCategories,
                                   onCategoryTap: _onCategoryTap,
                                 ),
-                                const Divider(height: 1, thickness: 1, color: Color(0xFFF0F0F0)),
+                                const Divider(
+                                    height: 1,
+                                    thickness: 1,
+                                    color: Color(0xFFF0F0F0)),
                               ],
                             ),
                           ),
@@ -190,7 +197,8 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   double get maxExtent => maxHeight;
 
   @override
-  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
     return SizedBox.expand(child: child);
   }
 
