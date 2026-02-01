@@ -13,7 +13,7 @@ class BouncingButton extends StatefulWidget {
     required this.child,
     required this.onTap,
     this.scaleFactor = 0.95,
-    this.duration = const Duration(milliseconds: 100),
+    this.duration = const Duration(milliseconds: 100), // Faster animation
     this.borderRadius,
   });
 
@@ -66,7 +66,6 @@ class _BouncingButtonState extends State<BouncingButton>
     _scaleController.reverse();
     _rotationController.stop();
     _rotationController.reset();
-    widget.onTap();
   }
 
   void _onTapCancel() {
@@ -78,9 +77,11 @@ class _BouncingButtonState extends State<BouncingButton>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      behavior: HitTestBehavior.opaque,
       onTapDown: _onTapDown,
       onTapUp: _onTapUp,
       onTapCancel: _onTapCancel,
+      onTap: widget.onTap, // Use standard onTap for action
       child: AnimatedBuilder(
         animation: Listenable.merge([_scaleController, _rotationController]),
         builder: (context, child) {
