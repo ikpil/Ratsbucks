@@ -17,6 +17,7 @@ class _OrderViewState extends State<OrderView> {
   final List<String> _mainCategories = ['음료', '푸드', '상품'];
 
   // 상세 페이지 상태 관리를 위한 변수
+  bool _showDetail = false;
   String? _detailTitle;
   List<Map<String, dynamic>>? _detailItems;
 
@@ -30,13 +31,14 @@ class _OrderViewState extends State<OrderView> {
     setState(() {
       _detailTitle = title;
       _detailItems = items;
+      _showDetail = true;
     });
   }
 
   void _closeDetail() {
     setState(() {
-      _detailTitle = null;
-      _detailItems = null;
+      _showDetail = false;
+      // 데이터는 애니메이션이 끝난 후 정리하거나 유지해도 무방함
     });
   }
 
@@ -44,10 +46,10 @@ class _OrderViewState extends State<OrderView> {
   Widget build(BuildContext context) {
     // 상세 페이지가 열려있으면 백 버튼으로 닫기 처리
     return PopScope(
-      canPop: _detailTitle == null,
+      canPop: !_showDetail,
       onPopInvoked: (didPop) {
         if (didPop) return;
-        if (_detailTitle != null) {
+        if (_showDetail) {
           _closeDetail();
         }
       },
@@ -58,60 +60,77 @@ class _OrderViewState extends State<OrderView> {
             PointerDeviceKind.mouse,
           },
         ),
-        child: _detailTitle != null
-            ? OrderProductList(
-                title: _detailTitle!,
-                items: _detailItems!,
-                onPop: _closeDetail,
-              )
-            : Scaffold(
-                backgroundColor: Colors.white,
-                body: NestedScrollView(
-                  physics: const BouncingScrollPhysics(),
-                  headerSliverBuilder: (context, innerBoxIsScrolled) {
-                    return [
-                      RatsSliverAppBar(
-                        title: 'Order',
-                        actions: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.search,
-                                color: Colors.black, size: 28),
-                            padding: const EdgeInsets.only(right: 20),
-                          ),
-                        ],
-                      ),
-                      SliverPersistentHeader(
-                        pinned: true,
-                        delegate: _SliverAppBarDelegate(
-                          minHeight: 61.0,
-                          maxHeight: 61.0,
-                          child: Container(
-                            color: Colors.white,
-                            child: Column(
-                              children: [
-                                OrderMainCategoryTab(
-                                  selectedIndex: _selectedCategoryIndex,
-                                  categories: _mainCategories,
-                                  onCategoryTap: _onCategoryTap,
-                                ),
-                                const Divider(
-                                    height: 1,
-                                    thickness: 1,
-                                    color: Color(0xFFF0F0F0)),
-                              ],
+        child: Stack(
+          children: [
+            AnimatedSlide(
+              offset: _showDetail ? const Offset(-0.3, 0) : Offset.zero,
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+              child: IgnorePointer(
+                ignoring: _showDetail,
+                child: Scaffold(
+                  backgroundColor: Colors.white,
+                  body: NestedScrollView(
+                    physics: const BouncingScrollPhysics(),
+                    headerSliverBuilder: (context, innerBoxIsScrolled) {
+                      return [
+                        RatsSliverAppBar(
+                          title: 'Order',
+                          actions: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.search,
+                                  color: Colors.black, size: 28),
+                              padding: const EdgeInsets.only(right: 20),
+                            ),
+                          ],
+                        ),
+                        SliverPersistentHeader(
+                          pinned: true,
+                          delegate: _SliverAppBarDelegate(
+                            minHeight: 61.0,
+                            maxHeight: 61.0,
+                            child: Container(
+                              color: Colors.white,
+                              child: Column(
+                                children: [
+                                  OrderMainCategoryTab(
+                                    selectedIndex: _selectedCategoryIndex,
+                                    categories: _mainCategories,
+                                    onCategoryTap: _onCategoryTap,
+                                  ),
+                                  const Divider(
+                                      height: 1,
+                                      thickness: 1,
+                                      color: Color(0xFFF0F0F0)),
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ];
-                  },
-                  body: OrderSubCategoryList(
-                    categoryIndex: _selectedCategoryIndex,
-                    onCategoryTap: _openDetail,
+                      ];
+                    },
+                    body: OrderSubCategoryList(
+                      categoryIndex: _selectedCategoryIndex,
+                      onCategoryTap: _openDetail,
+                    ),
                   ),
                 ),
               ),
+            ),
+            if (_detailTitle != null)
+              AnimatedSlide(
+                offset: _showDetail ? Offset.zero : const Offset(1.0, 0),
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+                child: OrderProductList(
+                  title: _detailTitle!,
+                  items: _detailItems!,
+                  onPop: _closeDetail,
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }
