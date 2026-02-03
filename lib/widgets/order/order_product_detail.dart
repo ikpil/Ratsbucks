@@ -36,76 +36,90 @@ class _ProductDetailViewState extends State<ProductDetailView> {
             SliverAppBar(
               expandedHeight: 450.0,
               pinned: true,
+              stretch: true, // 바운스 시 이미지가 늘어나는 효과
               backgroundColor: Colors.white,
               elevation: 0,
               leading: IconButton(
-              icon: Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.5),
-                  shape: BoxShape.circle,
+                icon: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.5),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(Icons.arrow_back_ios_new,
+                      color: Colors.black, size: 20),
                 ),
-                child: const Icon(Icons.arrow_back_ios_new,
-                    color: Colors.black, size: 20),
+                onPressed: () => Navigator.pop(context),
               ),
-              onPressed: () => Navigator.pop(context),
+              flexibleSpace: FlexibleSpaceBar(
+                collapseMode: CollapseMode.parallax, // 배경이 천천히 움직여 깊이감 제공
+                stretchModes: const [
+                  StretchMode.zoomBackground, // 바운스 시 이미지 확대 효과만 유지
+                ],
+                background: widget.item['image'] != null
+                    ? Image.asset(
+                        widget.item['image'],
+                        fit: BoxFit.cover,
+                        errorBuilder: (_, __, ___) => _buildPlaceholderImage(),
+                      )
+                    : _buildPlaceholderImage(),
+              ),
             ),
-            flexibleSpace: FlexibleSpaceBar(
-              background: widget.item['image'] != null
-                  ? Image.asset(
-                      widget.item['image'],
-                      fit: BoxFit.cover,
-                      errorBuilder: (_, __, ___) => _buildPlaceholderImage(),
-                    )
-                  : _buildPlaceholderImage(),
-            ),
-          ),
 
-          // 컨텐츠 섹션
-          SliverToBoxAdapter(
-            child: Transform.translate(
-              offset: const Offset(0, -100), // 상단으로 100픽셀 이동 (입체적 효과 강화)
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      // 2. 상품에 대한 설명 섹션
-                      Text(
-                    widget.item['name'] ?? '상품 이름',
-                    style: const TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      height: 1.2,
-                      letterSpacing: -0.5,
-                    ),
+            // 컨텐츠 섹션
+            SliverToBoxAdapter(
+              child: Transform.translate(
+                offset: const Offset(0, -30), // 상단으로 30픽셀 이동하여 이미지와 겹침
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius:
+                        BorderRadius.vertical(top: Radius.circular(30)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 10,
+                        offset: Offset(0, -5),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 8),
-                  Text(
-                    widget.item['en'] ?? 'Product English Name',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey[500],
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    widget.item['description'] ??
-                        '진한 에스프레소와 뜨거운 물을 섞어 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽게 잘 느낄 수 있는 커피',
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.grey[700],
-                      height: 1.6,
-                    ),
-                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 24.0, vertical: 32.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // 2. 상품에 대한 설명 섹션
+                        Text(
+                          widget.item['name'] ?? '상품 이름',
+                          style: const TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            height: 1.2,
+                            letterSpacing: -0.5,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          widget.item['en'] ?? 'Product English Name',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.grey[500],
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          widget.item['description'] ??
+                              '진한 에스프레소와 뜨거운 물을 섞어 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽게 잘 느낄 수 있는 커피',
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.grey[700],
+                            height: 1.6,
+                          ),
+                        ),
 
-                  const SizedBox(height: 32),
+                        const SizedBox(height: 32),
 
                   // 3. 가격 & 4. Hot/Ice 표기
                   Row(
@@ -235,7 +249,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
           ),
           
           // 하단 여백 보정 (Transform으로 올라간 만큼)
-          const SliverToBoxAdapter(child: SizedBox(height: 100)),
+          const SliverToBoxAdapter(child: SizedBox(height: 30)),
         ],
       ),
       ),
