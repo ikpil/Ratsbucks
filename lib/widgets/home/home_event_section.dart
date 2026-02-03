@@ -52,7 +52,7 @@ class HomeEventSection extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   child: Container(
                     width: double.infinity,
-                    height: 320,
+                    height: 140,
                     margin: const EdgeInsets.only(bottom: 16),
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -65,54 +65,28 @@ class HomeEventSection extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    child: Row(
                       children: [
-                        // Image
                         Expanded(
-                          flex: 3,
-                          child: Container(
-                            decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.vertical(
-                                top: Radius.circular(20),
-                              ),
-                            ),
-                            clipBehavior: Clip.hardEdge,
-                            child: Image.asset(
-                              event.imagePath,
-                              fit: BoxFit.cover,
-                              width: double.infinity,
-                              errorBuilder: (context, error, stackTrace) {
-                                return Container(
-                                  color: Colors.grey.shade200,
-                                  child: const Center(
-                                    child: Icon(Icons.broken_image, color: Colors.grey),
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                        ),
-                        // Content
-                        Expanded(
-                          flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.all(20),
+                            padding: const EdgeInsets.fromLTRB(20, 16, 16, 16),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   event.title,
                                   style: const TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 17,
                                     fontWeight: FontWeight.bold,
                                     height: 1.3,
                                     color: Colors.black87,
+                                    letterSpacing: -0.5,
                                   ),
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
                                 ),
+                                const SizedBox(height: 8),
                                 Text(
                                   event.date,
                                   style: TextStyle(
@@ -122,6 +96,28 @@ class HomeEventSection extends StatelessWidget {
                                   ),
                                 ),
                               ],
+                            ),
+                          ),
+                        ),
+                        ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topRight: Radius.circular(20),
+                            bottomRight: Radius.circular(20),
+                          ),
+                          child: SizedBox(
+                            width: 140,
+                            height: 140,
+                            child: Image.asset(
+                              event.imagePath,
+                              fit: BoxFit.cover,
+                              errorBuilder: (context, error, stackTrace) {
+                                return Container(
+                                  color: Colors.grey.shade200,
+                                  child: const Center(
+                                    child: Icon(Icons.broken_image, color: Colors.grey),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                         ),
