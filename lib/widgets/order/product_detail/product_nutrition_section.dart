@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'product_nutrition_modal.dart';
 
 class ProductNutritionSection extends StatelessWidget {
   const ProductNutritionSection({super.key});
@@ -9,130 +10,52 @@ class ProductNutritionSection extends StatelessWidget {
       onTap: () {
         showModalBottomSheet(
           context: context,
-          backgroundColor: Colors.white,
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+          backgroundColor: Colors.transparent, // 모달의 둥근 모서리를 위해 투명 처리
+          isScrollControlled: true, // 전체 높이 제어 가능
+          builder: (context) => const Wrap(
+            children: [ProductNutritionModal()],
           ),
-          builder: (context) => const _NutritionDetailModal(),
         );
       },
       borderRadius: BorderRadius.circular(12),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  '제품 영양 정보',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  '1회 제공량 기준 (10kcal)',
-                  style: TextStyle(fontSize: 14, color: Colors.grey[600]),
-                ),
-              ],
-            ),
-            const Icon(Icons.keyboard_arrow_up_rounded, color: Colors.grey),
-          ],
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey[300]!),
+          borderRadius: BorderRadius.circular(12),
         ),
-      ),
-    );
-  }
-}
-
-class _NutritionDetailModal extends StatelessWidget {
-  const _NutritionDetailModal();
-
-  @override
-  Widget build(BuildContext context) {
-    final nutrients = [
-      {'label': '칼로리', 'value': '10', 'unit': 'kcal'},
-      {'label': '당류', 'value': '0', 'unit': 'g'},
-      {'label': '나트륨', 'value': '5', 'unit': 'mg'},
-      {'label': '단백질', 'value': '1', 'unit': 'g'},
-      {'label': '카페인', 'value': '150', 'unit': 'mg'},
-      {'label': '포화지방', 'value': '0', 'unit': 'g'},
-    ];
-
-    return Container(
-      padding: const EdgeInsets.all(24),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Center(
-            child: Container(
-              width: 40,
-              height: 4,
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(2),
+                color: const Color(0xFF00704A).withOpacity(0.1),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(Icons.info_outline,
+                  color: Color(0xFF00704A), size: 20),
+            ),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    '제품 영양 정보',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    '칼로리, 당류, 포화지방 등 확인하기',
+                    style: TextStyle(fontSize: 13, color: Colors.grey[600]),
+                  ),
+                ],
               ),
             ),
-          ),
-          const SizedBox(height: 24),
-          const Text(
-            '제품 영양 정보',
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 24),
-          GridView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-              childAspectRatio: 1.4,
-              mainAxisSpacing: 12,
-              crossAxisSpacing: 12,
-            ),
-            itemCount: nutrients.length,
-            itemBuilder: (context, index) {
-              return Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[50],
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.grey[200]!),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      nutrients[index]['label']!,
-                      style: TextStyle(color: Colors.grey[600], fontSize: 12),
-                    ),
-                    const SizedBox(height: 4),
-                    RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: nutrients[index]['value'],
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                              color: Colors.black87,
-                            ),
-                          ),
-                          TextSpan(
-                            text: ' ${nutrients[index]['unit']}',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.grey[600],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            },
-          ),
-          const SizedBox(height: 20),
-        ],
+            const Icon(Icons.arrow_forward_ios_rounded,
+                color: Colors.grey, size: 16),
+          ],
+        ),
       ),
     );
   }
