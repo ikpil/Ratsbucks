@@ -52,7 +52,7 @@ class QuickOrderSection extends StatelessWidget {
                   controller: PageController(
                     viewportFraction: 0.88,
                   ),
-                  physics: const BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                   itemCount: 10,
                   itemBuilder: (context, horizontalIndex) {
                     final quickOrderItems = [

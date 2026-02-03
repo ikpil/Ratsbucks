@@ -23,7 +23,7 @@ class _HomeViewState extends State<HomeView> {
           },
         ),
         child: CustomScrollView(
-          physics: const BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           slivers: [
             SliverSafeArea(
               bottom: false,

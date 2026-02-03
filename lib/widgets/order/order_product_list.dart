@@ -19,7 +19,7 @@ class OrderProductList extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
-        physics: const BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
         slivers: [
           RatsSliverAppBar(
             title: title,

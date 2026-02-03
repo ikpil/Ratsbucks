@@ -29,7 +29,7 @@ class OrderSubCategoryList extends StatelessWidget {
     final menuData = _menuData;
 
     return ListView.builder(
-      physics: const BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
       padding: const EdgeInsets.only(top: 16, bottom: 120),
       itemCount: menuData.keys.length,
       itemBuilder: (context, index) {

@@ -71,7 +71,7 @@ class _OrderViewState extends State<OrderView> {
                 child: Scaffold(
                   backgroundColor: Colors.white,
                   body: NestedScrollView(
-                    physics: const BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                     headerSliverBuilder: (context, innerBoxIsScrolled) {
                       return [
                         RatsSliverAppBar(

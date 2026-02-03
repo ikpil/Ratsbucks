@@ -29,7 +29,7 @@ class HomeHeaderQuickMenu extends StatelessWidget {
         ),
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          physics: const BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           padding: const EdgeInsets.symmetric(horizontal: 16),
           itemCount: quickMenus.length,
           itemBuilder: (context, index) {

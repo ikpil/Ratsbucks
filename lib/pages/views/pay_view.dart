@@ -97,7 +97,7 @@ class PayView extends StatelessWidget {
           },
         ),
         child: CustomScrollView(
-          physics: const BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           slivers: [
             // Custom App Bar
             SliverAppBar(
