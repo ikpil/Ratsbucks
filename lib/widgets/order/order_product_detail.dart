@@ -30,7 +30,8 @@ class _ProductDetailViewState extends State<ProductDetailView> {
           },
         ),
         child: CustomScrollView(
-          physics: const BouncingScrollPhysics(),
+          // 컨텐츠가 화면보다 짧아도 항상 스크롤(바운스) 가능하게 설정
+          physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           slivers: [
             // 1. 상품 이미지 섹션 (SliverAppBar)
             SliverAppBar(
