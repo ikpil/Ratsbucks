@@ -7,6 +7,7 @@ import 'product_detail/product_info_section.dart';
 import 'product_detail/product_nutrition_section.dart';
 import 'product_detail/product_option_section.dart';
 import 'product_detail/product_price_section.dart';
+import 'product_detail/product_temperature_section.dart';
 import 'product_detail/similar_product_section.dart';
 
 class ProductDetailView extends StatefulWidget {
@@ -67,14 +68,22 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        const SizedBox(height: 32),
+
                         // 2. 상품 설명 섹션
                         ProductInfoSection(item: widget.item),
 
                         const SizedBox(height: 32),
 
-                        // 3. 가격 및 Hot/Ice 선택
+                        // 3. 가격
                         ProductPriceSection(
                           price: widget.item['price'],
+                        ),
+
+                        const SizedBox(height: 24),
+
+                        // 4. Hot/Ice 선택 (가격 아래 배치)
+                        ProductTemperatureSection(
                           isIce: isIce,
                           onToggle: (val) => setState(() => isIce = val),
                         ),
