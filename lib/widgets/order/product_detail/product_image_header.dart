@@ -49,10 +49,13 @@ class ProductImageHeader extends StatelessWidget {
           StretchMode.zoomBackground,
         ],
         background: item['image'] != null
-            ? Image.asset(
-                item['image'],
-                fit: BoxFit.cover,
-                errorBuilder: (_, __, ___) => _buildPlaceholderImage(),
+            ? Hero(
+                tag: item['name'] ?? 'product_image',
+                child: Image.asset(
+                  item['image'],
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, __, ___) => _buildPlaceholderImage(),
+                ),
               )
             : _buildPlaceholderImage(),
       ),
