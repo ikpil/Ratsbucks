@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../common/bouncing_button.dart';
+import '../../models/event.dart';
 
 class HomeEventSection extends StatelessWidget {
   const HomeEventSection({super.key});
@@ -7,64 +8,11 @@ class HomeEventSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-        _buildEventGroup(
-          title: "What's New",
-          description: "새로 나온 메뉴와 소식을 만나보세요",
-          events: [
-            {
-              'title': '딸기 라떼의 계절이 돌아왔어요!',
-              'date': '2024.01.01 - 2024.02.28',
-              'color': Colors.red.shade100,
-              'icon': Icons.local_drink,
-            },
-            {
-              'title': '설날 맞이 기프트 카드 출시',
-              'date': '2024.01.15 - 2024.02.10',
-              'color': Colors.orange.shade100,
-              'icon': Icons.card_giftcard,
-            },
-          ],
-        ),
-        _buildEventGroup(
-          title: "Coupon & Benefit",
-          description: "놓치지 말아야 할 혜택",
-          events: [
-            {
-              'title': '사이렌 오더 주문 시 별 3개 적립',
-              'date': '2024.01.20 - 2024.01.31',
-              'color': Colors.green.shade100,
-              'icon': Icons.star,
-            },
-            {
-              'title': '텀블러 사용 시 에코별 추가 적립',
-              'date': '상시 혜택',
-              'color': Colors.blue.shade100,
-              'icon': Icons.eco,
-            },
-          ],
-        ),
-        _buildEventGroup(
-          title: "Recommendation",
-          description: "회원님을 위한 특별한 추천",
-          events: [
-            {
-              'title': '비오는 날엔 따뜻한 아메리카노',
-              'date': '오늘의 추천',
-              'color': Colors.brown.shade100,
-              'icon': Icons.coffee,
-            },
-          ],
-        ),
-      ],
+      children: homeEvents.map((group) => _buildEventGroup(group)).toList(),
     );
   }
 
-  Widget _buildEventGroup({
-    required String title,
-    required String description,
-    required List<Map<String, dynamic>> events,
-  }) {
+  Widget _buildEventGroup(EventGroup group) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 32),
       child: Column(
@@ -76,7 +24,7 @@ class HomeEventSection extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  title,
+                  group.title,
                   style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -85,7 +33,7 @@ class HomeEventSection extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  description,
+                  group.description,
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.grey[600],
@@ -98,7 +46,7 @@ class HomeEventSection extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Column(
-              children: events.map((event) {
+              children: group.events.map((event) {
                 return BouncingButton(
                   onTap: () {},
                   borderRadius: BorderRadius.circular(20),
@@ -120,22 +68,28 @@ class HomeEventSection extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Image Placeholder
+                        // Image
                         Expanded(
                           flex: 3,
                           child: Container(
-                            decoration: BoxDecoration(
-                              color: event['color'],
-                              borderRadius: const BorderRadius.vertical(
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.vertical(
                                 top: Radius.circular(20),
                               ),
                             ),
-                            child: Center(
-                              child: Icon(
-                                event['icon'],
-                                size: 64,
-                                color: Colors.black26,
-                              ),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.asset(
+                              event.imagePath,
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                              errorBuilder: (context, error, stackTrace) {
+                                return Container(
+                                  color: Colors.grey.shade200,
+                                  child: const Center(
+                                    child: Icon(Icons.broken_image, color: Colors.grey),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                         ),
@@ -149,7 +103,7 @@ class HomeEventSection extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  event['title'],
+                                  event.title,
                                   style: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -160,7 +114,7 @@ class HomeEventSection extends StatelessWidget {
                                   overflow: TextOverflow.ellipsis,
                                 ),
                                 Text(
-                                  event['date'],
+                                  event.date,
                                   style: TextStyle(
                                     fontSize: 13,
                                     color: Colors.grey[500],
