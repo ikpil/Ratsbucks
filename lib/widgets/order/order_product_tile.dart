@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../pages/views/product_detail_view.dart';
+import 'order_product_detail.dart';
 
 class OrderProductTile extends StatefulWidget {
   final Map<String, dynamic> item;
