@@ -26,9 +26,10 @@ class HomeEventSection extends StatelessWidget {
                 Text(
                   group.title,
                   style: const TextStyle(
-                    fontSize: 22,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
+                    letterSpacing: -0.5,
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -59,7 +60,7 @@ class HomeEventSection extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.08),
+                          color: Colors.black.withOpacity(0.05),
                           blurRadius: 10,
                           offset: const Offset(0, 4),
                         ),
@@ -68,6 +69,7 @@ class HomeEventSection extends StatelessWidget {
                     child: Row(
                       children: [
                         Expanded(
+                          flex: 3,
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(20, 16, 16, 16),
                             child: Column(
@@ -86,38 +88,64 @@ class HomeEventSection extends StatelessWidget {
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
                                 ),
-                                const SizedBox(height: 8),
-                                Text(
-                                  event.date,
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    color: Colors.grey[500],
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                                const SizedBox(height: 12),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.calendar_today_rounded,
+                                      size: 14,
+                                      color: Colors.grey[600],
+                                    ),
+                                    const SizedBox(width: 6),
+                                    Text(
+                                      event.date,
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.grey[700],
+                                        fontWeight: FontWeight.w600,
+                                        letterSpacing: -0.2,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
                           ),
                         ),
-                        ClipRRect(
-                          borderRadius: const BorderRadius.only(
-                            topRight: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                          ),
-                          child: SizedBox(
-                            width: 140,
+                        Expanded(
+                          flex: 2,
+                          child: Container(
                             height: 140,
-                            child: Image.asset(
-                              event.imagePath,
-                              fit: BoxFit.cover,
-                              errorBuilder: (context, error, stackTrace) {
-                                return Container(
-                                  color: Colors.grey.shade200,
-                                  child: const Center(
-                                    child: Icon(Icons.broken_image, color: Colors.grey),
-                                  ),
-                                );
-                              },
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.only(
+                                topRight: Radius.circular(20),
+                                bottomRight: Radius.circular(20),
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.15),
+                                  blurRadius: 12,
+                                  offset: const Offset(-4, 0),
+                                ),
+                              ],
+                            ),
+                            child: ClipRRect(
+                              borderRadius: const BorderRadius.only(
+                                topRight: Radius.circular(20),
+                                bottomRight: Radius.circular(20),
+                              ),
+                              child: Image.asset(
+                                event.imagePath,
+                                fit: BoxFit.cover,
+                                errorBuilder: (context, error, stackTrace) {
+                                  return Container(
+                                    color: Colors.grey.shade200,
+                                    child: const Center(
+                                      child: Icon(Icons.broken_image, color: Colors.grey),
+                                    ),
+                                  );
+                                },
+                              ),
                             ),
                           ),
                         ),
