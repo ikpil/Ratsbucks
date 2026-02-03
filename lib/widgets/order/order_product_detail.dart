@@ -23,6 +23,35 @@ class _ProductDetailViewState extends State<ProductDetailView> {
   // 상태 관리 변수들
   bool isIce = true; // 기본값 Ice
   String selectedBean = '블론드'; // 기본 선택 원두
+  
+  // 스크롤 제어
+  late ScrollController _scrollController;
+  bool _showTitle = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(_onScroll);
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void _onScroll() {
+    // 이미지가 거의 다 가려질 때쯤 (380px) 타이틀 표시
+    if (_scrollController.hasClients) {
+      final show = _scrollController.offset > 380;
+      if (show != _showTitle) {
+        setState(() {
+          _showTitle = show;
+        });
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +68,15 @@ class _ProductDetailViewState extends State<ProductDetailView> {
           },
         ),
         child: CustomScrollView(
+          controller: _scrollController,
           physics: const BouncingScrollPhysics(
               parent: AlwaysScrollableScrollPhysics()),
           slivers: [
             // 1. 상품 이미지 섹션
-            ProductImageHeader(item: widget.item),
+            ProductImageHeader(
+              item: widget.item,
+              showTitle: _showTitle,
+            ),
 
             // 컨텐츠 섹션
             SliverToBoxAdapter(

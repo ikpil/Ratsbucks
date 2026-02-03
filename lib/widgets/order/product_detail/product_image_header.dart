@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 class ProductImageHeader extends StatelessWidget {
   final Map<String, dynamic> item;
+  final bool showTitle;
 
-  const ProductImageHeader({super.key, required this.item});
+  const ProductImageHeader({
+    super.key,
+    required this.item,
+    this.showTitle = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +18,19 @@ class ProductImageHeader extends StatelessWidget {
       stretch: true,
       backgroundColor: Colors.white,
       elevation: 0,
+      centerTitle: true,
+      title: AnimatedOpacity(
+        duration: const Duration(milliseconds: 300),
+        opacity: showTitle ? 1.0 : 0.0,
+        child: Text(
+          item['name'] ?? '',
+          style: const TextStyle(
+            color: Colors.black,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       leading: IconButton(
         icon: Container(
           padding: const EdgeInsets.all(8),
