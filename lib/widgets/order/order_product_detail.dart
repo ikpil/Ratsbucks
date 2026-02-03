@@ -34,11 +34,11 @@ class _ProductDetailViewState extends State<ProductDetailView> {
           slivers: [
             // 1. 상품 이미지 섹션 (SliverAppBar)
             SliverAppBar(
-            expandedHeight: 380.0,
-            pinned: true,
-            backgroundColor: Colors.white,
-            elevation: 0,
-            leading: IconButton(
+              expandedHeight: 450.0,
+              pinned: true,
+              backgroundColor: Colors.white,
+              elevation: 0,
+              leading: IconButton(
               icon: Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
@@ -64,7 +64,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
           // 컨텐츠 섹션
           SliverToBoxAdapter(
             child: Transform.translate(
-              offset: const Offset(0, -60), // 상단으로 60픽셀 이동 (입체적 효과)
+              offset: const Offset(0, -100), // 상단으로 100픽셀 이동 (입체적 효과 강화)
               child: Container(
                 decoration: const BoxDecoration(
                   color: Colors.white,
@@ -235,7 +235,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
           ),
           
           // 하단 여백 보정 (Transform으로 올라간 만큼)
-          const SliverToBoxAdapter(child: SizedBox(height: 60)),
+          const SliverToBoxAdapter(child: SizedBox(height: 100)),
         ],
       ),
       ),
