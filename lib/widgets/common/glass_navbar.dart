@@ -27,16 +27,14 @@ class GlassNavBar extends StatelessWidget {
       offset: isVisible ? Offset.zero : const Offset(0, 1.5), // Hide downwards
       duration: const Duration(milliseconds: 500),
       curve: Curves.easeOutQuart,
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: Padding(
-          padding: const EdgeInsets.only(
-            bottom: floatingBottomMargin,
-            left: 24,
-            right: 24,
-          ),
-          child: Container(
-            height: barHeight,
+      child: Padding(
+        padding: const EdgeInsets.only(
+          bottom: floatingBottomMargin,
+          left: 24,
+          right: 24,
+        ),
+        child: Container(
+          height: barHeight,
             constraints: const BoxConstraints(maxWidth: 400),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(32),
@@ -76,7 +74,6 @@ class GlassNavBar extends StatelessWidget {
                 ),
               ),
             ),
-          ),
         ),
       ),
     );

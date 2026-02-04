@@ -138,8 +138,10 @@ class _RootPageState extends State<RootPage> {
               left: isPaySelected ? 16 : 0,
               right: isPaySelected ? 16 : 0,
               bottom: isPaySelected ? 0 : null,
-              child: GestureDetector(
-                onVerticalDragStart: (details) {
+              child: IgnorePointer(
+                ignoring: !isPaySelected && !_isDraggingPayView,
+                child: GestureDetector(
+                  onVerticalDragStart: (details) {
                   if (isPaySelected) {
                     setState(() {
                       _isDraggingPayView = true;
@@ -212,6 +214,7 @@ class _RootPageState extends State<RootPage> {
                     ],
                   ),
                 ),
+              ),
               ),
             ),
           ],
