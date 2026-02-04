@@ -137,7 +137,9 @@ class _RootPageState extends State<RootPage> {
                   : MediaQuery.of(context).size.height,
               left: isPaySelected ? 16 : 0,
               right: isPaySelected ? 16 : 0,
-              bottom: isPaySelected ? 0 : null,
+              bottom: isPaySelected
+                  ? -_payViewDragOffset
+                  : 120 - MediaQuery.of(context).size.height,
               child: IgnorePointer(
                 ignoring: !isPaySelected && !_isDraggingPayView,
                 child: GestureDetector(

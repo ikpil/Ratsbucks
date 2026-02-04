@@ -22,7 +22,7 @@ class GlassNavBar extends StatelessWidget {
     const double blurSigma = 30.0;
     const double barHeight = 64.0; 
     const double floatingBottomMargin = 34.0;
-    
+
     
     return AnimatedSlide(
       offset: isVisible ? Offset.zero : const Offset(0, 1.5), // Hide downwards
@@ -36,6 +36,7 @@ class GlassNavBar extends StatelessWidget {
         ),
         child: Container(
           height: barHeight,
+            alignment: Alignment.center,
             constraints: const BoxConstraints(maxWidth: 400),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(32),
@@ -131,7 +132,7 @@ class _NavBarItem extends StatelessWidget {
                 if (value > 0.05) ...[
                    const SizedBox(height: 4),
                    Opacity(
-                    opacity: value,
+                    opacity: value.clamp(0.0, 1.0),
                     child: Transform.translate(
                       offset: Offset(0, (1 - value) * 5),
                       child: Container(
