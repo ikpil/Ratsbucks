@@ -45,6 +45,7 @@ class _GlassNavBarState extends State<GlassNavBar> with SingleTickerProviderStat
       _controller.forward(from: 0.0);
     }
   }
+  
 
   @override
   void dispose() {
