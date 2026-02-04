@@ -23,6 +23,7 @@ class GlassNavBar extends StatelessWidget {
     const double barHeight = 64.0; 
     const double floatingBottomMargin = 34.0;
     
+    
     return AnimatedSlide(
       offset: isVisible ? Offset.zero : const Offset(0, 1.5), // Hide downwards
       duration: const Duration(milliseconds: 500),
