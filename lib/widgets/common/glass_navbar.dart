@@ -21,7 +21,8 @@ class GlassNavBar extends StatefulWidget {
   State<GlassNavBar> createState() => _GlassNavBarState();
 }
 
-class _GlassNavBarState extends State<GlassNavBar> with SingleTickerProviderStateMixin {
+class _GlassNavBarState extends State<GlassNavBar>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _elasticAnimation;
 
@@ -45,7 +46,6 @@ class _GlassNavBarState extends State<GlassNavBar> with SingleTickerProviderStat
       _controller.forward(from: 0.0);
     }
   }
-  
 
   @override
   void dispose() {
@@ -74,7 +74,8 @@ class _GlassNavBarState extends State<GlassNavBar> with SingleTickerProviderStat
           animation: _elasticAnimation,
           builder: (context, child) {
             // Micro-interaction: slight stretch on tap
-            final stretch = 1.0 + (0.02 * math.sin(_elasticAnimation.value * math.pi));
+            final stretch =
+                1.0 + (0.02 * math.sin(_elasticAnimation.value * math.pi));
             return Transform.scale(
               scaleX: stretch,
               scaleY: 1.0 / stretch, // Conservation of mass (Liquid feel)
@@ -110,10 +111,11 @@ class _GlassNavBarState extends State<GlassNavBar> with SingleTickerProviderStat
                 children: [
                   // 1. Frosted Glass Layer
                   BackdropFilter(
-                    filter: ui.ImageFilter.blur(sigmaX: blurSigma, sigmaY: blurSigma),
-                    child: Container(
-                      color: Colors.white.withOpacity(0.6),
+                    filter: ui.ImageFilter.blur(
+                      sigmaX: blurSigma,
+                      sigmaY: blurSigma,
                     ),
+                    child: Container(color: Colors.white.withOpacity(0.6)),
                   ),
 
                   // 2. Convex Lens Gradient (Optical Illusion)
@@ -133,9 +135,7 @@ class _GlassNavBarState extends State<GlassNavBar> with SingleTickerProviderStat
                   ),
 
                   // 3. Specular Reflection & Rim Light (Custom Painter)
-                  CustomPaint(
-                    painter: LiquidGlassPainter(),
-                  ),
+                  CustomPaint(painter: LiquidGlassPainter()),
 
                   // 4. Content
                   Row(
@@ -188,30 +188,10 @@ class LiquidGlassPainter extends CustomPainter {
       ..shader = LinearGradient(
         begin: Alignment.bottomCenter,
         end: Alignment.topCenter,
-        colors: [
-          Colors.white.withOpacity(0.3),
-          Colors.transparent,
-        ],
+        colors: [Colors.white.withOpacity(0.3), Colors.transparent],
       ).createShader(rect);
-    
+
     canvas.drawRRect(rrect.inflate(-1), paintGlow);
-    
-    // Specular Highlight (The "Liquid" shine)
-    final path = Path();
-    path.moveTo(size.width * 0.3, 0);
-    path.quadraticBezierTo(size.width * 0.5, size.height * 0.3, size.width * 0.7, 0);
-    
-    final paintSpec = Paint()
-      ..shader = RadialGradient(
-        center: const Alignment(0, -0.8),
-        radius: 0.5,
-        colors: [
-          Colors.white.withOpacity(0.3),
-          Colors.transparent,
-        ],
-      ).createShader(rect);
-      
-    canvas.drawPath(path, paintSpec);
   }
 
   @override
@@ -248,7 +228,7 @@ class _LiquidNavItem extends StatelessWidget {
           curve: Curves.elasticOut,
           builder: (context, value, child) {
             final double scale = 1.0 + (value * 0.3); // Zoom effect
-            
+
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -278,11 +258,7 @@ class _LiquidNavItem extends StatelessWidget {
                         ),
                       Icon(
                         item['icon'] as IconData,
-                        color: Color.lerp(
-                          Colors.black45,
-                          Colors.black,
-                          value,
-                        ),
+                        color: Color.lerp(Colors.black45, Colors.black, value),
                         size: 26,
                       ),
                     ],
@@ -290,8 +266,8 @@ class _LiquidNavItem extends StatelessWidget {
                 ),
                 // Liquid Dot
                 if (value > 0.05) ...[
-                   const SizedBox(height: 6),
-                   Opacity(
+                  const SizedBox(height: 6),
+                  Opacity(
                     opacity: value.clamp(0.0, 1.0),
                     child: Transform.translate(
                       offset: Offset(0, (1 - value) * 10),
@@ -306,8 +282,8 @@ class _LiquidNavItem extends StatelessWidget {
                               color: Colors.black.withOpacity(0.3),
                               blurRadius: 4,
                               offset: const Offset(0, 2),
-                            )
-                          ]
+                            ),
+                          ],
                         ),
                       ),
                     ),
