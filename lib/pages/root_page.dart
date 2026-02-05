@@ -20,7 +20,6 @@ class _RootPageState extends State<RootPage> {
   int _previousIndex = 0;
   double _payViewDragOffset = 0.0;
   bool _isDraggingPayView = false;
-  bool _isNavBarVisible = true;
 
   final List<Map<String, dynamic>> _navItems = [
     {'label': 'Home', 'icon': Icons.house_rounded},
@@ -57,16 +56,7 @@ class _RootPageState extends State<RootPage> {
     return Scaffold(
       extendBody: true,
       backgroundColor: Colors.black, // Fallback color
-      body: NotificationListener<UserScrollNotification>(
-        onNotification: (notification) {
-          if (notification.direction == ScrollDirection.reverse) {
-            if (_isNavBarVisible) setState(() => _isNavBarVisible = false);
-          } else if (notification.direction == ScrollDirection.forward) {
-            if (!_isNavBarVisible) setState(() => _isNavBarVisible = true);
-          }
-          return true;
-        },
-        child: Stack(
+      body: Stack(
           children: [
             // Space Background
             if (isPaySelected)
@@ -122,7 +112,7 @@ class _RootPageState extends State<RootPage> {
                 selectedIndex: _selectedIndex,
                 onItemTapped: _onItemTapped,
                 items: _navItems,
-                isVisible: _isNavBarVisible && !isPaySelected, // Hide when Pay is active
+                isVisible: !isPaySelected, // Hide when Pay is active
               ),
             ),
   
@@ -221,7 +211,6 @@ class _RootPageState extends State<RootPage> {
             ),
           ],
         ),
-      ),
     );
   }
 
