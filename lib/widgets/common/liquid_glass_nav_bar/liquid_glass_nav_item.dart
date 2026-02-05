@@ -16,11 +16,11 @@ class LiquidGlassNavItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Icon Size
-    const double iconSize = 30.0;
+    const double iconSize = 15.0;
     // Item Width = Double the Icon Width
-    const double itemWidth = 60;
+    const double itemWidth = iconSize * 3;
     // Glass covers the text, so height needs to be sufficient
-    const double itemHeight = 75.0;
+    const double itemHeight = 55.0;
 
     return GestureDetector(
       onTap: () {
@@ -31,7 +31,7 @@ class LiquidGlassNavItem extends StatelessWidget {
       },
       behavior: HitTestBehavior.opaque,
       child: SizedBox(
-        width: itemWidth * 1.7,
+        width: itemWidth * 1.5,
         height: itemHeight,
         child: TweenAnimationBuilder<double>(
           tween: Tween(begin: 0.0, end: isSelected ? 1.0 : 0.0),
