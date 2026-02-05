@@ -115,7 +115,7 @@ class _GlassNavBarState extends State<GlassNavBar>
                       sigmaX: blurSigma,
                       sigmaY: blurSigma,
                     ),
-                    child: Container(color: Colors.white.withOpacity(0.6)),
+                    child: Container(color: Colors.white.withOpacity(0.01)),
                   ),
 
                   // 2. Convex Lens Gradient (Optical Illusion)
