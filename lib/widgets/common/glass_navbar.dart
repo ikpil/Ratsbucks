@@ -91,8 +91,8 @@ class _GlassNavBarState extends State<GlassNavBar>
               borderRadius: BorderRadius.circular(40),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  blurRadius: 30,
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 10,
                   offset: const Offset(0, 15),
                   spreadRadius: -5,
                 ),
@@ -224,8 +224,8 @@ class _LiquidNavItem extends StatelessWidget {
         height: 60,
         child: TweenAnimationBuilder<double>(
           tween: Tween(begin: 0.0, end: isSelected ? 1.0 : 0.0),
-          duration: const Duration(milliseconds: 600),
-          curve: Curves.elasticOut,
+          duration: Duration(milliseconds: isSelected ? 400 : 100),
+          curve: isSelected ? Curves.elasticOut : Curves.elasticIn,
           builder: (context, value, child) {
             final double scale = 1.0 + (value * 0.3); // Zoom effect
 
@@ -248,9 +248,9 @@ class _LiquidNavItem extends StatelessWidget {
                               shape: BoxShape.circle,
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.blueAccent.withOpacity(0.4),
-                                  blurRadius: 15,
-                                  spreadRadius: 5,
+                                  color: Colors.black.withOpacity(0.2),
+                                  blurRadius: 3,
+                                  spreadRadius: 8,
                                 ),
                               ],
                             ),
@@ -259,7 +259,7 @@ class _LiquidNavItem extends StatelessWidget {
                       Icon(
                         item['icon'] as IconData,
                         color: Color.lerp(Colors.black45, Colors.black, value),
-                        size: 26,
+                        size: 30,
                       ),
                     ],
                   ),
