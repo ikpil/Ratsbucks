@@ -38,7 +38,8 @@ class LiquidGlassNavItem extends StatelessWidget {
           duration: Duration(milliseconds: isSelected ? 400 : 200),
           curve: isSelected ? Curves.elasticOut : Curves.easeOut,
           builder: (context, value, child) {
-            final double iconScale = 1.0 + (value * 0.1);
+            // Scale icon: Always 2.5x
+            final double iconScale = 2.0;
 
             return Stack(
               alignment: Alignment.center,
