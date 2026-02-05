@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import '../widgets/common/glass_navbar.dart';
+import '../widgets/common/liquid_glass_nav_bar/liquid_glass_nav_bar.dart';
 import '../widgets/common/space_background.dart';
 import 'views/home_view.dart';
 import 'views/pay_view.dart';
@@ -118,7 +118,7 @@ class _RootPageState extends State<RootPage> {
               bottom: 0,
               left: 0,
               right: 0,
-              child: GlassNavBar(
+              child: LiquidGlassNavBar(
                 selectedIndex: _selectedIndex,
                 onItemTapped: _onItemTapped,
                 items: _navItems,
