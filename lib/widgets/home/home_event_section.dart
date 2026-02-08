@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../models/event.dart';
-import '../../pages/event_detail_page.dart';
+import 'home_event_detail_page.dart';
 import 'home_event_group_title.dart';
 import 'home_event_card.dart';
 
@@ -35,7 +35,7 @@ class HomeEventSection extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => EventDetailPage(event: event),
+                        builder: (context) => HomeEventDetailPage(event: event),
                       ),
                     );
                   },

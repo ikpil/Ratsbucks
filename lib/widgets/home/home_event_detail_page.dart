@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import '../models/event.dart';
+import '../../models/event.dart';
 
-class EventDetailPage extends StatelessWidget {
+class HomeEventDetailPage extends StatelessWidget {
   final Event event;
 
-  const EventDetailPage({super.key, required this.event});
+  const HomeEventDetailPage({super.key, required this.event});
 
   @override
   Widget build(BuildContext context) {
