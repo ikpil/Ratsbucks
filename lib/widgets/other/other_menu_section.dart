@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import '../../models/other_menu_item.dart';
 
 class OtherMenuSectionWidget extends StatelessWidget {
@@ -58,7 +59,7 @@ class OtherMenuSectionWidget extends StatelessWidget {
                     onTap: () {
                       if (item.page != null) {
                         Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => item.page!),
+                          CupertinoPageRoute(builder: (context) => item.page!),
                         );
                       }
                     },
