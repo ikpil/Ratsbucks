@@ -17,13 +17,12 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       body: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(
-          dragDevices: {
-            PointerDeviceKind.touch,
-            PointerDeviceKind.mouse,
-          },
+          dragDevices: {PointerDeviceKind.touch, PointerDeviceKind.mouse},
         ),
         child: CustomScrollView(
-          physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+          physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics(),
+          ),
           slivers: [
             SliverSafeArea(
               bottom: false,
@@ -33,32 +32,18 @@ class _HomeViewState extends State<HomeView> {
               ),
             ),
             SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, index) {
-                  final int itemIndex = index + 1;
-
-                  if (itemIndex == 1) {
-                    // 퀵 오더 영역
-                    return const QuickOrderSection();
-                  }
-
-                  if (itemIndex == 2) {
-                    // 이벤트 영역
-                    return const HomeEventSection();
-                  }
-
-                  return const SizedBox.shrink();
-                },
-                childCount: 3,
-              ),
+              delegate: SliverChildListDelegate([
+                // 퀵 오더 영역
+                const QuickOrderSection(),
+                // 이벤트 영역
+                const HomeEventSection(),
+              ]),
             ),
-            const SliverToBoxAdapter(
-              child: SizedBox(height: 120),
-            ),
+            const SliverToBoxAdapter(child: SizedBox(height: 120)),
           ],
         ),
       ),
     );
-// ...existing code...
+    // ...existing code...
   }
 }
