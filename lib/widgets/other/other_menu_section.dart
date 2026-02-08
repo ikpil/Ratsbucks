@@ -1,24 +1,10 @@
 import 'package:flutter/material.dart';
+import '../../models/other_menu_item.dart';
 
-class OtherMenuItem {
-  final IconData icon;
-  final String title;
-  final String? trailing;
-  final bool isDestructive;
+class OtherMenuSectionWidget extends StatelessWidget {
+  final OtherMenuSection section;
 
-  OtherMenuItem({
-    required this.icon,
-    required this.title,
-    this.trailing,
-    this.isDestructive = false,
-  });
-}
-
-class OtherMenuSection extends StatelessWidget {
-  final String title;
-  final List<OtherMenuItem> items;
-
-  const OtherMenuSection({super.key, required this.title, required this.items});
+  const OtherMenuSectionWidget({super.key, required this.section});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +14,7 @@ class OtherMenuSection extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
           child: Text(
-            title,
+            section.title,
             style: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
@@ -39,7 +25,7 @@ class OtherMenuSection extends StatelessWidget {
         Container(
           color: Colors.white,
           child: Column(
-            children: items.map((item) {
+            children: section.items.map((item) {
               return Column(
                 children: [
                   ListTile(
@@ -69,9 +55,15 @@ class OtherMenuSection extends StatelessWidget {
                             Icons.chevron_right_rounded,
                             color: Colors.grey.shade300,
                           ),
-                    onTap: () {},
+                    onTap: () {
+                      if (item.page != null) {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => item.page!),
+                        );
+                      }
+                    },
                   ),
-                  if (items.last != item)
+                  if (section.items.last != item)
                     Divider(
                       height: 1,
                       indent: 56, // Icon width + padding
