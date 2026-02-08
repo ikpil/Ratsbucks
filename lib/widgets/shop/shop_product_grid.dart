@@ -16,7 +16,7 @@ class ShopProductGrid extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 16,
           crossAxisSpacing: 16,
-          childAspectRatio: 0.66, // Decreased ratio to increase height
+          childAspectRatio: 0.62, // Decreased ratio to increase height
         ),
         delegate: SliverChildBuilderDelegate((context, index) {
           return ShopGridItemCard(item: items[index]);
