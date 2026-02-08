@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../models/shop_data.dart';
-import '../../pages/views/shop_product_detail_view.dart';
+import 'shop_product_detail.dart';
 
 class ShopItemCard extends StatefulWidget {
   final ShopItem item;
@@ -64,7 +64,7 @@ class _ShopItemCardState extends State<ShopItemCard>
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => ShopProductDetailView(item: widget.item),
+            builder: (context) => ShopProductDetail(item: widget.item),
           ),
         );
       },
