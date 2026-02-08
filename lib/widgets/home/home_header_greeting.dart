@@ -16,19 +16,19 @@ class _HomeHeaderGreetingState extends State<HomeHeaderGreeting> {
 
   final List<Map<String, String>> _messages = [
     {
-      'title': '안녕하세요 최익필님',
+      'title': '안녕하세요 금파리님',
       'subtitle': '오늘도 랫츠벅스와 함께\n활기찬 하루 시작하세요! ☕️',
     },
     {
-      'title': '반가워요 최익필님',
+      'title': '반가워요 금파리님',
       'subtitle': '당신을 위한 특별한\n커피가 준비되어 있어요! 🌟',
     },
     {
-      'title': '어서오세요 최익필님',
+      'title': '어서오세요 금파리님',
       'subtitle': '잠시 휴식이 필요할 땐\n랫츠벅스 어떠세요? 🍀',
     },
     {
-      'title': '환영합니다 최익필님',
+      'title': '환영합니다 금파리님',
       'subtitle': '기분 좋은 하루가\n되길 응원할게요! ✨',
     },
   ];
