@@ -35,7 +35,7 @@ class OtherView extends StatelessWidget {
             parent: AlwaysScrollableScrollPhysics(),
           ),
           children: [
-            const OtherProfileHeader(),
+            OtherProfileHeader(profile: otherProfileData),
             const SizedBox(height: 20),
             ...otherMenuData.map((section) {
               return Padding(

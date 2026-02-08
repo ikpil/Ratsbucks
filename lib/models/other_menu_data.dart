@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import '../models/other_menu_item.dart';
+import '../models/other_profile.dart';
+
+final OtherProfile otherProfileData = OtherProfile(
+  name: '최익필 회원님',
+  greeting: '오늘도 즐거운 하루 되세요!',
+  imagePath: 'assets/images/profile_placeholder.png',
+  page: _createPlaceholderPage('계정 정보 설정'),
+);
 
 final List<OtherMenuSection> otherMenuData = [
   OtherMenuSection(
