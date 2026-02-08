@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../models/shop_data.dart';
-import 'shop_item_card.dart';
+import 'shop_grid_item_card.dart';
 
 class ShopProductGrid extends StatelessWidget {
   final List<ShopItem> items;
@@ -16,10 +16,10 @@ class ShopProductGrid extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 16,
           crossAxisSpacing: 16,
-          childAspectRatio: 0.63,
+          childAspectRatio: 0.72, // Optimized for ShopGridItemCard
         ),
         delegate: SliverChildBuilderDelegate((context, index) {
-          return ShopItemCard(item: items[index]);
+          return ShopGridItemCard(item: items[index]);
         }, childCount: items.length),
       ),
     );
