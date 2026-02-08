@@ -74,12 +74,12 @@ class _ShopItemCardState extends State<ShopItemCard>
           width: widget.isHorizontal ? 160 : double.infinity,
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(16),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.04),
-                blurRadius: 8,
-                offset: const Offset(0, 4),
+                color: Colors.black.withOpacity(0.08),
+                blurRadius: 16,
+                offset: const Offset(0, 8),
               ),
             ],
           ),
@@ -92,68 +92,73 @@ class _ShopItemCardState extends State<ShopItemCard>
                     tag: widget.item.name,
                     child: ClipRRect(
                       borderRadius: const BorderRadius.vertical(
-                        top: Radius.circular(12),
+                        top: Radius.circular(16),
                       ),
                       child: AspectRatio(
                         aspectRatio: 1,
                         child: Container(
-                          color: Colors.grey.shade100,
-                          child: Center(
-                            child: Image.asset(
-                              widget.item.imageUrl,
-                              fit: BoxFit.cover,
-                            ),
+                          color: const Color(0xFFF5F5F5),
+                          child: Image.asset(
+                            widget.item.imageUrl,
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) {
+                              return const Center(
+                                child: Icon(Icons.broken_image,
+                                    color: Colors.grey),
+                              );
+                            },
                           ),
                         ),
                       ),
                     ),
                   ),
-                  if (widget.item.isNew)
-                    Positioned(
-                      top: 8,
-                      left: 8,
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: const Text(
-                          'NEW',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 10,
-                            fontWeight: FontWeight.bold,
+                  Positioned(
+                    top: 10,
+                    left: 10,
+                    child: Row(
+                      children: [
+                        if (widget.item.isNew)
+                          Container(
+                            margin: const EdgeInsets.only(right: 6),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 4,
+                            ),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF1B3C35),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: const Text(
+                              'NEW',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                    ),
-                  if (widget.item.isBest)
-                    Positioned(
-                      top: 8,
-                      left: 8,
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.redAccent,
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: const Text(
-                          'BEST',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 10,
-                            fontWeight: FontWeight.bold,
+                        if (widget.item.isBest)
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 4,
+                            ),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFD62B1F),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: const Text(
+                              'BEST',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
+                      ],
                     ),
+                  ),
                 ],
               ),
               Padding(
@@ -168,7 +173,16 @@ class _ShopItemCardState extends State<ShopItemCard>
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
-                        height: 1.2,
+                        height: 1.3,
+                        color: Color(0xFF1A1A1A),
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      widget.item.category,
+                      style: const TextStyle(
+                        fontSize: 11,
+                        color: Color(0xFF757575),
                       ),
                     ),
                     const SizedBox(height: 8),
@@ -176,7 +190,7 @@ class _ShopItemCardState extends State<ShopItemCard>
                       '${widget.item.price}원',
                       style: const TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w700,
                         color: Colors.black,
                       ),
                     ),
