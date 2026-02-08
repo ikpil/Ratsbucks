@@ -43,7 +43,7 @@ class OtherView extends StatelessWidget {
                 child: OtherMenuSectionWidget(section: section),
               );
             }),
-            const SizedBox(height: 20),
+            const SizedBox(height: 120),
           ],
         ),
       ),
