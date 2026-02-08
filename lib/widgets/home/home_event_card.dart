@@ -3,7 +3,7 @@ import '../../models/event.dart';
 import '../common/bouncing_button.dart';
 
 class HomeEventCard extends StatelessWidget {
-  final EventItem event;
+  final Event event;
   final VoidCallback onTap;
 
   const HomeEventCard({super.key, required this.event, required this.onTap});
