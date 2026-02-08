@@ -100,7 +100,7 @@ class _ShopViewState extends State<ShopView> {
               ),
             ),
             ShopProductGrid(items: _filteredProducts),
-            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+            const SliverToBoxAdapter(child: SizedBox(height: 120)),
           ],
         ),
       ),

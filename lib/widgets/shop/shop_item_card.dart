@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../models/shop_data.dart';
+import '../../pages/views/shop_product_detail_view.dart';
 
 class ShopItemCard extends StatefulWidget {
   final ShopItem item;
@@ -60,7 +61,13 @@ class _ShopItemCardState extends State<ShopItemCard>
       onTapDown: _onTapDown,
       onTapUp: _onTapUp,
       onTapCancel: _onTapCancel,
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => ShopProductDetailView(item: widget.item),
+          ),
+        );
+      },
       child: ScaleTransition(
         scale: _scaleAnimation,
         child: Container(
@@ -81,18 +88,21 @@ class _ShopItemCardState extends State<ShopItemCard>
             children: [
               Stack(
                 children: [
-                  ClipRRect(
-                    borderRadius: const BorderRadius.vertical(
-                      top: Radius.circular(12),
-                    ),
-                    child: AspectRatio(
-                      aspectRatio: 1,
-                      child: Container(
-                        color: Colors.grey.shade100,
-                        child: Center(
-                          child: Image.asset(
-                            widget.item.imageUrl,
-                            fit: BoxFit.cover,
+                  Hero(
+                    tag: widget.item.name,
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.vertical(
+                        top: Radius.circular(12),
+                      ),
+                      child: AspectRatio(
+                        aspectRatio: 1,
+                        child: Container(
+                          color: Colors.grey.shade100,
+                          child: Center(
+                            child: Image.asset(
+                              widget.item.imageUrl,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
