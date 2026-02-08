@@ -19,7 +19,9 @@ class ShopCategoryList extends StatelessWidget {
         SizedBox(
           height: 100,
           child: ListView.separated(
-            physics: const BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(
+              parent: AlwaysScrollableScrollPhysics(),
+            ),
             padding: const EdgeInsets.symmetric(horizontal: 16),
             scrollDirection: Axis.horizontal,
             itemCount: categories.length,

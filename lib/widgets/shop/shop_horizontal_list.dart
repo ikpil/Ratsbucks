@@ -12,7 +12,9 @@ class ShopHorizontalList extends StatelessWidget {
     return SizedBox(
       height: 280,
       child: ListView.separated(
-        physics: const BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(
+          parent: AlwaysScrollableScrollPhysics(),
+        ),
         padding: const EdgeInsets.symmetric(horizontal: 20),
         scrollDirection: Axis.horizontal,
         itemCount: items.length,

@@ -44,7 +44,9 @@ class _ShopViewState extends State<ShopView> {
           dragDevices: {PointerDeviceKind.touch, PointerDeviceKind.mouse},
         ),
         child: CustomScrollView(
-          physics: const BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics(),
+          ),
           slivers: [
             RatsSliverAppBar(
               title: 'Shop',
@@ -63,11 +65,14 @@ class _ShopViewState extends State<ShopView> {
               ],
             ),
             const SliverToBoxAdapter(child: ShopBanner()),
-            SliverToBoxAdapter(
-              child: ShopCategoryList(
-                categories: _categories,
-                selectedCategory: _selectedCategory,
-                onSelected: _onCategorySelected,
+            SliverPersistentHeader(
+              pinned: true,
+              delegate: _ShopCategoryHeaderDelegate(
+                child: ShopCategoryList(
+                  categories: _categories,
+                  selectedCategory: _selectedCategory,
+                  onSelected: _onCategorySelected,
+                ),
               ),
             ),
             if (_selectedCategory == '전체') ...[
@@ -100,5 +105,31 @@ class _ShopViewState extends State<ShopView> {
         ),
       ),
     );
+  }
+}
+
+class _ShopCategoryHeaderDelegate extends SliverPersistentHeaderDelegate {
+  final Widget child;
+
+  _ShopCategoryHeaderDelegate({required this.child});
+
+  @override
+  double get minExtent => 116.0;
+
+  @override
+  double get maxExtent => 116.0;
+
+  @override
+  Widget build(
+    BuildContext context,
+    double shrinkOffset,
+    bool overlapsContent,
+  ) {
+    return Container(color: Colors.white, child: child);
+  }
+
+  @override
+  bool shouldRebuild(covariant _ShopCategoryHeaderDelegate oldDelegate) {
+    return true;
   }
 }
