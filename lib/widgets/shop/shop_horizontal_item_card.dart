@@ -1,3 +1,4 @@
+import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import '../../models/shop_data.dart';
 import 'shop_product_detail.dart';
@@ -63,87 +64,118 @@ class _ShopHorizontalItemCardState extends State<ShopHorizontalItemCard>
         child: Container(
           width: 160,
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: Colors.grey.withOpacity(0.1)),
+            borderRadius: BorderRadius.circular(24),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.08),
+                color: Colors.black.withOpacity(0.18),
                 blurRadius: 12,
-                offset: const Offset(0, 4),
+                offset: const Offset(0, 6),
+              ),
+              BoxShadow(
+                color: Colors.black.withOpacity(0.08),
+                blurRadius: 4,
+                offset: const Offset(0, 2),
               ),
             ],
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Stack(
-                children: [
-                  Hero(
-                    tag: "horizontal_${widget.item.name}",
-                    child: ClipRRect(
-                      borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-                      child: AspectRatio(
-                        aspectRatio: 1.1,
-                        child: Container(
-                          color: const Color(0xFFF5F5F5),
-                          child: Image.asset(
-                            widget.item.imageUrl,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(24),
+            child: BackdropFilter(
+              filter: ui.ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.7),
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.all(
+                    color: Colors.black.withOpacity(0.08),
+                    width: 1,
                   ),
-                  Positioned(
-                    top: 8,
-                    left: 8,
-                    child: Row(
-                      children: [
-                        if (widget.item.isNew) _buildBadge('NEW', const Color(0xFF1B3C35)),
-                        if (widget.item.isBest) _buildBadge('BEST', const Color(0xFFD62B1F)),
-                      ],
-                    ),
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Colors.white.withOpacity(0.4),
+                      Colors.white.withOpacity(0.1),
+                    ],
                   ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10),
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      widget.item.name,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF1A1A1A),
-                      ),
+                    Stack(
+                      children: [
+                        Hero(
+                          tag: "horizontal_${widget.item.name}",
+                          child: ClipRRect(
+                            borderRadius: const BorderRadius.vertical(
+                                top: Radius.circular(24)),
+                            child: AspectRatio(
+                              aspectRatio: 1.1,
+                              child: Container(
+                                color: Colors.black.withOpacity(0.03),
+                                child: Image.asset(
+                                  widget.item.imageUrl,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 8,
+                          left: 8,
+                          child: Row(
+                            children: [
+                              if (widget.item.isNew)
+                                _buildBadge('NEW', const Color(0xFF1B3C35)),
+                              if (widget.item.isBest)
+                                _buildBadge('BEST', const Color(0xFFD62B1F)),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 2),
-                    Text(
-                      widget.item.category,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(fontSize: 12, color: Color(0xFF757575)),
-                    ),
-                    const SizedBox(height: 6),
-                    Text(
-                      '${widget.item.price}원',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black,
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            widget.item.name,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFF1A1A1A),
+                            ),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            widget.item.category,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                                fontSize: 11, color: Color(0xFF757575)),
+                          ),
+                          const SizedBox(height: 6),
+                          Text(
+                            '${widget.item.price}원',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
               ),
-            ],
+            ),
           ),
         ),
       ),
