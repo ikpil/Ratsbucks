@@ -1,3 +1,4 @@
+import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import '../../models/menu_data.dart';
 
@@ -75,101 +76,123 @@ class _SubCategoryCardState extends State<SubCategoryCard> {
       onTapUp: (_) => setState(() => _isPressed = false),
       onTapCancel: () => setState(() => _isPressed = false),
       child: AnimatedScale(
-        scale: _isPressed ? 0.95 : 1.0,
+        scale: _isPressed ? 0.96 : 1.0,
         duration: const Duration(milliseconds: 100),
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-          padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(24),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.05),
-                offset: const Offset(0, 4),
-                blurRadius: 16,
+                color: Colors.black.withOpacity(0.18),
+                blurRadius: 12,
+                offset: const Offset(0, 6),
+              ),
+              BoxShadow(
+                color: Colors.black.withOpacity(0.08),
+                blurRadius: 4,
+                offset: const Offset(0, 2),
               ),
             ],
           ),
-          child: Row(
-            children: [
-              // Image Area (Embossed Circle)
-              Container(
-                width: 100,
-                height: 100,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(24),
+            child: BackdropFilter(
+              filter: ui.ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+              child: Container(
+                padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: const Color(0xFFF5F5F5),
+                  color: Colors.white.withOpacity(0.98),
+                  borderRadius: BorderRadius.circular(24),
                   border: Border.all(
-                    color: Colors.black.withOpacity(0.05),
+                    color: Colors.black.withOpacity(0.08),
                     width: 1,
                   ),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.white,
-                      offset: Offset(-2, -2),
-                      blurRadius: 4,
-                    ),
-                    BoxShadow(
-                      color: Color(0xFFE0E0E0),
-                      offset: Offset(2, 2),
-                      blurRadius: 4,
-                    ),
-                  ],
-                ),
-                child: ClipOval(
-                  child: Image.asset(
-                    imagePath,
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) => Center(
-                      child: Icon(
-                        Icons.coffee,
-                        size: 40,
-                        color: Colors.brown.shade300,
-                      ),
-                    ),
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Colors.white.withOpacity(1.0),
+                      Colors.white.withOpacity(0.92),
+                    ],
                   ),
                 ),
-              ),
-              const SizedBox(width: 24),
-              // Text Content Area
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: Row(
                   children: [
-                    Text(
-                      widget.category,
-                      style: const TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.black87,
-                        letterSpacing: -0.5,
+                    // Image Area (Embossed Circle)
+                    Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.black.withOpacity(0.03),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.white.withOpacity(0.8),
+                            offset: const Offset(-2, -2),
+                            blurRadius: 4,
+                          ),
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.05),
+                            offset: const Offset(2, 2),
+                            blurRadius: 4,
+                          ),
+                        ],
                       ),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
+                      child: ClipOval(
+                        child: Image.asset(
+                          imagePath,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Center(
+                              child: Icon(
+                                Icons.image_not_supported_outlined,
+                                color: Colors.grey.shade400,
+                                size: 40,
+                              ),
+                            );
+                          },
+                        ),
+                      ),
                     ),
-                    const SizedBox(height: 6),
-                    Text(
-                      englishName,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xFF9E9E9E),
-                        fontStyle: FontStyle.italic,
+                    const SizedBox(width: 24),
+                    // Text Area
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            widget.category,
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.black87,
+                              letterSpacing: -0.5,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            englishName,
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey.shade500,
+                              fontWeight: FontWeight.w500,
+                              fontStyle: FontStyle.italic,
+                              letterSpacing: 0.2,
+                            ),
+                          ),
+                        ],
                       ),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      size: 20,
+                      color: Colors.grey.shade300,
                     ),
                   ],
                 ),
               ),
-              Icon(
-                Icons.arrow_forward_ios_rounded,
-                size: 20,
-                color: Colors.grey.shade300,
-              ),
-            ],
+            ),
           ),
         ),
       ),
