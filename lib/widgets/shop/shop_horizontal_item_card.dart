@@ -31,7 +31,7 @@ class _ShopHorizontalItemCardState extends State<ShopHorizontalItemCard>
       value: 1.0,
     );
     _scaleAnimation = CurvedAnimation(
-      parent: _controller,
+      parent: _controller,      
       curve: Curves.easeInOut,
     );
   }
