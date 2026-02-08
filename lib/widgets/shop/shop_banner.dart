@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 class ShopBanner extends StatefulWidget {
   const ShopBanner({super.key});
@@ -10,6 +11,7 @@ class ShopBanner extends StatefulWidget {
 class _ShopBannerState extends State<ShopBanner> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
+  Timer? _timer;
 
   final List<Color> _bannerColors = [
     Colors.green.shade800,
@@ -18,7 +20,27 @@ class _ShopBannerState extends State<ShopBanner> {
   ];
 
   @override
+  void initState() {
+    super.initState();
+    _startAutoScroll();
+  }
+
+  void _startAutoScroll() {
+    _timer = Timer.periodic(const Duration(seconds: 5), (timer) {
+      if (_pageController.hasClients) {
+        int nextPage = (_currentPage + 1) % _bannerColors.length;
+        _pageController.animateToPage(
+          nextPage,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
+        );
+      }
+    });
+  }
+
+  @override
   void dispose() {
+    _timer?.cancel();
     _pageController.dispose();
     super.dispose();
   }

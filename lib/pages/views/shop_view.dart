@@ -8,8 +8,32 @@ import '../../widgets/shop/shop_product_grid.dart';
 import '../../widgets/shop/shop_section_header.dart';
 import '../../models/shop_data.dart';
 
-class ShopView extends StatelessWidget {
+class ShopView extends StatefulWidget {
   const ShopView({super.key});
+
+  @override
+  State<ShopView> createState() => _ShopViewState();
+}
+
+class _ShopViewState extends State<ShopView> {
+  String _selectedCategory = '전체';
+
+  List<String> get _categories => ['전체', ...ShopData.categories];
+
+  List<ShopItem> get _filteredProducts {
+    if (_selectedCategory == '전체') {
+      return ShopData.products;
+    }
+    return ShopData.products
+        .where((item) => item.category == _selectedCategory)
+        .toList();
+  }
+
+  void _onCategorySelected(String category) {
+    setState(() {
+      _selectedCategory = category;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,27 +64,37 @@ class ShopView extends StatelessWidget {
             ),
             const SliverToBoxAdapter(child: ShopBanner()),
             SliverToBoxAdapter(
-              child: ShopCategoryList(categories: ShopData.categories),
+              child: ShopCategoryList(
+                categories: _categories,
+                selectedCategory: _selectedCategory,
+                onSelected: _onCategorySelected,
+              ),
             ),
-            const SliverToBoxAdapter(child: SizedBox(height: 24)),
+            if (_selectedCategory == '전체') ...[
+              const SliverToBoxAdapter(child: SizedBox(height: 24)),
+              SliverToBoxAdapter(
+                child: ShopSectionHeader(
+                  title: 'New & Featured',
+                  onMoreTap: () {},
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: ShopHorizontalList(
+                  items: ShopData.products
+                      .where((item) => item.isNew || item.isBest)
+                      .toList(),
+                ),
+              ),
+            ],
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
             SliverToBoxAdapter(
               child: ShopSectionHeader(
-                title: 'New & Featured',
-                onMoreTap: () {},
+                title: _selectedCategory == '전체'
+                    ? 'All Products'
+                    : '$_selectedCategory Products',
               ),
             ),
-            SliverToBoxAdapter(
-              child: ShopHorizontalList(
-                items: ShopData.products
-                    .where((item) => item.isNew || item.isBest)
-                    .toList(),
-              ),
-            ),
-            const SliverToBoxAdapter(child: SizedBox(height: 32)),
-            const SliverToBoxAdapter(
-              child: ShopSectionHeader(title: 'All Products'),
-            ),
-            ShopProductGrid(items: ShopData.products),
+            ShopProductGrid(items: _filteredProducts),
             const SliverToBoxAdapter(child: SizedBox(height: 32)),
           ],
         ),
