@@ -18,6 +18,9 @@ class OrderMainCategoryTab extends StatelessWidget {
       height: 60,
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: ListView.separated(
+        physics: const BouncingScrollPhysics(
+          parent: AlwaysScrollableScrollPhysics(),
+        ),
         padding: const EdgeInsets.symmetric(horizontal: 24),
         scrollDirection: Axis.horizontal,
         itemCount: categories.length,
