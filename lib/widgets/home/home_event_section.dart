@@ -92,10 +92,11 @@ class HomeEventSection extends StatelessWidget {
                                 end: Alignment.bottomCenter,
                                 colors: [
                                   Colors.transparent,
-                                  Colors.black.withValues(alpha: 0.2),
-                                  Colors.black.withValues(alpha: 0.7),
+                                  Colors.black.withValues(alpha: 0.0),
+                                  Colors.black.withValues(alpha: 0.6),
+                                  Colors.black.withValues(alpha: 0.9),
                                 ],
-                                stops: const [0.5, 0.7, 1.0],
+                                stops: const [0.0, 0.4, 0.75, 1.0],
                               ),
                             ),
                           ),
@@ -113,17 +114,35 @@ class HomeEventSection extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white.withValues(alpha: 0.9),
                                     letterSpacing: 0.5,
+                                    shadows: [
+                                      Shadow(
+                                        color: Colors.black.withValues(
+                                          alpha: 0.5,
+                                        ),
+                                        offset: const Offset(0, 1),
+                                        blurRadius: 2,
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 const SizedBox(height: 8),
                                 Text(
                                   event.title,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                     height: 1.2,
                                     letterSpacing: -0.5,
+                                    shadows: [
+                                      Shadow(
+                                        color: Colors.black.withValues(
+                                          alpha: 0.5,
+                                        ),
+                                        offset: const Offset(0, 1),
+                                        blurRadius: 4,
+                                      ),
+                                    ],
                                   ),
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
@@ -135,6 +154,15 @@ class HomeEventSection extends StatelessWidget {
                                     fontSize: 14,
                                     color: Colors.white.withValues(alpha: 0.8),
                                     fontWeight: FontWeight.w500,
+                                    shadows: [
+                                      Shadow(
+                                        color: Colors.black.withValues(
+                                          alpha: 0.5,
+                                        ),
+                                        offset: const Offset(0, 1),
+                                        blurRadius: 2,
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
