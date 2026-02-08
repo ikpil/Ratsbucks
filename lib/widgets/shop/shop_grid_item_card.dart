@@ -83,7 +83,7 @@ class _ShopGridItemCardState extends State<ShopGridItemCard>
               filter: ui.ImageFilter.blur(sigmaX: 5, sigmaY: 5),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.7),
+                  color: Colors.white.withOpacity(0.95),
                   borderRadius: BorderRadius.circular(24),
                   border: Border.all(
                     color: Colors.black.withOpacity(0.08),
@@ -93,8 +93,8 @@ class _ShopGridItemCardState extends State<ShopGridItemCard>
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      Colors.white.withOpacity(0.4),
-                      Colors.white.withOpacity(0.1),
+                      Colors.white.withOpacity(0.98),
+                      Colors.white.withOpacity(0.85),
                     ],
                   ),
                 ),

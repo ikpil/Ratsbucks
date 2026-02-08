@@ -10,7 +10,7 @@ class ShopHorizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250, // Adjusted for ShopHorizontalItemCard
+      height: 254, // Increased by 4
       child: ListView.separated(
         physics: const BouncingScrollPhysics(
           parent: AlwaysScrollableScrollPhysics(),
