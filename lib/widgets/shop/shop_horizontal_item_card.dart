@@ -84,7 +84,7 @@ class _ShopHorizontalItemCardState extends State<ShopHorizontalItemCard>
               filter: ui.ImageFilter.blur(sigmaX: 5, sigmaY: 5),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.95),
+                  color: Colors.white.withOpacity(0.98),
                   borderRadius: BorderRadius.circular(24),
                   border: Border.all(
                     color: Colors.black.withOpacity(0.08),
@@ -94,8 +94,8 @@ class _ShopHorizontalItemCardState extends State<ShopHorizontalItemCard>
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      Colors.white.withOpacity(0.98),
-                      Colors.white.withOpacity(0.85),
+                      Colors.white.withOpacity(1.0),
+                      Colors.white.withOpacity(0.92),
                     ],
                   ),
                 ),
