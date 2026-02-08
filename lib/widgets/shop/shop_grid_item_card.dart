@@ -114,10 +114,10 @@ class _ShopGridItemCardState extends State<ShopGridItemCard>
                     children: [
                       Text(
                         widget.item.name,
-                        maxLines: 2,
+                        maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
-                          fontSize: 14,
+                          fontSize: 18,
                           fontWeight: FontWeight.w600,
                           height: 1.3,
                           color: Color(0xFF1A1A1A),
@@ -126,13 +126,17 @@ class _ShopGridItemCardState extends State<ShopGridItemCard>
                       const SizedBox(height: 2),
                       Text(
                         widget.item.category,
-                        style: const TextStyle(fontSize: 11, color: Color(0xFF757575)),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontSize: 14, color: Color(0xFF757575)),
                       ),
-                      const Spacer(),
+                      const SizedBox(height: 2),
                       Text(
                         '${widget.item.price}원',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
-                          fontSize: 16,
+                          fontSize: 17,
                           fontWeight: FontWeight.w700,
                           color: Colors.black,
                         ),
@@ -158,7 +162,7 @@ class _ShopGridItemCardState extends State<ShopGridItemCard>
       ),
       child: Text(
         text,
-        style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
+        style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
       ),
     );
   }

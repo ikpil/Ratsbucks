@@ -117,7 +117,7 @@ class _ShopHorizontalItemCardState extends State<ShopHorizontalItemCard>
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
-                        fontSize: 13,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600,
                         color: Color(0xFF1A1A1A),
                       ),
@@ -125,13 +125,17 @@ class _ShopHorizontalItemCardState extends State<ShopHorizontalItemCard>
                     const SizedBox(height: 2),
                     Text(
                       widget.item.category,
-                      style: const TextStyle(fontSize: 10, color: Color(0xFF757575)),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(fontSize: 12, color: Color(0xFF757575)),
                     ),
                     const SizedBox(height: 6),
                     Text(
                       '${widget.item.price}원',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
-                        fontSize: 14,
+                        fontSize: 15,
                         fontWeight: FontWeight.w700,
                         color: Colors.black,
                       ),
@@ -156,7 +160,7 @@ class _ShopHorizontalItemCardState extends State<ShopHorizontalItemCard>
       ),
       child: Text(
         text,
-        style: const TextStyle(color: Colors.white, fontSize: 8, fontWeight: FontWeight.bold),
+        style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
       ),
     );
   }
