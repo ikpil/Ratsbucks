@@ -9,8 +9,12 @@ class OtherView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Nav bar height (70) + margin (34) + extra buffer
+    final bottomPadding = 120.0 + MediaQuery.of(context).viewPadding.bottom;
+
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F5), // Light grey background
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text(
           'Other',
@@ -34,6 +38,7 @@ class OtherView extends StatelessWidget {
           physics: const BouncingScrollPhysics(
             parent: AlwaysScrollableScrollPhysics(),
           ),
+          padding: EdgeInsets.only(bottom: bottomPadding),
           children: [
             OtherProfileHeader(profile: otherProfileData),
             const SizedBox(height: 20),
@@ -43,7 +48,6 @@ class OtherView extends StatelessWidget {
                 child: OtherMenuSectionWidget(section: section),
               );
             }),
-            const SizedBox(height: 140),
           ],
         ),
       ),
