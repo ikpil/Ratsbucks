@@ -14,71 +14,59 @@ class ShopCategoryList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          height: 100,
-          child: ListView.separated(
-            physics: const BouncingScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics(),
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            scrollDirection: Axis.horizontal,
-            itemCount: categories.length,
-            separatorBuilder: (context, index) => const SizedBox(width: 16),
-            itemBuilder: (context, index) {
-              final category = categories[index];
-              final isSelected = category == selectedCategory;
-
-              return GestureDetector(
-                onTap: () => onSelected(category),
-                child: Column(
-                  children: [
-                    AnimatedContainer(
-                      duration: const Duration(milliseconds: 200),
-                      width: 64,
-                      height: 64,
-                      decoration: BoxDecoration(
-                        color: isSelected
-                            ? Colors.green.shade800
-                            : Colors.grey.shade100,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: isSelected
-                              ? Colors.green.shade800
-                              : Colors.grey.shade200,
-                          width: 2,
-                        ),
-                      ),
-                      child: Icon(
-                        Icons.coffee, // Placeholder icon
-                        color: isSelected
-                            ? Colors.white
-                            : Colors.brown.shade400,
-                        size: 32,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      category,
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: isSelected
-                            ? FontWeight.bold
-                            : FontWeight.w600,
-                        color: isSelected
-                            ? Colors.green.shade900
-                            : Colors.black87,
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            },
-          ),
+    return Container(
+      height: 60,
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: ListView.separated(
+        physics: const BouncingScrollPhysics(
+          parent: AlwaysScrollableScrollPhysics(),
         ),
-        const SizedBox(height: 16),
-      ],
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        scrollDirection: Axis.horizontal,
+        itemCount: categories.length,
+        separatorBuilder: (context, index) => const SizedBox(width: 10),
+        itemBuilder: (context, index) {
+          final category = categories[index];
+          final isSelected = category == selectedCategory;
+
+          return GestureDetector(
+            onTap: () => onSelected(category),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: isSelected ? const Color(0xFF00704A) : Colors.white,
+                borderRadius: BorderRadius.circular(22),
+                border: Border.all(
+                  color: isSelected
+                      ? const Color(0xFF00704A)
+                      : Colors.grey.shade300,
+                  width: 1,
+                ),
+                boxShadow: isSelected
+                    ? [
+                        BoxShadow(
+                          color: const Color(0xFF00704A).withOpacity(0.3),
+                          blurRadius: 8,
+                          offset: const Offset(0, 4),
+                        ),
+                      ]
+                    : null,
+              ),
+              child: Text(
+                category,
+                style: TextStyle(
+                  color: isSelected ? Colors.white : Colors.grey[600],
+                  fontSize: 15,
+                  fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
+                  letterSpacing: -0.3,
+                ),
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }

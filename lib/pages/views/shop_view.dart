@@ -114,10 +114,10 @@ class _ShopCategoryHeaderDelegate extends SliverPersistentHeaderDelegate {
   _ShopCategoryHeaderDelegate({required this.child});
 
   @override
-  double get minExtent => 116.0;
+  double get minExtent => 60.0;
 
   @override
-  double get maxExtent => 116.0;
+  double get maxExtent => 60.0;
 
   @override
   Widget build(
