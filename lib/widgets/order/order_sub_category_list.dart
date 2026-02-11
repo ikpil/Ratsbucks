@@ -76,11 +76,6 @@ class _SubCategoryCardState extends State<SubCategoryCard> {
 
   @override
   Widget build(BuildContext context) {
-    final details =
-        OrderItemList.categoryDetails[widget.category] ?? {'en': '', 'image': ''};
-    final englishName = details['en'] ?? '';
-    final imagePath = details['image'] ?? '';
-
     return GestureDetector(
       onTap: widget.onTap,
       onTapDown: (_) => setState(() => _isPressed = true),
