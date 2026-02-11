@@ -4,6 +4,7 @@ import '../../widgets/order/order_sub_category_list.dart';
 import '../../widgets/order/order_main_category_tab.dart';
 import '../../widgets/order/order_product_list.dart';
 import '../../widgets/common/rats_sliver_app_bar.dart';
+import '../../models/order_main_category_list.dart';
 
 class OrderView extends StatefulWidget {
   const OrderView({super.key});
@@ -14,7 +15,8 @@ class OrderView extends StatefulWidget {
 
 class _OrderViewState extends State<OrderView> {
   int _selectedCategoryIndex = 0;
-  final List<String> _mainCategories = ['음료', '푸드', '상품'];
+  List<String> get _mainCategories =>
+      OrderMainCategoryList.categories.map((e) => e.label).toList();
 
   // 상세 페이지 상태 관리를 위한 변수
   bool _showDetail = false;
