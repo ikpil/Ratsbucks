@@ -1,5 +1,9 @@
 class OrderMainCategory {
+  final String id;
   final String label;
 
-  const OrderMainCategory(this.label);
+  const OrderMainCategory({
+    required this.id,
+    required this.label,
+  });
 }

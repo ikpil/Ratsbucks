@@ -1,6 +1,9 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import '../../models/order_item_list.dart';
+import '../../models/order_sub_category.dart';
+import '../../models/order_sub_category_list.dart' as model;
+import '../../models/order_main_category_list.dart';
 
 class OrderSubCategoryList extends StatelessWidget {
   final int categoryIndex;
@@ -11,6 +14,13 @@ class OrderSubCategoryList extends StatelessWidget {
     required this.categoryIndex,
     required this.onCategoryTap,
   });
+
+  List<OrderSubCategory> get _categories {
+    final mainCategoryId = OrderMainCategoryList.categories[categoryIndex].id;
+    return model.OrderSubCategoryList.categories
+        .where((category) => category.mainCategoryId == mainCategoryId)
+        .toList();
+  }
 
   Map<String, List<Map<String, dynamic>>> get _menuData {
     switch (categoryIndex) {
@@ -27,19 +37,20 @@ class OrderSubCategoryList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final categories = _categories;
     final menuData = _menuData;
 
     return ListView.builder(
       physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
       padding: const EdgeInsets.only(top: 16, bottom: 120),
-      itemCount: menuData.keys.length,
+      itemCount: categories.length,
       itemBuilder: (context, index) {
-        final category = menuData.keys.elementAt(index);
-        final items = menuData[category]!;
+        final category = categories[index];
+        final items = menuData[category.label] ?? [];
 
         return SubCategoryCard(
           category: category,
-          onTap: () => onCategoryTap(category, items),
+          onTap: () => onCategoryTap(category.label, items),
         );
       },
     );
@@ -47,7 +58,7 @@ class OrderSubCategoryList extends StatelessWidget {
 }
 
 class SubCategoryCard extends StatefulWidget {
-  final String category;
+  final OrderSubCategory category;
   final VoidCallback onTap;
 
   const SubCategoryCard({
@@ -126,6 +137,10 @@ class _SubCategoryCardState extends State<SubCategoryCard> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.black.withOpacity(0.03),
+                        image: DecorationImage(
+                          image: AssetImage(widget.category.imageUrl),
+                          fit: BoxFit.cover,
+                        ),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.white.withOpacity(0.8),
@@ -141,7 +156,7 @@ class _SubCategoryCardState extends State<SubCategoryCard> {
                       ),
                       child: ClipOval(
                         child: Image.asset(
-                          imagePath,
+                          widget.category.imageUrl,
                           fit: BoxFit.cover,
                           errorBuilder: (context, error, stackTrace) {
                             return Center(
@@ -162,7 +177,7 @@ class _SubCategoryCardState extends State<SubCategoryCard> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            widget.category,
+                            widget.category.label,
                             style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w800,
@@ -172,7 +187,7 @@ class _SubCategoryCardState extends State<SubCategoryCard> {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            englishName,
+                            widget.category.enLabel,
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey.shade500,
