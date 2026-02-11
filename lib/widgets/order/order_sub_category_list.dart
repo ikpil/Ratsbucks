@@ -1,6 +1,6 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import '../../models/menu_data.dart';
+import '../../models/order_item_list.dart';
 
 class OrderSubCategoryList extends StatelessWidget {
   final int categoryIndex;
@@ -15,13 +15,13 @@ class OrderSubCategoryList extends StatelessWidget {
   Map<String, List<Map<String, dynamic>>> get _menuData {
     switch (categoryIndex) {
       case 0:
-        return MenuData.beverageMenu;
+        return OrderItemList.beverageMenu;
       case 1:
-        return MenuData.foodMenu;
+        return OrderItemList.foodMenu;
       case 2:
-        return MenuData.goodsMenu;
+        return OrderItemList.goodsMenu;
       default:
-        return MenuData.beverageMenu;
+        return OrderItemList.beverageMenu;
     }
   }
 
@@ -66,7 +66,7 @@ class _SubCategoryCardState extends State<SubCategoryCard> {
   @override
   Widget build(BuildContext context) {
     final details =
-        MenuData.categoryDetails[widget.category] ?? {'en': '', 'image': ''};
+        OrderItemList.categoryDetails[widget.category] ?? {'en': '', 'image': ''};
     final englishName = details['en'] ?? '';
     final imagePath = details['image'] ?? '';
 
