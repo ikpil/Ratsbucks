@@ -1,6 +1,6 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import '../../models/shop_data.dart';
+import '../../models/shop_item.dart';
 import 'shop_product_detail.dart';
 
 class ShopGridItemCard extends StatefulWidget {

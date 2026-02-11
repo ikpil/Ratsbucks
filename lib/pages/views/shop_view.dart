@@ -6,7 +6,8 @@ import '../../widgets/shop/shop_category_list.dart';
 import '../../widgets/shop/shop_horizontal_list.dart';
 import '../../widgets/shop/shop_product_grid.dart';
 import '../../widgets/shop/shop_section_header.dart';
-import '../../models/shop_data.dart';
+import '../../models/shop_item.dart';
+import '../../models/shop_item_list.dart';
 
 class ShopView extends StatefulWidget {
   const ShopView({super.key});
@@ -18,13 +19,13 @@ class ShopView extends StatefulWidget {
 class _ShopViewState extends State<ShopView> {
   String _selectedCategory = '전체';
 
-  List<String> get _categories => ['전체', ...ShopData.categories];
+  List<String> get _categories => ['전체', ...ShopItemList.categories];
 
   List<ShopItem> get _filteredProducts {
     if (_selectedCategory == '전체') {
-      return ShopData.products;
+      return ShopItemList.products;
     }
-    return ShopData.products
+    return ShopItemList.products
         .where((item) => item.category == _selectedCategory)
         .toList();
   }
@@ -85,7 +86,7 @@ class _ShopViewState extends State<ShopView> {
               ),
               SliverToBoxAdapter(
                 child: ShopHorizontalList(
-                  items: ShopData.products
+                  items: ShopItemList.products
                       .where((item) => item.isNew || item.isBest)
                       .toList(),
                 ),

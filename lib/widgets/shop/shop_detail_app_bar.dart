@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../models/shop_data.dart';
+import '../../models/shop_item.dart';
 
 class ShopDetailAppBar extends StatelessWidget {
   final ShopItem item;
