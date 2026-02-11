@@ -9,6 +9,7 @@ import 'product_detail/product_option_section.dart';
 import 'product_detail/product_price_section.dart';
 import 'product_detail/product_temperature_section.dart';
 import 'product_detail/similar_product_section.dart';
+import 'product_order_modal.dart';
 
 class ProductDetailView extends StatefulWidget {
   final Map<String, dynamic> item;
@@ -168,7 +169,18 @@ class _ProductDetailViewState extends State<ProductDetailView> {
             border: Border(top: BorderSide(color: Colors.transparent)),
           ),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                backgroundColor: Colors.transparent,
+                builder: (context) => ProductOrderModal(
+                  item: widget.item,
+                  initialIsIce: isIce,
+                  initialSelectedBean: selectedBean,
+                ),
+              );
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: primaryColor,
               foregroundColor: Colors.white,
