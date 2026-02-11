@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import '../../models/order_item.dart';
+import '../../pages/payment/payment_page.dart';
 import 'product_detail/product_option_section.dart';
 import 'product_detail/product_temperature_section.dart';
 
@@ -152,9 +154,23 @@ class _ProductOrderModalState extends State<ProductOrderModal> {
           // 주문하기 버튼
           ElevatedButton(
             onPressed: () {
-              // 주문 로직 처리 (현재는 로그 출력 및 모달 닫기)
-              print('주문: ${widget.item['name']}, $quantity개, $formattedTotalPrice원, Ice: $isIce, Bean: $selectedBean');
-              Navigator.pop(context);
+              Navigator.pop(context); // 모달 닫기
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PaymentPage(
+                    items: [
+                      OrderItem(
+                        name: widget.item['name'],
+                        unitPrice: price,
+                        quantity: quantity,
+                        isIce: isIce,
+                        selectedBean: selectedBean,
+                      ),
+                    ],
+                  ),
+                ),
+              );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFF00704A),
