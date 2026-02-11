@@ -5,7 +5,7 @@ class OrderPaymentItem {
   final bool isIce;
   final String selectedBean;
 
-  const OrderItem({
+  const OrderPaymentItem({
     required this.name,
     required this.unitPrice,
     required this.quantity,
