@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../../models/order_item.dart';
+import '../../models/order_payment_item.dart';
 
 class PaymentOrderSummary extends StatelessWidget {
-  final List<OrderItem> items;
+  final List<OrderPaymentItem> items;
 
   const PaymentOrderSummary({
     super.key,
@@ -34,7 +34,7 @@ class PaymentOrderSummary extends StatelessWidget {
     );
   }
 
-  Widget _buildItemRow(OrderItem item) {
+  Widget _buildItemRow(OrderPaymentItem item) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Row(

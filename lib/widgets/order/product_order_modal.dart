@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../../models/order_item.dart';
+import '../../models/order_payment_item.dart';
 import '../../pages/payment/payment_page.dart';
 import 'product_detail/product_option_section.dart';
 import 'product_detail/product_temperature_section.dart';
@@ -160,7 +160,7 @@ class _ProductOrderModalState extends State<ProductOrderModal> {
                 MaterialPageRoute(
                   builder: (context) => PaymentPage(
                     items: [
-                      OrderItem(
+                      OrderPaymentItem(
                         name: widget.item['name'],
                         unitPrice: price,
                         quantity: quantity,

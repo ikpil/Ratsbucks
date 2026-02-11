@@ -1,4 +1,4 @@
-class OrderItem {
+class OrderPaymentItem {
   final String name;
   final int unitPrice;
   final int quantity;

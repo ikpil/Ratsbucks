@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../models/order_item.dart';
+import '../../models/order_payment_item.dart';
 import '../../widgets/payment/payment_order_summary.dart';
 import '../../widgets/payment/payment_coupon_section.dart';
 import '../../widgets/payment/payment_method_section.dart';
 import '../../widgets/payment/payment_amount_info.dart';
 
 class PaymentPage extends StatefulWidget {
-  final List<OrderItem> items;
+  final List<OrderPaymentItem> items;
 
   const PaymentPage({
     super.key,
