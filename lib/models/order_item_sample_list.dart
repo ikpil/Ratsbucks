@@ -1,4 +1,4 @@
-class OrderItemList {
+class OrderItemSampleList {
   static final Map<String, List<Map<String, dynamic>>> beverageMenu = {
     '콜드 브루': [
       {

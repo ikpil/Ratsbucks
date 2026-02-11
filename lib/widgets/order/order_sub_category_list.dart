@@ -1,6 +1,6 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import '../../models/order_item_list.dart';
+import '../../models/order_item_sample_list.dart';
 import '../../models/order_sub_category.dart';
 import '../../models/order_sub_category_list.dart' as model;
 import '../../models/order_main_category_list.dart';
@@ -25,13 +25,13 @@ class OrderSubCategoryList extends StatelessWidget {
   Map<String, List<Map<String, dynamic>>> get _menuData {
     switch (categoryIndex) {
       case 0:
-        return OrderItemList.beverageMenu;
+        return OrderItemSampleList.beverageMenu;
       case 1:
-        return OrderItemList.foodMenu;
+        return OrderItemSampleList.foodMenu;
       case 2:
-        return OrderItemList.goodsMenu;
+        return OrderItemSampleList.goodsMenu;
       default:
-        return OrderItemList.beverageMenu;
+        return OrderItemSampleList.beverageMenu;
     }
   }
 
