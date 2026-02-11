@@ -1,16 +1,6 @@
 import 'shop_item.dart';
 
 class ShopItemList {
-  static const List<String> categories = [
-    '머그',
-    '글라스',
-    '텀블러',
-    '보온병',
-    '액세서리',
-    '커피용품',
-    '패키지 티',
-  ];
-
   static const List<ShopItem> products = [
     ShopItem(
       name: 'SS 블랙 앤 골드 스탠리 보온병 500ml',
