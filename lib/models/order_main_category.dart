@@ -1,5 +1,7 @@
+import 'order_main_category_id.dart';
+
 class OrderMainCategory {
-  final String id;
+  final OrderMainCategoryId id;
   final String label;
 
   const OrderMainCategory({

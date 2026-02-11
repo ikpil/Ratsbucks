@@ -1,8 +1,9 @@
+import 'order_main_category_id.dart';
 import 'order_sub_category_id.dart';
 
 class OrderSubCategory {
   final OrderSubCategoryId id;
-  final String mainCategoryId;
+  final OrderMainCategoryId mainCategoryId;
   final String label;
   final String enLabel;
   final String imageUrl;
