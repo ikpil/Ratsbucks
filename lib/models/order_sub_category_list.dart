@@ -1,69 +1,81 @@
 import 'order_sub_category.dart';
+import 'order_sub_category_id.dart';
 
 class OrderSubCategoryList {
   static const List<OrderSubCategory> categories = [
     // Beverage (음료) - mainCategoryId: 'beverage'
     OrderSubCategory(
+      id: OrderSubCategoryId.coldBrew,
       mainCategoryId: 'beverage',
       label: '콜드 브루',
       enLabel: 'Cold Brew',
       imageUrl: 'assets/images/categories/soup.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.espresso,
       mainCategoryId: 'beverage',
       label: '에스프레소',
       enLabel: 'Espresso',
       imageUrl: 'assets/images/categories/refresher.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.frappuccino,
       mainCategoryId: 'beverage',
       label: '프라푸치노',
       enLabel: 'Frappuccino',
       imageUrl: 'assets/images/categories/frappuccino.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.blended,
       mainCategoryId: 'beverage',
       label: '블렌디드',
       enLabel: 'Blended',
       imageUrl: 'assets/images/categories/espresso.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.tea,
       mainCategoryId: 'beverage',
       label: '티 (Tea)',
       enLabel: 'Tea',
       imageUrl: 'assets/images/categories/mug.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.brewedCoffee,
       mainCategoryId: 'beverage',
       label: '브루드 커피',
       enLabel: 'Brewed Coffee',
       imageUrl: 'assets/images/categories/bottled_beverages.png',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.fizzio,
       mainCategoryId: 'beverage',
       label: '피지오',
       enLabel: 'Fizzio',
       imageUrl: 'assets/images/categories/milk___juice_and_more.png',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.refresher,
       mainCategoryId: 'beverage',
       label: '리프레셔',
       enLabel: 'Refresher',
       imageUrl: 'assets/images/categories/glass.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.miniDrink,
       mainCategoryId: 'beverage',
       label: '미니 음료',
       enLabel: 'Mini Drink',
       imageUrl: 'assets/images/categories/sandwich.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.bottledDrink,
       mainCategoryId: 'beverage',
       label: '병음료',
       enLabel: 'Bottled Drink',
       imageUrl: 'assets/images/categories/snack.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.ade,
       mainCategoryId: 'beverage',
       label: '에이드',
       enLabel: 'Ade',
@@ -72,60 +84,70 @@ class OrderSubCategoryList {
 
     // Food (푸드) - mainCategoryId: 'food'
     OrderSubCategory(
+      id: OrderSubCategoryId.cake,
       mainCategoryId: 'food',
       label: '케이크',
       enLabel: 'Cake',
       imageUrl: 'assets/images/categories/cold_cups.png',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.sandwichSalad,
       mainCategoryId: 'food',
       label: '샌드위치 & 샐러드',
       enLabel: 'Sandwich & Salad',
       imageUrl: 'assets/images/categories/snacks.png',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.bread,
       mainCategoryId: 'food',
       label: '브레드',
       enLabel: 'Bread',
       imageUrl: 'assets/images/categories/tea.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.fruitYogurt,
       mainCategoryId: 'food',
       label: '과일 & 요거트',
       enLabel: 'Fruit & Yogurt',
       imageUrl: 'assets/images/categories/brunch.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.snackMiniDessert,
       mainCategoryId: 'food',
       label: '스낵 & 미니 디저트',
       enLabel: 'Snack & Mini Dessert',
       imageUrl: 'assets/images/categories/cold_coffees.png',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.iceCream,
       mainCategoryId: 'food',
       label: '아이스크림',
       enLabel: 'Ice Cream',
       imageUrl: 'assets/images/categories/blended.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.soup,
       mainCategoryId: 'food',
       label: '수프',
       enLabel: 'Soup',
       imageUrl: 'assets/images/categories/lunch.png',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.brunch,
       mainCategoryId: 'food',
       label: '브런치',
       enLabel: 'Brunch',
       imageUrl: 'assets/images/categories/brewed_coffee.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.chocolate,
       mainCategoryId: 'food',
       label: '초콜릿',
       enLabel: 'Chocolate',
       imageUrl: 'assets/images/categories/gift_card.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.macaron,
       mainCategoryId: 'food',
       label: '마카롱',
       enLabel: 'Macaron',
@@ -134,60 +156,70 @@ class OrderSubCategoryList {
 
     // Goods (상품) - mainCategoryId: 'goods'
     OrderSubCategory(
+      id: OrderSubCategoryId.mugGlass,
       mainCategoryId: 'goods',
       label: '머그 & 글라스',
       enLabel: 'Mug & Glass',
       imageUrl: 'assets/images/categories/bottled.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.tumblerThermos,
       mainCategoryId: 'goods',
       label: '텀블러 & 보온병',
       enLabel: 'Tumbler & Thermos',
       imageUrl: 'assets/images/categories/fizzio.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.coffeeGoods,
       mainCategoryId: 'goods',
       label: '커피 용품',
       enLabel: 'Coffee Goods',
       imageUrl: 'assets/images/categories/tumblers.png',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.wholeBean,
       mainCategoryId: 'goods',
       label: '원두',
       enLabel: 'Whole Bean',
       imageUrl: 'assets/images/categories/lifestyle.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.viaInstant,
       mainCategoryId: 'goods',
       label: '비아 (VIA)',
       enLabel: 'VIA Instant',
       imageUrl: 'assets/images/categories/fruit.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.teaPackage,
       mainCategoryId: 'goods',
       label: '티 패키지',
       enLabel: 'Tea Package',
       imageUrl: 'assets/images/categories/cake.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.syrupSauce,
       mainCategoryId: 'goods',
       label: '시럽 & 소스',
       enLabel: 'Syrup & Sauce',
       imageUrl: 'assets/images/categories/ice_cream.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.lifestyle,
       mainCategoryId: 'goods',
       label: '라이프스타일',
       enLabel: 'Lifestyle',
       imageUrl: 'assets/images/categories/tumbler.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.giftCard,
       mainCategoryId: 'goods',
       label: '기프트 카드',
       enLabel: 'Gift Card',
       imageUrl: 'assets/images/categories/via.jpg',
     ),
     OrderSubCategory(
+      id: OrderSubCategoryId.accessory,
       mainCategoryId: 'goods',
       label: '액세서리',
       enLabel: 'Accessory',
