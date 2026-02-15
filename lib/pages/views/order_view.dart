@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import '../../models/order_product.dart';
 import '../../widgets/order/order_sub_category_list.dart';
 import '../../widgets/order/order_main_category_tab.dart';
 import '../../widgets/order/order_product_list.dart';
@@ -21,7 +22,7 @@ class _OrderViewState extends State<OrderView> {
   // 상세 페이지 상태 관리를 위한 변수
   bool _showDetail = false;
   String? _detailTitle;
-  List<Map<String, dynamic>>? _detailItems;
+  List<OrderProduct>? _detailItems;
 
   void _onCategoryTap(int index) {
     setState(() {
@@ -29,7 +30,7 @@ class _OrderViewState extends State<OrderView> {
     });
   }
 
-  void _openDetail(String title, List<Map<String, dynamic>> items) {
+  void _openDetail(String title, List<OrderProduct> items) {
     setState(() {
       _detailTitle = title;
       _detailItems = items;
@@ -57,10 +58,7 @@ class _OrderViewState extends State<OrderView> {
       },
       child: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(
-          dragDevices: {
-            PointerDeviceKind.touch,
-            PointerDeviceKind.mouse,
-          },
+          dragDevices: {PointerDeviceKind.touch, PointerDeviceKind.mouse},
         ),
         child: Stack(
           children: [
@@ -73,7 +71,9 @@ class _OrderViewState extends State<OrderView> {
                 child: Scaffold(
                   backgroundColor: Colors.white,
                   body: NestedScrollView(
-                    physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                    physics: const BouncingScrollPhysics(
+                      parent: AlwaysScrollableScrollPhysics(),
+                    ),
                     headerSliverBuilder: (context, innerBoxIsScrolled) {
                       return [
                         RatsSliverAppBar(
@@ -81,8 +81,11 @@ class _OrderViewState extends State<OrderView> {
                           actions: [
                             IconButton(
                               onPressed: () {},
-                              icon: const Icon(Icons.search,
-                                  color: Colors.black, size: 28),
+                              icon: const Icon(
+                                Icons.search,
+                                color: Colors.black,
+                                size: 28,
+                              ),
                               padding: const EdgeInsets.only(right: 20),
                             ),
                           ],
@@ -102,9 +105,10 @@ class _OrderViewState extends State<OrderView> {
                                     onCategoryTap: _onCategoryTap,
                                   ),
                                   const Divider(
-                                      height: 1,
-                                      thickness: 1,
-                                      color: Color(0xFFF0F0F0)),
+                                    height: 1,
+                                    thickness: 1,
+                                    color: Color(0xFFF0F0F0),
+                                  ),
                                 ],
                               ),
                             ),
@@ -157,7 +161,10 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
 
   @override
   Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
+    BuildContext context,
+    double shrinkOffset,
+    bool overlapsContent,
+  ) {
     return SizedBox.expand(child: child);
   }
 

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import '../../models/order_product.dart';
 import '../common/rats_sliver_app_bar.dart';
 import 'order_product_tile.dart';
 
 class OrderProductList extends StatelessWidget {
   final String title;
-  final List<Map<String, dynamic>> items;
+  final List<OrderProduct> items;
   final VoidCallback onPop;
 
   const OrderProductList({
@@ -19,13 +20,17 @@ class OrderProductList extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
-        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+        physics: const BouncingScrollPhysics(
+          parent: AlwaysScrollableScrollPhysics(),
+        ),
         slivers: [
           RatsSliverAppBar(
             title: title,
             leading: IconButton(
-              icon: const Icon(Icons.arrow_back_ios_new_rounded,
-                  color: Colors.black),
+              icon: const Icon(
+                Icons.arrow_back_ios_new_rounded,
+                color: Colors.black,
+              ),
               onPressed: onPop,
             ),
             actions: [
@@ -37,13 +42,10 @@ class OrderProductList extends StatelessWidget {
             ],
           ),
           SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                final item = items[index];
-                return OrderProductTile(item: item);
-              },
-              childCount: items.length,
-            ),
+            delegate: SliverChildBuilderDelegate((context, index) {
+              final item = items[index];
+              return OrderProductTile(item: item);
+            }, childCount: items.length),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: 120)),
         ],

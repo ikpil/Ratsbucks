@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import '../../../models/order_product.dart';
 
 class SimilarProductSection extends StatelessWidget {
-  final Map<String, dynamic> item;
+  final OrderProduct item;
 
   const SimilarProductSection({super.key, required this.item});
 
@@ -28,7 +29,8 @@ class SimilarProductSection extends StatelessWidget {
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             physics: const BouncingScrollPhysics(
-                parent: AlwaysScrollableScrollPhysics()),
+              parent: AlwaysScrollableScrollPhysics(),
+            ),
             itemCount: 5,
             separatorBuilder: (context, index) => const SizedBox(width: 16),
             itemBuilder: (context, index) {
@@ -42,23 +44,27 @@ class SimilarProductSection extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           color: Colors.grey[100],
-                          image: item['image'] != null
+                          image: item.imageUrl.isNotEmpty
                               ? DecorationImage(
-                                  image: AssetImage(item['image']),
+                                  image: AssetImage(item.imageUrl),
                                   fit: BoxFit.cover,
                                 )
                               : null,
                         ),
-                        child: item['image'] == null
+                        child: item.imageUrl.isEmpty
                             ? Center(
-                                child: Icon(Icons.coffee,
-                                    size: 40, color: Colors.grey[300]))
+                                child: Icon(
+                                  Icons.coffee,
+                                  size: 40,
+                                  color: Colors.grey[300],
+                                ),
+                              )
                             : null,
                       ),
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      item['name'] ?? '추천 메뉴 ${index + 1}',
+                      item.name.isNotEmpty ? item.name : '추천 메뉴 ${index + 1}',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
@@ -68,11 +74,8 @@ class SimilarProductSection extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      '${item['price'] ?? 4500}원',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.grey[600],
-                      ),
+                      '${item.price}원',
+                      style: TextStyle(fontSize: 13, color: Colors.grey[600]),
                     ),
                   ],
                 ),

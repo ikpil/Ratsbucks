@@ -1,14 +1,12 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
+import '../../models/order_product.dart';
 import 'order_product_detail.dart';
 
 class OrderProductTile extends StatefulWidget {
-  final Map<String, dynamic> item;
+  final OrderProduct item;
 
-  const OrderProductTile({
-    super.key,
-    required this.item,
-  });
+  const OrderProductTile({super.key, required this.item});
 
   @override
   State<OrderProductTile> createState() => _OrderProductTileState();
@@ -96,10 +94,10 @@ class _OrderProductTileState extends State<OrderProductTile> {
                         ],
                       ),
                       child: Hero(
-                        tag: widget.item['name'] ?? 'product_image',
+                        tag: widget.item.name,
                         child: ClipOval(
                           child: Image.asset(
-                            widget.item['image'] ?? '',
+                            widget.item.imageUrl,
                             fit: BoxFit.cover,
                             width: 80,
                             height: 80,
@@ -125,7 +123,7 @@ class _OrderProductTileState extends State<OrderProductTile> {
                         children: [
                           // 1. Product Name
                           Text(
-                            widget.item['name'] ?? '',
+                            widget.item.name,
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w700,
@@ -138,7 +136,7 @@ class _OrderProductTileState extends State<OrderProductTile> {
                           const SizedBox(height: 4),
                           // 2. Product English Name
                           Text(
-                            widget.item['en'] ?? '',
+                            widget.item.enName,
                             style: const TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
@@ -151,7 +149,7 @@ class _OrderProductTileState extends State<OrderProductTile> {
                           const SizedBox(height: 12),
                           // 4. Product Price
                           Text(
-                            '${widget.item['price']}원',
+                            '${widget.item.price}원',
                             style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,

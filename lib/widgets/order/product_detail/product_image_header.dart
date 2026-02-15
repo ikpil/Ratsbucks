@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import '../../../models/order_product.dart';
 
 class ProductImageHeader extends StatelessWidget {
-  final Map<String, dynamic> item;
+  final OrderProduct item;
   final bool showTitle;
 
   const ProductImageHeader({
@@ -23,7 +24,7 @@ class ProductImageHeader extends StatelessWidget {
         duration: const Duration(milliseconds: 300),
         opacity: showTitle ? 1.0 : 0.0,
         child: Text(
-          item['name'] ?? '',
+          item.name,
           style: const TextStyle(
             color: Colors.black,
             fontSize: 16,
@@ -38,26 +39,25 @@ class ProductImageHeader extends StatelessWidget {
             color: Colors.white.withOpacity(0.5),
             shape: BoxShape.circle,
           ),
-          child: const Icon(Icons.arrow_back_ios_new,
-              color: Colors.black, size: 20),
+          child: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.black,
+            size: 20,
+          ),
         ),
         onPressed: () => Navigator.pop(context),
       ),
       flexibleSpace: FlexibleSpaceBar(
         collapseMode: CollapseMode.parallax,
-        stretchModes: const [
-          StretchMode.zoomBackground,
-        ],
-        background: item['image'] != null
-            ? Hero(
-                tag: item['name'] ?? 'product_image',
-                child: Image.asset(
-                  item['image'],
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => _buildPlaceholderImage(),
-                ),
-              )
-            : _buildPlaceholderImage(),
+        stretchModes: const [StretchMode.zoomBackground],
+        background: Hero(
+          tag: item.name,
+          child: Image.asset(
+            item.imageUrl,
+            fit: BoxFit.cover,
+            errorBuilder: (_, __, ___) => _buildPlaceholderImage(),
+          ),
+        ),
       ),
     );
   }

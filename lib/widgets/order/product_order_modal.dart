@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import '../../models/order_product.dart';
 import '../../models/order_payment_item.dart';
 import '../../pages/payment/payment_page.dart';
 import 'product_detail/product_option_section.dart';
 import 'product_detail/product_temperature_section.dart';
 
 class ProductOrderModal extends StatefulWidget {
-  final Map<String, dynamic> item;
+  final OrderProduct item;
   final bool initialIsIce;
   final String initialSelectedBean;
 
@@ -33,10 +34,7 @@ class _ProductOrderModalState extends State<ProductOrderModal> {
     selectedBean = widget.initialSelectedBean;
   }
 
-  int get price {
-    final priceStr = widget.item['price'] as String;
-    return int.parse(priceStr.replaceAll(',', ''));
-  }
+  int get price => widget.item.priceInt;
 
   int get totalPrice => price * quantity;
 
@@ -85,11 +83,8 @@ class _ProductOrderModalState extends State<ProductOrderModal> {
 
           // 상품명
           Text(
-            widget.item['name'],
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+            widget.item.name,
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 24),
 
@@ -161,7 +156,7 @@ class _ProductOrderModalState extends State<ProductOrderModal> {
                   builder: (context) => PaymentPage(
                     items: [
                       OrderPaymentItem(
-                        name: widget.item['name'],
+                        name: widget.item.name,
                         unitPrice: price,
                         quantity: quantity,
                         isIce: isIce,

@@ -1,13 +1,14 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import '../../models/order_item_sample_list.dart';
+import '../../models/order_product.dart';
+import '../../models/order_product_list.dart' as product_model;
 import '../../models/order_sub_category.dart';
 import '../../models/order_sub_category_list.dart' as model;
 import '../../models/order_main_category_list.dart';
 
 class OrderSubCategoryList extends StatelessWidget {
   final int categoryIndex;
-  final Function(String title, List<Map<String, dynamic>> items) onCategoryTap;
+  final Function(String title, List<OrderProduct> items) onCategoryTap;
 
   const OrderSubCategoryList({
     super.key,
@@ -22,31 +23,21 @@ class OrderSubCategoryList extends StatelessWidget {
         .toList();
   }
 
-  Map<String, List<Map<String, dynamic>>> get _menuData {
-    switch (categoryIndex) {
-      case 0:
-        return OrderItemSampleList.beverageMenu;
-      case 1:
-        return OrderItemSampleList.foodMenu;
-      case 2:
-        return OrderItemSampleList.goodsMenu;
-      default:
-        return OrderItemSampleList.beverageMenu;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final categories = _categories;
-    final menuData = _menuData;
 
     return ListView.builder(
-      physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+      physics: const BouncingScrollPhysics(
+        parent: AlwaysScrollableScrollPhysics(),
+      ),
       padding: const EdgeInsets.only(top: 16, bottom: 120),
       itemCount: categories.length,
       itemBuilder: (context, index) {
         final category = categories[index];
-        final items = menuData[category.label] ?? [];
+        final items = product_model.OrderProductList.products
+            .where((p) => p.subCategoryId == category.id)
+            .toList();
 
         return SubCategoryCard(
           category: category,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import '../../models/order_product.dart';
 
 import 'product_detail/product_allergy_section.dart';
 import 'product_detail/product_image_header.dart';
@@ -12,7 +13,7 @@ import 'product_detail/similar_product_section.dart';
 import 'product_order_modal.dart';
 
 class ProductDetailView extends StatefulWidget {
-  final Map<String, dynamic> item;
+  final OrderProduct item;
 
   const ProductDetailView({super.key, required this.item});
 
@@ -24,7 +25,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
   // 상태 관리 변수들
   bool isIce = true; // 기본값 Ice
   String selectedBean = '블론드'; // 기본 선택 원두
-  
+
   // 스크롤 제어
   late ScrollController _scrollController;
   bool _showTitle = false;
@@ -63,21 +64,16 @@ class _ProductDetailViewState extends State<ProductDetailView> {
       backgroundColor: Colors.white,
       body: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(
-          dragDevices: {
-            PointerDeviceKind.touch,
-            PointerDeviceKind.mouse,
-          },
+          dragDevices: {PointerDeviceKind.touch, PointerDeviceKind.mouse},
         ),
         child: CustomScrollView(
           controller: _scrollController,
           physics: const BouncingScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics()),
+            parent: AlwaysScrollableScrollPhysics(),
+          ),
           slivers: [
             // 1. 상품 이미지 섹션
-            ProductImageHeader(
-              item: widget.item,
-              showTitle: _showTitle,
-            ),
+            ProductImageHeader(item: widget.item, showTitle: _showTitle),
 
             // 컨텐츠 섹션
             SliverToBoxAdapter(
@@ -86,8 +82,9 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                 child: Container(
                   decoration: const BoxDecoration(
                     color: Colors.white,
-                    borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(30)),
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(30),
+                    ),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black12,
@@ -98,7 +95,9 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 24.0, vertical: 32.0),
+                      horizontal: 24.0,
+                      vertical: 32.0,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -110,9 +109,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                         const SizedBox(height: 32),
 
                         // 3. 가격
-                        ProductPriceSection(
-                          price: widget.item['price'],
-                        ),
+                        ProductPriceSection(price: widget.item.price),
 
                         const SizedBox(height: 24),
 
