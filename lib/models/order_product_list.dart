@@ -9,6 +9,7 @@ class OrderProductList {
     OrderProduct(
       name: '나이트로 콜드 브루',
       enName: 'Nitro Cold Brew',
+      description: '나이트로 콜드 브루는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '6,000',
       imageUrl: 'assets/images/products/cookies_and_cream_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -17,6 +18,7 @@ class OrderProductList {
     OrderProduct(
       name: '돌체 콜드 브루',
       enName: 'Dolce Cold Brew',
+      description: '돌체 콜드 브루는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '6,000',
       imageUrl: 'assets/images/products/caffe_americano.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -25,6 +27,7 @@ class OrderProductList {
     OrderProduct(
       name: '콜드 브루',
       enName: 'Cold Brew',
+      description: '콜드 브루는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '4,900',
       imageUrl:
           'assets/images/products/caramel_brulee_creme_frappuccino_blended_beverage.png',
@@ -34,6 +37,7 @@ class OrderProductList {
     OrderProduct(
       name: '바닐라 크림 콜드 브루',
       enName: 'Vanilla Cream Cold Brew',
+      description: '바닐라 크림 콜드 브루는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '5,800',
       imageUrl: 'assets/images/products/salted_caramel_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -42,6 +46,7 @@ class OrderProductList {
     OrderProduct(
       name: '오트 콜드 브루',
       enName: 'Oat Cold Brew',
+      description: '오트 콜드 브루는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '5,800',
       imageUrl: 'assets/images/products/iced_black_tea.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -50,6 +55,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 비자림 콜드 브루',
       enName: 'Jeju Forest Cold Brew',
+      description: '제주 비자림 콜드 브루는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '6,800',
       imageUrl: 'assets/images/products/mocha_cookie_crumble_frappuccino.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -58,6 +64,7 @@ class OrderProductList {
     OrderProduct(
       name: '시그니처 더 블랙 콜드 브루',
       enName: 'Signature The Black Cold Brew',
+      description: '시그니처 더 블랙 콜드 브루는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '19,600',
       imageUrl:
           'assets/images/products/peppermint_white_chocolate_mocha_frappuccino_blended_beverage.png',
@@ -67,6 +74,7 @@ class OrderProductList {
     OrderProduct(
       name: '콜드 브루 몰트',
       enName: 'Cold Brew Malt',
+      description: '콜드 브루 몰트는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '8,500',
       imageUrl: 'assets/images/products/iced_caffe_americano.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -75,6 +83,7 @@ class OrderProductList {
     OrderProduct(
       name: '콜드 브루 플로트',
       enName: 'Cold Brew Float',
+      description: '콜드 브루 플로트는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '8,000',
       imageUrl:
           'assets/images/products/peppermint_mocha_creme_frappuccino_blended_beverage.png',
@@ -84,6 +93,7 @@ class OrderProductList {
     OrderProduct(
       name: '프렌치 바닐라 라떼',
       enName: 'French Vanilla Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '6,500',
       imageUrl: 'assets/images/products/steamed_apple_juice.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -94,6 +104,7 @@ class OrderProductList {
     OrderProduct(
       name: '아메리카노',
       enName: 'Caffe Americano',
+      description: '진한 에스프레소에 뜨거운 물을 더해 깔끔하고 강렬한 원두 본연의 맛을 느낄 수 있는 음료입니다.',
       price: '4,500',
       imageUrl:
           'assets/images/products/caramel_ribbon_crunch_frappuccino_blended_beverage.png',
@@ -103,6 +114,7 @@ class OrderProductList {
     OrderProduct(
       name: '카페 라떼',
       enName: 'Caffe Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '5,000',
       imageUrl: 'assets/images/products/iced_passion_tango_tea_lemonade.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -111,6 +123,7 @@ class OrderProductList {
     OrderProduct(
       name: '카푸치노',
       enName: 'Cappuccino',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '5,000',
       imageUrl:
           'assets/images/products/espresso_frappuccino_blended_beverage.png',
@@ -120,6 +133,7 @@ class OrderProductList {
     OrderProduct(
       name: '카라멜 마키아또',
       enName: 'Caramel Macchiato',
+      description: '카라멜 마키아또는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/peppermint_mocha.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -128,6 +142,7 @@ class OrderProductList {
     OrderProduct(
       name: '스타벅스 돌체 라떼',
       enName: 'Starbucks Dolce Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/butter_croissant.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -136,6 +151,7 @@ class OrderProductList {
     OrderProduct(
       name: '바닐라 빈 라떼',
       enName: 'Vanilla Bean Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '6,100',
       imageUrl: 'assets/images/products/chocolate_croissant.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -144,6 +160,7 @@ class OrderProductList {
     OrderProduct(
       name: '에스프레소',
       enName: 'Espresso',
+      description: '에스프레소는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,000',
       imageUrl: 'assets/images/products/everything_bagel.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -152,6 +169,7 @@ class OrderProductList {
     OrderProduct(
       name: '에스프레소 마키아또',
       enName: 'Espresso Macchiato',
+      description: '에스프레소 마키아또는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,000',
       imageUrl:
           'assets/images/products/sugar_cookie_almondmilk_creme_frappuccino_blended_beverage.png',
@@ -161,6 +179,7 @@ class OrderProductList {
     OrderProduct(
       name: '에스프레소 콘 파나',
       enName: 'Espresso Con Panna',
+      description: '에스프레소 콘 파나는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,200',
       imageUrl: 'assets/images/products/via_sweetened_iced_coffee.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -169,6 +188,7 @@ class OrderProductList {
     OrderProduct(
       name: '카페 모카',
       enName: 'Caffe Mocha',
+      description: '카페 모카는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,500',
       imageUrl: 'assets/images/products/plain_bagel.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -177,6 +197,7 @@ class OrderProductList {
     OrderProduct(
       name: '화이트 초콜릿 모카',
       enName: 'White Chocolate Mocha',
+      description: '화이트 초콜릿 모카는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl:
           'assets/images/products/peppermint_mocha_frappuccino_blended_beverage.png',
@@ -188,6 +209,7 @@ class OrderProductList {
     OrderProduct(
       name: '자바 칩 프라푸치노',
       enName: 'Java Chip Frappuccino',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,300',
       imageUrl: 'assets/images/products/iced_peach_green_tea.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -196,6 +218,7 @@ class OrderProductList {
     OrderProduct(
       name: '카라멜 프라푸치노',
       enName: 'Caramel Frappuccino',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/iced_caffe_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -204,6 +227,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 말차 크림 프라푸치노',
       enName: 'Jeju Matcha Cream Frappuccino',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,300',
       imageUrl: 'assets/images/products/chai_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -212,6 +236,7 @@ class OrderProductList {
     OrderProduct(
       name: '화이트 초콜릿 모카 프라푸치노',
       enName: 'White Chocolate Mocha Frappuccino',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,000',
       imageUrl: 'assets/images/products/snowman_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -220,6 +245,7 @@ class OrderProductList {
     OrderProduct(
       name: '에스프레소 프라푸치노',
       enName: 'Espresso Frappuccino',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '5,500',
       imageUrl: 'assets/images/products/starbucks_cold_brew_coffee.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -228,6 +254,7 @@ class OrderProductList {
     OrderProduct(
       name: '더블 에스프레소 칩 프라푸치노',
       enName: 'Double Espresso Chip Frappuccino',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,300',
       imageUrl:
           'assets/images/products/caramel_frappuccino_blended_beverage.png',
@@ -237,6 +264,7 @@ class OrderProductList {
     OrderProduct(
       name: '초콜릿 크림 칩 프라푸치노',
       enName: 'Chocolate Cream Chip Frappuccino',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,000',
       imageUrl: 'assets/images/products/iced_chestnut_praline_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -245,6 +273,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 까망 크림 프라푸치노',
       enName: 'Jeju Black Sesame Cream Frappuccino',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '7,500',
       imageUrl: 'assets/images/products/iced_sugar_cookie_almondmilk_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -253,6 +282,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 쑥떡 크림 프라푸치노',
       enName: 'Jeju Mugwort Cream Frappuccino',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '7,500',
       imageUrl: 'assets/images/products/iced_peach_green_tea_lemonade.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -261,6 +291,7 @@ class OrderProductList {
     OrderProduct(
       name: '바닐라 크림 프라푸치노',
       enName: 'Vanilla Cream Frappuccino',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '5,100',
       imageUrl: 'assets/images/products/coffee_traveler___dark_roast.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -271,6 +302,7 @@ class OrderProductList {
     OrderProduct(
       name: '망고 바나나 블렌디드',
       enName: 'Mango Banana Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,300',
       imageUrl: 'assets/images/products/iced_coffee_clover_vertica.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -279,6 +311,7 @@ class OrderProductList {
     OrderProduct(
       name: '딸기 딜라이트 요거트 블렌디드',
       enName: 'Strawberry Delight Yogurt Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,300',
       imageUrl: 'assets/images/products/espresso_macchiato.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -287,6 +320,7 @@ class OrderProductList {
     OrderProduct(
       name: '피치 & 레몬 블렌디드',
       enName: 'Peach & Lemon Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,300',
       imageUrl:
           'assets/images/products/chocolate_cookie_crumble_creme_frappuccino.png',
@@ -296,6 +330,7 @@ class OrderProductList {
     OrderProduct(
       name: '망고 패션 티 블렌디드',
       enName: 'Mango Passion Tea Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '5,400',
       imageUrl: 'assets/images/products/espresso_roast.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -304,6 +339,7 @@ class OrderProductList {
     OrderProduct(
       name: '익스트림 티 블렌디드',
       enName: 'Xtreme Tea Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,800',
       imageUrl: 'assets/images/products/espresso_con_panna.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -312,6 +348,7 @@ class OrderProductList {
     OrderProduct(
       name: '여수 바다 유자 블렌디드',
       enName: 'Yeosu Sea Yuja Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '7,000',
       imageUrl: 'assets/images/products/ham_and_swiss_croissant.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -320,6 +357,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 비자림 콜드 브루',
       enName: 'Jeju Forest Cold Brew',
+      description: '제주 비자림 콜드 브루는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '6,800',
       imageUrl: 'assets/images/products/iced_white_chocolate_mocha.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -328,6 +366,7 @@ class OrderProductList {
     OrderProduct(
       name: '코코넛 밀크 블렌디드',
       enName: 'Coconut Milk Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,500',
       imageUrl: 'assets/images/products/petite_vanilla_bean_scone.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -336,6 +375,7 @@ class OrderProductList {
     OrderProduct(
       name: '오트 그린 티 블렌디드',
       enName: 'Oat Green Tea Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,500',
       imageUrl: 'assets/images/products/impossible_breakfast_sandwich.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -344,6 +384,7 @@ class OrderProductList {
     OrderProduct(
       name: '시그니처 초콜릿 블렌디드',
       enName: 'Signature Chocolate Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,500',
       imageUrl: 'assets/images/products/starbucks_blonde_espresso_roast.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -354,6 +395,7 @@ class OrderProductList {
     OrderProduct(
       name: '자몽 허니 블랙 티',
       enName: 'Grapefruit Honey Black Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '5,700',
       imageUrl:
           'assets/images/products/chestnut_praline_frappuccino_blended_beverage.png',
@@ -363,6 +405,7 @@ class OrderProductList {
     OrderProduct(
       name: '유자 민트 티',
       enName: 'Yuaja Mint Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '5,900',
       imageUrl:
           'assets/images/products/iced_starbucks_blonde_vanilla_latte.png',
@@ -372,6 +415,7 @@ class OrderProductList {
     OrderProduct(
       name: '차이 티 라떼',
       enName: 'Chai Tea Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '5,500',
       imageUrl: 'assets/images/products/vanilla_sweet_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -380,6 +424,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 유기농 말차로 만든 라떼',
       enName: 'Jeju Organic Matcha Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '6,100',
       imageUrl: 'assets/images/products/cinnamon_coffee_cake.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -388,6 +433,7 @@ class OrderProductList {
     OrderProduct(
       name: '잉글리쉬 브렉퍼스트 티',
       enName: 'English Breakfast Brewed Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/caffe_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -396,6 +442,7 @@ class OrderProductList {
     OrderProduct(
       name: '얼 그레이 티',
       enName: 'Earl Grey Brewed Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/chocolate_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -404,6 +451,7 @@ class OrderProductList {
     OrderProduct(
       name: '유스베리 티',
       enName: 'Youthberry Brewed Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/iced_chai_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -412,6 +460,7 @@ class OrderProductList {
     OrderProduct(
       name: '히비스커스 블렌드 티',
       enName: 'Hibiscus Blend Brewed Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '4,500',
       imageUrl:
           'assets/images/products/strawberry_creme_frappuccino_blended_beverage.png',
@@ -421,6 +470,7 @@ class OrderProductList {
     OrderProduct(
       name: '민트 블렌드 티',
       enName: 'Mint Blend Brewed Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/iced_peppermint_mocha.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -429,6 +479,7 @@ class OrderProductList {
     OrderProduct(
       name: '캐모마일 블렌드 티',
       enName: 'Chamomile Blend Brewed Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/coffee_traveler___pike_place_roast.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -439,6 +490,7 @@ class OrderProductList {
     OrderProduct(
       name: '오늘의 커피',
       enName: 'Brewed Coffee',
+      description: '오늘의 커피는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,200',
       imageUrl: 'assets/images/products/espresso.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -447,6 +499,7 @@ class OrderProductList {
     OrderProduct(
       name: '아이스 커피',
       enName: 'Iced Coffee',
+      description: '아이스 커피는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/baked_apple_croissant.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -455,6 +508,7 @@ class OrderProductList {
     OrderProduct(
       name: '카페 베로나',
       enName: 'Caffe Verona',
+      description: '카페 베로나는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,000',
       imageUrl: 'assets/images/products/iced_caffe_mocha.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -463,6 +517,7 @@ class OrderProductList {
     OrderProduct(
       name: '파이크 플레이스 로스트',
       enName: 'Pike Place Roast',
+      description: '파이크 플레이스 로스트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,000',
       imageUrl: 'assets/images/products/chocolate_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -471,6 +526,7 @@ class OrderProductList {
     OrderProduct(
       name: '디카페인 하우스 블렌드',
       enName: 'Decaf House Blend',
+      description: '디카페인 하우스 블렌드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,300',
       imageUrl: 'assets/images/products/caffe_mocha.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -479,6 +535,7 @@ class OrderProductList {
     OrderProduct(
       name: '크리스마스 블렌드',
       enName: 'Christmas Blend',
+      description: '크리스마스 블렌드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,500',
       imageUrl: 'assets/images/products/iced_gingerbread_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -487,6 +544,7 @@ class OrderProductList {
     OrderProduct(
       name: '콜롬비아',
       enName: 'Colombia',
+      description: '콜롬비아는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,000',
       imageUrl:
           'assets/images/products/nondairy_salted_caramel_cream_cold_brew.png',
@@ -496,6 +554,7 @@ class OrderProductList {
     OrderProduct(
       name: '이탈리안 로스트',
       enName: 'Italian Roast',
+      description: '이탈리안 로스트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,000',
       imageUrl: 'assets/images/products/iced_passion_tango_tea.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -504,6 +563,7 @@ class OrderProductList {
     OrderProduct(
       name: '에티오피아',
       enName: 'Ethiopia',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '5,500',
       imageUrl: 'assets/images/products/gingerbread_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -512,6 +572,7 @@ class OrderProductList {
     OrderProduct(
       name: '수마트라',
       enName: 'Sumatra',
+      description: '수마트라는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,500',
       imageUrl: 'assets/images/products/iced_shaken_espresso.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -522,6 +583,7 @@ class OrderProductList {
     OrderProduct(
       name: '쿨 라임 피지오',
       enName: 'Cool Lime Fizzio',
+      description: '쿨 라임 피지오는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl:
           'assets/images/products/iced_hazelnut_oatmilk_shaken_espresso.png',
@@ -531,6 +593,7 @@ class OrderProductList {
     OrderProduct(
       name: '블랙 티 레모네이드 피지오',
       enName: 'Black Tea Lemonade Fizzio',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '5,400',
       imageUrl: 'assets/images/products/blueberry_streusel_muffin.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -539,6 +602,7 @@ class OrderProductList {
     OrderProduct(
       name: '패션 탱고 티 레모네이드 피지오',
       enName: 'Passion Tango Tea Lemonade Fizzio',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '5,400',
       imageUrl: 'assets/images/products/nitro_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -547,6 +611,7 @@ class OrderProductList {
     OrderProduct(
       name: '핑크베리 유스베리',
       enName: 'Pinkberry Youthberry',
+      description: '핑크베리 유스베리는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,100',
       imageUrl: 'assets/images/products/iced_coffee.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -555,6 +620,7 @@ class OrderProductList {
     OrderProduct(
       name: '오미자 셔벗 블렌디드',
       enName: 'Omija Sherbet Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,300',
       imageUrl: 'assets/images/products/mocha_frappuccino_blended_beverage.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -563,6 +629,7 @@ class OrderProductList {
     OrderProduct(
       name: '라임 모히또 티',
       enName: 'Lime Mojito Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '6,100',
       imageUrl: 'assets/images/products/iced_black_tea_lemonade.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -571,6 +638,7 @@ class OrderProductList {
     OrderProduct(
       name: '자몽 피지오',
       enName: 'Grapefruit Fizzio',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '6,300',
       imageUrl:
           'assets/images/products/peppermint_white_chocolate_creme_frappuccino_blended_beverage.png',
@@ -580,6 +648,7 @@ class OrderProductList {
     OrderProduct(
       name: '유자 피지오',
       enName: 'Yuja Fizzio',
+      description: '유자 피지오는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,300',
       imageUrl: 'assets/images/products/jade_citrus_mint_brewed_tea.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -588,6 +657,7 @@ class OrderProductList {
     OrderProduct(
       name: '레몬 에이드 피지오',
       enName: 'Lemonade Fizzio',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '5,900',
       imageUrl:
           'assets/images/products/java_chip_frappuccino_blended_beverage.png',
@@ -597,6 +667,7 @@ class OrderProductList {
     OrderProduct(
       name: '믹스베리 피지오',
       enName: 'Mix Berry Fizzio',
+      description: '믹스베리 피지오는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,300',
       imageUrl: 'assets/images/products/steamed_milk.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -607,6 +678,7 @@ class OrderProductList {
     OrderProduct(
       name: '딸기 아사이 레모네이드 스타벅스 리프레셔',
       enName: 'Strawberry Acai Lemonade Starbucks Refreshers',
+      description: '딸기 아사이 레모네이드 스타벅스 리프레셔는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl:
           'assets/images/products/chestnut_praline_creme_frappuccino_blended_beverage.png',
@@ -616,6 +688,7 @@ class OrderProductList {
     OrderProduct(
       name: '망고 용과 레모네이드 스타벅스 리프레셔',
       enName: 'Mango Dragonfruit Lemonade Starbucks Refreshers',
+      description: '망고 용과 레모네이드 스타벅스 리프레셔는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl:
           'assets/images/products/iced_brown_sugar_oatmilk_shaken_espresso.png',
@@ -625,6 +698,7 @@ class OrderProductList {
     OrderProduct(
       name: '퍼플 드링크 위드 망고 용과 스타벅스 리프레셔',
       enName: 'Purple Drink with Mango Dragonfruit Starbucks Refreshers',
+      description: '퍼플 드링크 위드 망고 용과 스타벅스 리프레셔는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/peppermint_white_chocolate_mocha.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -633,6 +707,7 @@ class OrderProductList {
     OrderProduct(
       name: '핑크 드링크 위드 딸기 아사이 스타벅스 리프레셔',
       enName: 'Pink Drink with Strawberry Acai Starbucks Refreshers',
+      description: '핑크 드링크 위드 딸기 아사이 스타벅스 리프레셔는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/white_chocolate_mocha.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -641,6 +716,7 @@ class OrderProductList {
     OrderProduct(
       name: '슈크림 라떼',
       enName: 'Choux Cream Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '6,300',
       imageUrl: 'assets/images/products/earl_grey_tea.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -649,6 +725,7 @@ class OrderProductList {
     OrderProduct(
       name: '바질 레몬 셔벗 블렌디드',
       enName: 'Basil Lemon Sherbet Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,500',
       imageUrl: 'assets/images/products/iced_caramel_brulee_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -657,6 +734,7 @@ class OrderProductList {
     OrderProduct(
       name: '코코넛 리프레셔',
       enName: 'Coconut Refreshers',
+      description: '코코넛 리프레셔는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,000',
       imageUrl: 'assets/images/products/caramel_brulee_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -665,6 +743,7 @@ class OrderProductList {
     OrderProduct(
       name: '라임 리프레셔',
       enName: 'Lime Refreshers',
+      description: '라임 리프레셔는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,000',
       imageUrl:
           'assets/images/products/sugar_cookie_almondmilk_frappuccino_blended_beverage.png',
@@ -674,6 +753,7 @@ class OrderProductList {
     OrderProduct(
       name: '베리 히비스커스 리프레셔',
       enName: 'Berry Hibiscus Refreshers',
+      description: '베리 히비스커스 리프레셔는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,000',
       imageUrl:
           'assets/images/products/caramel_brulee_frappuccino_blended_beverage.png',
@@ -683,6 +763,7 @@ class OrderProductList {
     OrderProduct(
       name: '쿨 라임 리프레셔',
       enName: 'Cool Lime Refreshers',
+      description: '쿨 라임 리프레셔는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,000',
       imageUrl: 'assets/images/products/birthday_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -693,6 +774,7 @@ class OrderProductList {
     OrderProduct(
       name: '루비 레드 칠링 아이스 티',
       enName: 'Ruby Red Chilling Iced Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '8,300',
       imageUrl:
           'assets/images/products/caramel_ribbon_crunch_creme_frappuccino_blended_beverage.png',
@@ -702,6 +784,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 유기농 말차로 만든 라떼',
       enName: 'Jeju Organic Matcha Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '8,300',
       imageUrl: 'assets/images/products/pistachio_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -710,6 +793,7 @@ class OrderProductList {
     OrderProduct(
       name: '미니 딸기 라떼',
       enName: 'Mini Strawberry Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/starbucks_blonde_vanilla_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -718,6 +802,7 @@ class OrderProductList {
     OrderProduct(
       name: '미니 망고 스무디',
       enName: 'Mini Mango Smoothie',
+      description: '미니 망고 스무디는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/coffee_traveler___veranda_blend.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -726,6 +811,7 @@ class OrderProductList {
     OrderProduct(
       name: '미니 초콜릿',
       enName: 'Mini Chocolate',
+      description: '미니 초콜릿는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,000',
       imageUrl: 'assets/images/products/cinnamon_dolce_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -734,6 +820,7 @@ class OrderProductList {
     OrderProduct(
       name: '미니 바닐라 크림',
       enName: 'Mini Vanilla Cream',
+      description: '미니 바닐라 크림는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,000',
       imageUrl:
           'assets/images/products/iced_peppermint_white_chocolate_mocha.png',
@@ -743,6 +830,7 @@ class OrderProductList {
     OrderProduct(
       name: '미니 카라멜',
       enName: 'Mini Caramel',
+      description: '미니 카라멜는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,000',
       imageUrl:
           'assets/images/products/caffe_vanilla_frappuccino_blended_beverage.png',
@@ -752,6 +840,7 @@ class OrderProductList {
     OrderProduct(
       name: '미니 헤이즐넛',
       enName: 'Mini Hazelnut',
+      description: '미니 헤이즐넛는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,000',
       imageUrl:
           'assets/images/products/coffee_frappuccino_blended_beverage.png',
@@ -761,6 +850,7 @@ class OrderProductList {
     OrderProduct(
       name: '미니 그린티',
       enName: 'Mini Green Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/iced_espresso.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -769,6 +859,7 @@ class OrderProductList {
     OrderProduct(
       name: '미니 블루베리 요거트',
       enName: 'Mini Blueberry Yogurt',
+      description: '미니 블루베리 요거트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/chai_creme_frappuccino.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -779,6 +870,7 @@ class OrderProductList {
     OrderProduct(
       name: '한입에 쏙 고구마',
       enName: 'Sweet Potato Bite',
+      description: '한입에 쏙 고구마는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,800',
       imageUrl: 'assets/images/products/iced_cinnamon_dolce_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -787,6 +879,7 @@ class OrderProductList {
     OrderProduct(
       name: '리얼 블루베리',
       enName: 'Real Blueberry',
+      description: '리얼 블루베리는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,900',
       imageUrl:
           'assets/images/products/coffee_traveler___decaf_pike_place_roast.png',
@@ -796,6 +889,7 @@ class OrderProductList {
     OrderProduct(
       name: '딸기 가득 요거트',
       enName: 'Full of Strawberry Yogurt',
+      description: '딸기 가득 요거트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,100',
       imageUrl: 'assets/images/products/nondairy_chocolate_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -804,6 +898,7 @@ class OrderProductList {
     OrderProduct(
       name: '망고 가득 요거트',
       enName: 'Full of Mango Yogurt',
+      description: '망고 가득 요거트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,100',
       imageUrl:
           'assets/images/products/vanilla_sweet_cream_nitro_cold_brew.png',
@@ -813,6 +908,7 @@ class OrderProductList {
     OrderProduct(
       name: '블루베리 요거트',
       enName: 'Blueberry Yogurt',
+      description: '블루베리 요거트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,900',
       imageUrl: 'assets/images/products/sugar_cookie_almondmilk_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -821,6 +917,7 @@ class OrderProductList {
     OrderProduct(
       name: '치아씨드 요거트',
       enName: 'Chia Seed Yogurt',
+      description: '치아씨드 요거트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,300',
       imageUrl:
           'assets/images/products/nondairy_vanilla_sweet_cream_cold_brew.png',
@@ -830,6 +927,7 @@ class OrderProductList {
     OrderProduct(
       name: '케일 & 사과 주스',
       enName: 'Kale & Apple Juice',
+      description: '케일 & 사과 주스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,000',
       imageUrl: 'assets/images/products/london_fog_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -838,6 +936,7 @@ class OrderProductList {
     OrderProduct(
       name: '햇사과 주스',
       enName: 'Fresh Apple Juice',
+      description: '햇사과 주스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,000',
       imageUrl:
           'assets/images/products/cold_brew_with_nondairy_vanilla_sweet_cream_cold_foam.png',
@@ -847,6 +946,7 @@ class OrderProductList {
     OrderProduct(
       name: '딸기 주스',
       enName: 'Strawberry Juice',
+      description: '딸기 주스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,800',
       imageUrl: 'assets/images/products/chestnut_praline_latte.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -855,6 +955,7 @@ class OrderProductList {
     OrderProduct(
       name: '토마토 주스',
       enName: 'Tomato Juice',
+      description: '토마토 주스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,800',
       imageUrl: 'assets/images/products/cookies_and_cream_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -865,6 +966,7 @@ class OrderProductList {
     OrderProduct(
       name: '라임 패션 티',
       enName: 'Lime Passion Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '5,600',
       imageUrl: 'assets/images/products/caffe_americano.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -873,6 +975,7 @@ class OrderProductList {
     OrderProduct(
       name: '자몽 셔벗 블렌디드',
       enName: 'Grapefruit Sherbet Blended',
+      description: '얼음과 함께 갈아 만든 시원하고 달콤한 맛이 특징인 아이스 블렌디드 음료입니다.',
       price: '6,300',
       imageUrl:
           'assets/images/products/caramel_brulee_creme_frappuccino_blended_beverage.png',
@@ -882,6 +985,7 @@ class OrderProductList {
     OrderProduct(
       name: '유자 에이드',
       enName: 'Yuja Ade',
+      description: '유자 에이드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/salted_caramel_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -890,6 +994,7 @@ class OrderProductList {
     OrderProduct(
       name: '레몬 에이드',
       enName: 'Lemon Ade',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '5,400',
       imageUrl: 'assets/images/products/iced_black_tea.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -898,6 +1003,7 @@ class OrderProductList {
     OrderProduct(
       name: '자몽 에이드',
       enName: 'Grapefruit Ade',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/mocha_cookie_crumble_frappuccino.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -906,6 +1012,7 @@ class OrderProductList {
     OrderProduct(
       name: '청포도 에이드',
       enName: 'Green Grape Ade',
+      description: '청포도 에이드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,000',
       imageUrl:
           'assets/images/products/peppermint_white_chocolate_mocha_frappuccino_blended_beverage.png',
@@ -915,6 +1022,7 @@ class OrderProductList {
     OrderProduct(
       name: '오렌지 에이드',
       enName: 'Orange Ade',
+      description: '오렌지 에이드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/iced_caffe_americano.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -923,6 +1031,7 @@ class OrderProductList {
     OrderProduct(
       name: '베리 에이드',
       enName: 'Berry Ade',
+      description: '베리 에이드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,000',
       imageUrl:
           'assets/images/products/peppermint_mocha_creme_frappuccino_blended_beverage.png',
@@ -932,6 +1041,7 @@ class OrderProductList {
     OrderProduct(
       name: '깔라만시 에이드',
       enName: 'Calamansi Ade',
+      description: '깔라만시 에이드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,100',
       imageUrl: 'assets/images/products/steamed_apple_juice.png',
       mainCategoryId: OrderMainCategoryId.beverage,
@@ -940,6 +1050,7 @@ class OrderProductList {
     OrderProduct(
       name: '석류 에이드',
       enName: 'Pomegranate Ade',
+      description: '석류 에이드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,200',
       imageUrl:
           'assets/images/products/caramel_ribbon_crunch_frappuccino_blended_beverage.png',
@@ -952,6 +1063,7 @@ class OrderProductList {
     OrderProduct(
       name: '부드러운 생크림 카스텔라',
       enName: 'Fresh Cream Castella',
+      description: '부드러운 생크림 카스텔라는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/iced_passion_tango_tea_lemonade.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -960,6 +1072,7 @@ class OrderProductList {
     OrderProduct(
       name: '클라우드 치즈 케이크',
       enName: 'Cloud Cheese Cake',
+      description: '달콤하고 부드러운 식감이 특징이며 커피와 함께 즐기기에 최적인 디저트입니다.',
       price: '5,500',
       imageUrl:
           'assets/images/products/espresso_frappuccino_blended_beverage.png',
@@ -969,6 +1082,7 @@ class OrderProductList {
     OrderProduct(
       name: '7 레이어 가나슈 케이크',
       enName: '7 Layer Ganache Cake',
+      description: '달콤하고 부드러운 식감이 특징이며 커피와 함께 즐기기에 최적인 디저트입니다.',
       price: '5,700',
       imageUrl: 'assets/images/products/peppermint_mocha.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -977,6 +1091,7 @@ class OrderProductList {
     OrderProduct(
       name: '레드벨벳 크림치즈 케이크',
       enName: 'Red Velvet Cream Cheese Cake',
+      description: '달콤하고 부드러운 식감이 특징이며 커피와 함께 즐기기에 최적인 디저트입니다.',
       price: '5,500',
       imageUrl: 'assets/images/products/butter_croissant.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -985,6 +1100,7 @@ class OrderProductList {
     OrderProduct(
       name: '마스카포네 티라미수 케이크',
       enName: 'Mascarpone Tiramisu Cake',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/chocolate_croissant.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -993,6 +1109,7 @@ class OrderProductList {
     OrderProduct(
       name: '블루베리 쿠키 치즈 케이크',
       enName: 'Blueberry Cookie Cheese Cake',
+      description: '달콤하고 부드러운 식감이 특징이며 커피와 함께 즐기기에 최적인 디저트입니다.',
       price: '6,900',
       imageUrl: 'assets/images/products/everything_bagel.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1001,6 +1118,7 @@ class OrderProductList {
     OrderProduct(
       name: '슈크림 가득 바움쿠헨',
       enName: 'Choux Cream Baumkuchen',
+      description: '슈크림 가득 바움쿠헨는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,900',
       imageUrl:
           'assets/images/products/sugar_cookie_almondmilk_creme_frappuccino_blended_beverage.png',
@@ -1010,6 +1128,7 @@ class OrderProductList {
     OrderProduct(
       name: '더 촉촉한 초콜릿 생크림 케이크',
       enName: 'Chocolate Fresh Cream Cake',
+      description: '달콤하고 부드러운 식감이 특징이며 커피와 함께 즐기기에 최적인 디저트입니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/via_sweetened_iced_coffee.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1018,6 +1137,7 @@ class OrderProductList {
     OrderProduct(
       name: '호두 당근 케이크',
       enName: 'Walnut Carrot Cake',
+      description: '달콤하고 부드러운 식감이 특징이며 커피와 함께 즐기기에 최적인 디저트입니다.',
       price: '6,500',
       imageUrl: 'assets/images/products/plain_bagel.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1026,6 +1146,7 @@ class OrderProductList {
     OrderProduct(
       name: '번트 치즈 케이크',
       enName: 'Burnt Cheese Cake',
+      description: '달콤하고 부드러운 식감이 특징이며 커피와 함께 즐기기에 최적인 디저트입니다.',
       price: '6,900',
       imageUrl:
           'assets/images/products/peppermint_mocha_frappuccino_blended_beverage.png',
@@ -1037,6 +1158,7 @@ class OrderProductList {
     OrderProduct(
       name: 'B.E.L.T. 샌드위치',
       enName: 'B.E.L.T. Sandwich',
+      description: '든든한 한 끼 식사로 충분한 신선한 재료가 가득 들어간 베이커리 메뉴입니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/iced_peach_green_tea.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1045,6 +1167,7 @@ class OrderProductList {
     OrderProduct(
       name: '에그 에그 샌드위치',
       enName: 'Egg Egg Sandwich',
+      description: '든든한 한 끼 식사로 충분한 신선한 재료가 가득 들어간 베이커리 메뉴입니다.',
       price: '4,400',
       imageUrl: 'assets/images/products/iced_caffe_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1053,6 +1176,7 @@ class OrderProductList {
     OrderProduct(
       name: '바비큐 치킨 치즈 치아바타',
       enName: 'BBQ Chicken Cheese Ciabatta',
+      description: '바비큐 치킨 치즈 치아바타는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,800',
       imageUrl: 'assets/images/products/chai_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1061,6 +1185,7 @@ class OrderProductList {
     OrderProduct(
       name: '햄 & 루꼴라 올리브 샌드위치',
       enName: 'Ham & Arugula Olive Sandwich',
+      description: '든든한 한 끼 식사로 충분한 신선한 재료가 가득 들어간 베이커리 메뉴입니다.',
       price: '6,200',
       imageUrl: 'assets/images/products/snowman_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1069,6 +1194,7 @@ class OrderProductList {
     OrderProduct(
       name: '단호박 에그 샌드위치',
       enName: 'Pumpkin Egg Sandwich',
+      description: '든든한 한 끼 식사로 충분한 신선한 재료가 가득 들어간 베이커리 메뉴입니다.',
       price: '4,900',
       imageUrl: 'assets/images/products/starbucks_cold_brew_coffee.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1077,6 +1203,7 @@ class OrderProductList {
     OrderProduct(
       name: '크랜베리 치킨 치즈 샌드위치',
       enName: 'Cranberry Chicken Cheese Sandwich',
+      description: '든든한 한 끼 식사로 충분한 신선한 재료가 가득 들어간 베이커리 메뉴입니다.',
       price: '4,500',
       imageUrl:
           'assets/images/products/caramel_frappuccino_blended_beverage.png',
@@ -1086,6 +1213,7 @@ class OrderProductList {
     OrderProduct(
       name: '트리플 치즈 크로크무슈',
       enName: 'Triple Cheese Croque Monsieur',
+      description: '트리플 치즈 크로크무슈는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,200',
       imageUrl: 'assets/images/products/iced_chestnut_praline_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1094,6 +1222,7 @@ class OrderProductList {
     OrderProduct(
       name: '쉬림프 코코넛 샐러드',
       enName: 'Shrimp Coconut Salad',
+      description: '쉬림프 코코넛 샐러드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,500',
       imageUrl: 'assets/images/products/iced_sugar_cookie_almondmilk_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1102,6 +1231,7 @@ class OrderProductList {
     OrderProduct(
       name: '로스트 치킨 샐러드',
       enName: 'Roasted Chicken Salad',
+      description: '로스트 치킨 샐러드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,500',
       imageUrl: 'assets/images/products/iced_peach_green_tea_lemonade.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1110,6 +1240,7 @@ class OrderProductList {
     OrderProduct(
       name: '콥 & 요거트 샐러드',
       enName: 'Cobb & Yogurt Salad',
+      description: '콥 & 요거트 샐러드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,800',
       imageUrl: 'assets/images/products/coffee_traveler___dark_roast.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1120,6 +1251,7 @@ class OrderProductList {
     OrderProduct(
       name: '하트 파이',
       enName: 'Heart Pie',
+      description: '하트 파이는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,200',
       imageUrl: 'assets/images/products/iced_coffee_clover_vertica.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1128,6 +1260,7 @@ class OrderProductList {
     OrderProduct(
       name: '미니 클래식 스콘',
       enName: 'Mini Classic Scone',
+      description: '미니 클래식 스콘는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,000',
       imageUrl: 'assets/images/products/espresso_macchiato.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1136,6 +1269,7 @@ class OrderProductList {
     OrderProduct(
       name: '베이글 (플레인/블루베리)',
       enName: 'Bagel',
+      description: '든든한 한 끼 식사로 충분한 신선한 재료가 가득 들어간 베이커리 메뉴입니다.',
       price: '3,000',
       imageUrl:
           'assets/images/products/chocolate_cookie_crumble_creme_frappuccino.png',
@@ -1145,6 +1279,7 @@ class OrderProductList {
     OrderProduct(
       name: '프렌치 크루아상',
       enName: 'French Croissant',
+      description: '프렌치 크루아상는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,200',
       imageUrl: 'assets/images/products/espresso_roast.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1153,6 +1288,7 @@ class OrderProductList {
     OrderProduct(
       name: '초콜릿 데니쉬 롤',
       enName: 'Chocolate Danish Roll',
+      description: '초콜릿 데니쉬 롤는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,900',
       imageUrl: 'assets/images/products/espresso_con_panna.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1161,6 +1297,7 @@ class OrderProductList {
     OrderProduct(
       name: '연유 밀크 모닝',
       enName: 'Condensed Milk Morning',
+      description: '연유 밀크 모닝는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,300',
       imageUrl: 'assets/images/products/ham_and_swiss_croissant.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1169,6 +1306,7 @@ class OrderProductList {
     OrderProduct(
       name: '버터 프레첼',
       enName: 'Butter Pretzel',
+      description: '버터 프레첼는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,800',
       imageUrl: 'assets/images/products/iced_white_chocolate_mocha.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1177,6 +1315,7 @@ class OrderProductList {
     OrderProduct(
       name: '뺑 오 쇼콜라',
       enName: 'Pain au Chocolat',
+      description: '뺑 오 쇼콜라는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/petite_vanilla_bean_scone.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1185,6 +1324,7 @@ class OrderProductList {
     OrderProduct(
       name: '고메 버터 스콘',
       enName: 'Gourmet Butter Scone',
+      description: '고메 버터 스콘는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/impossible_breakfast_sandwich.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1193,6 +1333,7 @@ class OrderProductList {
     OrderProduct(
       name: '리얼 블루베리 베이글',
       enName: 'Real Blueberry Bagel',
+      description: '든든한 한 끼 식사로 충분한 신선한 재료가 가득 들어간 베이커리 메뉴입니다.',
       price: '3,000',
       imageUrl: 'assets/images/products/starbucks_blonde_espresso_roast.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1203,6 +1344,7 @@ class OrderProductList {
     OrderProduct(
       name: '하루 한 컵 RED',
       enName: 'Cup of Fruit RED',
+      description: '하루 한 컵 RED는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,600',
       imageUrl:
           'assets/images/products/chestnut_praline_frappuccino_blended_beverage.png',
@@ -1212,6 +1354,7 @@ class OrderProductList {
     OrderProduct(
       name: '오가닉 그릭 요거트',
       enName: 'Organic Greek Yogurt',
+      description: '오가닉 그릭 요거트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,900',
       imageUrl:
           'assets/images/products/iced_starbucks_blonde_vanilla_latte.png',
@@ -1221,6 +1364,7 @@ class OrderProductList {
     OrderProduct(
       name: '오가닉 그릭 요거트 플레인',
       enName: 'Organic Greek Yogurt Plain',
+      description: '오가닉 그릭 요거트 플레인는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,900',
       imageUrl: 'assets/images/products/vanilla_sweet_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1229,6 +1373,7 @@ class OrderProductList {
     OrderProduct(
       name: '그래놀라 요거트',
       enName: 'Granola Yogurt',
+      description: '그래놀라 요거트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,200',
       imageUrl: 'assets/images/products/cinnamon_coffee_cake.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1237,6 +1382,7 @@ class OrderProductList {
     OrderProduct(
       name: '사과 & 당근',
       enName: 'Apple & Carrot',
+      description: '사과 & 당근는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/caffe_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1245,6 +1391,7 @@ class OrderProductList {
     OrderProduct(
       name: '바나나',
       enName: 'Banana',
+      description: '바나나는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '1,500',
       imageUrl: 'assets/images/products/chocolate_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1253,6 +1400,7 @@ class OrderProductList {
     OrderProduct(
       name: '한라봉 젤리',
       enName: 'Hallabong Jelly',
+      description: '한라봉 젤리는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,800',
       imageUrl: 'assets/images/products/iced_chai_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1261,6 +1409,7 @@ class OrderProductList {
     OrderProduct(
       name: '사과 가득 핸디 젤리',
       enName: 'Apple Handy Jelly',
+      description: '사과 가득 핸디 젤리는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,800',
       imageUrl:
           'assets/images/products/strawberry_creme_frappuccino_blended_beverage.png',
@@ -1270,6 +1419,7 @@ class OrderProductList {
     OrderProduct(
       name: '딸기 가득 핸디 젤리',
       enName: 'Strawberry Handy Jelly',
+      description: '딸기 가득 핸디 젤리는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,800',
       imageUrl: 'assets/images/products/iced_peppermint_mocha.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1278,6 +1428,7 @@ class OrderProductList {
     OrderProduct(
       name: '토마토 & 모짜렐라',
       enName: 'Tomato & Mozzarella',
+      description: '토마토 & 모짜렐라는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/coffee_traveler___pike_place_roast.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1288,6 +1439,7 @@ class OrderProductList {
     OrderProduct(
       name: '한입에 쏙 고구마',
       enName: 'Sweet Potato Bite',
+      description: '한입에 쏙 고구마는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,800',
       imageUrl: 'assets/images/products/espresso.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1296,6 +1448,7 @@ class OrderProductList {
     OrderProduct(
       name: '라이스 칩',
       enName: 'Rice Chip',
+      description: '라이스 칩는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,700',
       imageUrl: 'assets/images/products/baked_apple_croissant.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1304,6 +1457,7 @@ class OrderProductList {
     OrderProduct(
       name: '더블 치즈 베이글 칩',
       enName: 'Double Cheese Bagel Chip',
+      description: '든든한 한 끼 식사로 충분한 신선한 재료가 가득 들어간 베이커리 메뉴입니다.',
       price: '2,700',
       imageUrl: 'assets/images/products/iced_caffe_mocha.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1312,6 +1466,7 @@ class OrderProductList {
     OrderProduct(
       name: '한입에 쏙 공주 밤',
       enName: 'Chestnut Bite',
+      description: '한입에 쏙 공주 밤는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/chocolate_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1320,6 +1475,7 @@ class OrderProductList {
     OrderProduct(
       name: '오도독 건강한 넛 & 블루베리',
       enName: 'Crunchy Nuts & Blueberry',
+      description: '오도독 건강한 넛 & 블루베리는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,000',
       imageUrl: 'assets/images/products/caffe_mocha.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1328,6 +1484,7 @@ class OrderProductList {
     OrderProduct(
       name: '초콜릿 월넛 브라우니',
       enName: 'Chocolate Walnut Brownie',
+      description: '초콜릿 월넛 브라우니는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/iced_gingerbread_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1336,6 +1493,7 @@ class OrderProductList {
     OrderProduct(
       name: '다크 초콜릿 카우보이 쿠키',
       enName: 'Dark Chocolate Cowboy Cookie',
+      description: '다크 초콜릿 카우보이 쿠키는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,800',
       imageUrl:
           'assets/images/products/nondairy_salted_caramel_cream_cold_brew.png',
@@ -1345,6 +1503,7 @@ class OrderProductList {
     OrderProduct(
       name: '화이트 초콜릿 카우보이 쿠키',
       enName: 'White Chocolate Cowboy Cookie',
+      description: '화이트 초콜릿 카우보이 쿠키는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,800',
       imageUrl: 'assets/images/products/iced_passion_tango_tea.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1353,6 +1512,7 @@ class OrderProductList {
     OrderProduct(
       name: '아몬드 토피넛 캔디',
       enName: 'Almond Toffee Nut Candy',
+      description: '아몬드 토피넛 캔디는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/gingerbread_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1361,6 +1521,7 @@ class OrderProductList {
     OrderProduct(
       name: '비스코티',
       enName: 'Biscotti',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '2,500',
       imageUrl: 'assets/images/products/iced_shaken_espresso.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1371,6 +1532,7 @@ class OrderProductList {
     OrderProduct(
       name: '자바 칩 유기농 바닐라 아이스크림',
       enName: 'Java Chip Organic Vanilla Ice Cream',
+      description: '자바 칩 유기농 바닐라 아이스크림는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,900',
       imageUrl:
           'assets/images/products/iced_hazelnut_oatmilk_shaken_espresso.png',
@@ -1380,6 +1542,7 @@ class OrderProductList {
     OrderProduct(
       name: '넛츠 초콜릿 아포가토',
       enName: 'Nuts Chocolate Affogato',
+      description: '넛츠 초콜릿 아포가토는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,600',
       imageUrl: 'assets/images/products/blueberry_streusel_muffin.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1388,6 +1551,7 @@ class OrderProductList {
     OrderProduct(
       name: '유기농 바닐라 아이스크림',
       enName: 'Organic Vanilla Ice Cream',
+      description: '유기농 바닐라 아이스크림는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,900',
       imageUrl: 'assets/images/products/nitro_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1396,6 +1560,7 @@ class OrderProductList {
     OrderProduct(
       name: '유기농 초콜릿 아이스크림',
       enName: 'Organic Chocolate Ice Cream',
+      description: '유기농 초콜릿 아이스크림는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,900',
       imageUrl: 'assets/images/products/iced_coffee.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1404,6 +1569,7 @@ class OrderProductList {
     OrderProduct(
       name: '딸기 요거트 젤라또',
       enName: 'Strawberry Yogurt Gelato',
+      description: '딸기 요거트 젤라또는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/mocha_frappuccino_blended_beverage.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1412,6 +1578,7 @@ class OrderProductList {
     OrderProduct(
       name: '망고 요거트 젤라또',
       enName: 'Mango Yogurt Gelato',
+      description: '망고 요거트 젤라또는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/iced_black_tea_lemonade.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1420,6 +1587,7 @@ class OrderProductList {
     OrderProduct(
       name: '바닐라 아포가토',
       enName: 'Vanilla Affogato',
+      description: '바닐라 아포가토는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,600',
       imageUrl:
           'assets/images/products/peppermint_white_chocolate_creme_frappuccino_blended_beverage.png',
@@ -1429,6 +1597,7 @@ class OrderProductList {
     OrderProduct(
       name: '초콜릿 아포가토',
       enName: 'Chocolate Affogato',
+      description: '초콜릿 아포가토는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,600',
       imageUrl: 'assets/images/products/jade_citrus_mint_brewed_tea.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1437,6 +1606,7 @@ class OrderProductList {
     OrderProduct(
       name: '그린티 아포가토',
       enName: 'Green Tea Affogato',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '6,100',
       imageUrl:
           'assets/images/products/java_chip_frappuccino_blended_beverage.png',
@@ -1446,6 +1616,7 @@ class OrderProductList {
     OrderProduct(
       name: '자바 칩 아포가토',
       enName: 'Java Chip Affogato',
+      description: '자바 칩 아포가토는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,100',
       imageUrl: 'assets/images/products/steamed_milk.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1456,6 +1627,7 @@ class OrderProductList {
     OrderProduct(
       name: '트러플 머쉬룸 수프',
       enName: 'Truffle Mushroom Soup',
+      description: '트러플 머쉬룸 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,200',
       imageUrl:
           'assets/images/products/chestnut_praline_creme_frappuccino_blended_beverage.png',
@@ -1465,6 +1637,7 @@ class OrderProductList {
     OrderProduct(
       name: '로스트 치킨 수프',
       enName: 'Roasted Chicken Soup',
+      description: '로스트 치킨 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,200',
       imageUrl:
           'assets/images/products/iced_brown_sugar_oatmilk_shaken_espresso.png',
@@ -1474,6 +1647,7 @@ class OrderProductList {
     OrderProduct(
       name: '단호박 크림 수프',
       enName: 'Pumpkin Cream Soup',
+      description: '단호박 크림 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,200',
       imageUrl: 'assets/images/products/peppermint_white_chocolate_mocha.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1482,6 +1656,7 @@ class OrderProductList {
     OrderProduct(
       name: '토마토 로제 수프',
       enName: 'Tomato Rose Soup',
+      description: '토마토 로제 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,200',
       imageUrl: 'assets/images/products/white_chocolate_mocha.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1490,6 +1665,7 @@ class OrderProductList {
     OrderProduct(
       name: '브로콜리 치즈 수프',
       enName: 'Broccoli Cheese Soup',
+      description: '브로콜리 치즈 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,200',
       imageUrl: 'assets/images/products/earl_grey_tea.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1498,6 +1674,7 @@ class OrderProductList {
     OrderProduct(
       name: '양송이 수프',
       enName: 'Mushroom Soup',
+      description: '양송이 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,900',
       imageUrl: 'assets/images/products/iced_caramel_brulee_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1506,6 +1683,7 @@ class OrderProductList {
     OrderProduct(
       name: '콘 크림 수프',
       enName: 'Corn Cream Soup',
+      description: '콘 크림 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,900',
       imageUrl: 'assets/images/products/caramel_brulee_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1514,6 +1692,7 @@ class OrderProductList {
     OrderProduct(
       name: '어니언 수프',
       enName: 'Onion Soup',
+      description: '어니언 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,900',
       imageUrl:
           'assets/images/products/sugar_cookie_almondmilk_frappuccino_blended_beverage.png',
@@ -1523,6 +1702,7 @@ class OrderProductList {
     OrderProduct(
       name: '클램 차우더 수프',
       enName: 'Clam Chowder Soup',
+      description: '클램 차우더 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,500',
       imageUrl:
           'assets/images/products/caramel_brulee_frappuccino_blended_beverage.png',
@@ -1532,6 +1712,7 @@ class OrderProductList {
     OrderProduct(
       name: '비프 칠리 수프',
       enName: 'Beef Chili Soup',
+      description: '비프 칠리 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,500',
       imageUrl: 'assets/images/products/birthday_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1542,6 +1723,7 @@ class OrderProductList {
     OrderProduct(
       name: '브런치 유어 웨이',
       enName: 'Brunch Your Way',
+      description: '브런치 유어 웨이는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0', // 'Variable' handled as '0' or similar
       imageUrl:
           'assets/images/products/caramel_ribbon_crunch_creme_frappuccino_blended_beverage.png',
@@ -1551,6 +1733,7 @@ class OrderProductList {
     OrderProduct(
       name: '베이컨 치즈 토스트',
       enName: 'Bacon Cheese Toast',
+      description: '베이컨 치즈 토스트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,900',
       imageUrl: 'assets/images/products/pistachio_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1559,6 +1742,7 @@ class OrderProductList {
     OrderProduct(
       name: '햄 & 치즈 베이글',
       enName: 'Ham & Cheese Bagel',
+      description: '든든한 한 끼 식사로 충분한 신선한 재료가 가득 들어간 베이커리 메뉴입니다.',
       price: '5,300',
       imageUrl: 'assets/images/products/starbucks_blonde_vanilla_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1567,6 +1751,7 @@ class OrderProductList {
     OrderProduct(
       name: '에그 베이컨 파니니',
       enName: 'Egg Bacon Panini',
+      description: '에그 베이컨 파니니는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,500',
       imageUrl: 'assets/images/products/coffee_traveler___veranda_blend.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1575,6 +1760,7 @@ class OrderProductList {
     OrderProduct(
       name: '브리오슈 에그 샌드위치',
       enName: 'Brioche Egg Sandwich',
+      description: '든든한 한 끼 식사로 충분한 신선한 재료가 가득 들어간 베이커리 메뉴입니다.',
       price: '5,900',
       imageUrl: 'assets/images/products/cinnamon_dolce_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1583,6 +1769,7 @@ class OrderProductList {
     OrderProduct(
       name: '잉글리쉬 머핀 밀 박스',
       enName: 'English Muffin Meal Box',
+      description: '잉글리쉬 머핀 밀 박스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl:
           'assets/images/products/iced_peppermint_white_chocolate_mocha.png',
@@ -1592,6 +1779,7 @@ class OrderProductList {
     OrderProduct(
       name: '멕시칸 브리또 밀 박스',
       enName: 'Mexican Burrito Meal Box',
+      description: '멕시칸 브리또 밀 박스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,900',
       imageUrl:
           'assets/images/products/caffe_vanilla_frappuccino_blended_beverage.png',
@@ -1601,6 +1789,7 @@ class OrderProductList {
     OrderProduct(
       name: '쉬림프 로제 파스타 밀 박스',
       enName: 'Shrimp Rose Pasta Meal Box',
+      description: '쉬림프 로제 파스타 밀 박스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,500',
       imageUrl:
           'assets/images/products/coffee_frappuccino_blended_beverage.png',
@@ -1610,6 +1799,7 @@ class OrderProductList {
     OrderProduct(
       name: '트러플 머쉬룸 수프',
       enName: 'Truffle Mushroom Soup',
+      description: '트러플 머쉬룸 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,200',
       imageUrl: 'assets/images/products/iced_espresso.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1618,6 +1808,7 @@ class OrderProductList {
     OrderProduct(
       name: '현미 크림 수프',
       enName: 'Brown Rice Cream Soup',
+      description: '현미 크림 수프는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,900',
       imageUrl: 'assets/images/products/chai_creme_frappuccino.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1628,6 +1819,7 @@ class OrderProductList {
     OrderProduct(
       name: '시그니처 초콜릿',
       enName: 'Signature Chocolate',
+      description: '시그니처 초콜릿는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,300',
       imageUrl: 'assets/images/products/iced_cinnamon_dolce_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1636,6 +1828,7 @@ class OrderProductList {
     OrderProduct(
       name: '화이트 초콜릿 모카',
       enName: 'White Chocolate Mocha',
+      description: '화이트 초콜릿 모카는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,600',
       imageUrl:
           'assets/images/products/coffee_traveler___decaf_pike_place_roast.png',
@@ -1645,6 +1838,7 @@ class OrderProductList {
     OrderProduct(
       name: '아몬드 초콜릿',
       enName: 'Almond Chocolate',
+      description: '아몬드 초콜릿는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/nondairy_chocolate_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1653,6 +1847,7 @@ class OrderProductList {
     OrderProduct(
       name: '헤이즐넛 초콜릿',
       enName: 'Hazelnut Chocolate',
+      description: '헤이즐넛 초콜릿는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl:
           'assets/images/products/vanilla_sweet_cream_nitro_cold_brew.png',
@@ -1662,6 +1857,7 @@ class OrderProductList {
     OrderProduct(
       name: '다크 초콜릿',
       enName: 'Dark Chocolate',
+      description: '다크 초콜릿는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/sugar_cookie_almondmilk_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1670,6 +1866,7 @@ class OrderProductList {
     OrderProduct(
       name: '밀크 초콜릿',
       enName: 'Milk Chocolate',
+      description: '밀크 초콜릿는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl:
           'assets/images/products/nondairy_vanilla_sweet_cream_cold_brew.png',
@@ -1679,6 +1876,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 녹차 초콜릿',
       enName: 'Jeju Green Tea Chocolate',
+      description: '제주 녹차 초콜릿는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '4,000',
       imageUrl: 'assets/images/products/london_fog_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1687,6 +1885,7 @@ class OrderProductList {
     OrderProduct(
       name: '코인 초콜릿',
       enName: 'Coin Chocolate',
+      description: '코인 초콜릿는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '1,500',
       imageUrl:
           'assets/images/products/cold_brew_with_nondairy_vanilla_sweet_cream_cold_foam.png',
@@ -1696,6 +1895,7 @@ class OrderProductList {
     OrderProduct(
       name: '초콜릿 바',
       enName: 'Chocolate Bar',
+      description: '초콜릿 바는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,500',
       imageUrl: 'assets/images/products/chestnut_praline_latte.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1704,6 +1904,7 @@ class OrderProductList {
     OrderProduct(
       name: '트러플 초콜릿',
       enName: 'Truffle Chocolate',
+      description: '트러플 초콜릿는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '8,000',
       imageUrl: 'assets/images/products/cookies_and_cream_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1714,6 +1915,7 @@ class OrderProductList {
     OrderProduct(
       name: '블루베리 마카롱',
       enName: 'Blueberry Macaron',
+      description: '블루베리 마카롱는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,700',
       imageUrl: 'assets/images/products/caffe_americano.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1722,6 +1924,7 @@ class OrderProductList {
     OrderProduct(
       name: '바닐라 마카롱',
       enName: 'Vanilla Macaron',
+      description: '바닐라 마카롱는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,700',
       imageUrl:
           'assets/images/products/caramel_brulee_creme_frappuccino_blended_beverage.png',
@@ -1731,6 +1934,7 @@ class OrderProductList {
     OrderProduct(
       name: '스트로베리 마카롱',
       enName: 'Strawberry Macaron',
+      description: '스트로베리 마카롱는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,700',
       imageUrl: 'assets/images/products/salted_caramel_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1739,6 +1943,7 @@ class OrderProductList {
     OrderProduct(
       name: '초콜릿 마카롱',
       enName: 'Chocolate Macaron',
+      description: '초콜릿 마카롱는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,700',
       imageUrl: 'assets/images/products/iced_black_tea.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1747,6 +1952,7 @@ class OrderProductList {
     OrderProduct(
       name: '피스타치오 마카롱',
       enName: 'Pistachio Macaron',
+      description: '피스타치오 마카롱는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,700',
       imageUrl: 'assets/images/products/mocha_cookie_crumble_frappuccino.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1755,6 +1961,7 @@ class OrderProductList {
     OrderProduct(
       name: '레몬 마카롱',
       enName: 'Lemon Macaron',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '2,700',
       imageUrl:
           'assets/images/products/peppermint_white_chocolate_mocha_frappuccino_blended_beverage.png',
@@ -1764,6 +1971,7 @@ class OrderProductList {
     OrderProduct(
       name: '얼 그레이 마카롱',
       enName: 'Earl Grey Macaron',
+      description: '얼 그레이 마카롱는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,700',
       imageUrl: 'assets/images/products/iced_caffe_americano.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1772,6 +1980,7 @@ class OrderProductList {
     OrderProduct(
       name: '솔티드 카라멜 마카롱',
       enName: 'Salted Caramel Macaron',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '2,900',
       imageUrl:
           'assets/images/products/peppermint_mocha_creme_frappuccino_blended_beverage.png',
@@ -1781,6 +1990,7 @@ class OrderProductList {
     OrderProduct(
       name: '라즈베리 마카롱',
       enName: 'Raspberry Macaron',
+      description: '라즈베리 마카롱는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,900',
       imageUrl: 'assets/images/products/steamed_apple_juice.png',
       mainCategoryId: OrderMainCategoryId.food,
@@ -1789,6 +1999,7 @@ class OrderProductList {
     OrderProduct(
       name: '흑임자 마카롱',
       enName: 'Black Sesame Macaron',
+      description: '흑임자 마카롱는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '2,900',
       imageUrl:
           'assets/images/products/caramel_ribbon_crunch_frappuccino_blended_beverage.png',
@@ -1801,6 +2012,7 @@ class OrderProductList {
     OrderProduct(
       name: '그린 사이렌 클래식 머그',
       enName: 'Green Siren Classic Mug',
+      description: '그린 사이렌 클래식 머그는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '16,000',
       imageUrl: 'assets/images/products/iced_passion_tango_tea_lemonade.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1809,6 +2021,7 @@ class OrderProductList {
     OrderProduct(
       name: 'SS 블랙 데비 머그',
       enName: 'SS Black Debbie Mug',
+      description: 'SS 블랙 데비 머그는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '22,000',
       imageUrl:
           'assets/images/products/espresso_frappuccino_blended_beverage.png',
@@ -1818,6 +2031,7 @@ class OrderProductList {
     OrderProduct(
       name: '더블월 글라스',
       enName: 'Double Wall Glass',
+      description: '더블월 글라스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '18,000',
       imageUrl: 'assets/images/products/peppermint_mocha.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1826,6 +2040,7 @@ class OrderProductList {
     OrderProduct(
       name: '서울 투어 머그',
       enName: 'Seoul Tour Mug',
+      description: '서울 투어 머그는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '18,000',
       imageUrl: 'assets/images/products/butter_croissant.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1834,6 +2049,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 투어 머그',
       enName: 'Jeju Tour Mug',
+      description: '제주 투어 머그는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '18,000',
       imageUrl: 'assets/images/products/chocolate_croissant.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1842,6 +2058,7 @@ class OrderProductList {
     OrderProduct(
       name: '부산 투어 머그',
       enName: 'Busan Tour Mug',
+      description: '부산 투어 머그는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '18,000',
       imageUrl: 'assets/images/products/everything_bagel.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1850,6 +2067,7 @@ class OrderProductList {
     OrderProduct(
       name: 'SS 헤리티지 뉴턴 텀블러',
       enName: 'SS Heritage Newton Tumbler',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '31,000',
       imageUrl:
           'assets/images/products/sugar_cookie_almondmilk_creme_frappuccino_blended_beverage.png',
@@ -1859,6 +2077,7 @@ class OrderProductList {
     OrderProduct(
       name: '아이코닉 사이렌 머그',
       enName: 'Iconic Siren Mug',
+      description: '아이코닉 사이렌 머그는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '14,000',
       imageUrl: 'assets/images/products/via_sweetened_iced_coffee.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1867,6 +2086,7 @@ class OrderProductList {
     OrderProduct(
       name: '밀키 화이트 머그',
       enName: 'Milky White Mug',
+      description: '밀키 화이트 머그는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '15,000',
       imageUrl: 'assets/images/products/plain_bagel.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1875,6 +2095,7 @@ class OrderProductList {
     OrderProduct(
       name: '스태킹 머그 세트',
       enName: 'Stacking Mug Set',
+      description: '스태킹 머그 세트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '28,000',
       imageUrl:
           'assets/images/products/peppermint_mocha_frappuccino_blended_beverage.png',
@@ -1886,6 +2107,7 @@ class OrderProductList {
     OrderProduct(
       name: 'SS 엘마 블랙 텀블러',
       enName: 'SS Elma Black Tumbler',
+      description: 'SS 엘마 블랙 텀블러는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '33,000',
       imageUrl: 'assets/images/products/iced_peach_green_tea.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1894,6 +2116,7 @@ class OrderProductList {
     OrderProduct(
       name: 'JNL 제트 블랙 보온병',
       enName: 'JNL Jet Black Thermos',
+      description: 'JNL 제트 블랙 보온병는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '48,000',
       imageUrl: 'assets/images/products/iced_caffe_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1902,6 +2125,7 @@ class OrderProductList {
     OrderProduct(
       name: '미르 텀블러',
       enName: 'MiiR Tumbler',
+      description: '미르 텀블러는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '35,000',
       imageUrl: 'assets/images/products/chai_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1910,6 +2134,7 @@ class OrderProductList {
     OrderProduct(
       name: 'SS 콩코드 텀블러',
       enName: 'SS Concorde Tumbler',
+      description: 'SS 콩코드 텀블러는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '35,000',
       imageUrl: 'assets/images/products/snowman_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1918,6 +2143,7 @@ class OrderProductList {
     OrderProduct(
       name: 'SS 투고 텀블러',
       enName: 'SS ToGo Tumbler',
+      description: 'SS 투고 텀블러는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '31,000',
       imageUrl: 'assets/images/products/starbucks_cold_brew_coffee.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1926,6 +2152,7 @@ class OrderProductList {
     OrderProduct(
       name: 'SS 오페라 텀블러',
       enName: 'SS Opera Tumbler',
+      description: 'SS 오페라 텀블러는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '33,000',
       imageUrl:
           'assets/images/products/caramel_frappuccino_blended_beverage.png',
@@ -1935,6 +2162,7 @@ class OrderProductList {
     OrderProduct(
       name: 'JNM 클래식 보온병',
       enName: 'JNM Classic Thermos',
+      description: 'JNM 클래식 보온병는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '45,000',
       imageUrl: 'assets/images/products/iced_chestnut_praline_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1943,6 +2171,7 @@ class OrderProductList {
     OrderProduct(
       name: 'FEJ 보온병',
       enName: 'FEJ Thermos',
+      description: 'FEJ 보온병는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '48,000',
       imageUrl: 'assets/images/products/iced_sugar_cookie_almondmilk_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1951,6 +2180,7 @@ class OrderProductList {
     OrderProduct(
       name: '스탠리 텀블러',
       enName: 'Stanley Tumbler',
+      description: '스탠리 텀블러는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '37,000',
       imageUrl: 'assets/images/products/iced_peach_green_tea_lemonade.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1959,6 +2189,7 @@ class OrderProductList {
     OrderProduct(
       name: '마블 화이트 보온병',
       enName: 'Marble White Thermos',
+      description: '마블 화이트 보온병는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '49,000',
       imageUrl: 'assets/images/products/coffee_traveler___dark_roast.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1969,6 +2200,7 @@ class OrderProductList {
     OrderProduct(
       name: '세라믹 드리퍼',
       enName: 'Ceramic Dripper',
+      description: '세라믹 드리퍼는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '24,000',
       imageUrl: 'assets/images/products/iced_coffee_clover_vertica.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1977,6 +2209,7 @@ class OrderProductList {
     OrderProduct(
       name: '커피 프레스',
       enName: 'Coffee Press',
+      description: '커피 프레스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '38,000',
       imageUrl: 'assets/images/products/espresso_macchiato.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -1985,6 +2218,7 @@ class OrderProductList {
     OrderProduct(
       name: '글라스 서버',
       enName: 'Glass Server',
+      description: '글라스 서버는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '22,000',
       imageUrl:
           'assets/images/products/chocolate_cookie_crumble_creme_frappuccino.png',
@@ -1994,6 +2228,7 @@ class OrderProductList {
     OrderProduct(
       name: '커피 스쿱',
       enName: 'Coffee Scoop',
+      description: '커피 스쿱는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '9,000',
       imageUrl: 'assets/images/products/espresso_roast.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2002,6 +2237,7 @@ class OrderProductList {
     OrderProduct(
       name: '드립 케틀',
       enName: 'Drip Kettle',
+      description: '드립 케틀는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '42,000',
       imageUrl: 'assets/images/products/espresso_con_panna.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2010,6 +2246,7 @@ class OrderProductList {
     OrderProduct(
       name: '핸드 그라인더',
       enName: 'Hand Grinder',
+      description: '핸드 그라인더는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '39,000',
       imageUrl: 'assets/images/products/ham_and_swiss_croissant.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2018,6 +2255,7 @@ class OrderProductList {
     OrderProduct(
       name: '프렌치 프레스',
       enName: 'French Press',
+      description: '프렌치 프레스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '36,000',
       imageUrl: 'assets/images/products/iced_white_chocolate_mocha.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2026,6 +2264,7 @@ class OrderProductList {
     OrderProduct(
       name: '사이펀',
       enName: 'Siphon',
+      description: '사이펀는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '89,000',
       imageUrl: 'assets/images/products/petite_vanilla_bean_scone.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2034,6 +2273,7 @@ class OrderProductList {
     OrderProduct(
       name: '콜드 브루 메이커',
       enName: 'Cold Brew Maker',
+      description: '콜드 브루 메이커는 차가운 물로 오랜 시간 서서히 추출하여 깔끔하고 깊은 풍미를 느낄 수 있는 프리미엄 커피입니다.',
       price: '25,000',
       imageUrl: 'assets/images/products/impossible_breakfast_sandwich.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2042,6 +2282,7 @@ class OrderProductList {
     OrderProduct(
       name: '종이 필터',
       enName: 'Paper Filter',
+      description: '종이 필터는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '3,500',
       imageUrl: 'assets/images/products/starbucks_blonde_espresso_roast.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2052,6 +2293,7 @@ class OrderProductList {
     OrderProduct(
       name: '에스프레소 로스트 250g',
       enName: 'Espresso Roast 250g',
+      description: '에스프레소 로스트 250g는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '15,000',
       imageUrl:
           'assets/images/products/chestnut_praline_frappuccino_blended_beverage.png',
@@ -2061,6 +2303,7 @@ class OrderProductList {
     OrderProduct(
       name: '하우스 블렌드 250g',
       enName: 'House Blend 250g',
+      description: '하우스 블렌드 250g는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '15,000',
       imageUrl:
           'assets/images/products/iced_starbucks_blonde_vanilla_latte.png',
@@ -2070,6 +2313,7 @@ class OrderProductList {
     OrderProduct(
       name: '파이크 플레이스 로스트 250g',
       enName: 'Pike Place Roast 250g',
+      description: '파이크 플레이스 로스트 250g는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '15,000',
       imageUrl: 'assets/images/products/vanilla_sweet_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2078,6 +2322,7 @@ class OrderProductList {
     OrderProduct(
       name: '카페 베로나 250g',
       enName: 'Caffe Verona 250g',
+      description: '카페 베로나 250g는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '15,000',
       imageUrl: 'assets/images/products/cinnamon_coffee_cake.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2086,6 +2331,7 @@ class OrderProductList {
     OrderProduct(
       name: '수마트라 250g',
       enName: 'Sumatra 250g',
+      description: '수마트라 250g는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '16,000',
       imageUrl: 'assets/images/products/caffe_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2094,6 +2340,7 @@ class OrderProductList {
     OrderProduct(
       name: '에티오피아 250g',
       enName: 'Ethiopia 250g',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '18,000',
       imageUrl: 'assets/images/products/chocolate_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2102,6 +2349,7 @@ class OrderProductList {
     OrderProduct(
       name: '콜롬비아 250g',
       enName: 'Colombia 250g',
+      description: '콜롬비아 250g는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '16,000',
       imageUrl: 'assets/images/products/iced_chai_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2110,6 +2358,7 @@ class OrderProductList {
     OrderProduct(
       name: '과테말라 안티구아 250g',
       enName: 'Guatemala Antigua 250g',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '16,000',
       imageUrl:
           'assets/images/products/strawberry_creme_frappuccino_blended_beverage.png',
@@ -2119,6 +2368,7 @@ class OrderProductList {
     OrderProduct(
       name: '케냐 250g',
       enName: 'Kenya 250g',
+      description: '케냐 250g는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '18,000',
       imageUrl: 'assets/images/products/iced_peppermint_mocha.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2127,6 +2377,7 @@ class OrderProductList {
     OrderProduct(
       name: '디카페인 하우스 블렌드 250g',
       enName: 'Decaf House Blend 250g',
+      description: '디카페인 하우스 블렌드 250g는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '17,000',
       imageUrl: 'assets/images/products/coffee_traveler___pike_place_roast.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2137,6 +2388,7 @@ class OrderProductList {
     OrderProduct(
       name: '비아 바닐라 라떼',
       enName: 'VIA Vanilla Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '6,900',
       imageUrl: 'assets/images/products/espresso.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2145,6 +2397,7 @@ class OrderProductList {
     OrderProduct(
       name: '비아 캐러멜 라떼',
       enName: 'VIA Caramel Latte',
+      description: '진한 에스프레소와 부드러운 스팀 우유가 어우러져 고소하고 담백한 맛이 일품인 음료입니다.',
       price: '6,900',
       imageUrl: 'assets/images/products/baked_apple_croissant.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2153,6 +2406,7 @@ class OrderProductList {
     OrderProduct(
       name: '비아 콜롬비아',
       enName: 'VIA Colombia',
+      description: '비아 콜롬비아는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '12,800',
       imageUrl: 'assets/images/products/iced_caffe_mocha.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2161,6 +2415,7 @@ class OrderProductList {
     OrderProduct(
       name: '비아 하우스 블렌드',
       enName: 'VIA House Blend',
+      description: '비아 하우스 블렌드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '12,800',
       imageUrl: 'assets/images/products/chocolate_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2169,6 +2424,7 @@ class OrderProductList {
     OrderProduct(
       name: '비아 파이크 플레이스',
       enName: 'VIA Pike Place',
+      description: '비아 파이크 플레이스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '12,800',
       imageUrl: 'assets/images/products/caffe_mocha.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2177,6 +2433,7 @@ class OrderProductList {
     OrderProduct(
       name: '비아 이탈리안 로스트',
       enName: 'VIA Italian Roast',
+      description: '비아 이탈리안 로스트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '12,800',
       imageUrl: 'assets/images/products/iced_gingerbread_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2185,6 +2442,7 @@ class OrderProductList {
     OrderProduct(
       name: '비아 디카페인 하우스 블렌드',
       enName: 'VIA Decaf House Blend',
+      description: '비아 디카페인 하우스 블렌드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '13,500',
       imageUrl:
           'assets/images/products/nondairy_salted_caramel_cream_cold_brew.png',
@@ -2194,6 +2452,7 @@ class OrderProductList {
     OrderProduct(
       name: '비아 모카',
       enName: 'VIA Mocha',
+      description: '비아 모카는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '7,200',
       imageUrl: 'assets/images/products/iced_passion_tango_tea.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2202,6 +2461,7 @@ class OrderProductList {
     OrderProduct(
       name: '비아 말차',
       enName: 'VIA Matcha',
+      description: '비아 말차는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '8,500',
       imageUrl: 'assets/images/products/gingerbread_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2210,6 +2470,7 @@ class OrderProductList {
     OrderProduct(
       name: '비아 아이스 커피',
       enName: 'VIA Iced Coffee',
+      description: '비아 아이스 커피는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,900',
       imageUrl: 'assets/images/products/iced_shaken_espresso.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2220,6 +2481,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 녹차 (15입)',
       enName: 'Jeju Green Tea',
+      description: '제주 녹차 (15입)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '20,000',
       imageUrl:
           'assets/images/products/iced_hazelnut_oatmilk_shaken_espresso.png',
@@ -2229,6 +2491,7 @@ class OrderProductList {
     OrderProduct(
       name: '얼 그레이 (15입)',
       enName: 'Earl Grey',
+      description: '얼 그레이 (15입)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '20,000',
       imageUrl: 'assets/images/products/blueberry_streusel_muffin.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2237,6 +2500,7 @@ class OrderProductList {
     OrderProduct(
       name: '잉글리쉬 브렉퍼스트 (15입)',
       enName: 'English Breakfast',
+      description: '잉글리쉬 브렉퍼스트 (15입)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '20,000',
       imageUrl: 'assets/images/products/nitro_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2245,6 +2509,7 @@ class OrderProductList {
     OrderProduct(
       name: '차이 (15입)',
       enName: 'Chai',
+      description: '차이 (15입)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '20,000',
       imageUrl: 'assets/images/products/iced_coffee.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2253,6 +2518,7 @@ class OrderProductList {
     OrderProduct(
       name: '히비스커스 (15입)',
       enName: 'Hibiscus',
+      description: '히비스커스 (15입)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '20,000',
       imageUrl: 'assets/images/products/mocha_frappuccino_blended_beverage.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2261,6 +2527,7 @@ class OrderProductList {
     OrderProduct(
       name: '민트 블렌드 (15입)',
       enName: 'Mint Blend',
+      description: '민트 블렌드 (15입)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '20,000',
       imageUrl: 'assets/images/products/iced_black_tea_lemonade.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2269,6 +2536,7 @@ class OrderProductList {
     OrderProduct(
       name: '유스베리 (15입)',
       enName: 'Youthberry',
+      description: '유스베리 (15입)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '22,000',
       imageUrl:
           'assets/images/products/peppermint_white_chocolate_creme_frappuccino_blended_beverage.png',
@@ -2278,6 +2546,7 @@ class OrderProductList {
     OrderProduct(
       name: '캐모마일 블렌드 (15입)',
       enName: 'Chamomile Blend',
+      description: '캐모마일 블렌드 (15입)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '20,000',
       imageUrl: 'assets/images/products/jade_citrus_mint_brewed_tea.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2286,6 +2555,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 유채꽃 티',
       enName: 'Jeju Canola Flower Tea',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '25,000',
       imageUrl:
           'assets/images/products/java_chip_frappuccino_blended_beverage.png',
@@ -2295,6 +2565,7 @@ class OrderProductList {
     OrderProduct(
       name: '자몽 허니 블랙 티 세트',
       enName: 'Grapefruit Honey Black Tea Set',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '28,000',
       imageUrl: 'assets/images/products/steamed_milk.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2305,6 +2576,7 @@ class OrderProductList {
     OrderProduct(
       name: '바닐라 시럽 (280ml)',
       enName: 'Vanilla Syrup',
+      description: '바닐라 시럽 (280ml)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '9,000',
       imageUrl:
           'assets/images/products/chestnut_praline_creme_frappuccino_blended_beverage.png',
@@ -2314,6 +2586,7 @@ class OrderProductList {
     OrderProduct(
       name: '헤이즐넛 시럽 (280ml)',
       enName: 'Hazelnut Syrup',
+      description: '헤이즐넛 시럽 (280ml)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '9,000',
       imageUrl:
           'assets/images/products/iced_brown_sugar_oatmilk_shaken_espresso.png',
@@ -2323,6 +2596,7 @@ class OrderProductList {
     OrderProduct(
       name: '카라멜 시럽 (280ml)',
       enName: 'Caramel Syrup',
+      description: '카라멜 시럽 (280ml)는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '9,000',
       imageUrl: 'assets/images/products/peppermint_white_chocolate_mocha.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2331,6 +2605,7 @@ class OrderProductList {
     OrderProduct(
       name: '초콜릿 소스',
       enName: 'Chocolate Sauce',
+      description: '초콜릿 소스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '8,000',
       imageUrl: 'assets/images/products/white_chocolate_mocha.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2339,6 +2614,7 @@ class OrderProductList {
     OrderProduct(
       name: '카라멜 소스',
       enName: 'Caramel Sauce',
+      description: '카라멜 소스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '8,000',
       imageUrl: 'assets/images/products/earl_grey_tea.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2347,6 +2623,7 @@ class OrderProductList {
     OrderProduct(
       name: '화이트 초콜릿 소스',
       enName: 'White Chocolate Sauce',
+      description: '화이트 초콜릿 소스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '8,500',
       imageUrl: 'assets/images/products/iced_caramel_brulee_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2355,6 +2632,7 @@ class OrderProductList {
     OrderProduct(
       name: '클래식 시럽',
       enName: 'Classic Syrup',
+      description: '클래식 시럽는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '8,000',
       imageUrl: 'assets/images/products/caramel_brulee_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2363,6 +2641,7 @@ class OrderProductList {
     OrderProduct(
       name: '돌체 시럽',
       enName: 'Dolce Syrup',
+      description: '돌체 시럽는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '9,500',
       imageUrl:
           'assets/images/products/sugar_cookie_almondmilk_frappuccino_blended_beverage.png',
@@ -2372,6 +2651,7 @@ class OrderProductList {
     OrderProduct(
       name: '제주 꿀',
       enName: 'Jeju Honey',
+      description: '제주 꿀는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '12,000',
       imageUrl:
           'assets/images/products/caramel_brulee_frappuccino_blended_beverage.png',
@@ -2381,6 +2661,7 @@ class OrderProductList {
     OrderProduct(
       name: '메이플 시럽',
       enName: 'Maple Syrup',
+      description: '메이플 시럽는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '11,000',
       imageUrl: 'assets/images/products/birthday_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2391,6 +2672,7 @@ class OrderProductList {
     OrderProduct(
       name: '스타벅스 장우산',
       enName: 'Starbucks Umbrella',
+      description: '스타벅스 장우산는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '25,000',
       imageUrl:
           'assets/images/products/caramel_ribbon_crunch_creme_frappuccino_blended_beverage.png',
@@ -2400,6 +2682,7 @@ class OrderProductList {
     OrderProduct(
       name: '23 스타벅스 다이어리',
       enName: '23 Starbucks Diary',
+      description: '23 스타벅스 다이어리는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '32,000',
       imageUrl: 'assets/images/products/pistachio_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2408,6 +2691,7 @@ class OrderProductList {
     OrderProduct(
       name: '에코백',
       enName: 'Eco Bag',
+      description: '에코백는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '18,000',
       imageUrl: 'assets/images/products/starbucks_blonde_vanilla_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2416,6 +2700,7 @@ class OrderProductList {
     OrderProduct(
       name: '파우치',
       enName: 'Pouch',
+      description: '파우치는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '15,000',
       imageUrl: 'assets/images/products/coffee_traveler___veranda_blend.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2424,6 +2709,7 @@ class OrderProductList {
     OrderProduct(
       name: '키링',
       enName: 'Key Ring',
+      description: '키링는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '12,000',
       imageUrl: 'assets/images/products/cinnamon_dolce_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2432,6 +2718,7 @@ class OrderProductList {
     OrderProduct(
       name: '노트북 파우치',
       enName: 'Laptop Pouch',
+      description: '노트북 파우치는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '35,000',
       imageUrl:
           'assets/images/products/iced_peppermint_white_chocolate_mocha.png',
@@ -2441,6 +2728,7 @@ class OrderProductList {
     OrderProduct(
       name: '피크닉 매트',
       enName: 'Picnic Mat',
+      description: '피크닉 매트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '28,000',
       imageUrl:
           'assets/images/products/caffe_vanilla_frappuccino_blended_beverage.png',
@@ -2450,6 +2738,7 @@ class OrderProductList {
     OrderProduct(
       name: '쿨러백',
       enName: 'Cooler Bag',
+      description: '쿨러백는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '32,000',
       imageUrl:
           'assets/images/products/coffee_frappuccino_blended_beverage.png',
@@ -2459,6 +2748,7 @@ class OrderProductList {
     OrderProduct(
       name: '담요',
       enName: 'Blanket',
+      description: '담요는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '22,000',
       imageUrl: 'assets/images/products/iced_espresso.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2467,6 +2757,7 @@ class OrderProductList {
     OrderProduct(
       name: '머그 리드',
       enName: 'Mug Lid',
+      description: '머그 리드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,000',
       imageUrl: 'assets/images/products/chai_creme_frappuccino.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2477,6 +2768,7 @@ class OrderProductList {
     OrderProduct(
       name: 'Thank You 카드',
       enName: 'Thank You Card',
+      description: 'Thank You 카드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0',
       imageUrl: 'assets/images/products/iced_cinnamon_dolce_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2485,6 +2777,7 @@ class OrderProductList {
     OrderProduct(
       name: 'Happy Birthday 카드',
       enName: 'Happy Birthday Card',
+      description: 'Happy Birthday 카드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0',
       imageUrl:
           'assets/images/products/coffee_traveler___decaf_pike_place_roast.png',
@@ -2494,6 +2787,7 @@ class OrderProductList {
     OrderProduct(
       name: 'Congratulations 카드',
       enName: 'Congratulations Card',
+      description: 'Congratulations 카드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0',
       imageUrl: 'assets/images/products/nondairy_chocolate_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2502,6 +2796,7 @@ class OrderProductList {
     OrderProduct(
       name: 'Love You 카드',
       enName: 'Love You Card',
+      description: 'Love You 카드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0',
       imageUrl:
           'assets/images/products/vanilla_sweet_cream_nitro_cold_brew.png',
@@ -2511,6 +2806,7 @@ class OrderProductList {
     OrderProduct(
       name: 'Cheer Up 카드',
       enName: 'Cheer Up Card',
+      description: 'Cheer Up 카드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0',
       imageUrl: 'assets/images/products/sugar_cookie_almondmilk_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2519,6 +2815,7 @@ class OrderProductList {
     OrderProduct(
       name: 'Wedding 카드',
       enName: 'Wedding Card',
+      description: 'Wedding 카드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0',
       imageUrl:
           'assets/images/products/nondairy_vanilla_sweet_cream_cold_brew.png',
@@ -2528,6 +2825,7 @@ class OrderProductList {
     OrderProduct(
       name: 'Graduation 카드',
       enName: 'Graduation Card',
+      description: 'Graduation 카드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0',
       imageUrl: 'assets/images/products/london_fog_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2536,6 +2834,7 @@ class OrderProductList {
     OrderProduct(
       name: 'New Year 카드',
       enName: 'New Year Card',
+      description: 'New Year 카드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0',
       imageUrl:
           'assets/images/products/cold_brew_with_nondairy_vanilla_sweet_cream_cold_foam.png',
@@ -2545,6 +2844,7 @@ class OrderProductList {
     OrderProduct(
       name: 'Christmas 카드',
       enName: 'Christmas Card',
+      description: 'Christmas 카드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0',
       imageUrl: 'assets/images/products/chestnut_praline_latte.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2553,6 +2853,7 @@ class OrderProductList {
     OrderProduct(
       name: 'Seoul City 카드',
       enName: 'Seoul City Card',
+      description: 'Seoul City 카드는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '0',
       imageUrl: 'assets/images/products/cookies_and_cream_cake_pop.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2563,6 +2864,7 @@ class OrderProductList {
     OrderProduct(
       name: '베어리스타 키체인',
       enName: 'Bearista Key Chain',
+      description: '베어리스타 키체인는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '14,000',
       imageUrl: 'assets/images/products/caffe_americano.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2571,6 +2873,7 @@ class OrderProductList {
     OrderProduct(
       name: '머들러',
       enName: 'Muddler',
+      description: '머들러는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '7,000',
       imageUrl:
           'assets/images/products/caramel_brulee_creme_frappuccino_blended_beverage.png',
@@ -2580,6 +2883,7 @@ class OrderProductList {
     OrderProduct(
       name: '코스터',
       enName: 'Coaster',
+      description: '코스터는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '5,000',
       imageUrl: 'assets/images/products/salted_caramel_cream_cold_brew.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2588,6 +2892,7 @@ class OrderProductList {
     OrderProduct(
       name: '스트로우 세트',
       enName: 'Straw Set',
+      description: '스트로우 세트는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '8,000',
       imageUrl: 'assets/images/products/iced_black_tea.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2596,6 +2901,7 @@ class OrderProductList {
     OrderProduct(
       name: '보틀 커버',
       enName: 'Bottle Cover',
+      description: '보틀 커버는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '9,000',
       imageUrl: 'assets/images/products/mocha_cookie_crumble_frappuccino.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2604,6 +2910,7 @@ class OrderProductList {
     OrderProduct(
       name: '텀블러 세척 솔',
       enName: 'Tumbler Brush',
+      description: '텀블러 세척 솔는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '6,000',
       imageUrl:
           'assets/images/products/peppermint_white_chocolate_mocha_frappuccino_blended_beverage.png',
@@ -2613,6 +2920,7 @@ class OrderProductList {
     OrderProduct(
       name: '커피 스쿱 클립',
       enName: 'Coffee Scoop Clip',
+      description: '커피 스쿱 클립는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '8,000',
       imageUrl: 'assets/images/products/iced_caffe_americano.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2621,6 +2929,7 @@ class OrderProductList {
     OrderProduct(
       name: '티 인퓨저',
       enName: 'Tea Infuser',
+      description: '신선한 과일이나 엄선된 찻잎을 사용하여 상큼하고 깔끔한 맛을 선사하는 티 음료입니다.',
       price: '15,000',
       imageUrl:
           'assets/images/products/peppermint_mocha_creme_frappuccino_blended_beverage.png',
@@ -2630,6 +2939,7 @@ class OrderProductList {
     OrderProduct(
       name: '드리퍼 필터 케이스',
       enName: 'Dripper Filter Case',
+      description: '드리퍼 필터 케이스는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '22,000',
       imageUrl: 'assets/images/products/steamed_apple_juice.png',
       mainCategoryId: OrderMainCategoryId.goods,
@@ -2638,6 +2948,7 @@ class OrderProductList {
     OrderProduct(
       name: '원두 보관 용기',
       enName: 'Bean Storage Container',
+      description: '원두 보관 용기는 Ratsbucks에서 정성을 다해 준비한 메뉴로, 풍부한 맛과 향을 선사합니다.',
       price: '18,000',
       imageUrl:
           'assets/images/products/caramel_ribbon_crunch_frappuccino_blended_beverage.png',

@@ -31,7 +31,7 @@ class ProductInfoSection extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         Text(
-          '진한 에스프레소와 뜨거운 물을 섞어 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽게 잘 느낄 수 있는 커피',
+          item.description,
           style: TextStyle(fontSize: 15, color: Colors.grey[700], height: 1.6),
         ),
       ],
